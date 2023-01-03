@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from './Button'
-import Subtitle from './SubTitle'
+import Subtitle from './Subtitle'
 import { motion, Variants } from 'framer-motion'
 
 

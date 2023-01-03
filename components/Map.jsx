@@ -1,5 +1,5 @@
 import React from 'react'
-import Subtitle from './SubTitle'
+import Subtitle from './Subtitle'
 import ArrowLink from './ArrowLink'
 import ContactB from './ContactB'
 // import LocationPin from './LocationPin'
@@ -22,6 +22,7 @@ const Map = () => {
       <div className='grid grid-cols-3 gap-6 h-2/3 '>
         <div className='flex col-start-1 col-span-2 '>
           <div className=' w-full h-full rounded-2xl shadow-2xl overflow-hidden relative transition-all duration-700 ease-out'>
+            <Image className='object-cover' src={'/images/map3.svg'} alt='map showing the location of ywdesign company' fill />
             <Image className='object-cover' src={'/images/map3.svg'} alt='map showing the location of ywdesign company' fill />
           </div>
         </div>

@@ -16,7 +16,7 @@ export default function Service({name, title, span, text, position, noBlur, icon
 
   useEffect(()=> {
     handleVisibility(true, Math.floor(Math.random()*icons.length))
-  },[])
+  },[icons, handleVisibility])
 
   useEffect(()=>{
     let interval = setInterval(() => {
@@ -25,7 +25,7 @@ export default function Service({name, title, span, text, position, noBlur, icon
     
     return () => clearInterval(interval)
 
-  }, [visibleItem,clicked])
+  }, [visibleItem, clicked, nextVisibility])
 
   function handleVisibility(newVal,i) {
     // console.log('Clicked with current state:')
@@ -125,9 +125,6 @@ export default function Service({name, title, span, text, position, noBlur, icon
 //   },
 //   tap: {scale:1}
 // }
-
-
-
 
 function ServiceIcon ({icon, clicked, handleClick, noBlur}) {
 
