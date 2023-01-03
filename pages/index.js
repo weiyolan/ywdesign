@@ -32,7 +32,7 @@ export default function Home({scrolled}) {
             <div className='col-start-1 w-full'>
               <Subtitle name='Workflow' title='A fully personalised solution, every time' span={'solution'} 
               text='The roadmap allows us to find the best solution for you, every time. You want to try it out.' 
-              first={false} position='left'/>
+              first={true} position='left'/>
             </div>
             <div className=' col-start-2 w-full'>
               {/* <SpecialtyCard 
@@ -43,7 +43,7 @@ export default function Home({scrolled}) {
           <Features/>
 
               
-          <Conctact/>
+          <Conctact first={true}/>
 
         </Layout>
 

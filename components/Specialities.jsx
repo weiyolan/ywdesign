@@ -37,29 +37,30 @@ export default function Specialities (noBlur) {
   
   }
 
-  const parent = {
-    visible: {
-      opacity: 1,
-      scale:1,
-      transition: {
-        when: "beforeChildren",
-        staggerChildren: 0.08,
-      },
-    },
-    hidden: {
-      opacity: 0,
-      transition: {
-        when: "afterChildren",
-      },
-    },
-  }
+  // const parent = {
+  //   visible: {
+  //     opacity: 1,
+  //     scale:1,
+  //     transition: {
+  //       when: "beforeChildren",
+  //       staggerChildren: 0.08,
+  //     },
+  //   },
+  //   hidden: {
+  //     opacity: 0,
+  //     transition: {
+  //       when: "afterChildren",
+  //     },
+  //   },
+  // }
 
   return (
     <LayoutSection>
     
       <Subtitle first={true} name='Solutions' title='Our in-house specialities' span={'specialities'} position='center'/>
     
-      <motion.div initial='hidden' viewport={{once:false}} whileInView='visible' variants={parent} 
+      {/* <div initial='hidden' viewport={{once:false}} whileInView='visible' variants={parent}  */}
+      <div
         className='inline-flex justify-between w-full mx-auto mt-10'>
       
         {specialities.map((specialty,i)=>{
@@ -69,7 +70,7 @@ export default function Specialities (noBlur) {
             )})
         }
 
-      </motion.div>
+      </div>
     </LayoutSection>
     
     

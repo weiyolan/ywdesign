@@ -50,21 +50,21 @@ export default function Aboutme({scrolled}) {
 
           <TwoColumns left={true}>
             <Subtitle name='About' title={`A little bit\nabout me`} span='me' first={true} position={'left'}/>
-              <p className='flex font-light mt-36 px-12 text-primary text-center'>
+              <p className='flex font-light mt-36 pl-24 text-primary text-center'>
               {aboutmeText}
               </p>
           </TwoColumns>
 
-          <TwoColumns left={true}>
-            <Subtitle name='Mission' title={`What I want\nto achieve`} span='achieve' position={'left'} />
-            <p className='flex font-light mt-60 px-12 text-primary text-center'>
+          <TwoColumns left={false}>
+            <Subtitle name='Mission' first={true} title={`What I want\nto achieve`} span='achieve' position={'right'} />
+            <p className='flex font-light mt-36 pr-24 text-primary text-center'>
               {missionText}
             </p>
 
           </TwoColumns>
 
           <section className='flex flex-col text-center cursor-default'>
-          <Subtitle name='Vision' title={`Everything starts\nwith a vision`} first={false} span='vision'/>
+          <Subtitle name='Vision' title={`Everything starts\nwith a vision`} first={true} span='vision'/>
             {/* <RiDoubleQuotesL className='inline-block -translate-y-3' fill='white'/>  */}
             <div className='grid grid-cols-2 gap-16 auto-rows-auto my-10 mx-auto'>
               {vision.map((item)=>{
@@ -89,7 +89,7 @@ export default function Aboutme({scrolled}) {
 
           <section className='grid grid-cols-3 cursor-default'>
             <div className='col-start-1 col-span-3'>
-              <Subtitle name='Numbers' title={`Measure to\ndrive impact`} span='drive'  />
+              <Subtitle name='Numbers' first={true} title={`Measure to\ndrive impact`} span='drive'  />
             </div>
             {numbers.map((num,i) => {
                 return (

@@ -27,8 +27,9 @@ let roadmap = {icon: <GiTrail color='white' className='mx-auto w-8 h-8' alt={'Ro
 
 let serviceIcons1 = [
   {icon: <IoEarth color='white' className='mx-auto w-8 h-8' alt={'Earth Icon'}/>, 
-  title:'Develop new Products', 
-  list:['Logo','Website','App','e-Commerce','Online Tools']
+  title:'Products we make', 
+  list:['As a graphic designer and computer scientist two essential skills are at our disposal to develop high speed and beautiful internet tools answering your needs.','We can develop a simple new logo and fast modern website. If required we can also build complete internet strategies or highly customised applications to help grow your business.',
+  'Things I can build for your: online strategy, web application, logo, website, web shop, business tools']
   },
 
   roadmap,
@@ -93,7 +94,7 @@ let serviceIcons4  = [
 ];
 
 let serviceList = [
-  {name:'Web Development', icons: serviceIcons1, title:'You are ready\nfor the Internet', span:'Internet',text:'We create your logo, website, e-commerce and customised online business tools. Using the latest technology to insure a great user experience on all devices.'},
+  {name:'Web Development', icons: serviceIcons1, title:'Step up your\ninternet game', span:'internet',text:'Together we improve your online presence by creating a brand new logo, website, e-commerces and customised online tools.'},
   {name:'Products', icons: serviceIcons2, title:'We work with\nStart-ups',span:'Start-ups', text:'We help shape your ideas into functioning prototypes that convince your stakeholders and new investors.'},
   {name:'Redesign', icons: serviceIcons3, title:'Put your brand\nin a new Jacket',span:'brand', text:'Your current website or brand feels outdated? We integrate the latest design trends and technology to bring your vision alive.'},
   {name:'Analysis', icons: serviceIcons4, title:'Knowledge is\nPower',span:'Power', text:'We provide an in-depth report of your online presence, looking at coherence, your vision, values, speed, and overall user experience.'}
@@ -113,10 +114,13 @@ export default function Services({scrolled}) {
         
         <Layout>
 
+          {/* <Subtitle name='How To' title='' span text first={true}/> */}
+
           {serviceList.map((service,i)=>{
             return <Service 
             key={i} 
             name={service.name} 
+            first={i===0?true:false}
             icons={service.icons}
             title={service.title} 
             text={service.text} 
@@ -129,7 +133,7 @@ export default function Services({scrolled}) {
 
           <Technologies/>
 
-          <Conctact/>
+          <Conctact first={false}/>
 
         </Layout>
 

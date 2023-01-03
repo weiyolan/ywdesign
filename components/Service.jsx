@@ -6,7 +6,7 @@ import LayoutSection from "./LayoutSection"
 import { motion } from "framer-motion"
 
 
-export default function Service({name, title, span, text, position, noBlur, icons}) {
+export default function Service({name, title, span, text, position, first, noBlur, icons}) {
   // create object with key-value pairs of index-false
   let [visibleItem, setVisibleItem] = useState(new Array(icons.length).fill(false))
   let [clicked,setClicked] = useState(false)
@@ -16,7 +16,7 @@ export default function Service({name, title, span, text, position, noBlur, icon
 
   useEffect(()=> {
     handleVisibility(true, Math.floor(Math.random()*icons.length))
-  },[icons, handleVisibility])
+  },[icons])
 
   useEffect(()=>{
     let interval = setInterval(() => {
@@ -25,51 +25,37 @@ export default function Service({name, title, span, text, position, noBlur, icon
     
     return () => clearInterval(interval)
 
-  }, [visibleItem, clicked, nextVisibility])
+  }, [visibleItem, clicked])
 
   function handleVisibility(newVal,i) {
-    // console.log('Clicked with current state:')
-    // console.log(visibleItem)
-    // console.log('next state:')
-
     let newVisibility = new Array(icons.length).fill(false);
-
     if (newVal===true) {
       newVisibility[i]=newVal;
       setVisibleItem(newVisibility)
     } else if (newVal === false) {
       setVisibleItem(newVisibility)
     }     
-  
   }
 
   function nextVisibility(visibleItems) {
     let currentItem = visibleItems.indexOf(true);
-    // console.log(currentItem)
-    // console.log(visibleItem)
-
     if (currentItem === -1) {
       handleVisibility(true, 0)
     } else {
       let nextItem = currentItem===visibleItems.length-1?0:currentItem+1; 
       handleVisibility(true, nextItem)
-
     }    
   }
 
   let cards = (
-    <div>
-    {icons.map((icon,i)=>{
-      return (
-        <ServiceCard icon={icon} noBlur={noBlur} key={i} position={position} visible={visibleItem[i]}/>
-      )
-    })}  
+    <div className='relative w-full h-full'>
+      {icons.map((icon,i)=>{
+        return (
+          <ServiceCard icon={icon} noBlur={noBlur} first={first} key={i} position={position} visible={visibleItem[i]}/>
+        )
+      })}  
     </div>
   )
-
-  
-
-
 
   let info = (
     <div>
@@ -77,11 +63,12 @@ export default function Service({name, title, span, text, position, noBlur, icon
           name={name} 
           title={title} 
           span={span} 
-          text={text} 
+          text={text}
+          first={first} 
           position={position}
         />
 {/* initial={'hidden'} whileInView={"visible"} variants={parent} */}
-        <div className= {`flex flex-row mt-4 ${position==='left'?'':'justify-end'} `}>
+        <div className= {`flex flex-row mt-8 ${position==='left'?'':'justify-end'} `}>
           {icons.map((icon,i)=>{
             // console.log('i and visibility of service icon is:' )
             // console.log(i)
@@ -96,11 +83,11 @@ export default function Service({name, title, span, text, position, noBlur, icon
   
       <div className='grid grid-cols-2 w-full'>
 
-        <div className={`col-start-1 w-full relative`}>
+        <div className={`col-start-1 w-full`}>
           {position==='left'?info:cards}
         </div>
         
-        <div className=' col-start-2 w-full relative'>
+        <div className=' col-start-2 w-full'>
           {position==='left'?cards:info}
         </div>
 

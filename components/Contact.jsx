@@ -1,9 +1,9 @@
 import ContactB from '../components/ContactB'
 import Button from './Button'
 
-export default function Conctact () {
+export default function Conctact ({first}) {
   return (
-    <section className='flex flex-row justify-between mt-48 items-end mb-20'>
+    <section className={`flex flex-row justify-between ${first?'mt-24':'mt-48'} items-end mb-20`}>
 
       <div className={'text-left'}>
         <h3 className='text-accent font-semibold text-sm'>

@@ -30,18 +30,18 @@ import StripeC from '../public/images/logo_stripe_c.svg'
 import TailwindC from '../public/images/logo_tailwind_c.svg'
 
 let logos = [
-  {white: <Nextjs fill='white' alt='Nextjs logo in white' />, color: <NextjsC alt='Nextjs logo in color' />},
-  {white: <Redux fill='white' alt='Redux logo in white' />, color: <ReduxC alt='Redux logo in color' />},
-  {white: <Figma fill='white' alt='Figma logo in white' />, color: <FigmaC alt='Figma logo in color' />},
-  {white: <Tailwind fill='white' alt='Tailwind logo in white'/>, color: <TailwindC alt='Tailwind logo in color'/>},
-  {white: <Reactjs fill='white' alt='Reactjs logo in white' />,color: <ReactjsC alt='Reactjs logo in color' />},
-  {white: <Octopusdo fill='white' alt='Octopusdo logo in white'/>, color: <OctopusdoC alt='Octopusdo logo in color'/>},
-  {white: <Fauna fill='white' alt='FaunaDB logo in white' />, color: <FaunaC alt='FaunaDB logo in color' />},
-  {white: <MongoDB fill='white' alt='MongoDB logo in white' />, color: <MongoDBC  alt='MongoDB logo in color' />},
-  {white: <Github fill='white' alt='Github logo in white'  />, color: <GithubC alt='Github logo in color'  />},
-  {white: <Nodejs fill='white' alt='Nodejs logo in white' />, color: <NodejsC  alt='Nodejs logo in color' />},
-  {white: <Sanity fill='white' alt='Sanity logo in white' />, color: <SanityC  alt='Sanity logo in color' />},
-  {white: <Stripe fill='white' alt='Stripe logo in white' />, color: <StripeC  alt='Stripe logo in color' />}]
+  {white: <Nextjs className='w-28' fill='white' alt='Nextjs logo in white' />, color: <NextjsC alt='Nextjs logo in color'  className={` w-28`} />, link:'https://nextjs.org/'},
+  {white: <Redux className='w-20' fill='white' alt='Redux logo in white' />, color: <ReduxC alt='Redux logo in color'  className={` w-20`} />, link:'https://redux.js.org/'},
+  {white: <Figma className='w-14' fill='white' alt='Figma logo in white' />, color: <FigmaC alt='Figma logo in color'  className={` w-14`} />, link:'https://www.figma.com/'},
+  {white: <Tailwind className='w-24' fill='white' alt='Tailwind logo in white'/>, color: <TailwindC alt='Tailwind logo in color' className={` w-24`} />, link:'https://tailwindcss.com/'},
+  {white: <Reactjs className='w-20' fill='white' alt='Reactjs logo in white' />,color: <ReactjsC alt='Reactjs logo in color'  className={` w-20`} />, link:'https://reactjs.org/'},
+  {white: <Octopusdo className='w-16' fill='white' alt='Octopusdo logo in white'/>, color: <OctopusdoC alt='Octopusdo logo in color' className={` w-16`} />, link:'https://octopus.do/'},
+  {white: <Fauna className='w-32' fill='white' alt='FaunaDB logo in white' />, color: <FaunaC alt='FaunaDB logo in color'  className={` w-32`} />, link:'https://fauna.com/'},
+  {white: <Github className='w-20' fill='white' alt='Github logo in white'  />, color: <GithubC alt='Github logo in color'   className={` w-20`} />, link:'https://github.com/'},
+  {white: <MongoDB className='w-32' fill='white' alt='MongoDB logo in white' />, color: <MongoDBC  alt='MongoDB logo in color'  className={` w-32`} />, link:'https://www.mongodb.com/'},
+  {white: <Nodejs className='w-28' fill='white' alt='Nodejs logo in white' />, color: <NodejsC  alt='Nodejs logo in color'  className={` w-28`} />, link:'https://nodejs.org/'},
+  {white: <Sanity className='w-32' fill='white' alt='Sanity logo in white' />, color: <SanityC  alt='Sanity logo in color'  className={` w-32`} />, link:'https://www.sanity.io/'},
+  {white: <Stripe className='w-32' fill='white' alt='Stripe logo in white' />, color: <StripeC  alt='Stripe logo in color'  className={` w-32`} />, link:'https://stripe.com/'}]
 
 
 export default function Technologies () {
@@ -65,13 +65,13 @@ export default function Technologies () {
 
   return (
     <section>
-      <Subtitle name='Technology' title={`In-house technology\nfrom the newest generation`} span={'technology'} position='center'/>
+      <Subtitle name='Technology' first={false} text={'Using the latest technology we ensure high speed\nand great user experiences on all devices'} title={`In-house technology\nfrom the newest generation`} span={'technology'} position='center'/>
 
       <motion.div initial='hidden' whileInView='visible' variants={variant} viewport={{once:true}} className='w-full mt-20 grid grid-cols-6 gap-4 grid-flow-row relative'>
         {/* {logos.map((logo,i)=><div key={i}>{logo}</div>)} */}
 
         {logos.map((logo,i)=>{
-          return <Logo key={i} color={logo.color} white={logo.white}/>
+          return <Logo key={i} color={logo.color} link={logo.link} white={logo.white}/>
         })}
       </motion.div>
 

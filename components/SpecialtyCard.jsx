@@ -5,7 +5,7 @@ export default function SpecialtyCard({title, text, clicked, setClicked, noBlur}
 
     return (
       // variants={cardMotion}
-      <div  className={`flex flex-col aspect-square basis-56 h-1/2 p-5 m-2 bg-white/10 rounded-[45px] 
+      <div className={`flex flex-col aspect-square basis-56 h-1/2 p-5 m-2 bg-white/10 rounded-[45px] 
       duration-1000 overflow-hidden transition-all flex-nowrap
       text-white text-center justify-center cursor-pointer 
       outline-2 outline -outline-offset-2 hover:outline-white/30 ` + (clicked?` ${noBlur?'':'backdrop-blur-md'} shadow-2xl outline-white/30 animate-outlinePulse `:` outline-none ${noBlur?'':'backdrop-blur-sm'} shadow-md translate-y-1 scale-95 `)}

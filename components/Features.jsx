@@ -44,9 +44,9 @@ const parent = {
 export default function Features () {
   return (
     <LayoutSection>
-      <Subtitle name='Features' title={'What makes a\nbetter website'} span={'better'} position='right'/>
+      <Subtitle name='Features' first={true}  title={'What makes a\nbetter website'} span={'better'} position='right'/>
 
-      <motion.div initial='hidden' viewport={{once:false}} whileInView='visible' variants={parent} className='grid relative grid-cols-3 w-full gap-12 grid-flow-row mt-28'>
+      <motion.div initial='hidden' viewport={{once:true}} whileInView='visible' variants={parent} className='grid relative grid-cols-3 w-full gap-12 grid-flow-row mt-28'>
 
         {myfeatures.map((feature,i)=>{
 
