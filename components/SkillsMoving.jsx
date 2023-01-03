@@ -86,6 +86,11 @@ function MovingRow({allSkills, baseVelocity=100}) {
           return <li className='inline-block' key={skill+i}><Pill content={skill} round={true} /></li>
         })}
         </ul>
+        <ul className={`inline-block flex-none`}>
+          {allSkills.map((skill,i)=>{
+          return <li className='inline-block' key={skill+i}><Pill content={skill} round={true} /></li>
+        })}
+        </ul>
         
         
         
@@ -97,11 +102,12 @@ function MovingRow({allSkills, baseVelocity=100}) {
 function Pill({content,round}) {
   return (
       <div className='inline-flex mx-2 px-2 py-1 
-      bg-white/10 
+      bg-white/10 items-center
       rounded-full 
        text-xs text-white font-medium  '>
+          <Check className='inline-block mr-1' width='12' height={12} alt='checkmark icon'/>
           {/* <Check width='15' alt='checkmark'/> */}
-          <Image className='aspect-square inline-block mr-1' src={`/images/icon_check_${round?'round':'simple'}.svg`} width={12} height={12} alt='checkmark icon'/>        
+          {/* <Image priority className='aspect-square inline-block mr-1' src={`/images/icon_check_${round?'round':'simple'}.svg`} width={12} height={12} alt='checkmark icon'/>         */}
           <span className='inline-block whitespace-nowrap'>{content}</span>           
       </div>
     

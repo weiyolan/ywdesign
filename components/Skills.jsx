@@ -49,8 +49,8 @@ function Pill({content,round}) {
       bg-white/10 
       rounded-full 
        text-xs text-white font-medium  '>
-          {/* <Check width='15' alt='checkmark'/> */}
-          <Image className='aspect-square inline-block mr-1' src={`/images/icon_check_${round?'round':'simple'}.svg`} width={12} height={12} alt='checkmark icon'/>        
+          <Check width='12' height={12} alt='checkmark icon'/>
+          {/* <Image className='inline-block mr-1' src={`/images/icon_check_${round?'round':'simple'}.svg`} width={12} height={12} alt='checkmark icon'/>         */}
           <span className='inline-block whitespace-nowrap'>{content}</span>           
       </div>
     
