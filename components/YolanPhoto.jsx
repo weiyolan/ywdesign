@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import Yolan from '../public/images/yolan.svg'
+import {RiDoubleQuotesL,RiDoubleQuotesR} from 'react-icons/ri'
 
 const YolanPhoto = () => {
   let [loaded,setLoaded] = useState(false)
@@ -11,19 +12,17 @@ const YolanPhoto = () => {
 
 
   return (
-    <section className='relative flex flex-col w-full '>
+    <section className='relative flex flex-col max-w-3xl w-full mx-auto cursor-default'>
       <Yolan className={`duration-700 transition-all delay-1000 mx-auto mt-24 mb-6 ${loaded?'opacity-100':'opacity-0'}`}  width='200' alt='Picture of Yolan Weiler' />
           
- 
-      <h1 className='text-right mx-auto my-8 font-sans font-normal text-2xl text-primary'>
-         
-            {/* <RiDoubleQuotesL className='inline-block -translate-y-3' fill='white'/> */}
-            As a passionate biomedical engineer and surfer, 
-            I am dedicated to having a 
-            <span className='text-white font-medium'> global positive impact</span>
-            {/* <RiDoubleQuotesR className='inline-block relative -right-2 -translate-y-3' fill=''/> */}
-
-      </h1>
+      <div className='flex flex-row mx-auto whitespace-pre-wrap'>
+        <h2 className='text-center my-8 font-sans font-light text-2xl text-primary'>
+          <span className='inline-block flex-none '><RiDoubleQuotesL  fill='rgb(23 27 77)'/></span>
+          {` As a passionate biomedical engineer and surfer, I am dedicated to having a `}
+          <span className='text-white font-medium'>global positive impact </span>
+          <span className='inline-block flex-none '><RiDoubleQuotesR  fill='rgb(23 27 77)'/></span>
+        </h2>
+      </div>
     </section>
   )
 }

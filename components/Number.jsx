@@ -1,6 +1,6 @@
 export default function Number ({n, title, text}) {
   return(
-    <div className='flex flex-col mx-auto text-center'>
+    <div className='flex flex-col mt-12 mx-auto text-center cursor-default'>
       <div className='font-sans text-primary font-light text-9xl'>
         {n}
       </div>

@@ -32,14 +32,6 @@ let inputVariants = {
   hidden: {
     y: 50 ,
     opacity: 0
-  },
-  hover: {
-    scale:1.05,
-  },
-  focus: {
-    scale: 0.99,
-    transition: { type: 'spring', bounce: 0.4, duration:0.8
-    },   
   }
 }
 
@@ -50,11 +42,15 @@ const Form = ({noBlur}) => {
   let [message,setMessage] = useState('');
 
 
+function handleClick() {
+  
+}
+
   return (
   <section  className='my-24 w-full'>
     <Subtitle name={'Form'} title={`And here's a\nbeautiful form`} span={'form'} position={'right'} first={false}/>
 
-    <motion.form initial='hidden' whileInView='visible' variants={variant} viewport={{once:false}} className='flex flex-col items-start'>
+    <motion.form initial='hidden' whileInView='visible' variants={variant} viewport={{once:true}} className='flex flex-col items-start'>
       
       <div className='grid gap-6 grid-cols-3 w-full min-w-[30vw] auto-rows-min'>
         <div  className='inline-block relative col-start-1 col-span-1 '>
@@ -131,13 +127,13 @@ const Form = ({noBlur}) => {
       
       {/* BUTTON */}
         <div className='flex col-start-3 row-start-2 justify-start items-end'>
-          <motion.div variants={inputVariants} whileHover='hover' className={`inline-flex shadow-sm my-2
+          <motion.div variants={inputVariants} whileHover={{scale:1.05}} className={`inline-flex shadow-sm my-2
           border border-solid rounded-full px-4 py-2 mx-4  
           font-sans font-semibold text-xs textcenter whitespace-nowrap
           cursor-pointer   
           outline-none focus-visible:outline-primary border-transparent bg-primary text-white 
           active:bg-white active:text-primary hover:border-white`}
-          onClick={()=>handleClick(title)}>
+          onClick={handleClick}>
 
             <h5>SUBMIT</h5>
           </motion.div>

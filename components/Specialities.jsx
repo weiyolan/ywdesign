@@ -59,7 +59,7 @@ export default function Specialities (noBlur) {
     
       <Subtitle first={true} name='Solutions' title='Our in-house specialities' span={'specialities'} position='center'/>
     
-      <motion.div initial='hidden' viewport={{once:true}} whileInView='visible' variants={parent} 
+      <motion.div initial='hidden' viewport={{once:false}} whileInView='visible' variants={parent} 
         className='inline-flex justify-between w-full mx-auto mt-10'>
       
         {specialities.map((specialty,i)=>{
