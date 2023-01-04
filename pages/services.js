@@ -33,6 +33,7 @@ import {TbFlower,TbPlant, TbReportAnalytics, TbRoad} from 'react-icons/tb'
 import {TiSocialFacebook} from 'react-icons/ti'
 import {BiTimer, BiCodeAlt,BiGlasses} from 'react-icons/bi'
 import {SiLighthouse} from 'react-icons/si'
+import { useEffect } from 'react'
 // RiFlowChart
 // GrDirections
 // GiTrail
@@ -190,7 +191,7 @@ let serviceIconsSEO  = [
 ];
 
 let serviceList = [
-  {name:'Websites', icons: serviceIconsWebsite, title:'Step up your\ninternet game', span:'internet',text:'We build fast and modern websites from scratch to bring your story online and to organically reach new customers.'},
+  {name:'Website', icons: serviceIconsWebsite, title:'Step up your\ninternet game', span:'internet',text:'We build fast and modern websites from scratch to bring your story online and to organically reach new customers.'},
   {name:'e-Commerce', icons: serviceIconsShop, title:'Bring your\nshop online',span:'shop', text:'We build themed e-commerces integrating secure payment services like Twint to make customers love shopping with you.'},
   {name:'Logo', icons: serviceIconsLogo, title:'Put your brand\nin a new Jacket',span:'brand', text:'Your current brand image feels outdated? We integrate the latest design trends to create a new logo and modern color palette.'},
   {name:'Tools', icons: serviceIconsTools, title:'Tools to boost\nyour business',span:'boost', text:'We build simple tools that you can manage. Think automated customer scheduling, team planning, invoice reminders and more.'},
@@ -199,7 +200,8 @@ let serviceList = [
   {name:'SEO Optimisation', icons: serviceIconsSEO, title:'Google will\nlove your site',span:'Google', text:"We implement Search Engine Optimisation (SEO) because even a fast and beautiful website has no impact without it."},
   ];
 
-export default function Services({scrolled}) {
+export default function Services({scrolled, breakPointSmall}) {
+  
   return (
     <>
       <Head> 
@@ -224,6 +226,7 @@ export default function Services({scrolled}) {
             title={service.title} 
             text={service.text} 
             span={service.span}
+            breakPointSmall = {breakPointSmall}
             noBlur={true} 
             position={i % 2 === 0 ? 'left' : 'right' } 
             />

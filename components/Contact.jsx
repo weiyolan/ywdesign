@@ -30,7 +30,7 @@ export default function Conctact ({first}) {
       <ContactB />
 
       <div className='mb-2'>
-        <Button  to="quote" title="Ask a quote" mode={'white'}/>
+        <Button  to="quote" title="Contact" text="Ask a quote" mode={'white'}/>
       </div>
     </section>
   )

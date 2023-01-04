@@ -14,6 +14,11 @@
   }
 }
 
+html {
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
 * {
   /* border: 1px red solid; */
 }

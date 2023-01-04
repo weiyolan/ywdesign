@@ -47,14 +47,14 @@ function handleClick() {
 }
 
   return (
-  <section  className='my-24 w-full'>
-    <Subtitle name={'Form'} title={`And here's a\nbeautiful form`} span={'form'} position={'right'} first={false}/>
+  <section id={'Form'} className='my-24 w-full'>
+    <Subtitle name={'Form'} title={`And here's a\nbeautiful form`} span={'form'} position={'left'} first={true}/>
 
     <motion.form initial='hidden' whileInView='visible' variants={variant} viewport={{once:true}} className='flex flex-col items-start'>
       
       <div className='grid gap-6 grid-cols-3 w-full min-w-[30vw] auto-rows-min'>
         <div  className='inline-block relative col-start-1 col-span-1 '>
-          <motion.label variants={inputVariants} className='text-blue cursor-pointer font-medium text-sm inline-flex max-w-fit mt-2 ml-1' htmlFor='name'>NAME</motion.label>
+          <motion.label variants={inputVariants} className='text-primary cursor-pointer font-semibold text-xs inline-flex max-w-fit mt-2 ml-1' htmlFor='name'>NAME</motion.label>
           <motion.input variants={inputVariants} required name='name' className={`block bg-white/10 shadow-sm font-normal text-primary placeholder:text-primary
             ${!noBlur && ' backdrop-blur-md focus:backdrop-blur-sm '} target:outline-primary rounded-2xl
            autofill:bg-white/10  valid:scale-[0.99] 
@@ -69,7 +69,7 @@ function handleClick() {
         </div>
 
         <div  className='inline-block relative col-start-2 col-span-1 '>
-          <motion.label variants={inputVariants} className='text-blue cursor-pointer font-medium inline-flex max-w-fit text-sm mt-2 ml-1' htmlFor='lastname'>LAST NAME</motion.label>
+          <motion.label variants={inputVariants} className='text-primary cursor-pointer font-semibold inline-flex max-w-fit text-xs mt-2 ml-1' htmlFor='lastname'>LAST NAME</motion.label>
           <motion.input variants={inputVariants} required name='lastname' 
           className={`bg-white/10 font-normal w-full text-primary placeholder:text-primary
            p-2 my-2
@@ -91,7 +91,7 @@ function handleClick() {
         </div>
 
         <div  className='inline-block relative col-start-1 col-span-2'>
-          <motion.label variants={inputVariants} className='text-blue cursor-pointer font-medium text-sm inline-flex max-w-fit mt-2 ml-1' htmlFor='email'>EMAIL</motion.label>
+          <motion.label variants={inputVariants} className='text-primary cursor-pointer font-semibold text-xs inline-flex max-w-fit mt-2 ml-1' htmlFor='email'>EMAIL</motion.label>
           <motion.input variants={inputVariants} required name='email' className={`bg-white/10 font-normal  text-primary placeholder:text-primary
           ${!noBlur && ' backdrop-blur-md focus:backdrop-blur-sm '} 
           shadow-sm target:outline-primary rounded-2xl
@@ -108,7 +108,7 @@ function handleClick() {
         
         {/* <div className={`flex flex-row `}> */}
         <div className='inline-flex flex-col w-full col-start-1 col-span-3 '>
-          <motion.label variants={inputVariants} className='text-blue cursor-pointer font-medium text-sm inline-flex max-w-fit mt-2 ml-1' htmlFor='message'>MESSAGE</motion.label>
+          <motion.label variants={inputVariants} className='text-primary cursor-pointer font-semibold text-xs inline-flex max-w-fit mt-2 ml-1' htmlFor='message'>MESSAGE</motion.label>
           <motion.textarea variants={inputVariants} required className={`bg-white/10 font-normal  text-primary placeholder:text-primary 
           ${!noBlur && ' backdrop-blur-md focus:backdrop-blur-sm '} shadow-sm target:outline-primary rounded-2xl
           autofill:bg-white/10 valid:scale-[0.99]

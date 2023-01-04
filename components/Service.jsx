@@ -1,15 +1,19 @@
 import Image from "next/image"
 import Subtitle from "./Subtitle"
 import ServiceCard from "./ServiceCard"
-import { useState,useEffect } from "react"
+import { useState,useEffect, useCallback } from "react"
 import LayoutSection from "./LayoutSection"
 import { motion } from "framer-motion"
+import ArrowLink from "./ArrowLink"
+import useWindowSize from "./useWindowSize"
 
 
-export default function Service({name, title, span, text, position, first, noBlur, icons}) {
+
+export default function Service({name, title, span, text, position, first, noBlur, icons, breakPointSmall}) {
   // create object with key-value pairs of index-false
   let [visibleItem, setVisibleItem] = useState(new Array(icons.length).fill(false))
   let [clicked,setClicked] = useState(false)
+  let window = useWindowSize()
   // let [visibleItem, setVisibleItem] = useState(Object.fromEntries(new Array(icons.length).fill(false).map((val,i)=>[i,val])))
   // let [globalClick,setGlobalClick] = useState(false)
   // let [serviceText,setServiceText] = useState('')
@@ -47,20 +51,24 @@ export default function Service({name, title, span, text, position, first, noBlu
     }    
   }
 
+  // useEffect(()=>{
+  //   console.log(breakPointSmall)
+  // })
+
   let cards = (
-    <div className='relative w-full h-full'>
+    <div className='relative w-full'>
       {icons.map((icon,i)=>{
         return (
-          <ServiceCard icon={icon} noBlur={noBlur} first={first} key={i} position={position} visible={visibleItem[i]}/>
+          <ServiceCard icon={icon} noBlur={noBlur} first={first} key={i} position={position} breakPointSmall={breakPointSmall} visible={visibleItem[i]}/>
         )
       })}  
     </div>
   )
 
   let info = (
-    <div>
+    <div className='cursor-default'>
       <Subtitle className=''
-          name={name} 
+          name={name}   
           title={title} 
           span={span} 
           text={text}
@@ -68,29 +76,49 @@ export default function Service({name, title, span, text, position, first, noBlu
           position={position}
         />
 {/* initial={'hidden'} whileInView={"visible"} variants={parent} */}
-        <div className= {`flex flex-row mt-8 ${position==='left'?'':'justify-end'} `}>
-          {icons.map((icon,i)=>{
-            // console.log('i and visibility of service icon is:' )
-            // console.log(i)
-            // console.log(visibleItem[i])
-            return <ServiceIcon noBlur={noBlur} icon={icon.icon} key={i} clicked={visibleItem[i]} handleClick={(newVal)=>{handleVisibility(newVal,i);setClicked(true)}} />
-            })}
-        </div>
+      <div className= {`flex ${position==='left'?'':'justify-end'} `}><ArrowLink text={'Ask for it'} to={'/contact/#Form'} ext={false}/></div>
+      <div className= {`flex flex-row flex-wrap  ${position==='left'?'':'justify-end'} `}>
+        {icons.map((icon,i)=>{
+          // console.log('i and visibility of service icon is:' )
+          // console.log(i)
+          // console.log(visibleItem[i])
+          return <ServiceIcon noBlur={noBlur} icon={icon.icon} key={i} clicked={visibleItem[i]} handleClick={(newVal)=>{handleVisibility(newVal,i);setClicked(true)}} />
+          })}
+      </div>
     </div>
   )
 
-  return(
-  
-      <div className='grid grid-cols-2 w-full'>
 
-        <div className={`col-start-1 w-full`}>
-          {position==='left'?info:cards}
+
+
+  return(
+      <div>
+      {window.width<breakPointSmall?(
+       <div id={name} className='grid grid-row-2 w-full'>
+
+        <div className={`row-start-1 w-full`}>
+          {info}
         </div>
         
-        <div className=' col-start-2 w-full'>
-          {position==='left'?cards:info}
+        <div className=' row-start-2 w-full min-h-[200px]'>
+          {cards}
         </div>
 
+      </div>
+      ):
+      (<div id={name} className='grid grid-cols-2 w-full'>
+
+          <div className={`col-start-1 w-full`}>
+            {position==='left'?info:cards}
+          </div>
+          
+          <div className=' col-start-2 w-full'>
+            {position==='left'?cards:info}
+          </div>
+
+        </div>
+        )
+      }
       </div>
     )
 }

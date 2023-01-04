@@ -9,8 +9,8 @@ let inactiveStyle = ` border-transparent text-primary/70 hover:border-primary ac
 let darkStyle = ` border-transparent bg-primary text-white 
   active:bg-white active:text-primary hover:border-white`
 
-
-export default function Button({to, title, selected, handleClick, darkMode, mode}) {
+  
+export default function Button({to, title, text, selected, handleClick, darkMode, mode}) {
     // let content = title;
 
   switch (mode) {
@@ -20,7 +20,7 @@ export default function Button({to, title, selected, handleClick, darkMode, mode
           href={`/${to}`}
           onClick={()=>handleClick(title)}>
 
-            <h5>{title.toUpperCase()}</h5>
+            <h5>{text.toUpperCase()}</h5>
         </Link>)
 
     case 'selected' :
@@ -29,17 +29,22 @@ export default function Button({to, title, selected, handleClick, darkMode, mode
            href={`/${to}`}
            onClick={()=>handleClick(title)}>
 
-            <h5>{title.toUpperCase()}</h5>
+            <h5>{text.toUpperCase()}</h5>
 
         </Link>)
 
     case 'dark' :
-    return(
-      <Link className={basicStyle + darkStyle + ''}
+      return(
+      // <Link className={basicStyle + darkStyle + ''}
+        <Link className={`flex border border-solid rounded-full px-4 py-2 mx-4 
+        font-sans font-semibold text-xs textcenter self-center whitespace-nowrap
+        duration-300 cursor-pointer   
+        outline-none focus-visible:outline-primary border-transparent bg-primary text-white 
+        active:bg-white active:text-primary hover:border-white`}
         href={`/${to}`}
         onClick={()=>handleClick(title)}>
 
-          <h5>{title.toUpperCase()}</h5>
+          <h5>{text.toUpperCase()}</h5>
 
       </Link>)
 
@@ -53,7 +58,7 @@ export default function Button({to, title, selected, handleClick, darkMode, mode
           href={`/${to}`}
           onClick={()=>handleClick(title)}>
   
-            <h5>{title.toUpperCase()}</h5>
+            <h5>{text.toUpperCase()}</h5>
   
         </Link>)
 
@@ -63,7 +68,7 @@ export default function Button({to, title, selected, handleClick, darkMode, mode
           href={`/${to}`}
           onClick={()=>handleClick(title)}>
   
-            <h5>{title.toUpperCase()}</h5>
+            <h5>{text.toUpperCase()}</h5>
   
         </Link>)
     default: 
@@ -72,7 +77,7 @@ export default function Button({to, title, selected, handleClick, darkMode, mode
           href={`/${to}`}
           onClick={()=>handleClick(title)}>
 
-            <h5>{title.toUpperCase()}</h5>
+            <h5>{text.toUpperCase()}</h5>
         </Link>)
   }
     

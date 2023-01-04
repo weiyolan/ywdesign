@@ -31,15 +31,15 @@ export default function Navbar({from}) {
               </Link> 
             </div>
             <div className='flex flex-row justify-between justify-items-center col-start-4 col-span-6 self-center mx-auto'>
-              <Button className='' to="" title="Home" mode={selectedB==='Home'?'selected':'unselected'} handleClick={selectButton}/>
-              <Button className='' to="services" title="Services" mode={selectedB==='Services'?'selected':'unselected'} handleClick={selectButton}/>
-              <Button className='' to="aboutme" title="About Me" mode={selectedB==='About Me'?'selected':'unselected'} handleClick={selectButton}/>
-              <Button className='' to="contact" title="Contact" mode={selectedB==='Contact'?'selected':'unselected'} handleClick={selectButton}/>
+              <Button className='' to="" title="Home" text="Home" mode={selectedB==='Home'?'selected':'unselected'} handleClick={selectButton}/>
+              <Button className='' to="services" title="Services" text="Services" mode={selectedB==='Services'?'selected':'unselected'} handleClick={selectButton}/>
+              <Button className='' to="aboutme" title="About Me" text="About Me" mode={selectedB==='About Me'?'selected':'unselected'} handleClick={selectButton}/>
+              <Button className='' to="contact" title="Contact"  text="Contact" mode={selectedB==='Contact'?'selected':'unselected'} handleClick={selectButton}/>
             </div>
             <div className='flex flex-row col-start-10 col-span-3 justify-self-end self-center'>
-              <Button className='' to="" title="Have a question?"/>
-              <Button className='' to="" title="EN"/>
-              <Button className='' to="quote" title="Ask a quote" mode={'dark'}/>
+              {/* <Button className=''  to="contact/#Form" title="Contact" text="Have a question?" handleClick={selectButton} /> */}
+              {/* <Button className='' to="" title="EN"/> */}
+              <Button className='' to="contact/#Form" title="Contact" text="Ask a quote" handleClick={selectButton} mode={'dark'}/>
             </div>
         </div>
     )

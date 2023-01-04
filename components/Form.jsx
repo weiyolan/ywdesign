@@ -5,7 +5,7 @@ import Subtitle from './Subtitle'
 
 const Form = () => {
   return (
-  <section className='my-24 w-full'>
+  <section id={'Form'} className='my-24 w-full'>
     <Subtitle name={'Form'} title={`And here's a\nbeautiful form`} span={'form'} position={'right'} first={false}/>
 
     <form  className='flex flex-col items-start'>
