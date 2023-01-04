@@ -136,8 +136,10 @@ function ServiceIcon ({icon, clicked, handleClick, noBlur}) {
   return (
     // <motion.div variants={iconAnimation} initial='hidden' custom={clicked} whileTap='tap' whileInView='visible'
     <div
-    className={`flex ${noBlur?'':'backdrop-blur-md'} justify-center cursor-pointer items-center duration-200 bg-white/10 filter m-3 w-16 h-16 rounded-xl outline-2 outline -outline-offset-2 hover:outline-white/30 `+ 
-    (clicked?` outline-white/30 animate-outlinePulse shadow-md scale-95 translate-y-1 `:` shadow-2xl outline-white/0 `)}
+    className={`flex ${noBlur?'':'backdrop-blur-md'} justify-center cursor-pointer items-center duration-200 bg-white/10 filter m-3 w-16 h-16 rounded-xl 
+    outline-2 outline -outline-offset-2 hover:outline-white/30 
+    `+ 
+    (clicked?` outline-white/30 animate-outlinePulse shadow-md scale-95 translate-y-1 `:`hover:scale-[1.08] shadow-2xl outline-white/0 `)}
     onClick={()=>handleClick(!clicked)}
     >
 

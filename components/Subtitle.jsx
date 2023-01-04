@@ -39,7 +39,7 @@ export default function Subtitle({name, title, span, text, position, first}) {
           {title.split(span)[1]}
         </h2>
 
-        {text.length>0 && <div className='text-primary font-light'
+        {text.length>0 && <div className='text-primary font-normal'
         >{text}</div>}
       </div>
 

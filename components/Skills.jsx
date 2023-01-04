@@ -35,7 +35,16 @@ function MovingRow({type, allSkills, left}) {
           return <li className='inline-block' key={skill}><Pill content={skill} round={true} /></li>
         })}
         </ul>
-
+        <ul className={`inline-block flex-none`}>
+          {allSkills.map((skill)=>{
+          return <li className='inline-block' key={skill}><Pill content={skill} round={true} /></li>
+        })}
+        </ul>
+        <ul className={`inline-block flex-none`}>
+          {allSkills.map((skill)=>{
+          return <li className='inline-block' key={skill}><Pill content={skill} round={true} /></li>
+        })}
+        </ul>
         
         
         {/* animate-[left2Scroll_10s_linear_infinite] */}

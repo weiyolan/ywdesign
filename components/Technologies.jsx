@@ -33,7 +33,7 @@ let logos = [
   {white: <Nextjs className='w-28' fill='white' alt='Nextjs logo in white' />, color: <NextjsC alt='Nextjs logo in color'  className={` w-28`} />, link:'https://nextjs.org/'},
   {white: <Redux className='w-20' fill='white' alt='Redux logo in white' />, color: <ReduxC alt='Redux logo in color'  className={` w-20`} />, link:'https://redux.js.org/'},
   {white: <Figma className='w-14' fill='white' alt='Figma logo in white' />, color: <FigmaC alt='Figma logo in color'  className={` w-14`} />, link:'https://www.figma.com/'},
-  {white: <Tailwind className='w-24' fill='white' alt='Tailwind logo in white'/>, color: <TailwindC alt='Tailwind logo in color' className={` w-24`} />, link:'https://tailwindcss.com/'},
+  {white: <Tailwind className='w-24' fill='white' alt='Tailwind logo in white'/>, color: <TailwindC className='w-24' alt='Tailwind logo in color'/>, link:'https://tailwindcss.com/'},
   {white: <Reactjs className='w-20' fill='white' alt='Reactjs logo in white' />,color: <ReactjsC alt='Reactjs logo in color'  className={` w-20`} />, link:'https://reactjs.org/'},
   {white: <Octopusdo className='w-16' fill='white' alt='Octopusdo logo in white'/>, color: <OctopusdoC alt='Octopusdo logo in color' className={` w-16`} />, link:'https://octopus.do/'},
   {white: <Fauna className='w-32' fill='white' alt='FaunaDB logo in white' />, color: <FaunaC alt='FaunaDB logo in color'  className={` w-32`} />, link:'https://fauna.com/'},
