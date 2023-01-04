@@ -77,7 +77,7 @@ export default function Footer({scrolled}) {
           <ul>
             {contactList.map((item, i)=>{
               if (item.ext) {
-              return <li key={i} className='text-white font-light my-3 cursor-alias' ><Link href={item.link} legacyBehavior target='_blank' passHref><a className='text-white font-light my-3 cursor-alias' target='_blank' href={item.link}>{item.text}</a></Link></li>}
+              return <li key={i} className='text-white font-light my-3 cursor-alias' ><Link href={item.link} legacyBehavior target='_blank' passHref><a rel="noopener noreferrer" className='text-white font-light my-3 cursor-alias' target='_blank' href={item.link}>{item.text}</a></Link></li>}
               else { return <li key={i} className='text-white font-light my-3' ><Link href={item.link}>{item.text}</Link></li>}
             })}
           </ul>
