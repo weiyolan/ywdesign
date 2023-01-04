@@ -19,7 +19,7 @@ export default function ContactB() {
       </Link>
 
       <Link target='_blank' hrefPass legacyBehavior href={whatsappLink}>
-        <a className='cursor-alias' target='_blank' href={whatsappLink}>
+        <a className='cursor-alias' rel="noopener noreferrer" target='_blank' href={whatsappLink}>
           <div className=' rounded-full bg-white/10 backdrop-blurmdm p-4 mx-2 outline-none -outline-offset-2 
           duration-300 shadow-xl hover:backdrop-blur-sm hover:outline-white/20 hover:animate-outlinePulse hover:shadow-sm hover:translate-y-1 hover:scale-[0.98] '>
             <WhatsApp width='20' fill='white' alt='whatsapp icon'/>
@@ -28,7 +28,7 @@ export default function ContactB() {
       </Link>
 
       <Link target='_blank' hrefPass legacyBehavior href={mailLink}>
-        <a className='cursor-alias' target='_blank' href={mailLink}>
+        <a className='cursor-alias'  rel="noopener noreferrer" target='_blank' href={mailLink}>
           <div className='rounded-full bg-white/10 backdrop-blur-md p-4 mx-2 outline-none -outline-offset-2 
           duration-300 shadow-xl hover:backdrop-blur-sm hover:outline-white/20 hover:animate-outlinePulse hover:shadow-sm hover:translate-y-1 hover:scale-[0.98] '>
           <Mail width='20' fill='white' alt='mail icon'/>

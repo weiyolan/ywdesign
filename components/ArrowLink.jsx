@@ -13,6 +13,7 @@ const ArrowLink = ({text,to,ext}) => {
       `} 
       href={to} 
       target='_blank'
+      rel="noopener noreferrer"
       >
       <div className='inline-flex items-center my-4 relative'
       onMouseEnter={()=>setHovering(true)}
