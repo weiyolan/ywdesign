@@ -10,6 +10,7 @@ import Conctact from '../components/Contact'
 import Technologies from '../components/Technologies'
 import Service from '../components/Service'
 import Navbar from '../components/Navbar';
+import useWindowSize from '../components/useWindowSize'
 
 import IconScreen from '../public/images/icon_screen.svg';
 import IconGraph from '../public/images/icon_graph.svg';
@@ -207,7 +208,7 @@ let serviceList = [
   ];
 
 export default function Services({scrolled, breakPointSmall}) {
-  
+  let {width} = useWindowSize();
   return (
     <>
       <Head> 
@@ -239,9 +240,9 @@ export default function Services({scrolled, breakPointSmall}) {
           })}
 
 
-          <Technologies/>
+          <Technologies breakPointSmall={breakPointSmall}/>
 
-          <Conctact first={false}/>
+          <Conctact breakPointSmall={breakPointSmall} first={width<breakPointSmall?true:false}/>
 
         </Layout>
 

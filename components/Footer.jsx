@@ -39,7 +39,7 @@ export default function Footer({scrolled}) {
       initial={{y: 200 }} 
       whileInView={{y: 0, transition: {type:'spring', stiffness: 200, damping:25}}} 
       viewport={{once : true}}
-      className={`backdrop-blur bg-white/10 rounded-t-[2rem] bottom-0 relative p-16 mt-10 w-full`}>
+      className={`backdrop-blur bg-white/10 rounded-t-[2rem] mt-24 bottom-0 relative p-16 w-full`}>
       
       <div
       className='flex justify-between max-w-4xl mx-auto items-start '>

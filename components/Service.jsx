@@ -56,7 +56,7 @@ export default function Service({name, title, span, text, position, first, noBlu
   // })
 
   let cards = (
-    <div className={`relative w-full ${window.width>breakPointSmall?'h-full':'min-h-[40vh]'}`}>
+    <div className={`relative w-full ${window.width<breakPointSmall?(window.width<360?'min-h-[45vh]':'min-h-[40vh]'):'h-full'}`}>
       {icons.map((icon,i)=>{
         return (
           <ServiceCard icon={icon} noBlur={noBlur} first={window.width<breakPointSmall?true:first} key={i} position={position} breakPointSmall={breakPointSmall} visible={visibleItem[i]}/>
@@ -76,8 +76,10 @@ export default function Service({name, title, span, text, position, first, noBlu
           position={position}
         />
 {/* initial={'hidden'} whileInView={"visible"} variants={parent} */}
-      <div className= {`flex ${position==='left'?'':'justify-end'} `}><ArrowLink text={'Ask for it'} to={'/contact/#Form'} ext={false}/></div>
-      <div className= {`flex flex-row ${window.width<360?'flex-wrap':''}  ${position==='left'?'':'justify-end'} `}>
+      <div className= {`flex ${position==='left'?'':'justify-end'} `}>
+        <ArrowLink text={'Ask for it'} to={'/contact/#Form'} ext={false}/>
+        </div>
+      <div className= {`flex mt-8  ${window.width<360?'flex-wrap':''}  ${position==='left'?'':'justify-end'} `}>
         {icons.map((icon,i)=>{
           // console.log('i and visibility of service icon is:' )
           // console.log(i)

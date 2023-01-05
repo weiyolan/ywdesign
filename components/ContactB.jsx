@@ -9,7 +9,7 @@ let mailLink = 'mailto:contact@ywdesign.co?subject=Website%20Project&body=Hi%20Y
 export default function ContactB() {
   return (
 
-    <div className='inline-flex justify-center items-center flex-row'>
+    <div className='inline-flex justify-center items-center mt-4 flex-row'>
       
       <Link href='tel:+32471124525'>
         <div className='rounded-full bg-white/10 backdrop-blur-md p-4 mx-2 outline-none -outline-offset-2 cursor-pointer

@@ -17,7 +17,7 @@ export default function ServiceCard ({icon, visible, position, noBlur, first, br
         `top-0  -translate-x-1/2 mt-8 w-full `:
         
         ` top-1/2 sm:min-w-[40vw] lg:min-w-[30vw] xl:min-w-[400px]
-        ${first?'-translate-y-1/3':'-translate-y-[20%]'}  
+        ${first?'-translate-y-1/3':'-translate-y-[10%]'}  
         ${position==='left'?' xl:-translate-x-1/3  sm:-translate-x-[45%] ':' sm:-translate-x-[55%] xl:-translate-x-2/3 '}`
         
       } 
@@ -26,7 +26,7 @@ export default function ServiceCard ({icon, visible, position, noBlur, first, br
        ` blur-sm invisible bg-transparent text-transparent filter ${noBlur?'':'backdrop-blur-sm'} shadow-transparent shadow-sm z-0`}`}
       >
       
-      <h3 className={`duration-500 inline-flex mx-auto xl:whitespace-nowrap my-2 text-3xl`+
+      <h3 className={`duration-500 inline-flex mx-auto lg:whitespace-nowrap my-2 text-3xl`+
       (visible? ' font-light  ' :
       ' -translate-y-24 font-thin -rotate-1') }>
         {icon.title}

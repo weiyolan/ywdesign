@@ -1,17 +1,21 @@
+import { useEffect, useState } from 'react'
 import ContactB from '../components/ContactB'
+import AccentTitle from './AccentTitle'
 import Button from './Button'
+import useWindowSize from './useWindowSize'
 
-export default function Conctact ({first}) {
+export default function Conctact ({first, breakPointSmall}) {
+  let {width} = useWindowSize()
+
+
   return (
-    <section className={`flex flex-row justify-between ${first?'mt-24':'mt-48'} items-end mb-20`}>
+    <section className={`flex text-left whitespace-pre-wrap
+    ${first?' mt-24 ':' mt-48 '}
+    ${width<breakPointSmall?' flex-col items-start  ':' justify-between items-end '} `}>
 
-      <div className={'text-left'}>
-        <h3 className='text-accent font-semibold text-sm'>
-          CONTACT
-        </h3>
-
-        <h2 className='text-primary font-normal text-5xl mt-10 whitespace-pre-wrap'>
-          
+      <div>
+        <AccentTitle text='Contact' />
+        <h2 className={` text-primary font-normal text-5xl mt-10`}>
           {'I can '}
 
           <span className='text-white font-[550]'>
@@ -25,13 +29,8 @@ export default function Conctact ({first}) {
           </span> 
         </h2>
       </div>
-
-
-      <ContactB />
-
-      <div className='mb-2'>
-        <Button  to="quote" title="Contact" text="Ask a quote" mode={'white'}/>
-      </div>
+        <ContactB />
+      <Button to="quote" title="Contact" text="Ask a quote" mode={'white'}/>
     </section>
   )
 }

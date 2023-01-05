@@ -8,9 +8,9 @@ const ArrowLink = ({text,to,ext}) => {
 
   if (ext) {
     return (
-      <Link className={`text-primary font-semibold text-sm cursor-alias`} href={to} rel="noopener noreferrer" target='_blank'>
+      <Link className={`text-primary font-semibold  text-sm cursor-alias`} href={to} rel="noopener noreferrer" target='_blank'>
       
-      <div className='inline-flex items-center my-4 relative'
+      <div className='inline-flex items-center mt-4 relative'
       onMouseEnter={()=>setHovering(true)}
       onMouseLeave={()=>setHovering(false)}>
         {text}
@@ -21,10 +21,9 @@ const ArrowLink = ({text,to,ext}) => {
   }
 
   return (
-    <Link className={` text-primary font-semibold text-sm 
-    `} 
+    <Link className={` text-primary font-semibold text-sm  `} 
     href={to}>
-      <div className='inline-flex items-center my-4 relative'
+      <div className='inline-flex items-center mt-4 relative'
       onMouseEnter={()=>setHovering(true)}
       onMouseLeave={()=>setHovering(false)}>
         {text}
