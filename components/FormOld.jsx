@@ -5,7 +5,7 @@ import Subtitle from './Subtitle'
 
 const Form = () => {
   return (
-  <section id={'Form'} className='my-24 w-full'>
+  <section id={'Form'} className='w-full'>
     <Subtitle name={'Form'} title={`And here's a\nbeautiful form`} span={'form'} position={'right'} first={false}/>
 
     <form  className='flex flex-col items-start'>
@@ -60,7 +60,7 @@ const Form = () => {
         {/* BUTTON */}
         <div className='flex col-start-3 row-start-2 justify-start items-end'>
           <div className={`inline-flex shadow-xl my-2
-          border border-solid rounded-full px-4 py-2 mx-4  
+          border border-solid rounded-full px-4 py-2  
           font-sans font-semibold text-xs textcenter whitespace-nowrap
           duration-300 cursor-pointer   
           outline-none focus-visible:outline-primary border-transparent bg-primary text-white 
@@ -71,7 +71,6 @@ const Form = () => {
           </div>
         </div>
       
-      {/* <div className={`flex flex-row `}> */}
         <div className='inline-flex flex-col w-full col-start-1 col-span-3 '>
           <label className='text-blue font-medium text-sm block my-2 ml-1' htmlFor='message'>MESSAGE</label>
           <textarea required className='bg-white/10 font-normal  text-primary placeholder:text-primary

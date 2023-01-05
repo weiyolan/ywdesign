@@ -8,20 +8,14 @@ const ArrowLink = ({text,to,ext}) => {
 
   if (ext) {
     return (
-      <Link className={``} href={to} target='_blank' hrefPass legacyBehavior>
-      <a className={`text-primary font-semibold text-sm cursor-alias
-      `} 
-      href={to} 
-      target='_blank'
-      rel="noopener noreferrer"
-      >
+      <Link className={`text-primary font-semibold text-sm cursor-alias`} href={to} rel="noopener noreferrer" target='_blank'>
+      
       <div className='inline-flex items-center my-4 relative'
       onMouseEnter={()=>setHovering(true)}
       onMouseLeave={()=>setHovering(false)}>
         {text}
         <Arrow hovering={hovering} />
       </div>
-      </a>
       </Link>
     )
   }

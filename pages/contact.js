@@ -4,13 +4,13 @@ import Layout from '../components/Layout'
 import Navbar from '../components/Navbar'
 import Title from '../components/Title'
 import Map from '../components/Map'
-import Form from '../components/Form'
+// import Form from '../components/FormOld'
 import FormMotion from '../components/FormMotion'
 
 
 
 
-export default function Contact({scrolled}) {
+export default function Contact({scrolled, breakPointSmall}) {
   return (
     <>
       <Head> 
@@ -19,11 +19,11 @@ export default function Contact({scrolled}) {
 
       <main>
         <Navbar from='Contact'/>
-        <Title type='contact'/>
+        <Title breakPointSmall={breakPointSmall} type='contact'/>
 
         <Layout>
           <Map/>
-          <FormMotion/>
+          <FormMotion noBlur={true}/>
         </Layout>
         <Footer scrolled={scrolled}/>
 

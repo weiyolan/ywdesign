@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Check from '../public/images/icon_check_round.svg';
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import useWindowSize from './useWindowSize';
 import {
   motion,
   useScroll,
@@ -20,13 +21,18 @@ const skills2 = ['Next.js', "Logo's", 'Websites', 'React.js', 'Front-End', 'Mobi
 'Javascript', 'CSS', 'Sanity.io', 'CMS Integration', 'Headless CMS', 'Tailwind CSS', 'VS Code', 'Postman', 
 'API', 'Node.js', 'NoSQL', 'e-Commerce', 'Redux', 'GitHub', 'Web 3.0', "MongoDB", 'Stripe', 'Payments', 'Twint'];
 
-export default function SkillsMoving() {
+export default function SkillsMoving({breakPointSmall}) {
+ let window = useWindowSize();
 
-  return (
+//  useEffect(()=>{
+//   console.log(breakPointSmall)
+//  })
+  
+ return (
     <div className='cursor-default'>
       
-      <MovingRow baseVelocity={-1} allSkills={skills2}/>
-      <MovingRow baseVelocity={1} allSkills={skills1}/>
+      <MovingRow baseVelocity={window.width<breakPointSmall?-7:-1} allSkills={skills2}/>
+      <MovingRow baseVelocity={window.width<breakPointSmall?7:1} allSkills={skills1}/>
         
     </div>
 

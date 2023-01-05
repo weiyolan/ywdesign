@@ -47,7 +47,7 @@ function handleClick() {
 }
 
   return (
-  <section id={'Form'} className='my-24 w-full'>
+  <section id={'Form'} className='w-full'>
     <Subtitle name={'Form'} title={`And here's a\nbeautiful form`} span={'form'} position={'left'} first={true}/>
 
     <motion.form initial='hidden' whileInView='visible' variants={variant} viewport={{once:true}} className='flex flex-col items-start'>
@@ -128,7 +128,7 @@ function handleClick() {
       {/* BUTTON */}
         <div className='flex col-start-3 row-start-2 justify-start items-end'>
           <motion.div variants={inputVariants} whileHover={{scale:1.05}} className={`inline-flex shadow-sm my-2
-          border border-solid rounded-full px-4 py-2 mx-4  
+          border border-solid rounded-full px-4 py-2  
           font-sans font-semibold text-xs textcenter whitespace-nowrap
           cursor-pointer   
           outline-none focus-visible:outline-primary border-transparent bg-primary text-white 

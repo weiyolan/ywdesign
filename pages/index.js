@@ -7,12 +7,14 @@ import Footer from '../components/Footer'
 import Specialities from '../components/Specialities'
 import Navbar from '../components/Navbar'
 import Features from '../components/Features'
+import { useEffect } from 'react'
 
 // const inter = Inter({ subsets: ['latin'] })
 
 
 
-export default function Home({scrolled}) {
+export default function Index({scrolled, breakPointSmall}) {
+
   return (
     <>
       <Head>
@@ -21,7 +23,7 @@ export default function Home({scrolled}) {
       
       <main>
         <Navbar from='Home'/>
-        <Title type='home'/>
+        <Title breakPointSmall={breakPointSmall} type='home'/>
 
         <Layout>
           

@@ -130,11 +130,17 @@ let serviceIconsTools  = [
 let serviceIconsAnalysis  = [
   {icon: <BsFileEarmarkBarGraphFill color='white' className='mx-auto w-8 h-8' alt={'Analysis report Icon'}/>, 
   title:'In-Depth Report', 
-  list:['We analyse your online performance, looking at your overall brand image, user experience, speed, security, responsiveness, communication and spelling errors.','Several suggestions are made of actions that are most impactful to improve your score.']
-  },{icon: <GiOpenBook color='white' className='mx-auto w-8 h-8' alt='Graph going up Icon'/>, 
-  title: 'Gather Knowledge',
-  list: ['Start by gathering the knowledge needed to target the investments that will most impact your business growth.']
-  },{icon: <HiOutlineTranslate color='white' className='mx-auto w-8 h-8' alt={'Translate Icon'}/>, 
+  list:['We analyse your online performance, looking at your overall brand image, user experience, speed, security, responsiveness, communication and spelling errors.']
+  },
+  {icon: <IconGraph color='white' className='mx-auto w-8 h-8' alt='Graph going up Icon'/>, 
+  title: 'Grow Your Business',
+  list: ['Several suggestions are made of actions and investments that will most impact your business growth.']
+  },
+  // {icon: <GiOpenBook color='white' className='mx-auto w-8 h-8' alt='Graph going up Icon'/>, 
+  // title: 'Gather Knowledge',
+  // list: ['Start by gathering the knowledge needed to target .']
+  // },
+  {icon: <HiOutlineTranslate color='white' className='mx-auto w-8 h-8' alt={'Translate Icon'}/>, 
   title:'Language of Your Choice', 
   list:['The report and recommendations are delivered in the language of your choice with the possibilities of English, French or Dutch.']
   },
@@ -193,7 +199,7 @@ let serviceIconsSEO  = [
 let serviceList = [
   {name:'Website', icons: serviceIconsWebsite, title:'Step up your\ninternet game', span:'internet',text:'We build fast and modern websites from scratch to bring your story online and to organically reach new customers.'},
   {name:'e-Commerce', icons: serviceIconsShop, title:'Bring your\nshop online',span:'shop', text:'We build themed e-commerces integrating secure payment services like Twint to make customers love shopping with you.'},
-  {name:'Logo', icons: serviceIconsLogo, title:'Put your brand\nin a new Jacket',span:'brand', text:'Your current brand image feels outdated? We integrate the latest design trends to create a new logo and modern color palette.'},
+  {name:'Logo', icons: serviceIconsLogo, title:'Put your brand\nin a new jacket',span:'brand', text:'Your current brand image feels outdated? We integrate the latest design trends to create a new logo and modern color palette.'},
   {name:'Tools', icons: serviceIconsTools, title:'Tools to boost\nyour business',span:'boost', text:'We build simple tools that you can manage. Think automated customer scheduling, team planning, invoice reminders and more.'},
   {name:'Analysis', icons: serviceIconsAnalysis, title:'Knowledge is\npower',span:'power', text:'We provide an in-depth report analysing your online presence inlcuding brand coherence, vision, values, speed and UX/UI.'},
   {name:'Prototypes', icons: serviceIconsPrototypes, title:'We work with\nStart-ups',span:'Start-ups', text:'We help shape your ideas into functioning prototypes that convince your stakeholders and new investors.'},
@@ -211,7 +217,7 @@ export default function Services({scrolled, breakPointSmall}) {
       <main className="bg-[url('/images/background.svg')]">
         <Navbar from='Services'/>
         
-        <Title type='services'/>
+        <Title breakPointSmall={breakPointSmall} type='services'/>
         
         <Layout>
 

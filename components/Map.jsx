@@ -16,7 +16,7 @@ import Image from 'next/image'
 
 const Map = () => {
   return (
-    <section className='my-24'>
+    <section className=''>
       <Subtitle name='Contact' title={'Here are the details'} span={'details'} position={'left'} first={true}/>
       
       <div className='grid grid-cols-3 gap-6 h-2/3 '>

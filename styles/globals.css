@@ -20,7 +20,7 @@ html {
 }
 
 * {
-  /* border: 1px red solid; */
+  border: 1px red solid;
 }
 
   input:-webkit-autofill,

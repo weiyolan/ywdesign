@@ -1,16 +1,19 @@
 import Image from 'next/image';
 import Button from './Button';
-import Skills from './Skills';
 import { useEffect, useState } from 'react';
 import SkillsMoving from './SkillsMoving';
 
-export default function Title({type}) {
+export default function Title({type, breakPointSmall}) {
+  // useEffect(()=>{
+  //   console.log(breakPointSmall)
+  // })
+
 
   return (
       <section className='text-center w-full '>
           <GetTitle type={type}/>
        
-        <SkillsMoving/>
+        <SkillsMoving breakPointSmall={breakPointSmall}/>
 
       </section>
 
@@ -23,7 +26,7 @@ function GetTitle({type}) {
   let [ loadStyle, setLoadStyle] = useState(' ');
 
   useEffect(()=>{
-    setLoadStyle(' text-white font-semibold scale-150 translate-x-5 ')
+    setLoadStyle('text-white font-semibold scale-150 translate-x-5 ')
   },[])
 
   switch (type) {

@@ -32,7 +32,7 @@ let missionText = 'A positive impact on the planet and its people. I want to use
 let aboutmeText = "I'm an open-minded and ambitious person, taking every challenge as an opportunity to learn. I love working with people and I tend to get the best out of everyone. Listening and planning skills help me to pull the team forward, achieving always-improving results, together."
 
 
-export default function Aboutme({scrolled}) {
+export default function Aboutme({scrolled, breakPointSmall}) {
   return (
     <>
       <Head> 
@@ -41,7 +41,7 @@ export default function Aboutme({scrolled}) {
 
       <main>
         <Navbar from='About Me'/>
-        <Title type='aboutme'/>
+        <Title breakPointSmall={breakPointSmall} type='aboutme'/>
 
         <Layout type='text'>
         
