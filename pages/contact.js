@@ -6,11 +6,14 @@ import Title from '../components/Title'
 import Map from '../components/Map'
 // import Form from '../components/FormOld'
 import FormMotion from '../components/FormMotion'
+import { useAppContext } from '../components/Context'
 
 
 
 
-export default function Contact({scrolled, breakPointSmall}) {
+export default function Contact({scrolled}) {
+  let {width, breakPointSmall} = useAppContext();
+
   return (
     <>
       <Head> 
@@ -22,8 +25,10 @@ export default function Contact({scrolled, breakPointSmall}) {
         <Title breakPointSmall={breakPointSmall} type='contact'/>
 
         <Layout>
+          
           <Map/>
           <FormMotion noBlur={true}/>
+          
         </Layout>
         <Footer scrolled={scrolled}/>
 

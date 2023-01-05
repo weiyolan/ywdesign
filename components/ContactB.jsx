@@ -9,26 +9,25 @@ let mailLink = 'mailto:contact@ywdesign.co?subject=Website%20Project&body=Hi%20Y
 export default function ContactB() {
   return (
 
-    <div className='inline-flex justify-center items-center mt-4 flex-row'>
-      
+    <div className='inline-flex'>
       <Link href='tel:+32471124525'>
-        <div className='rounded-full bg-white/10 backdrop-blur-md p-4 mx-2 outline-none -outline-offset-2 cursor-pointer
+        <div className='rounded-full bg-white/10 backdrop-blur-md p-3 sm:p-4 mr-3 outline-none -outline-offset-2 cursor-pointer
         duration-300 shadow-xl hover:backdrop-blur-sm hover:outline-white/20 hover:animate-outlinePulse hover:shadow-sm hover:translate-y-1 hover:scale-[0.98] '>
-          <Phone width='20' fill='white' alt='phone icon'/>
+          <Phone className='w-5' fill='white' alt='phone icon'/>
         </div>
       </Link>
 
       <Link className='cursor-alias' target='_blank' rel="noopener noreferrer" href={whatsappLink}>
-          <div className=' rounded-full bg-white/10 backdrop-blurmdm p-4 mx-2 outline-none -outline-offset-2 
+          <div className=' rounded-full bg-white/10 backdrop-blurmdm p-3 sm:p-4 mr-3 outline-none -outline-offset-2 
           duration-300 shadow-xl hover:backdrop-blur-sm hover:outline-white/20 hover:animate-outlinePulse hover:shadow-sm hover:translate-y-1 hover:scale-[0.98] '>
-            <WhatsApp width='20' fill='white' alt='whatsapp icon'/>
+            <WhatsApp className='w-5' fill='white' alt='whatsapp icon'/>
           </div>
       </Link>
 
       <Link className='cursor-alias' target='_blank' rel="noopener noreferrer" href={mailLink}>
-          <div className='rounded-full bg-white/10 backdrop-blur-md p-4 mx-2 outline-none -outline-offset-2 
+          <div className='rounded-full bg-white/10 backdrop-blur-md p-3 sm:p-4 mr-3 outline-none -outline-offset-2 
           duration-300 shadow-xl hover:backdrop-blur-sm hover:outline-white/20 hover:animate-outlinePulse hover:shadow-sm hover:translate-y-1 hover:scale-[0.98] '>
-          <Mail width='20' fill='white' alt='mail icon'/>
+          <Mail className='w-5' fill='white' alt='mail icon'/>
           </div>
       </Link>
 

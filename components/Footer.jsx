@@ -1,10 +1,11 @@
 import Link from "next/link"
 import AccentTitle from "./AccentTitle"
-import YW from "../public/images/logo_ywd_w.svg"
+import YWD from "../public/images/logo_ywd_w.svg"
 import Image from "next/image";
 import { useState, useEffect } from "react";
-
+import useWindowSize from "./useWindowSize";
 import {motion} from 'framer-motion'
+import { useAppContext } from "./Context";
 
 const designList = [{text:'Logo',link:'/services/#Logo'},{text:'Website',link:'/services/#Website'},{text:'e-Commerce',link:'/services/#e-Commerce'},{text:'Analysis',link:'/services/#Analysis'}];
 const supportList = [{text:'FAQ',link:''},{text:'T&C',link:''},{text:'Workflow',link:''},{text:'Simulation',link:''}];
@@ -18,8 +19,11 @@ const contactList = [
 
 
 export default function Footer({scrolled}) {
+  let {width, breakPointSmall} = useAppContext();
   // let [style,setStyle] = useState({transform: 'translateY(100%) ', opacity:0 })
   // let [appeared,setAppeared] = useState(false)
+
+  // useEffect(()=>{console.log(breakPointSmall)})
 
   // useEffect(()=>{
   
@@ -36,57 +40,66 @@ export default function Footer({scrolled}) {
 
   return (
     <motion.section 
-      initial={{y: 200 }} 
+      initial={{y: `${width<breakPointSmall?100:200}` }} 
       whileInView={{y: 0, transition: {type:'spring', stiffness: 200, damping:25}}} 
       viewport={{once : true}}
-      className={`backdrop-blur bg-white/10 rounded-t-[2rem] mt-24 bottom-0 relative p-16 w-full`}>
-      
-      <div
-      className='flex justify-between max-w-4xl mx-auto items-start '>
-        <div>
+      className={`backdrop-blur bg-white/10 rounded-t-2xl sm:rounded-t-[2rem] mt-12 p-4 sm:mt-24 sm:p-8 lg:p-16 bottom-0 relative w-full`}>
+      <div className='flex justify-between max-w-4xl mx-auto items-start '>
+        <div className='flex-1'>
           <AccentTitle text={'Design'}/>
-          <ul>
-            {designList.map((item, i)=>{
-              return <li key={i} className='text-white font-light my-3' ><Link href={item.link} >{item.text}</Link></li>
-            })}
-          </ul>
+          <List list={designList}/>
         </div>
-        <div className=''>
+        <div className='flex-1'>
           <AccentTitle text={'Support'}/>
-          <ul>
-            {supportList.map((item, i)=>{
-              return <li key={i} className='text-white font-light my-3' ><Link href={item.link} >{item.text}</Link></li>
-            })}
-          </ul>
-        </div>    
+          <List list={supportList}/>
+        </div>  
+
         <div className="my-auto">
-          {/* <YW alt='ywdesign logo' width="60" fill='white'/> */}
-          <Link href='/'><Image src="/images/logo_ywd_w.svg" width={60} height={60*92/112} alt="ywdesign logo"/></Link>
-        
+          {/* <Link href='/'><Image src="/images/logo_ywd_w.svg" width={60} height={60*92/112} alt="ywdesign logo"/></Link> */}
+          <Link href='/'><YWD className='w-8 sm:w-14' alt='ywdesign logo in white'/></Link>
         </div>
-        <div className='text-right'>
+
+        <div className='text-right flex-1'>
           <AccentTitle text={'Links'}/>
-          <ul>
-            {linksList.map((item, i)=>{
-              return <li key={i} className='text-white font-light my-3' ><Link href={item.link} >{item.text}</Link></li>
-            })}
-          </ul>
+          <List list={linksList}/>
         </div>
-        <div className='text-right'>
+        <div className='text-right flex-1'>
           <AccentTitle text={'Contact'}/>
-          <ul>
-            {contactList.map((item, i)=>{
-              if (item.ext) {
-              return <li key={i} className='text-white font-light my-3 cursor-alias' ><Link href={item.link}  target='_blank' className='text-white font-light my-3 cursor-alias' rel="noopener noreferrer" >{item.text}</Link></li>}
-              else { return <li key={i} className='text-white font-light my-3' ><Link href={item.link}>{item.text}</Link></li>}
-            })}
-          </ul>
+          <List list={contactList}/>
         </div>
       </div>
-
     </motion.section>
+  )
+}
+
+
+function List ({list}) {
+
+  return (
+    <ul>
+      {list.map((item, i)=>{
+        if (item.ext) {
+          return (
+            <li key={i} 
+            className={`text-white font-light whitespace-nowrap
+            my-1 sm:my-3
+            text-[0.6rem] sm:text-sm`} >
+              <Link href={item.link} target='_blank' className='cursor-alias' rel="noopener noreferrer" >
+                {item.text}
+              </Link>
+            </li>
+        )} 
+        else { return (
+          <li key={i} 
+          className={`text-white font-light whitespace-nowrap
+          my-1 sm:my-3
+          text-[0.6rem] sm:text-sm`} >
+            <Link href={item.link}>
+              {item.text}
+            </Link>
+          </li>)}
+      })}
+    </ul>
 
   )
-
-
 }

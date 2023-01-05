@@ -8,12 +8,14 @@ import Specialities from '../components/Specialities'
 import Navbar from '../components/Navbar'
 import Features from '../components/Features'
 import { useEffect } from 'react'
+import { useAppContext } from '../components/Context'
 
 // const inter = Inter({ subsets: ['latin'] })
 
 
 
-export default function Index({scrolled, breakPointSmall}) {
+export default function Index({scrolled}) {
+  let {width, breakPointSmall} = useAppContext();
 
   return (
     <>
@@ -45,7 +47,7 @@ export default function Index({scrolled, breakPointSmall}) {
           <Features/>
 
               
-          <Conctact first={true}/>
+          <Conctact breakPointSmall={breakPointSmall} first={true}/>
 
         </Layout>
 

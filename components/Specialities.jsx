@@ -6,9 +6,9 @@ import LayoutSection from "./LayoutSection";
 import {motion} from 'framer-motion'
 
 const specialities = [
-    {title:'Web Dev', text:'I build websites, e-commerces and online tools to boost your brand.'},
+    {title:'Websites', text:'I build websites and online tools to boost your brand.'},
     {title: 'Redesign', text: 'Uplift your current logo or website with a modern design and color palette.'},
-    {title: 'Prototyping', text: 'I help start-ups build a prototype app and website.'},
+    {title: 'Web Shop', text: 'I help companies and artists getting their products online.'},
     {title: 'Analysis', text: 'Get insights on your current website and branding performance.'},
   ]
 
@@ -60,8 +60,8 @@ export default function Specialities (noBlur) {
       <Subtitle first={true} name='Solutions' title='Our in-house specialities' span={'specialities'} position='center'/>
     
       {/* <div initial='hidden' viewport={{once:false}} whileInView='visible' variants={parent}  */}
-      <div
-        className='inline-flex justify-between w-full mx-auto mt-10'>
+
+      <div className='grid grid-cols-2 sm:grid-cols-4 w-full gap-4 min-[500px]:gap-8 sm:gap-4 min-h-fit mx-auto '>
       
         {specialities.map((specialty,i)=>{
           return (

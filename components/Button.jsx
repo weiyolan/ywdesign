@@ -36,11 +36,11 @@ export default function Button({to, title, text, selected, handleClick, darkMode
     case 'dark' :
       return(
       // <Link className={basicStyle + darkStyle + ''}
-        <Link className={`flex border border-solid rounded-full px-4 py-2 mx-4 
+        <Link className={`flex border-2 border-solid rounded-full px-4 py-2 mx-4 
         font-sans font-semibold text-xs textcenter self-center whitespace-nowrap
         duration-300 cursor-pointer   
-        outline-none focus-visible:outline-primary border-transparent bg-primary text-white 
-        active:bg-white active:text-primary hover:border-white`}
+        outline-none border-transparent 
+        bg-primary text-white focus-visible:outline-primary active:bg-white active:text-primary hover:border-white`}
         href={`/${to}`}
         onClick={()=>handleClick(title)}>
 
@@ -50,11 +50,10 @@ export default function Button({to, title, text, selected, handleClick, darkMode
 
     case 'white' :
       return(
-        <Link className={`flex border-2 border-solid rounded-full px-4 py-2 mx-4 
-        font-sans font-semibold text-xs textcenter  whitespace-nowrap
-        duration-500 cursor-pointer   
-        outline-none focus-visible:outline-primary border-transparent bg-white text-primary 
-        active:bg-primary active:text-white hover:border-primary`}
+        <Link className={`flex border-2 outline-none border-solid border-transparent rounded-full self-center duration-300 cursor-pointer
+        px-4 py-2  
+        font-sans font-semibold text-xs textcenter whitespace-nowrap
+        bg-white text-primary focus-visible:outline-primary active:bg-primary active:text-white hover:border-primary`}
           href={`/${to}`}
           onClick={()=>handleClick(title)}>
   

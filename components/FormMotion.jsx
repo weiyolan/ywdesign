@@ -53,46 +53,48 @@ function handleClick() {
     <motion.form initial='hidden' whileInView='visible' variants={variant} viewport={{once:true}} className='flex flex-col items-start'>
       
       <div className='grid gap-6 grid-cols-3 w-full min-w-[30vw] auto-rows-min'>
-        <div  className='inline-block relative col-start-1 col-span-1 '>
-          <motion.label variants={inputVariants} className='text-primary cursor-pointer font-semibold text-xs inline-flex max-w-fit mt-2 ml-1' htmlFor='name'>NAME</motion.label>
-          <motion.input variants={inputVariants} required name='name' className={`block bg-white/10 shadow-sm font-normal text-primary placeholder:text-primary
-            ${!noBlur && ' backdrop-blur-md focus:backdrop-blur-sm '} target:outline-primary rounded-2xl
-           autofill:bg-white/10  valid:scale-[0.99] 
-            outline-none -outline-offset-2 focus:outline-none focus:animate-outlinePulse
-            border border-transparent invalid:text-pink-600
-            placeholder:text-primary/50
-            focus:-outline-offset-2 focus:outline-white/20 p-2 w-full text-sm  my-2`} id='name'
-            type='text' 
-            placeholder="First name"
-            value={name}
-            onChange={(e)=>{setName(e.target.value)}}/>
+        <div className='inline-flex col-start-1 col-span-3 min-[500px]:col-span-2'>
+          <div  className='inline-block relative col-start-1 col-span-1 pr-3'>
+            <motion.label variants={inputVariants} className='text-primary cursor-pointer font-semibold whitespace-nowrap text-xs inline-flex max-w-fit mt-2 ml-1' htmlFor='name'>NAME</motion.label>
+            <motion.input variants={inputVariants} required name='name' className={`block bg-white/10 shadow-sm font-normal text-primary placeholder:text-primary placeholder:text-xs min-[400px]:placeholder:text-sm
+              ${!noBlur && ' backdrop-blur-md focus:backdrop-blur-sm '} target:outline-primary rounded-2xl
+            autofill:bg-white/10  valid:scale-[0.99] 
+              outline-none -outline-offset-2 focus:outline-none focus:animate-outlinePulse
+              border border-transparent invalid:text-pink-600
+              placeholder:text-primary/50
+              focus:-outline-offset-2 focus:outline-white/20 p-2 w-full text-sm my-2`} id='name'
+              type='text' 
+              placeholder="First name"
+              value={name}
+              onChange={(e)=>{setName(e.target.value)}}/>
+          </div>
+
+          <div  className='inline-block relative col-start-2 col-span-1 pl-3'>
+            <motion.label variants={inputVariants} className='text-primary cursor-pointer whitespace-nowrap font-semibold inline-flex max-w-fit text-xs mt-2 ml-1' htmlFor='lastname'>LAST NAME</motion.label>
+            <motion.input variants={inputVariants} required name='lastname' 
+            className={`bg-white/10 font-normal w-full text-primary placeholder:text-primary  placeholder:text-xs min-[400px]:placeholder:text-sm
+            p-2 my-2
+            ${!noBlur && ' backdrop-blur-md focus:backdrop-blur-sm '} shadow-sm target:outline-primary rounded-2xl
+            autofill:bg-white/10 
+              valid:scale-[0.99] 
+              outline-none -outline-offset-2 
+              focus:outline-none focus:animate-outlinePulse
+              border border-transparent  
+              invalid:text-pink-600
+              placeholder:text-primary/50
+              focus:-outline-offset-2 
+              focus:outline-white/20  text-sm block `}
+              id='lastname' 
+              type="text" 
+              placeholder="Or family name"
+              value={lastName}
+              onChange={(e)=>{setLastName(e.target.value)}}/>
+          </div>
         </div>
 
-        <div  className='inline-block relative col-start-2 col-span-1 '>
-          <motion.label variants={inputVariants} className='text-primary cursor-pointer font-semibold inline-flex max-w-fit text-xs mt-2 ml-1' htmlFor='lastname'>LAST NAME</motion.label>
-          <motion.input variants={inputVariants} required name='lastname' 
-          className={`bg-white/10 font-normal w-full text-primary placeholder:text-primary
-           p-2 my-2
-           ${!noBlur && ' backdrop-blur-md focus:backdrop-blur-sm '} shadow-sm target:outline-primary rounded-2xl
-           autofill:bg-white/10 
-            valid:scale-[0.99] 
-            outline-none -outline-offset-2 
-            focus:outline-none focus:animate-outlinePulse
-            border border-transparent  
-            invalid:text-pink-600
-            placeholder:text-primary/50
-            focus:-outline-offset-2 
-            focus:outline-white/20  text-sm block `}
-            id='lastname' 
-            type="text" 
-            placeholder="Also known as family name"
-            value={lastName}
-            onChange={(e)=>{setLastName(e.target.value)}}/>
-        </div>
-
-        <div  className='inline-block relative col-start-1 col-span-2'>
-          <motion.label variants={inputVariants} className='text-primary cursor-pointer font-semibold text-xs inline-flex max-w-fit mt-2 ml-1' htmlFor='email'>EMAIL</motion.label>
-          <motion.input variants={inputVariants} required name='email' className={`bg-white/10 font-normal  text-primary placeholder:text-primary
+        <div  className='inline-block relative col-start-1 col-span-3 min-[400px]:col-span-2'>
+          <motion.label variants={inputVariants} className='text-primary cursor-pointer whitespace-nowrap font-semibold text-xs inline-flex max-w-fit mt-2 ml-1' htmlFor='email'>EMAIL</motion.label>
+          <motion.input variants={inputVariants} required name='email' className={`bg-white/10 font-normal  text-primary placeholder:text-primary placeholder:text-xs min-[400px]:placeholder:text-sm
           ${!noBlur && ' backdrop-blur-md focus:backdrop-blur-sm '} 
           shadow-sm target:outline-primary rounded-2xl
           autofill:bg-white/10  valid:scale-[0.99]
@@ -108,8 +110,8 @@ function handleClick() {
         
         {/* <div className={`flex flex-row `}> */}
         <div className='inline-flex flex-col w-full col-start-1 col-span-3 '>
-          <motion.label variants={inputVariants} className='text-primary cursor-pointer font-semibold text-xs inline-flex max-w-fit mt-2 ml-1' htmlFor='message'>MESSAGE</motion.label>
-          <motion.textarea variants={inputVariants} required className={`bg-white/10 font-normal  text-primary placeholder:text-primary 
+          <motion.label variants={inputVariants} className='text-primary cursor-pointer whitespace-nowrap font-semibold text-xs inline-flex max-w-fit mt-2 ml-1' htmlFor='message'>MESSAGE</motion.label>
+          <motion.textarea variants={inputVariants} required className={`bg-white/10 font-normal  text-primary placeholder:text-primary placeholder:text-xs min-[400px]:placeholder:text-sm
           ${!noBlur && ' backdrop-blur-md focus:backdrop-blur-sm '} shadow-sm target:outline-primary rounded-2xl
           autofill:bg-white/10 valid:scale-[0.99]
             outline-none -outline-offset-2 focus:outline-none focus:animate-outlinePulse
@@ -126,7 +128,7 @@ function handleClick() {
         </div>
       
       {/* BUTTON */}
-        <div className='flex col-start-3 row-start-2 justify-start items-end'>
+        <div className='flex col-start-1 row-start-4 min-[400px]:col-start-3 min-[400px]:row-start-2 justify-start items-end '>
           <motion.div variants={inputVariants} whileHover={{scale:1.05}} className={`inline-flex shadow-sm my-2
           border border-solid rounded-full px-4 py-2  
           font-sans font-semibold text-xs textcenter whitespace-nowrap

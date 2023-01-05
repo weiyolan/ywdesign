@@ -56,7 +56,8 @@ export default function Service({name, title, span, text, position, first, noBlu
   // })
 
   let cards = (
-    <div className={`relative w-full ${window.width<breakPointSmall?(window.width<360?'min-h-[45vh]':'min-h-[40vh]'):'h-full'}`}>
+    // <div className={`relative w-full sm:h-full min-h-[75vw] min-[350px]:min-h-[75vw] min-[400px]:min-h-[60vw] min-[500px]:min-h-[45vw] `}>
+    <div className={`relative w-full sm:h-full min-h-[75vw] min-[350px]:min-h-[60vw] min-[400px]:min-h-[50vw] min-[500px]:min-h-[40vw] `}>
       {icons.map((icon,i)=>{
         return (
           <ServiceCard icon={icon} noBlur={noBlur} first={window.width<breakPointSmall?true:first} key={i} position={position} breakPointSmall={breakPointSmall} visible={visibleItem[i]}/>
@@ -79,12 +80,12 @@ export default function Service({name, title, span, text, position, first, noBlu
       <div className= {`flex ${position==='left'?'':'justify-end'} `}>
         <ArrowLink text={'Ask for it'} to={'/contact/#Form'} ext={false}/>
         </div>
-      <div className= {`flex mt-8  ${window.width<360?'flex-wrap':''}  ${position==='left'?'':'justify-end'} `}>
+      <div className= {`flex mt-8 ${position==='left'?'':'justify-end'} `}>
         {icons.map((icon,i)=>{
           // console.log('i and visibility of service icon is:' )
           // console.log(i)
           // console.log(visibleItem[i])
-          return <ServiceIcon breakPointSmall={breakPointSmall} noBlur={noBlur} icon={icon.icon} key={i} clicked={visibleItem[i]} handleClick={(newVal)=>{handleVisibility(newVal,i);setClicked(true)}} />
+          return <ServiceIcon left={position==='left'} noBlur={noBlur} icon={icon.icon} key={i} clicked={visibleItem[i]} handleClick={(newVal)=>{handleVisibility(newVal,i);setClicked(true)}} />
           })}
       </div>
     </div>
@@ -126,7 +127,7 @@ export default function Service({name, title, span, text, position, first, noBlu
 //   tap: {scale:1}
 // }
 
-function ServiceIcon ({icon, clicked, handleClick, noBlur, breakPointSmall}) {
+function ServiceIcon ({icon, clicked, handleClick, noBlur, left}) {
   let window = useWindowSize()
 
   // const iconAnimation = {
@@ -151,7 +152,10 @@ function ServiceIcon ({icon, clicked, handleClick, noBlur, breakPointSmall}) {
     // <motion.div variants={iconAnimation} initial='hidden' custom={clicked} whileTap='tap' whileInView='visible'
     <div
     className={`flex ${noBlur?'':'backdrop-blur-md'} justify-center cursor-pointer items-center duration-200 bg-white/10 filter 
-    ${window.width<breakPointSmall?'m-1 p-1.5 w-9 h-9 rounded-lg':'p-2 sm:m-1 lg:m-2 sm:w-10 sm:h-10 lg:w-14 lg:h-14 sm:rounded-lg lg:rounded-xl'}  
+    ${!left?'ml-2 min-[350px]:ml-3 lg:ml-4 ':' mr-2 min-[350px]:mr-3 lg:mr-4 '}
+      w-9 h-9 sm:mt-2  min-[350px]:w-10 min-[350px]:h-10
+      sm:w-10 sm:h-10 md:h-12 md:w-12 rounded-lg md:rounded-xl lg:h-14 lg:w-14
+     p-2
     outline-2 outline -outline-offset-2 hover:outline-white/30 
     `+ 
     (clicked?` outline-white/30 animate-outlinePulse shadow-md scale-95 translate-y-1 `:`hover:scale-[1.08] shadow-2xl outline-white/0 `)}

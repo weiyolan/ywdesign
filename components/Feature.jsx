@@ -23,7 +23,7 @@ const Feature = ({offset, title, text, icon}) => {
       default : 
         break
     }
-  },[]) 
+  },[offset]) 
 
 
   let iconVariant={

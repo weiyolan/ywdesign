@@ -16,6 +16,7 @@ import Number from '../components/Number'
 import Vision from '../components/Vision'
 import YolanPhoto from '../components/YolanPhoto'
 import Conctact from '../components/Contact'
+import { useAppContext } from '../components/Context'
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -32,7 +33,10 @@ let missionText = 'A positive impact on the planet and its people. I want to use
 let aboutmeText = "I'm an open-minded and ambitious person, taking every challenge as an opportunity to learn. I love working with people and I tend to get the best out of everyone. Listening and planning skills help me to pull the team forward, achieving always-improving results, together."
 
 
-export default function Aboutme({scrolled, breakPointSmall}) {
+export default function Aboutme({scrolled}) {
+
+  let {width, breakPointSmall} = useAppContext();
+
   return (
     <>
       <Head> 
@@ -102,7 +106,7 @@ export default function Aboutme({scrolled, breakPointSmall}) {
           </section> */}
 
 
-          <Conctact/>
+          <Conctact breakPointSmall={breakPointSmall}/>
           
         </Layout>
 

@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import Image from 'next/image';
 import Background from '../components/Background'
 import { useState,useEffect } from 'react';
+import {AppWrapper} from '../components/Context';
 
 const workSans = Work_Sans({
   subsets: ['latin'],
@@ -35,17 +36,17 @@ export default function App({ Component, pageProps }) {
       <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      
-      <div className={`${workSans.variable} font-sans relative scroll-smooth cursor-default w-full overflow-hidden `}>
-        {/* bg-gradient-to-br from-green to-blue */}
-        <Background scrolled={scrolled}/>
-        {/* <Navbar/  > */}
-        {/* <Image className='absolute top-0 object-cover' src='/images/background2.svg' fill alt='background image'/> */}
-        {/* <Background className='absolute -z-10 w-full' /> */}
-        <Component {...pageProps} scrolled={scrolled} breakPointSmall={650}/>
+      <AppWrapper breakPointSmall={640}>
+        <div className={`${workSans.variable} font-sans relative scroll-smooth cursor-default w-full overflow-hidden `}>
+          {/* bg-gradient-to-br from-green to-blue */}
+          <Background scrolled={scrolled}/>
+          {/* <Navbar/  > */}
+          {/* <Image className='absolute top-0 object-cover' src='/images/background2.svg' fill alt='background image'/> */}
+          {/* <Background className='absolute -z-10 w-full' /> */}
+          <Component {...pageProps} scrolled={scrolled}/>
 
-      </div>
-    
+        </div>
+      </AppWrapper>
     </>
     ) 
 }

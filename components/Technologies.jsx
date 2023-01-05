@@ -33,10 +33,10 @@ import TailwindC from '../public/images/logo_tailwind_c.svg'
 let logos = [
   {white: <Nextjs className='w-full' fill='white' alt='Nextjs logo in white' />, color: <NextjsC alt='Nextjs logo in color'  className={` w-full `} />, link:'https://nextjs.org/'},
   {white: <Redux className='w-full max-h-[10vh]' fill='white' alt='Redux logo in white' />, color: <ReduxC alt='Redux logo in color'  className={` w-full max-h-[10vh]`} />, link:'https://redux.js.org/'},
-  {white: <Figma className='w-full max-h-[10vh]' fill='white' alt='Figma logo in white' />, color: <FigmaC alt='Figma logo in color'  className={` w-full max-h-[10vh]`} />, link:'https://www.figma.com/'},
+  {white: <Figma className='w-full max-h-[8vh]' fill='white' alt='Figma logo in white' />, color: <FigmaC alt='Figma logo in color'  className={` w-full max-h-[8vh]`} />, link:'https://www.figma.com/'},
   {white: <Tailwind className='w-full max-h-[10vh]' fill='white' alt='Tailwind logo in white'/>, color: <TailwindC  alt='Tailwind logo in color' className={'w-full max-h-[10vh]'} />, link:'https://tailwindcss.com/'},
   {white: <Reactjs className='w-full max-h-[10vh]' fill='white' alt='Reactjs logo in white' />,color: <ReactjsC alt='Reactjs logo in color'  className={` w-full max-h-[10vh]`} />, link:'https://reactjs.org/'},
-  {white: <Octopusdo className='w-full max-h-[10vh]' fill='white' alt='Octopusdo logo in white'/>, color: <OctopusdoC alt='Octopusdo logo in color' className={` w-full max-h-[10vh]`} />, link:'https://octopus.do/'},
+  {white: <Octopusdo className='w-full max-h-[9vh]' fill='white' alt='Octopusdo logo in white'/>, color: <OctopusdoC alt='Octopusdo logo in color' className={` w-full max-h-[9vh]`} />, link:'https://octopus.do/'},
   {white: <Fauna className='w-full max-h-[10vh]' fill='white' alt='FaunaDB logo in white' />, color: <FaunaC alt='FaunaDB logo in color'  className={` w-full max-h-[10vh]`} />, link:'https://fauna.com/'},
   {white: <Github className='w-full max-h-[10vh]' fill='white' alt='Github logo in white'  />, color: <GithubC alt='Github logo in color'   className={` w-full max-h-[10vh]`} />, link:'https://github.com/'},
   {white: <MongoDB className='w-full max-h-[10vh]' fill='white' alt='MongoDB logo in white' />, color: <MongoDBC  alt='MongoDB logo in color'  className={` w-full max-h-[10vh]`} />, link:'https://www.mongodb.com/'},
@@ -83,7 +83,7 @@ export default function Technologies ({breakPointSmall}) {
       <Subtitle name='Technology' first={width<breakPointSmall?true:false} text={'Using the latest technology we ensure high speed\nand great user experiences on all devices'} title={`In-house technology\nfrom the newest generation`} span={'technology'} position='center'/>
 
       <motion.div initial='hidden' whileInView='visible' variants={variant} viewport={{once:true}} 
-      className={`w-full mt-20 grid gap-4 grid-flow-row relative 
+      className={`w-full my-6 sm:my-10 grid gap-4 grid-flow-row relative 
       grid-cols-3 md:grid-cols-4 lg:grid-cols-6 
       
       `}>

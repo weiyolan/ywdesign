@@ -20,13 +20,13 @@ export default function Title({type, breakPointSmall}) {
   )
 }
 
-let heroTitleStyle = 'text-primary text-7xl font-medium my-24';
+let heroTitleStyle = 'text-primary  text-4xl  sm:text-6xl font-medium my-12 sm:my-24 px-4';
 
 function GetTitle({type}) {
   let [ loadStyle, setLoadStyle] = useState(' ');
 
   useEffect(()=>{
-    setLoadStyle('text-white font-semibold scale-150 translate-x-5 ')
+    setLoadStyle(' text-white font-semibold scale-150 translate-x-5 ')
   },[])
 
   switch (type) {

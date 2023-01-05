@@ -10,7 +10,7 @@ import Conctact from '../components/Contact'
 import Technologies from '../components/Technologies'
 import Service from '../components/Service'
 import Navbar from '../components/Navbar';
-import useWindowSize from '../components/useWindowSize'
+import { useAppContext } from '../components/Context'
 
 import IconScreen from '../public/images/icon_screen.svg';
 import IconGraph from '../public/images/icon_graph.svg';
@@ -59,7 +59,7 @@ let serviceIconsWebsite = [
   },
   {icon: <HiOutlineTranslate color='white' className='mx-auto w-8 h-8' alt={'Translate Icon'}/>, 
   title:'Multiple Languages', 
-  list:['We can translate your website in university level English, French and Dutch languages.']
+  list:['We can translate your website in the English, French and Dutch languages.']
   },
   roadmap
 ];
@@ -67,7 +67,7 @@ let serviceIconsWebsite = [
 let serviceIconsShop = [
   {icon: <RiSecurePaymentFill  className='w-8 text-3xl text-white' alt='Fingerprint icon'/>,
   title:'Secure Payments',
-  list:['We integrate flexible payment options like Twint and Sprite that allow for an easy and secure checkout process. They also bringing a scalable pricing strategy that is well documented before your engagment'],
+  list:['We integrate flexible payment options like Twint and Sprite that allow for an easy and secure checkout process as well as an affordable pricing strategy.'],
   },
   {icon: <BsCurrencyExchange  className='w-8 text-3xl text-white' alt='Fingerprint icon'/>,
   title:'Multiple Currencies',
@@ -110,7 +110,7 @@ let serviceIconsTools  = [
   },
   {icon: <MdManageAccounts className='w-8 text-3xl text-white' alt='Fingerprint icon'/>,
   title:'Team Management',
-  list:["We implement tools through which you can manage your team and each individual's salary, shifts, or even medical information and link automatic salary payments."],
+  list:["We implement tools through which you can manage your team and each individual's salary, shifts, and even medical information."],
   },{icon: <BiTimer color='white' className='mx-auto w-8 h-8' alt='Graph going up Icon'/>, 
   title: 'Free Your Time',
   list: ['Automatating simple tasks can free up your time allowing you to focus on improving your business.']
@@ -207,8 +207,9 @@ let serviceList = [
   {name:'SEO Optimisation', icons: serviceIconsSEO, title:'Google will\nlove your site',span:'Google', text:"We implement Search Engine Optimisation (SEO) because even a fast and beautiful website has no impact without it."},
   ];
 
-export default function Services({scrolled, breakPointSmall}) {
-  let {width} = useWindowSize();
+export default function Services({scrolled}) {
+  let {width, breakPointSmall} = useAppContext();
+
   return (
     <>
       <Head> 
