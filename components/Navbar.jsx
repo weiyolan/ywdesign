@@ -30,8 +30,8 @@ export default function Navbar ({from}) {
     return (
         <div>
         {width<750? 
-            <div className={`fixed z-[50]`}>  
-              <div className='absolute rounded-full bg-white/20 backdrop-blur-sm w-fit h-fit p-2 top-[20px] z-[51] left-[20px]'>
+            <div className={`z-[50]`}>  
+              <div className='absolute inline-flex rounded-full w-fit p-2 top-[16px] z-[51] left-[16px]'>
               <Link  href={`/`} onClick={()=>selectButton('Home')}>
               {/* <YW
                 width='40'

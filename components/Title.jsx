@@ -10,7 +10,7 @@ export default function Title({type, breakPointSmall}) {
 
 
   return (
-      <section className='text-center w-full mt-8 md:mt-0'>
+      <section className='text-center w-full mt-16 md:mt-0'>
           <GetTitle type={type}/>
        
         <SkillsMoving breakPointSmall={breakPointSmall}/>
