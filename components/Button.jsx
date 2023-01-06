@@ -51,7 +51,7 @@ export default function Button({to, title, text, selected, handleClick, darkMode
     case 'white' :
       return(
         <Link className={`flex border-2 outline-none border-solid border-transparent rounded-full self-center duration-300 cursor-pointer
-        px-4 py-2  
+        px-2 py-2 min-[420px]:px-4 
         font-sans font-semibold text-xs textcenter whitespace-nowrap
         bg-white text-primary focus-visible:outline-primary active:bg-primary active:text-white hover:border-primary`}
           href={`/${to}`}

@@ -7,7 +7,7 @@ export default function ServiceCard ({icon, visible, position, noBlur, first, br
   return (
     <div className={` 
       absolute 
-      flex-col p-4 sm:p-8 rounded-3xl min-[400px]:rounded-[2rem] sm:rounded-[40px]
+      flex-col py-4 px-5 sm:p-6 lg:p-8 rounded-[1.75rem] min-[400px]:rounded-[2rem] sm:rounded-[40px]
       filter 
       duration-500 overflow-hidden
       cursor-default 
@@ -25,8 +25,8 @@ export default function ServiceCard ({icon, visible, position, noBlur, first, br
        ` blur-sm invisible bg-transparent text-transparent filter ${noBlur?'':'backdrop-blur-sm'} shadow-transparent shadow-sm z-0`}`}
       >
       {/* ${position==='left'?'min-[420px]:justify-start':'min-[420px]:justify-end'}  */}
-      <h3 className={`duration-500 flex lg:whitespace-nowrap mb-2 
-        text-xl sm:text-2xl md:text-3xl ${position==='left'?'min-[420px]:justify-start':'min-[420px]:justify-end'}
+      <h3 className={`duration-500 flex md:whitespace-nowrap 
+        text-xl min-[350px]:text-2xl lg:text-3xl  justify-center sm:justify-center  ${position==='left'?'min-[420px]:justify-start':'min-[420px]:justify-end' }
         ${visible? 'font-light ' :`-translate-y-24 font-thin ${position==='left'?'-rotate-12':'rotate-12'}`}` }>
         {icon.title}
       </h3>
