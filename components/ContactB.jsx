@@ -17,14 +17,14 @@ export default function ContactB() {
       </Link>
 
       <Link className='cursor-alias' target='_blank' rel="noopener noreferrer" href={whatsappLink}>
-          <Button>
-            <WhatsApp className='w-4 sm:w-5' fill='white' alt='whatsapp icon'/>
+          <Button ext={true} >
+            <WhatsApp className='w-4 sm:w-5 cursor-alias' fill='white' alt='whatsapp icon'/>
           </Button>
       </Link>
 
       <Link className='cursor-alias' target='_blank' rel="noopener noreferrer" href={mailLink}>
-          <Button>
-          <Mail className='w-4 sm:w-5' fill='white' alt='mail icon'/>
+          <Button ext={true}>
+          <Mail className='w-4 sm:w-5 cursor-alias' fill='white' alt='mail icon'/>
           </Button>
       </Link>
 
@@ -32,10 +32,10 @@ export default function ContactB() {
   )
 }
 
-function Button ({children}) {
+function Button ({children,ext}) {
   return (
-      <div className='rounded-full bg-white/10 backdrop-blur-md p-2 min-[420px]:p-3 sm:p-4 mr-2 min-[420px]:mr-3 outline-none -outline-offset-2 cursor-pointer
-        duration-300 shadow-xl hover:backdrop-blur-sm hover:outline-white/20 hover:animate-outlinePulse hover:shadow-sm hover:translate-y-1 hover:scale-[0.98] '>
+      <div className={`rounded-full bg-white/10 backdrop-blur-md p-2 min-[420px]:p-3 sm:p-4 mr-2 min-[420px]:mr-3 outline-none -outline-offset-2 ${ext?'cursor-alias':'cursor-pointer'}
+        duration-300 shadow-xl hover:backdrop-blur-sm hover:outline-white/20 hover:animate-outlinePulse hover:shadow-sm hover:translate-y-1 hover:scale-[0.98]`}>
           {children}
       </div>
   )

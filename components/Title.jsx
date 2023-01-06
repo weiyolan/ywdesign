@@ -10,7 +10,7 @@ export default function Title({type, breakPointSmall}) {
 
 
   return (
-      <section className='text-center w-full '>
+      <section className='text-center w-full mt-8 md:mt-0'>
           <GetTitle type={type}/>
        
         <SkillsMoving breakPointSmall={breakPointSmall}/>
@@ -26,7 +26,7 @@ function GetTitle({type}) {
   let [ loadStyle, setLoadStyle] = useState(' ');
 
   useEffect(()=>{
-    setLoadStyle(' text-white font-semibold scale-150 translate-x-5 ')
+    setLoadStyle(' text-white font-semibold ')
   },[])
 
   switch (type) {

@@ -5,10 +5,10 @@ import Subtitle from '../components/Subtitle'
 import Conctact from '../components/Contact'
 import Footer from '../components/Footer'
 import Specialities from '../components/Specialities'
-import Navbar from '../components/Navbar'
 import Features from '../components/Features'
 import { useEffect } from 'react'
 import { useAppContext } from '../components/Context'
+import Navbar from '../components/Navbar'
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -24,12 +24,12 @@ export default function Index({scrolled}) {
       </Head>
       
       <main>
-        <Navbar from='Home'/>
+        <Navbar from = 'Home'/>
         <Title breakPointSmall={breakPointSmall} type='home'/>
 
         <Layout>
           
-          <Specialities noBlur={false}/>
+          <Specialities noBlur={true}/>
 
 
           <section className='grid grid-cols-2'>

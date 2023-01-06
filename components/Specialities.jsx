@@ -61,7 +61,7 @@ export default function Specialities (noBlur) {
     
       {/* <div initial='hidden' viewport={{once:false}} whileInView='visible' variants={parent}  */}
 
-      <div className='grid grid-cols-2 sm:grid-cols-4 w-full gap-4 min-[500px]:gap-8 sm:gap-4 min-h-fit mx-auto '>
+      <div className='grid grid-cols-2 sm:grid-cols-4 w-full gap-4 min-[500px]:gap-8 sm:gap-2 md:gap-6 lg:gap-8 min-h-fit mx-auto '>
       
         {specialities.map((specialty,i)=>{
           return (

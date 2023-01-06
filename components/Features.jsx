@@ -63,9 +63,9 @@ export default function Features () {
     <LayoutSection>
       <Subtitle name='Features' first={true}  title={'What makes a\nbetter website'} span={'better'} position='right'/>
 
-      <motion.div initial='hidden' viewport={{once:true}} whileInView='visible' variants={parent} 
-      className={`grid relative grid-cols-10 grid-flow-row  sm:grid-rows-2 sm:grid-cols-3 min-[520px]:grid-cols-3 min-[520px]:grid-rows-2 
-       w-full gap-4 sm:gap-6 lg:gap-0.52 mt-12 sm:mt-24`}>
+      <motion.div initial={false} animate='hidden' viewport={{once:true}} whileInView='visible' variants={parent} 
+      className={`grid relative grid-cols-10 grid-rows-6 grid-flow-row sm:grid-rows-2 sm:grid-cols-3 
+       w-full gap-4 sm:gap-6 md:gap-8 lg:gap-12 mt-12 sm:mt-24 lg:px-12`}>
         {myfeatures.map((feature,i)=>{
 
           return <Feature key={feature.title} offset={offsets[i]} title={feature.title} text={feature.text} icon={feature.icon}/>

@@ -41,6 +41,16 @@ html {
 
 body {
   overflow: overlay;
+
+}
+
+*::selection{
+  color:white;
+  background:#4200a431;
+}
+*::-moz-selection {
+  color:white;
+  background:#4200a431;
 }
 
 /* width */

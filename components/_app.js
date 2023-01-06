@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import Head from 'next/head'
 import {Work_Sans} from '@next/font/google'
-import Navbar from '../components/NavDesk';
+import Navbar from '../components/Navbar';
 import Image from 'next/image';
 import Background from '../components/Background'
 import { useState,useEffect } from 'react';

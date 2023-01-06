@@ -43,6 +43,9 @@ function MovingRow({allSkills, baseVelocity=100}) {
 
   const baseX = useMotionValue(0);
   const { scrollY } = useScroll();
+
+
+
   const scrollVelocity = useVelocity(scrollY);
   const smoothVelocity = useSpring(scrollVelocity, {
     damping: 60,
@@ -55,6 +58,8 @@ function MovingRow({allSkills, baseVelocity=100}) {
   const x = useTransform(baseX, (v) => `${v}%`);
 
   const directionFactor = useRef(1);
+
+
 
   useAnimationFrame((t, delta) => {
     let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
