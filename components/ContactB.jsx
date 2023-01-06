@@ -12,19 +12,19 @@ export default function ContactB() {
     <div className='inline-flex'>
       <Link href='tel:+32471124525'>
         <Button>
-          <Phone className='w-5' fill='white' alt='phone icon'/>
+          <Phone className='w-4 sm:w-5' fill='white' alt='phone icon'/>
         </Button>
       </Link>
 
       <Link className='cursor-alias' target='_blank' rel="noopener noreferrer" href={whatsappLink}>
           <Button>
-            <WhatsApp className='w-5' fill='white' alt='whatsapp icon'/>
+            <WhatsApp className='w-4 sm:w-5' fill='white' alt='whatsapp icon'/>
           </Button>
       </Link>
 
       <Link className='cursor-alias' target='_blank' rel="noopener noreferrer" href={mailLink}>
           <Button>
-          <Mail className='w-5' fill='white' alt='mail icon'/>
+          <Mail className='w-4 sm:w-5' fill='white' alt='mail icon'/>
           </Button>
       </Link>
 

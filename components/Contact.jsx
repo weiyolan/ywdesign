@@ -7,6 +7,12 @@ import { useAppContext } from './Context'
 export default function Conctact ({first}) {
   let {width, breakPointSmall} = useAppContext()
 
+  // useEffect(()=>{
+  //   console.log('FROM CONTACT:')
+  //   console.log(`width= ${width}`)
+  //   console.log(`breakPointSmall= ${breakPointSmall}`)
+  // },[width])
+
 
   return (
     <section className={`flex text-left whitespace-pre-wrap

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import LayoutSection from './LayoutSection'
 import Subtitle from './Subtitle'
@@ -9,26 +9,10 @@ import { motion } from 'framer-motion'
 import {MdAutoAwesome} from 'react-icons/md'
 import { HiPhoto } from 'react-icons/hi2'
 import IconGraph from '../public/images/icon_graph.svg'
+import IconScreen from '../public/images/icon_screen.svg'
 import { MdSpeed } from 'react-icons/md'
 import { SlSpeedometer } from 'react-icons/sl'
-let myfeatures = [{
-  offset:-1, title:'Responsiveness',text:`Beautiful layout on\nall screen sizes`, icon: <Image className='aspect-square' width={32} height={32} src='/images/icon_screen.svg' alt='Computer screen size icon'/>,
-},
-// {offset:0, title:'Animations & Effects',text:`Dynamic interactions that\nbring your website alive`, icon: <Image width={32} height={32} alt='Beautiful sparkles icon' src='/images/icon_spark.svg'/>,
-// },
-{
-  offset:0, title:'Animations & Effects',text:`Dynamic interactions that\nbring your website alive`, icon: <MdAutoAwesome className='aspect-square w-8 text-3xl text-white' alt='Beautiful sparkles icon'/>,
-},
-{
-  offset:1, title:'Performance',text:`Tell you story using\nfast internet technology`, icon: <SlSpeedometer className='aspect-square w-8 text-3xl text-white' alt='Velocity meter icon showing a high speed'/>,
-},{
-  offset:-1,  title:'UX/UI Focused', text:`Users love an easy to use\nand lightweight design`, icon: <IoFingerPrint className='aspect-square w-8 text-3xl text-white' alt='Fingerprint icon'/>,
- },{
-  offset:0, title:'CMS',text:`You can manage\nthe content yourself`, icon: <HiPhoto className='w-8 text-3xl text-white' alt='Structured database icon'/>,
-},{
-  offset:1, title:'SEO Optimisation',text:`Organically reach\nnew customers`, icon: <IconGraph className='aspect-square w-8 p-px text-white' alt='Curve icon showing increasing statistics'/>,
-},]
-
+import { useAppContext } from './Context'
 
 const parent = {
     visible: {
@@ -47,18 +31,43 @@ const parent = {
     },
   }
 
-
+  let myfeatures = [{
+    title:'Responsiveness',text:`Beautiful layout on\nall screen sizes`, icon: <IconScreen className=' flex w-full p-0.5 sm:p-2 text-white' alt='Computer screen size icon'/>,
+  },
+  {
+    title:'Animations & Effects',text:`Dynamic interactions that\nbring your website alive`, icon: <MdAutoAwesome className=' text-xl sm:text-2xl flex w-full text-white' alt='Beautiful sparkles icon'/>,
+  },
+  {
+    title:'Performance',text:`Tell you story using\nfast internet technology`, icon: <SlSpeedometer className=' text-xl sm:text-2xl flex w-full text-white' alt='Velocity meter icon showing a high speed'/>,
+  },{
+     title:'UX/UI Focused', text:`Users love an easy to use\nand lightweight design`, icon: <IoFingerPrint className='  text-xl sm:text-2xl flex w-full  text-white' alt='Fingerprint icon'/>,
+   },{
+    title:'CMS',text:`You can manage\nthe content yourself`, icon: <HiPhoto className=' text-xl sm:text-2xl flex w-full  text-white' alt='Structured database icon'/>,
+  },{
+    title:'SEO Optimisation',text:`Organically reach\nnew customers`, icon: <IconGraph className=' flex w-full  p-0.5 sm:p-2  text-white' alt='Curve icon showing increasing statistics'/>,
+  },]
 
 export default function Features () {
+  let {width, breakPointSmall} = useAppContext();
+  let [offsets, setOffsets] = useState([])
+
+  useEffect(()=>{
+    // console.log(`width= ${width}`)
+    // console.log(`breakPointSmall= ${breakPointSmall}`)
+    setOffsets(width<breakPointSmall?[1,0,1,0,1,0]:[-1, 0, 1, -1, 0, 1])
+  },[width])
+
+ 
+
   return (
     <LayoutSection>
       <Subtitle name='Features' first={true}  title={'What makes a\nbetter website'} span={'better'} position='right'/>
 
-      <motion.div initial='hidden' viewport={{once:true}} whileInView='visible' variants={parent} className='grid relative grid-cols-3 w-full gap-12 grid-flow-row mt-28'>
+      <motion.div initial='hidden' viewport={{once:true}} whileInView='visible' variants={parent} className='grid relative grid-cols-9 grid-rows-6 min-[420px]:grid-rows-2 min-[420px]:grid-cols-3 w-full gap-4 sm:gap-6 lg:gap-0.52 grid-flow-row mt-12 sm:mt-24'>
 
         {myfeatures.map((feature,i)=>{
 
-          return <Feature key={feature.title} offset={feature.offset} title={feature.title} text={feature.text} icon={feature.icon}/>
+          return <Feature small={width<breakPointSmall} key={feature.title} offset={offsets[i]} title={feature.title} text={feature.text} icon={feature.icon}/>
         })}
 
       </motion.div>
