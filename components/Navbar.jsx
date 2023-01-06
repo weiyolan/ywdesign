@@ -44,7 +44,7 @@ export default function Navbar ({from}) {
           
           <NavMobile from = {from} />
           </div>
-          :<div className={`fixed z-[50] top-0 duration-500 ${show?'':'-translate-y-20'}`}>
+          :<div className={`fixed z-[50] w-full top-0 duration-500 ${show?'':'-translate-y-20'}`}>
           :<NavDesk from = {from} />
           </div>}
         </div>
