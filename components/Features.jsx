@@ -32,10 +32,10 @@ const parent = {
   }
 
   let myfeatures = [{
-    title:'Responsiveness',text:`Beautiful layout on\nall screen sizes`, icon: <IconScreen className=' flex w-full p-0.5 sm:p-2 text-white' alt='Computer screen size icon'/>,
+    title:'Responsiveness',text:`Beautiful layout on\nall screen sizes`, icon: <IconScreen className=' flex w-full p-0.5 sm:p-1 text-white' alt='Computer screen size icon'/>,
   },
   {
-    title:'Animations & Effects',text:`Dynamic interactions that\nbring your website alive`, icon: <MdAutoAwesome className=' text-xl sm:text-2xl flex w-full text-white' alt='Beautiful sparkles icon'/>,
+    title:'Animations ',text:`Dynamic interactions that\nbring your website alive`, icon: <MdAutoAwesome className=' text-xl sm:text-2xl flex w-full text-white' alt='Beautiful sparkles icon'/>,
   },
   {
     title:'Performance',text:`Tell you story using\nfast internet technology`, icon: <SlSpeedometer className=' text-xl sm:text-2xl flex w-full text-white' alt='Velocity meter icon showing a high speed'/>,
@@ -44,7 +44,7 @@ const parent = {
    },{
     title:'CMS',text:`You can manage\nthe content yourself`, icon: <HiPhoto className=' text-xl sm:text-2xl flex w-full  text-white' alt='Structured database icon'/>,
   },{
-    title:'SEO Optimisation',text:`Organically reach\nnew customers`, icon: <IconGraph className=' flex w-full  p-0.5 sm:p-2  text-white' alt='Curve icon showing increasing statistics'/>,
+    title:'SEO Optimisation',text:`Organically reach\nnew customers`, icon: <IconGraph className=' flex w-full  p-0.5 sm:p-1  text-white' alt='Curve icon showing increasing statistics'/>,
   },]
 
 export default function Features () {
@@ -63,11 +63,12 @@ export default function Features () {
     <LayoutSection>
       <Subtitle name='Features' first={true}  title={'What makes a\nbetter website'} span={'better'} position='right'/>
 
-      <motion.div initial='hidden' viewport={{once:true}} whileInView='visible' variants={parent} className='grid relative grid-cols-9 grid-rows-6 min-[420px]:grid-rows-2 min-[420px]:grid-cols-3 w-full gap-4 sm:gap-6 lg:gap-0.52 grid-flow-row mt-12 sm:mt-24'>
-
+      <motion.div initial='hidden' viewport={{once:true}} whileInView='visible' variants={parent} 
+      className={`grid relative grid-cols-10 grid-flow-row  sm:grid-rows-2 sm:grid-cols-3 min-[520px]:grid-cols-3 min-[520px]:grid-rows-2 
+       w-full gap-4 sm:gap-6 lg:gap-0.52 mt-12 sm:mt-24`}>
         {myfeatures.map((feature,i)=>{
 
-          return <Feature small={width<breakPointSmall} key={feature.title} offset={offsets[i]} title={feature.title} text={feature.text} icon={feature.icon}/>
+          return <Feature key={feature.title} offset={offsets[i]} title={feature.title} text={feature.text} icon={feature.icon}/>
         })}
 
       </motion.div>

@@ -7,7 +7,7 @@ import {motion} from 'framer-motion'
 
 const specialities = [
     {title:'Websites', text:'I build websites and online tools to boost your brand.'},
-    {title: 'Redesign', text: 'Uplift your current logo or website with a modern design and color palette.'},
+    {title: 'Branding', text: 'Uplift your current logo or website with a modern design and color palette.'},
     {title: 'Web Shop', text: 'I help companies and artists getting their products online.'},
     {title: 'Analysis', text: 'Get insights on your current website and branding performance.'},
   ]

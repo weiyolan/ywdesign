@@ -7,7 +7,7 @@ export default function SpecialtyCard({title, text, clicked, setClicked, noBlur}
       // variants={cardMotion}
       <div className={`flex w-full flex-col relative aspect-square p-6 bg-white/10 
       duration-1000 overflow-hidden transition-all
-      text-white text-center justify-center cursor-pointer 
+      text-white text-center justify-center cursor-pointer
       outline-2 outline -outline-offset-2 hover:outline-white/30 ` + (clicked?` ${noBlur?'':'backdrop-blur-md'} shadow-2xl outline-white/30 animate-outlinePulse rounded-[1.5rem]  lg:rounded-[40px]  `:` rounded-[2.25rem] min-[500px]:rounded-[2.5rem] sm:rounded-[2rem] lg:rounded-[50px]  outline-none ${noBlur?'':'backdrop-blur-sm'} shadow-md translate-y-1 scale-95 `)}
       // onMouseEnter={()=>setHovering(true)}
       // onMouseLeave={()=>setHovering(false)}
