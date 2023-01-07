@@ -17,7 +17,7 @@ const variants = {
 
 export default function Navigation ({children}) { 
   return (
-    <motion.ul className='m-0 p-6 absolute  justify-end text-end right-0 top-[100px] w-[230px]' 
+    <motion.ul className='m-0 p-6 absolute  justify-end text-end right-0 top-[80px] w-[200px]' 
     variants={variants}>
       {children.map((child,i) => {
       return (<MenuItem key={i}>{child}</MenuItem>)})}

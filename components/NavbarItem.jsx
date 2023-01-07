@@ -18,12 +18,12 @@ const variants = {
   }
 };
 
-const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"];
+// const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"];
 
 export default function MenuItem ({ children }) {
   // const style = { border: `2px solid ${colors[i]}` };
   return (
-    <motion.li className='p-0 m-0 list-none mb-5 flex items-center cursor-pointer'
+    <motion.li className='p-0 m-0 list-none mb-7 flex  justify-end items-end cursor-pointer'
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
