@@ -136,7 +136,6 @@ const Form = ({noBlur}) => {
             onChange={(e)=>{setEmail(e.target.value)}}/>
         </div>
         
-        {/* <div className={`flex flex-row `}> */}
         <div className='inline-flex flex-col w-full col-start-1 col-span-3 '>
           <motion.label variants={inputVariants} className='text-primary cursor-pointer whitespace-nowrap font-semibold text-xs inline-flex max-w-fit mt-2 ml-1' htmlFor='message'>MESSAGE</motion.label>
           <motion.textarea variants={inputVariants} required className={`bg-white/10 font-normal  text-primary placeholder:text-primary placeholder:text-xs min-[400px]:placeholder:text-sm
@@ -164,11 +163,8 @@ const Form = ({noBlur}) => {
           cursor-pointer   
           outline-none focus-visible:outline-primary border-transparent bg-primary text-white 
           active:bg-white active:text-primary hover:border-white`}
-              
-          // onSubmit={handleSubmit}
           >
           SEND
-            {/* <h5>SEND</h5> */}
           </motion.button>
         </div>
 

@@ -208,7 +208,7 @@ let serviceList = [
   ];
 
 export default function Services({scrolled}) {
-  let {width, breakPointSmall} = useAppContext();
+  let {width, breakPointSmall, noBlur} = useAppContext();
 
   return (
     <>
@@ -235,7 +235,7 @@ export default function Services({scrolled}) {
             text={service.text} 
             span={service.span}
             breakPointSmall = {breakPointSmall}
-            noBlur={true} 
+            noBlur={noBlur} 
             position={i % 2 === 0 ? 'left' : 'right' } 
             />
           })}

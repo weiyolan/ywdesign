@@ -29,10 +29,25 @@ export default function NavMobile ({from}) {
   },[from])
 
 
-// useEffect(()=>{
-//   console.log(width)
-//   console.log(height)
-// },[width, height])
+// const sidebar = {
+//   open: {
+//     clipPath: `circle(${530 * 2 + 200}px at ${width-40}px 40px)`,
+//     transition: {
+//       type: "spring",
+//       stiffness: 20,
+//       restDelta: 2
+//   }
+//   },
+//   closed: {
+//     clipPath: `circle(30px at ${width-40}px 40px)`,
+//     transition: {
+//       delay: 0.2,
+//       type: "spring",
+//       stiffness: 400,
+//       damping: 40
+//   }
+//   }
+// };
 
 const sidebar = {
   open: {
@@ -73,13 +88,13 @@ const variants = {
 
 
   return (
-  <motion.nav className='fixed top-0 z-[30] h-[530px] rounded-b-[30px] rounded-tl-[30px] right-0 w-[100%] sm:w-[30vw] overflow-hidden'
+  <motion.nav className='fixed top-0 z-[30] h-[530px] rounded-b-[30px] rounded-tl-[30px] right-0 w-[100%] sm:w-[40vw] overflow-hidden'
     initial={false}
     animate={isOpen ? "open" : "closed"}
     variants={sidebar}
     ref={containerRef}
   >
-    <motion.div className={`${isOpen?'bg-white':'bg-white/10 backdrop-blur-sm'} fixed top-0 rounded-b-[30px] rounded-tl-[30px] h-[530px] right-0 w-[100%] sm:w-[30vw]`} variants={sidebar} />
+    <motion.div className={`${isOpen?'bg-white':'bg-white/10'} fixed duration-300 top-0 rounded-b-[30px] rounded-tl-[30px] h-[530px] right-0 w-[100%] sm:w-[40vw]`} variants={sidebar} />
     
       <motion.div 
       variants={variants}
