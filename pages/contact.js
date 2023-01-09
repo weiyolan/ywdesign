@@ -16,12 +16,14 @@ import { useAppContext } from '../components/Context'
 export default function Contact({scrolled}) {
   let {width, breakPointSmall, noBlur} = useAppContext();
 
-  let [lightbox, setLightbox] = useState(true);
+  let [lightbox, setLightbox] = useState(false);
 
   const lightboxClick = (event) => {
-      if (lightbox && event.target === document.getElementById('background')) {
+      if (lightbox && event.target === document.getElementById('lightboxBackground')) {
           setLightbox(false);
       };
+
+      console.log(event.target)
   };
 
   return (

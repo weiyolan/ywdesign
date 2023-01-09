@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Subtitle from './Subtitle'
 import { motion, Variants } from 'framer-motion'
-
+import {BsCheckLg} from 'react-icons/bs'
 
 
 let variant = {
@@ -36,6 +36,9 @@ let inputVariants = {
 }
 
 const Form = ({noBlur, setLightbox}) => {
+  let [success,setSuccess] = useState(false)
+  let [buttonHovering,setButtonHovering] = useState(false)
+  
   let [name,setName] = useState('');
   let [lastName,setLastName] = useState('');
   let [email,setEmail] = useState('');
@@ -66,7 +69,7 @@ const Form = ({noBlur, setLightbox}) => {
         'bot-field':honey
       }),
     })
-    .then(() => setLightbox(true))
+    .then(() => {setLightbox(true);setSuccess(true);setName('');setLastName('');setEmail('');setHoney('');setMessage('')})
     .catch((error) => alert(error));
   };
     
@@ -161,18 +164,33 @@ const Form = ({noBlur, setLightbox}) => {
         </div>
       
       {/* BUTTON */}
-        <div className='flex col-start-1 row-start-4 min-[400px]:col-start-3 min-[400px]:row-start-2  justify-start items-end '>
-          <motion.button type='submit' variants={inputVariants} whileHover={{scale:1.05}} 
-          className={`inline-flex shadow-sm my-2
+        <motion.div variants={inputVariants} className='flex relative col-start-1 row-start-4 min-[400px]:col-start-3 min-[400px]:row-start-2 min-h-[50px] justify-start items-end '>
+          
+          <button key='submitted' onMouseEnter={()=>setButtonHovering(true)} onMouseLeave={()=>setButtonHovering(false)}
+          className={`inline-flex shadow-sm my-2 absolute left-0 bottom-0
           border border-solid rounded-full px-4 py-2  
           font-sans font-semibold text-xs textcenter whitespace-nowrap
-          cursor-pointer   
+          cursor-pointer overflow-hidden w-fit h-fit  duration-300
+          ${success?'opacity-100 ':'opacity-0 -translate-x-[50px]'}
+          outline-none focus-visible:outline-primary border-transparent bg-primary text-white 
+          active:bg-white active:text-primary hover:border-white`} 
+          onClick={()=>setSuccess(false)}>
+            <span className={`duration-500 relative transition-all ${!buttonHovering?'opacity-0  -translate-x-[20px] ':'opacity-100  translate-x-[8px] '}`}>MORE?</span>
+            <BsCheckLg className={`duration-500 relative text-base ${buttonHovering?'opacity-0  translate-x-[20px] ':'opacity-100   -translate-x-[20px] '}`}/>
+          </button>
+          
+          <button key='submit' type='submit'  
+          className={`inline-flex shadow-sm my-2 absolute left-0 bottom-0
+          border border-solid rounded-full px-4 py-2  
+          font-sans font-semibold text-xs textcenter whitespace-nowrap
+          cursor-pointer w-fit  h-fit duration-300
+          ${success?'opacity-0 translate-y-[40px]':'opacity-100'}
           outline-none focus-visible:outline-primary border-transparent bg-primary text-white 
           active:bg-white active:text-primary hover:border-white`}
           >
           SEND
-          </motion.button>
-        </div>
+          </button>
+        </motion.div>
 
         {/* <div className='col-start-2 row-start-4 min-[400px]:col-start-1 min-[400px]:row-start-4 min-[500px]:col-start-3 min-[500px]:row-start-1 ' data-netlify-recaptcha="true"></div> */}
 
