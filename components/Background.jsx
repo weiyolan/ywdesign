@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react"
-
+import { useAppContext } from "./Context"
 
 
 export default function Background ({scrolled}) {
+
+  let {width, breakPointSmall} = useAppContext();
 
   let blurOn = true
 
@@ -35,7 +37,7 @@ export default function Background ({scrolled}) {
           right-[25vw] -top-[33vh] 
           transition-all duration-400 rounded-full filter absolute ${blurOn?`blur-[200px]`:''} `}
           />
-        <div style={{top:`${-60+25*scrolled}vh`, left:`${-33+30*scrolled}vw`}} 
+        <div style={width<648?{}:{top:`${-60+25*scrolled}vh`, left:`${-33+30*scrolled}vw`}} 
         className={`bg-green animate-blob animation-delay-6000   
           h-[100vh] w-[66vw] 
           -left-[33vw] -top-[60vh] 
@@ -49,7 +51,7 @@ export default function Background ({scrolled}) {
 
         {/* height:`${200-80*scrolled}vh`, width:`${66-20*scrolled}vw`} */}
 
-        <div style={{bottom:`${-100+20*scrolled}vh`, right:`${-25+50*scrolled}vw`}}
+        <div style={width<648?{}:{bottom:`${-100+20*scrolled}vh`, right:`${-25+50*scrolled}vw`}}
         className={`bg-blue animate-blob animation-delay-4000    
          -right-[25vw]  -bottom-[100vh]
          h-[150vh] w-[50vw]

@@ -78,7 +78,7 @@ const variants = {
     variants={sidebar}
     ref={containerRef}
   >
-    <motion.div className="bg-white/20 backdrop-blur-md fixed top-0 rounded-b-[30px] rounded-tl-[30px] h-[530px] right-0 w-[100%] sm:w-[30vw]" variants={sidebar} />
+    <motion.div className="bg-white/20 fixed top-0 rounded-b-[30px] rounded-tl-[30px] h-[530px] right-0 w-[100%] sm:w-[30vw]" variants={sidebar} />
     
       <motion.div 
       variants={variants}
@@ -96,11 +96,11 @@ const variants = {
       </motion.div>
 
     <Navigation>
-      <Button className='' to="" title="Home" text="Home" mode={selectedB==='Home'?'selected':'unselected'} handleClick={selectButton}/>
-      <Button className='' to="services" title="Services" text="Services" mode={selectedB==='Services'?'selected':'unselected'} handleClick={selectButton}/>
-      <Button className='' to="aboutme" title="About Me" text="About Me" mode={selectedB==='About Me'?'selected':'unselected'} handleClick={selectButton}/>
-      <Button className='' to="contact" title="Contact"  text="Contact" mode={selectedB==='Contact'?'selected':'unselected'} handleClick={selectButton}/>
-      <Button className='' to="contact/#Form" title="Contact" text="Ask a quote" handleClick={selectButton} mode={'dark'}/>
+      <Button mobile={true} className='' to="" title="Home" text="Home" mode={selectedB==='Home'?'selected':'unselected'} handleClick={selectButton}/>
+      <Button mobile={true} className='' to="services" title="Services" text="Services" mode={selectedB==='Services'?'selected':'unselected'} handleClick={selectButton}/>
+      <Button mobile={true} className='' to="aboutme" title="About Me" text="About Me" mode={selectedB==='About Me'?'selected':'unselected'} handleClick={selectButton}/>
+      <Button mobile={true} className='' to="contact" title="Contact"  text="Contact" mode={selectedB==='Contact'?'selected':'unselected'} handleClick={selectButton}/>
+      <Button mobile={true} className='' to="contact/#Form" title="Contact" text="Ask a quote" handleClick={selectButton} mode={'dark'}/>
 
     </Navigation>
     

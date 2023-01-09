@@ -50,7 +50,11 @@ function handleClick() {
   <section id={'Form'} className='w-full'>
     <Subtitle name={'Form'} title={`And here's a\nbeautiful form`} span={'form'} position={'left'} first={true}/>
 
-    <motion.form initial='hidden' whileInView='visible' variants={variant} viewport={{once:true}} className='flex flex-col items-start'>
+    <motion.form initial='hidden' whileInView='visible' variants={variant} viewport={{once:true}} 
+      // name='ContactForm' method="POST" data-netlify="true" 
+      className='flex flex-col items-start'>
+
+      <input type='hidden' name='form-name' value='ContactForm'/>
       
       <div className='grid gap-6 grid-cols-3 w-full min-w-[30vw] auto-rows-min'>
         <div className='inline-flex col-start-1 col-span-3 min-[500px]:col-span-2'>
@@ -129,7 +133,7 @@ function handleClick() {
       
       {/* BUTTON */}
         <div className='flex col-start-1 row-start-4 min-[400px]:col-start-3 min-[400px]:row-start-2 justify-start items-end '>
-          <motion.div variants={inputVariants} whileHover={{scale:1.05}} className={`inline-flex shadow-sm my-2
+          <motion.button type='submit' variants={inputVariants} whileHover={{scale:1.05}} className={`inline-flex shadow-sm my-2
           border border-solid rounded-full px-4 py-2  
           font-sans font-semibold text-xs textcenter whitespace-nowrap
           cursor-pointer   
@@ -138,7 +142,7 @@ function handleClick() {
           onClick={handleClick}>
 
             <h5>SUBMIT</h5>
-          </motion.div>
+          </motion.button>
         </div>
 
       </div>
