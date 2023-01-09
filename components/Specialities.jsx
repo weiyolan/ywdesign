@@ -12,7 +12,7 @@ const specialities = [
     {title: 'Analysis', text: 'Get insights on your current website and branding performance.'},
   ]
 
-export default function Specialities (noBlur) {
+export default function Specialities ({noBlur}) {
   let [clicked, setClicked] = useState({... new Array(specialities.length).fill(false)})
 
 
