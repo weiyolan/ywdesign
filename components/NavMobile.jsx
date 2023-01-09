@@ -55,7 +55,6 @@ const sidebar = {
   open: {
     y: 0,
     x: 0,
-    z: 50,
     transition: {
       type: "spring",
       stiffness: 400,
@@ -68,7 +67,6 @@ const sidebar = {
     // x: 160,
     x: width - 70,
     y: -460,
-    z: 50,
     transition: {
       delay: 0.2,
       type: "spring",
@@ -98,14 +96,14 @@ const variants = {
 
 
   return (
-  <motion.nav className={`fixed top-0 right-0 h-[530px] w-[100%] sm:w-[40vw] bg-transparent z-[51] rounded-b-[30px] rounded-tl-[30px] `}
+  <motion.nav className={`fixed top-0 h-0 w-[100%] z-[51] sm:w-[40vw]`}
     initial={false}
     animate={isOpen ? "open" : "closed"}
     custom={height}
     ref={containerRef}
     key={width}
   >
-    <motion.div className={`bg-white/10 backdrop-blur-md z-[51] absolute top-0 forward fill-mode rounded-b-[30px] rounded-tl-[30px] h-[530px] right-0 w-[100%] sm:w-[40vw]`} variants={sidebar} />
+    <motion.div className={`bg-white/10 backdrop-blur-md z-[51] absolute top-0 forward fill-mode rounded-b-[40px] rounded-tl-[40px] h-[530px] right-0 w-[100%] sm:w-[40vw]`} variants={sidebar} />
     {/* <motion.div className={`${isOpen?'bg-white':'bg-white/10'} fixed duration-700 top-0 rounded-b-[30px] rounded-tl-[30px] h-[530px] right-0 w-[100%] sm:w-[40vw]`} variants={sidebar} /> */}
     
     <motion.div 
