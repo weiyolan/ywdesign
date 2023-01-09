@@ -41,29 +41,32 @@ const Form = ({noBlur}) => {
   let [email,setEmail] = useState('');
   let [message,setMessage] = useState('');
 
-  function handleSubmit(e) {
-    e.prevenDefault();
-    console.log(e.target)
+  function encode(data) {
+    return Object.keys(data)
+      .map(
+        (key) =>
+          encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
   }
 
-  // function handleSubmit (e) {
-  //     e.preventDefault();
-    
-  //     const formData = new FormData();
-
-  //     formData.append("name", name)
-  //     formData.append("lastName", lastName)
-  //     formData.append("email", email)
-  //     formData.append("message", message)
-      
-  //     fetch("/", {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-  //       body: new URLSearchParams(formData).toString(),
-  //     })
-  //       .then(() => alert("Form successfully submitted"))
-  //       .catch((error) => alert(error));
-  //   };
+  function handleSubmit (e) {
+    e.preventDefault();
+  
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": e.target.getAttribute("name"),
+        'name': name,
+        'lastName':lastName,
+        'email':email,
+        'message':message,
+      }),
+    })
+    .then(() => alert("Thank you!"))
+    .catch((error) => alert(error));
+  };
     
     
   return (
@@ -71,7 +74,7 @@ const Form = ({noBlur}) => {
     <Subtitle name={'Form'} title={`And here's a\nbeautiful form`} span={'form'} position={'left'} first={true}/>
 
     <motion.form initial='hidden' whileInView='visible' variants={variant} viewport={{once:true}} 
-      name='ContactForm' method="POST" data-netlify="true" action='/success'
+      name='ContactForm' method="POST" data-netlify="true" 
       // data-netlify-recaptcha="true"
       className='flex flex-col items-start'>
 
