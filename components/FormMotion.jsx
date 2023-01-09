@@ -155,7 +155,7 @@ const Form = ({noBlur}) => {
           cursor-pointer   
           outline-none focus-visible:outline-primary border-transparent bg-primary text-white 
           active:bg-white active:text-primary hover:border-white`}
-          onClick={handleSubmit}>
+          onSubmit={handleSubmit}>
 
             <h5>SUBMIT</h5>
           </motion.button>
