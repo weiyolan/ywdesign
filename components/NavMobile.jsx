@@ -96,11 +96,11 @@ const variants = {
       </motion.div>
 
     <Navigation>
-      <Button mobile={true} className='' to="" title="Home" text="Home" mode={selectedB==='Home'?'selected':'unselected'} handleClick={selectButton}/>
-      <Button mobile={true} className='' to="services" title="Services" text="Services" mode={selectedB==='Services'?'selected':'unselected'} handleClick={selectButton}/>
-      <Button mobile={true} className='' to="aboutme" title="About Me" text="About Me" mode={selectedB==='About Me'?'selected':'unselected'} handleClick={selectButton}/>
-      <Button mobile={true} className='' to="contact" title="Contact"  text="Contact" mode={selectedB==='Contact'?'selected':'unselected'} handleClick={selectButton}/>
-      <Button mobile={true} className='' to="contact/#Form" title="Contact" text="Ask a quote" handleClick={selectButton} mode={'dark'}/>
+      <Button onClick={() => toggleOpen()} mobile={true} className='' to="" title="Home" text="Home" mode={selectedB==='Home'?'selected':'unselected'} handleClick={selectButton}/>
+      <Button onClick={() => toggleOpen()} mobile={true} className='' to="services" title="Services" text="Services" mode={selectedB==='Services'?'selected':'unselected'} handleClick={selectButton}/>
+      <Button onClick={() => toggleOpen()} mobile={true} className='' to="aboutme" title="About Me" text="About Me" mode={selectedB==='About Me'?'selected':'unselected'} handleClick={selectButton}/>
+      <Button onClick={() => toggleOpen()} mobile={true} className='' to="contact" title="Contact"  text="Contact" mode={selectedB==='Contact'?'selected':'unselected'} handleClick={selectButton}/>
+      <Button onClick={() => toggleOpen()} mobile={true} className='' to="contact/#Form" title="Contact" text="Ask a quote" handleClick={selectButton}  mode={'dark'}/>
 
     </Navigation>
     

@@ -42,16 +42,28 @@ const Form = ({noBlur}) => {
   let [message,setMessage] = useState('');
 
 
-function handleClick() {
-  
-}
-
+  function handleSubmit (e) {
+      e.preventDefault();
+    
+      const myForm = e.target;
+      const formData = new FormData(myForm);
+      
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      })
+        .then(() => alert("Form successfully submitted"))
+        .catch((error) => alert(error));
+    };
+    
+    
   return (
   <section id={'Form'} className='w-full'>
     <Subtitle name={'Form'} title={`And here's a\nbeautiful form`} span={'form'} position={'left'} first={true}/>
 
     <motion.form initial='hidden' whileInView='visible' variants={variant} viewport={{once:true}} 
-      // name='ContactForm' method="POST" data-netlify="true" 
+      name='ContactForm' data-netlify="true" 
       className='flex flex-col items-start'>
 
       <input type='hidden' name='form-name' value='ContactForm'/>
