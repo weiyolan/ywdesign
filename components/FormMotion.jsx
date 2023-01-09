@@ -40,6 +40,7 @@ const Form = ({noBlur}) => {
   let [lastName,setLastName] = useState('');
   let [email,setEmail] = useState('');
   let [message,setMessage] = useState('');
+  let [honey,setHoney] = useState('');
 
   function encode(data) {
     return Object.keys(data)
@@ -62,6 +63,7 @@ const Form = ({noBlur}) => {
         'lastName':lastName,
         'email':email,
         'message':message,
+        'bot-field':honey
       }),
     })
     .then(() => alert("Thank you!"))
@@ -74,11 +76,15 @@ const Form = ({noBlur}) => {
     <Subtitle name={'Form'} title={`And here's a\nbeautiful form`} span={'form'} position={'left'} first={true}/>
 
     <motion.form initial='hidden' whileInView='visible' variants={variant} viewport={{once:true}} 
-          onSubmit={handleSubmit} name='ContactForm' method="POST" data-netlify="true" 
+          onSubmit={handleSubmit} name='ContactForm' method="POST" data-netlify="true" netlify-honeypot="bot-field"
       // data-netlify-recaptcha="true"
       className='flex flex-col items-start'>
 
       <input type='hidden' name='form-name' value='ContactForm'/>
+        <p className='hidden'> 
+          <label>Don't fill this out if you're human:</label>
+          <input name="bot-field" value={honey} onChange={(e)=>setHoney(e.target.value)} />
+        </p>
       
       <div className='grid gap-6 grid-cols-3 w-full min-w-[30vw] auto-rows-min'>
         <div className='inline-flex col-start-1 col-span-3 min-[500px]:col-span-2'>
