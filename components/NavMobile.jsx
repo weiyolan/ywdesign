@@ -78,7 +78,7 @@ const variants = {
     variants={sidebar}
     ref={containerRef}
   >
-    <motion.div className="bg-white/20 fixed top-0 rounded-b-[30px] rounded-tl-[30px] h-[530px] right-0 w-[100%] sm:w-[30vw]" variants={sidebar} />
+    <motion.div className="bg-white/20 backdrop-blur-md fixed top-0 rounded-b-[30px] rounded-tl-[30px] h-[530px] right-0 w-[100%] sm:w-[30vw]" variants={sidebar} />
     
       <motion.div 
       variants={variants}
