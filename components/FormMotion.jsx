@@ -82,7 +82,7 @@ const Form = ({noBlur, setLightbox}) => {
 
       <input type='hidden' name='form-name' value='ContactForm'/>
         <p className='hidden'> 
-          <label>Don't fill this out if you're human:</label>
+          <label>{"Don't fill this out if you're human:"}</label>
           <input name="bot-field" value={honey} onChange={(e)=>setHoney(e.target.value)} />
         </p>
       
