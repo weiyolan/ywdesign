@@ -110,7 +110,7 @@ const variants = {
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
-      className='absolute inline-flex rounded-full w-fit p-2 top-[16px] z-[51] left-[16px]'>
+      className='absolute inline-flex rounded-full w-fit top-[16px] z-[51] left-[16px]'>
       <Link  href={`/`} onClick={()=>selectButton('Home')}>
       {/* <YW
         width='40'

@@ -4,12 +4,13 @@ import Subtitle from "./Subtitle";
 import SpecialtyCard from "./SpecialtyCard";
 import LayoutSection from "./LayoutSection";
 import {motion} from 'framer-motion'
+const designList = [{text:'Logo',link:'/services/#Logo'},{text:'Website',link:'/services/#Website'},{text:'e-Commerce',link:'/services/#e-Commerce'},{text:'Analysis',link:'/services/#Analysis'}];
 
 const specialities = [
-    {title:'Websites', text:'I build websites and online tools to boost your brand.'},
-    {title: 'Branding', text: 'Uplift your current logo or website with a modern design and color palette.'},
-    {title: 'Web Shop', text: 'I help companies and artists getting their products online.'},
-    {title: 'Analysis', text: 'Get insights on your current website and branding performance.'},
+    {title:'Websites', text:'I build websites and online tools to boost your brand.', link:'/services/#Website'},
+    {title: 'Branding', text: 'Uplift your current logo or website with a modern design and color palette.',link:'/services/#Logo'},
+    {title: 'Web Shop', text: 'I help companies and artists getting their products online.',link:'/services/#e-Commerce'},
+    {title: 'Analysis', text: 'Get insights on your current website and branding performance.',link:'/services/#Analysis'},
   ]
 
 export default function Specialities ({noBlur}) {
@@ -66,7 +67,7 @@ export default function Specialities ({noBlur}) {
         {specialities.map((specialty,i)=>{
           return (
             <SpecialtyCard noBlur={noBlur} className={``}
-            key={specialty.title} title={specialty.title} clicked={clicked[i]} setClicked={(newVal)=>handleClick(newVal,i)} text={specialty.text} />
+            key={specialty.title} title={specialty.title} clicked={clicked[i]} setClicked={(newVal)=>handleClick(newVal,i)} text={specialty.text} link={specialty.link}/>
             )})
         }
 

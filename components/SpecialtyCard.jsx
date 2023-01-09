@@ -1,7 +1,8 @@
 import {useEffect, useState} from 'react'
 import Image from 'next/image'
+import ArrowLink from './ArrowLink'
 
-export default function SpecialtyCard({title, text, clicked, setClicked, noBlur}) {
+export default function SpecialtyCard({title, text, clicked, setClicked, noBlur, link, linkText}) {
 
     return (
       // variants={cardMotion}
@@ -16,12 +17,15 @@ export default function SpecialtyCard({title, text, clicked, setClicked, noBlur}
       // onMouseLeave={()=>setHovering(false)}
       onClick={()=>setClicked(!clicked)}>
 
-        <h4 className={`absolute duration-1000 text-xl min-[400px]:text-2xl min-[500px]:text-3xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-4 whitespace-nowrap ` + (clicked?`scale-110 font-light left-1/2 top-0 -translate-x-1/2 mt-3 min-[350px]:mt-6 sm:mt-4 lg:mt-6 xl:mt-8`:`font-thin left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2`)}>
+        <h4 className={`absolute duration-1000 text-xl min-[400px]:text-2xl min-[500px]:text-3xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-4 whitespace-nowrap ` + (clicked?`scale-110 font-light left-1/2 top-0 -translate-x-1/2 mt-2 min-[350px]:mt-6 sm:mt-4 lg:mt-6 xl:mt-8`:`font-thin left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2`)}>
             {title}
             </h4>
-        <p className={`absolute duration-1000 w-full px-4 lg:px-6 font-extralight text-xs min-[400px]:text-sm  ` + (clicked?` text-white visible left-1/2 -translate-x-1/2 top-[50%] -translate-y-1/3 `:` top-40 translate-y-full left-1/2 -translate-x-1/2 invisible  text-transparent`)}>
+        <p className={`absolute duration-1000 w-full px-2 lg:px-6 font-extralight text-xs min-[400px]:text-sm  ` + (clicked?` text-white visible left-1/2 -translate-x-1/2 top-1/2 -translate-y-[40%] sm:-translate-y-1/3 `:` top-40 translate-y-full left-1/2 -translate-x-1/2 invisible  text-transparent`)}>
             {text}
         </p>
+        <div className={`absolute w-full font-extralight text-xs min-[400px]:text-sm transition-all left-1/2 -translate-x-1/2 ml-[15px] text-white fill-white bottom-0 mb-1 min-[400px]:mb-6 ` + (clicked?` opacity-100 visible ease-in duration-[3s]`:` opacity-0 ease-out duration-[0.5s] invisible`)} >
+          <ArrowLink text='More' inherit={true} to={link} ext={false}/>
+        </div>
       </div>
   
     )
