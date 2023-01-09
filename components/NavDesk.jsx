@@ -43,7 +43,7 @@ export default function NavDesk({from}) {
 
 
     return (
-        <nav className={`flex fixed justify-center w-full h-16 rounded-b-3xl top-0 z-10 bg-white/5 backdrop-blur-md`}>
+        <nav className={`flex fixed justify-center w-full h-16 rounded-b-3xl top-0 z-10 bg-white/5 backdrop-blur-sm`}>
             
             <div className='inline-flex absolute items-center h-16 left-0'>
               <Link  href={`/`} onClick={()=>selectButton('Home')}>

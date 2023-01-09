@@ -28,15 +28,25 @@ export default function Specialities ({noBlur}) {
     // console.log('next state:')
 
     let newClicked = {... new Array(specialities.length).fill(false)};
+    
 
     if (newVal===true) {
-      newClicked[i]=newVal;
+      newClicked[i]=true;
       setClicked(newClicked)
+
     } else if (newVal === false) {
+      let indexes = [0,1,2,3].filter((index)=> index !== i)
+      let randomIndex = indexes[Math.floor(Math.random()*3)];
+      console.log(randomIndex)
+      newClicked[randomIndex] = true;
       setClicked(newClicked)
     }     
   
   }
+
+  useEffect(()=>{
+    console.log(clicked)
+  },[clicked])
 
   // const parent = {
   //   visible: {

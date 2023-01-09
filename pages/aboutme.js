@@ -6,7 +6,7 @@ import Subtitle from '../components/Subtitle'
 import TwoColumns from '../components/TwoColumns'
 // import { Inter } from '@next/font/google'
 // import styles from '../styles/Home.module.css'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/NavbarOld'
 import Title from '../components/Title'
 import Yolan from '../public/images/yolan.svg'
 import AccentTitle from '../components/AccentTitle'
@@ -35,7 +35,7 @@ let aboutmeText = "I'm an open-minded and ambitious person, taking every challen
 
 export default function Aboutme({scrolled}) {
 
-  let {width, breakPointSmall} = useAppContext();
+  let {width, breakPointSmall, noBlur} = useAppContext();
 
   return (
     <>
@@ -51,23 +51,28 @@ export default function Aboutme({scrolled}) {
         
           <YolanPhoto />
 
-          <TwoColumns left={true}>
-            <Subtitle name='About' title={`A little bit\nabout me`} span='me' first={true} position={'left'}/>
-              <div className='flex text-base lg:text-base font-light  text-primary text-justify sm:text-left sm:w-2/3 lg:w-1/2'>
-                <p>{aboutmeText}</p>
+            <div className='flex flex-col lg:flex-row'>
+              <div className='flex-1'>
+                <TwoColumns left={true}>
+                  <Subtitle name='About' title={`A little bit\nabout me`} span='me' first={true} position={'left'}/>
+                    <div className='flex text-base lg:text-base font-light  text-primary text-justify sm:text-left sm:w-2/3 lg:w-4/5'>
+                      <p>{aboutmeText}</p>
+                    </div>
+                </TwoColumns>
               </div>
-          </TwoColumns>
-
-          {/* <TwoColumns left={width<breakPointSmall?true:false}> */}
-          <TwoColumns left={true}>
-            <Subtitle name='Mission' first={true} title={`What I want\nto achieve`} span='achieve' position={'right'} />
-            <div className='flex text-base lg:text-base font-light justify-end text-primary text-justify sm:text-right '>
-              <p className='sm:w-2/3 lg:w-1/2'>{missionText}</p>
+            {/* <TwoColumns left={width<breakPointSmall?true:false}> */}
+              <div className='flex-1'>
+                <TwoColumns left={true}>
+                  <Subtitle name='Mission' first={true} title={`What I want\nto achieve`} span='achieve' position={'right'} />
+                  <div className='flex text-base lg:text-base font-light text-primary text-justify sm:text-right justify-end'>
+                    <p className='sm:w-2/3 lg:w-4/5'>{missionText}</p>
+                  </div>
+                </TwoColumns>
+              </div>
             </div>
-          </TwoColumns>
 
           <section className='flex flex-col cursor-default'>
-            <Subtitle name='Vision' title={`Everything starts\nwith a vision`} first={true} span='vision'/>
+            <Subtitle name='Vision' title={`Everything starts\nwith a vision`} first={width>1025?false:true} span='vision'/>
             {/* <RiDoubleQuotesL className='inline-block -translate-y-3' fill='white'/>  */}
             <div className='grid grid-cols-2 gap-8  sm:gap-16 auto-rows-auto mx-auto'>
               {vision.map((item)=>{
@@ -88,7 +93,7 @@ export default function Aboutme({scrolled}) {
           </section> */}
 
           <section >
-              <Subtitle name='Numbers' first={true} title={`Measure to\ndrive impact`} span='drive'  />
+              <Subtitle name='Numbers' first={width>1025?false:true} title={`Measure to\ndrive impact`} span='drive'  />
               
               <div className='grid grid-rows-3 sm:grid-rows-1 sm:grid-cols-3 cursor-default'>
               {numbers.map((num,i) => {
@@ -104,7 +109,7 @@ export default function Aboutme({scrolled}) {
           </section> */}
 
 
-          <Conctact first={true}/>
+          <Conctact first={width>1025?false:true}/>
           
         </Layout>
 

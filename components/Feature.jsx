@@ -63,7 +63,7 @@ const Feature = ({offset, title, text, icon}) => {
   //  `
   //   }>
     // <motion.div initial={{y: 300 , opacity:0}} whenInView={style}
-    <motion.div  variants={styleVariant} whileHover={{scale:1.02}} whileTap={{scale:1.05}}
+    <motion.div  variants={styleVariant} whileHover={{scale:1.02}} whileTap={{scale:0.95}}
       // viewport={{once:true}}
 
       className={`flex w-full ${offset?'flex-row text-left':'flex-row-reverse text-right'} sm:flex-col sm:text-center relative justify-start  

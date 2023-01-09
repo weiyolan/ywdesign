@@ -35,7 +35,7 @@ let inputVariants = {
   }
 }
 
-const Form = ({noBlur}) => {
+const Form = ({noBlur, setLightbox}) => {
   let [name,setName] = useState('');
   let [lastName,setLastName] = useState('');
   let [email,setEmail] = useState('');
@@ -66,7 +66,7 @@ const Form = ({noBlur}) => {
         'bot-field':honey
       }),
     })
-    .then(() => alert("Thank you!"))
+    .then(() => setLightbox(true))
     .catch((error) => alert(error));
   };
     
