@@ -41,25 +41,24 @@ const Form = ({noBlur}) => {
   let [email,setEmail] = useState('');
   let [message,setMessage] = useState('');
 
-
-  function handleSubmit (e) {
-      e.preventDefault();
+  // function handleSubmit (e) {
+  //     e.preventDefault();
     
-      const formData = new FormData();
+  //     const formData = new FormData();
 
-      formData.append("name", name)
-      formData.append("lastName", lastName)
-      formData.append("email", email)
-      formData.append("message", message)
+  //     formData.append("name", name)
+  //     formData.append("lastName", lastName)
+  //     formData.append("email", email)
+  //     formData.append("message", message)
       
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
-      })
-        .then(() => alert("Form successfully submitted"))
-        .catch((error) => alert(error));
-    };
+  //     fetch("/", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //       body: new URLSearchParams(formData).toString(),
+  //     })
+  //       .then(() => alert("Form successfully submitted"))
+  //       .catch((error) => alert(error));
+  //   };
     
     
   return (
@@ -67,7 +66,8 @@ const Form = ({noBlur}) => {
     <Subtitle name={'Form'} title={`And here's a\nbeautiful form`} span={'form'} position={'left'} first={true}/>
 
     <motion.form initial='hidden' whileInView='visible' variants={variant} viewport={{once:true}} 
-      name='ContactForm' data-netlify="true" data-netlify-recaptcha="true"
+      name='ContactForm' method="POST" data-netlify="true" action='/success'
+      // data-netlify-recaptcha="true"
       className='flex flex-col items-start'>
 
       <input type='hidden' name='form-name' value='ContactForm'/>
@@ -149,19 +149,22 @@ const Form = ({noBlur}) => {
       
       {/* BUTTON */}
         <div className='flex col-start-1 row-start-4 min-[400px]:col-start-3 min-[400px]:row-start-2  justify-start items-end '>
-          <motion.button type='submit' variants={inputVariants} whileHover={{scale:1.05}} className={`inline-flex shadow-sm my-2
+          <motion.button type='submit' variants={inputVariants} whileHover={{scale:1.05}} 
+          className={`inline-flex shadow-sm my-2
           border border-solid rounded-full px-4 py-2  
           font-sans font-semibold text-xs textcenter whitespace-nowrap
           cursor-pointer   
           outline-none focus-visible:outline-primary border-transparent bg-primary text-white 
           active:bg-white active:text-primary hover:border-white`}
-          onSubmit={handleSubmit}>
 
-            <h5>SUBMIT</h5>
+          // onSubmit={handleSubmit}
+          >
+          SEND
+            {/* <h5>SEND</h5> */}
           </motion.button>
         </div>
 
-        <div className='col-start-2 row-start-4 min-[400px]:col-start-1 min-[400px]:row-start-4 min-[500px]:col-start-3 min-[500px]:row-start-1 ' data-netlify-recaptcha="true"></div>
+        {/* <div className='col-start-2 row-start-4 min-[400px]:col-start-1 min-[400px]:row-start-4 min-[500px]:col-start-3 min-[500px]:row-start-1 ' data-netlify-recaptcha="true"></div> */}
 
       </div>
           

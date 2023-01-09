@@ -21,6 +21,7 @@ export default function NavMobile ({from}) {
 
   function selectButton (selection) {
     setSelectedB(selection)
+    toggleOpen()
   }
 
   useEffect(()=>{
@@ -45,7 +46,7 @@ const sidebar = {
   closed: {
     clipPath: `circle(30px at ${width-40}px 40px)`,
     transition: {
-      delay: 0.5,
+      delay: 0.2,
       type: "spring",
       stiffness: 400,
       damping: 40
@@ -78,7 +79,7 @@ const variants = {
     variants={sidebar}
     ref={containerRef}
   >
-    <motion.div className="bg-white/20 backdrop-blur-md fixed top-0 rounded-b-[30px] rounded-tl-[30px] h-[530px] right-0 w-[100%] sm:w-[30vw]" variants={sidebar} />
+    <motion.div className={`${isOpen?'bg-white ':'bg-white/10 backdrop-blur-md'} duration-300 fixed top-0 rounded-b-[30px] rounded-tl-[30px] h-[530px] right-0 w-[100%] sm:w-[30vw]`} variants={sidebar} />
     
       <motion.div 
       variants={variants}
@@ -96,15 +97,15 @@ const variants = {
       </motion.div>
 
     <Navigation>
-      <Button onClick={() => toggleOpen()} mobile={true} className='' to="" title="Home" text="Home" mode={selectedB==='Home'?'selected':'unselected'} handleClick={selectButton}/>
-      <Button onClick={() => toggleOpen()} mobile={true} className='' to="services" title="Services" text="Services" mode={selectedB==='Services'?'selected':'unselected'} handleClick={selectButton}/>
-      <Button onClick={() => toggleOpen()} mobile={true} className='' to="aboutme" title="About Me" text="About Me" mode={selectedB==='About Me'?'selected':'unselected'} handleClick={selectButton}/>
-      <Button onClick={() => toggleOpen()} mobile={true} className='' to="contact" title="Contact"  text="Contact" mode={selectedB==='Contact'?'selected':'unselected'} handleClick={selectButton}/>
-      <Button onClick={() => toggleOpen()} mobile={true} className='' to="contact/#Form" title="Contact" text="Ask a quote" handleClick={selectButton}  mode={'dark'}/>
+      <Button  mobile={true} className='' to="" title="Home" text="Home" mode={selectedB==='Home'?'selected':'unselected'} handleClick={selectButton}/>
+      <Button  mobile={true} className='' to="services" title="Services" text="Services" mode={selectedB==='Services'?'selected':'unselected'} handleClick={selectButton}/>
+      <Button  mobile={true} className='' to="aboutme" title="About Me" text="About Me" mode={selectedB==='About Me'?'selected':'unselected'} handleClick={selectButton}/>
+      <Button  mobile={true} className='' to="contact" title="Contact"  text="Contact" mode={selectedB==='Contact'?'selected':'unselected'} handleClick={selectButton}/>
+      <Button  mobile={true} className='' to="contact/#Form" title="Contact" text="Ask a quote" handleClick={selectButton}  mode={'dark'}/>
 
     </Navigation>
     
-    <MenuToggle toggle={() => toggleOpen()} />
+    <MenuToggle open={isOpen} toggle={() => toggleOpen()} />
   
   </motion.nav>
   );
