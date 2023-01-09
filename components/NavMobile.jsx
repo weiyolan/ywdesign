@@ -12,10 +12,11 @@ import YW from "../public/images/logo_yw_b.svg";
 
 
 
+
 export default function NavMobile ({from}) {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
-  const { width } = useDimensions(containerRef);
+  const { width, height } = useDimensions(containerRef);
 
   let [selectedB,setSelectedB] = useState(from);
 
@@ -29,6 +30,7 @@ export default function NavMobile ({from}) {
   },[from])
 
 
+//  BIG CIRCLE
 // const sidebar = {
 //   open: {
 //     clipPath: `circle(${530 * 2 + 200}px at ${width-40}px 40px)`,
@@ -51,15 +53,22 @@ export default function NavMobile ({from}) {
 
 const sidebar = {
   open: {
-    clipPath: `circle(${530 * 2 + 200}px at ${width-40}px 40px)`,
+    y: 0,
+    x: 0,
+    z: 50,
     transition: {
       type: "spring",
-      stiffness: 20,
-      restDelta: 2
+      stiffness: 400,
+      restDelta: 2,
+      damping:40
   }
   },
   closed: {
-    clipPath: `circle(30px at ${width-40}px 40px)`,
+    // y: -490,
+    // x: 160,
+    x: width - 70,
+    y: -460,
+    z: 50,
     transition: {
       delay: 0.2,
       type: "spring",
@@ -68,6 +77,7 @@ const sidebar = {
   }
   }
 };
+
 
 const variants = {
   open: {
@@ -88,28 +98,30 @@ const variants = {
 
 
   return (
-  <motion.nav className='fixed top-0 z-[30] h-[530px] rounded-b-[30px] rounded-tl-[30px] right-0 w-[100%] sm:w-[40vw] overflow-hidden'
+  <motion.nav className={`fixed top-0 right-0 h-[530px] w-[100%] sm:w-[40vw] bg-transparent z-[51] rounded-b-[30px] rounded-tl-[30px] `}
     initial={false}
     animate={isOpen ? "open" : "closed"}
-    variants={sidebar}
+    custom={height}
     ref={containerRef}
+    key={width}
   >
-    <motion.div className={`${isOpen?'bg-white':'bg-white/10'} fixed duration-300 top-0 rounded-b-[30px] rounded-tl-[30px] h-[530px] right-0 w-[100%] sm:w-[40vw]`} variants={sidebar} />
+    <motion.div className={`bg-white/10 backdrop-blur-md z-[51] absolute top-0 forward fill-mode rounded-b-[30px] rounded-tl-[30px] h-[530px] right-0 w-[100%] sm:w-[40vw]`} variants={sidebar} />
+    {/* <motion.div className={`${isOpen?'bg-white':'bg-white/10'} fixed duration-700 top-0 rounded-b-[30px] rounded-tl-[30px] h-[530px] right-0 w-[100%] sm:w-[40vw]`} variants={sidebar} /> */}
     
-      <motion.div 
+    <motion.div 
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
       className='absolute inline-flex rounded-full w-fit p-2 top-[16px] z-[51] left-[16px]'>
-              <Link  href={`/`} onClick={()=>selectButton('Home')}>
-              {/* <YW
-                width='40'
-                className='m-2'
-                alt="ywdesign svg-logo"
-                onClick={()=>selectButton('Home')}/> */}
-                <YW className='w-10 h-10' lt="ywdesign logo" />
-              </Link> 
-      </motion.div>
+      <Link  href={`/`} onClick={()=>selectButton('Home')}>
+      {/* <YW
+        width='40'
+        className='m-2'
+        alt="ywdesign svg-logo"
+        onClick={()=>selectButton('Home')}/> */}
+        <YW className='w-10 h-10' lt="ywdesign logo" />
+      </Link> 
+    </motion.div>
 
     <Navigation>
       <Button  mobile={true} className='' to="" title="Home" text="Home" mode={selectedB==='Home'?'selected':'unselected'} handleClick={selectButton}/>
@@ -117,7 +129,6 @@ const variants = {
       <Button  mobile={true} className='' to="aboutme" title="About Me" text="About Me" mode={selectedB==='About Me'?'selected':'unselected'} handleClick={selectButton}/>
       <Button  mobile={true} className='' to="contact" title="Contact"  text="Contact" mode={selectedB==='Contact'?'selected':'unselected'} handleClick={selectButton}/>
       <Button  mobile={true} className='' to="contact/#Form" title="Contact" text="Ask a quote" handleClick={selectButton}  mode={'dark'}/>
-
     </Navigation>
     
     <MenuToggle open={isOpen} toggle={() => toggleOpen()} />

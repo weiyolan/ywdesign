@@ -83,7 +83,7 @@ function MovingRow({allSkills, baseVelocity=100}) {
 
 
   return (
-      <motion.div style={{ x }} className={`inline-flex justify-center mx-2 my-2 '} `}>
+      <motion.div style={{ x }} className={`inline-flex relative z-[10] justify-center mx-2 my-2 '} `}>
         {/* {allSkills.sort((a, b) => 0.5 - Math.random()).map((skill)=>{
           return <Pill content={skill} round={true} key={skill}/>
         })} */}

@@ -23,7 +23,7 @@ const variants = {
 export default function MenuItem ({ children }) {
   // const style = { border: `2px solid ${colors[i]}` };
   return (
-    <motion.li className='p-0 m-0 list-none mb-7 flex  justify-end items-end cursor-pointer'
+    <motion.li className='p-0 m-0 list-none mb-7 flex z-[51] justify-end items-end cursor-pointer'
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
