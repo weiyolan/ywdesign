@@ -45,8 +45,12 @@ const Form = ({noBlur}) => {
   function handleSubmit (e) {
       e.preventDefault();
     
-      const myForm = e.target;
-      const formData = new FormData(myForm);
+      const formData = new FormData();
+
+      formData.append("name", name)
+      formData.append("lastName", lastName)
+      formData.append("email", email)
+      formData.append("message", message)
       
       fetch("/", {
         method: "POST",
