@@ -67,7 +67,7 @@ const Form = ({noBlur}) => {
     <Subtitle name={'Form'} title={`And here's a\nbeautiful form`} span={'form'} position={'left'} first={true}/>
 
     <motion.form initial='hidden' whileInView='visible' variants={variant} viewport={{once:true}} 
-      name='ContactForm' data-netlify="true" 
+      name='ContactForm' data-netlify="true" data-netlify-recaptcha="true"
       className='flex flex-col items-start'>
 
       <input type='hidden' name='form-name' value='ContactForm'/>
@@ -148,7 +148,7 @@ const Form = ({noBlur}) => {
         </div>
       
       {/* BUTTON */}
-        <div className='flex col-start-1 row-start-4 min-[400px]:col-start-3 min-[400px]:row-start-2 justify-start items-end '>
+        <div className='flex col-start-1 row-start-4 min-[400px]:col-start-3 min-[400px]:row-start-2  justify-start items-end '>
           <motion.button type='submit' variants={inputVariants} whileHover={{scale:1.05}} className={`inline-flex shadow-sm my-2
           border border-solid rounded-full px-4 py-2  
           font-sans font-semibold text-xs textcenter whitespace-nowrap
@@ -160,6 +160,8 @@ const Form = ({noBlur}) => {
             <h5>SUBMIT</h5>
           </motion.button>
         </div>
+
+        <div className='col-start-2 row-start-4 min-[400px]:col-start-1 min-[400px]:row-start-4 min-[500px]:col-start-3 min-[500px]:row-start-1 ' data-netlify-recaptcha="true"></div>
 
       </div>
           

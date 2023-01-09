@@ -1,6 +1,6 @@
 {
-    "name": "ywdesign.co",
-    "short_name": "ywdesign.co",
+    "name": "ywdesign",
+    "short_name": "ywdesign",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#575757",
-    "background_color": "#575757",
+    "theme_color": "#171b4d",
+    "background_color": "#171b4d",
     "display": "standalone"
 }
