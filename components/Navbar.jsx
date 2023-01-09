@@ -1,13 +1,13 @@
 import React,{useState,useEffect} from "react";
 import NavDesk from "./NavDesk";
 import NavMobile from "./NavMobile";
-import useWindowSize from "./useWindowSize";
 import Link from "next/link";
+import { useAppContext } from "./Context";
 
 export default function Navbar ({from}) {
     let [lastTop, setLastTop] = useState(0)
     let [show,setShow] = useState(true)
-    let {width} = useWindowSize()
+    let {width, noBlur} = useAppContext()
 
     function handleScroll () {
         if(window.scrollY > lastTop){ //if it will be greater than the previous
@@ -32,7 +32,7 @@ export default function Navbar ({from}) {
           <div className={`z-[50]`}>  
               
           
-            <NavMobile from = {from} />
+            <NavMobile noBlur={noBlur} from = {from} />
           </div>
           :<div className={`fixed z-[50] w-full top-0 duration-500 ${show?'':'-translate-y-20'}`}>
           :<NavDesk from = {from} />

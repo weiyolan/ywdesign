@@ -6,7 +6,10 @@ const AppContext = createContext();
 export function AppWrapper({ children, breakPointSmall }) {
   let {width} = useWindowSize();
 
-  let sharedState = {width: width, breakPointSmall: breakPointSmall}
+  let sharedState = {
+    width: width, 
+    breakPointSmall: breakPointSmall,
+    noBlur: width<breakPointSmall}
 
   return (
     <AppContext.Provider value={sharedState}>

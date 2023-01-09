@@ -79,7 +79,7 @@ const variants = {
     variants={sidebar}
     ref={containerRef}
   >
-    <motion.div className={`${isOpen?'bg-white ':'bg-white/10 backdrop-blur-md'} duration-300 fixed top-0 rounded-b-[30px] rounded-tl-[30px] h-[530px] right-0 w-[100%] sm:w-[30vw]`} variants={sidebar} />
+    <motion.div className={`${isOpen?'bg-white':'bg-white/10 backdrop-blur-sm'} fixed top-0 rounded-b-[30px] rounded-tl-[30px] h-[530px] right-0 w-[100%] sm:w-[30vw]`} variants={sidebar} />
     
       <motion.div 
       variants={variants}

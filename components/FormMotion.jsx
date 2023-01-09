@@ -74,7 +74,7 @@ const Form = ({noBlur}) => {
     <Subtitle name={'Form'} title={`And here's a\nbeautiful form`} span={'form'} position={'left'} first={true}/>
 
     <motion.form initial='hidden' whileInView='visible' variants={variant} viewport={{once:true}} 
-      name='ContactForm' method="POST" data-netlify="true" 
+          onSubmit={handleSubmit} name='ContactForm' method="POST" data-netlify="true" 
       // data-netlify-recaptcha="true"
       className='flex flex-col items-start'>
 
@@ -158,7 +158,6 @@ const Form = ({noBlur}) => {
       {/* BUTTON */}
         <div className='flex col-start-1 row-start-4 min-[400px]:col-start-3 min-[400px]:row-start-2  justify-start items-end '>
           <motion.button type='submit' variants={inputVariants} whileHover={{scale:1.05}} 
-          onSubmit={handleSubmit}
           className={`inline-flex shadow-sm my-2
           border border-solid rounded-full px-4 py-2  
           font-sans font-semibold text-xs textcenter whitespace-nowrap

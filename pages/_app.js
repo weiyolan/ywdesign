@@ -37,6 +37,7 @@ export default function App({ Component, pageProps }) {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <AppWrapper breakPointSmall={640}>
+        
         <div className={`${workSans.variable} font-sans relative scroll-smooth cursor-default w-full overflow-hidden `}>
           {/* bg-gradient-to-br from-green to-blue */}
           <Background scrolled={scrolled}/>

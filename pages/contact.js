@@ -12,7 +12,7 @@ import { useAppContext } from '../components/Context'
 
 
 export default function Contact({scrolled}) {
-  let {width, breakPointSmall} = useAppContext();
+  let {width, breakPointSmall, noBlur} = useAppContext();
 
   return (
     <>
@@ -27,7 +27,7 @@ export default function Contact({scrolled}) {
         <Layout>
           
           <Map/>
-          <FormMotion noBlur={true}/>
+          <FormMotion noBlur={noBlur}/>
           
         </Layout>
         <Footer scrolled={scrolled}/>

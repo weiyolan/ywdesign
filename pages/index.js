@@ -15,7 +15,7 @@ import Navbar from '../components/Navbar'
 
 
 export default function Index({scrolled}) {
-  let {width, breakPointSmall} = useAppContext();
+  let {width, breakPointSmall, noBlur} = useAppContext();
 
   return (
     <>
@@ -25,11 +25,12 @@ export default function Index({scrolled}) {
       
       <main>
         <Navbar from = 'Home'/>
+        
         <Title breakPointSmall={breakPointSmall} type='home'/>
 
         <Layout>
           
-          <Specialities noBlur={true}/>
+          <Specialities noBlur={noBlur}/>
 
 
           <section className='grid grid-cols-2'>
