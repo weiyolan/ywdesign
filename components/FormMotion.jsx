@@ -41,6 +41,11 @@ const Form = ({noBlur}) => {
   let [email,setEmail] = useState('');
   let [message,setMessage] = useState('');
 
+  function handleSubmit(e) {
+    e.prevenDefault();
+    console.log(e.target)
+  }
+
   // function handleSubmit (e) {
   //     e.preventDefault();
     
@@ -150,13 +155,14 @@ const Form = ({noBlur}) => {
       {/* BUTTON */}
         <div className='flex col-start-1 row-start-4 min-[400px]:col-start-3 min-[400px]:row-start-2  justify-start items-end '>
           <motion.button type='submit' variants={inputVariants} whileHover={{scale:1.05}} 
+          onSubmit={handleSubmit}
           className={`inline-flex shadow-sm my-2
           border border-solid rounded-full px-4 py-2  
           font-sans font-semibold text-xs textcenter whitespace-nowrap
           cursor-pointer   
           outline-none focus-visible:outline-primary border-transparent bg-primary text-white 
           active:bg-white active:text-primary hover:border-white`}
-
+              
           // onSubmit={handleSubmit}
           >
           SEND
