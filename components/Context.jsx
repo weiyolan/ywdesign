@@ -3,13 +3,14 @@ import useWindowSize from './useWindowSize';
 
 const AppContext = createContext();
 
-export function AppWrapper({ children, breakPointSmall }) {
+export function AppWrapper({ children, breakPointSmall, scrolled }) {
   let {width} = useWindowSize();
 
   let sharedState = {
     width: width, 
     breakPointSmall: breakPointSmall,
-    noBlur: width<breakPointSmall}
+    noBlur: true,
+    scrolled: scrolled }
 
   return (
     <AppContext.Provider value={sharedState}>

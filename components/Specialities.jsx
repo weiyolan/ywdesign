@@ -72,15 +72,13 @@ export default function Specialities ({noBlur}) {
     
       {/* <div initial='hidden' viewport={{once:false}} whileInView='visible' variants={parent}  */}
 
-      <div className='grid grid-cols-2 sm:grid-cols-4 w-full gap-4 min-[500px]:gap-8 sm:gap-2 md:gap-6 lg:gap-8 min-h-fit mx-auto z-2'>
-      
+      <div className='grid grid-cols-2 grid-rows-2 sm:grid-rows-1 min-h-fit sm:grid-cols-4 w-full gap-4 min-[500px]:gap-8 sm:gap-2 md:gap-6 lg:gap-8  mx-auto z-2'>
         {specialities.map((specialty,i)=>{
           return (
             <SpecialtyCard noBlur={noBlur} className={``}
             key={specialty.title} title={specialty.title} clicked={clicked[i]} setClicked={(newVal)=>handleClick(newVal,i)} text={specialty.text} link={specialty.link}/>
             )})
         }
-
       </div>
     </LayoutSection>
     

@@ -229,7 +229,8 @@ export default function Services({scrolled}) {
             return <Service 
             key={i} 
             name={service.name} 
-            first={i===0?true:false}
+            first={true}
+            // first={i===0?true:false}
             icons={service.icons}
             title={service.title} 
             text={service.text} 
