@@ -26,14 +26,15 @@ export default function Navbar ({from}) {
   },[lastTop])
 
 
+
   return (
       <div>
       {width>750? 
-        <div className={`fixed z-[50] w-full top-0 duration-500 ${show?'':'-translate-y-20'}`}>
+        <div className={`fixed z-[50] w-full hidden min-[750px]:block top-0 duration-500 ${show?'':'-translate-y-20'}`}>
           <NavDesk from = {from} />
         </div>
         :
-        <div className={`z-[50]`}>  
+        <div className={`z-[50] block min-[750px]:hidden`}>  
           <NavMobile noBlur={noBlur} from = {from} />
         </div>}
       </div>

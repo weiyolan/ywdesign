@@ -23,7 +23,7 @@ export default function Contact({scrolled}) {
           setLightbox(false);
       };
 
-      console.log(event.target)
+      // console.log(event.target)  
   };
 
   return (
@@ -33,6 +33,11 @@ export default function Contact({scrolled}) {
       </Head>
 
       <main onClick={lightboxClick}>
+
+      {/* <Navbar from = 'Home'/>
+        
+        <Title breakPointSmall={breakPointSmall} type='home'/>
+         */}
         <Navbar from='Contact'/>
         <Title breakPointSmall={breakPointSmall} type='contact'/>
 

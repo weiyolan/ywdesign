@@ -15,7 +15,7 @@ export default function Conctact ({first}) {
 
 
   return (
-    <section className={`flex text-left whitespace-pre-wrap
+    <section className={`flex text-left select-none whitespace-pre-wrap
     ${first?' mt-12 sm:mt-24 ':' mt-42 sm:mt-48 '}
     ${width<breakPointSmall?' flex-col items-start  ':' justify-between items-end '} `}>
 
@@ -43,6 +43,8 @@ export default function Conctact ({first}) {
           <Button to="quote" title="Contact" text="Ask a quote" mode={'white'}/>
         </div>
       </div>
+
+      
     </section>
   )
 }

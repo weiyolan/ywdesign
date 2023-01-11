@@ -9,8 +9,8 @@ const Lightbox = ({lightbox, setLightbox}) => {
 
   useEffect(()=>{
     setStyle({opacity:lightbox?1:0, visibility:lightbox?'visible':'hidden'})
-    console.log(style)
-    console.log(lightbox)
+    // console.log(style)
+    // console.log(lightbox)
   },[lightbox])
 
   return (

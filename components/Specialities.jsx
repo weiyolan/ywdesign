@@ -37,16 +37,16 @@ export default function Specialities ({noBlur}) {
     } else if (newVal === false) {
       let indexes = [0,1,2,3].filter((index)=> index !== i)
       let randomIndex = indexes[Math.floor(Math.random()*3)];
-      console.log(randomIndex)
+      // console.log(randomIndex)
       newClicked[randomIndex] = true;
       setClicked(newClicked)
     }     
   
   }
 
-  useEffect(()=>{
-    console.log(clicked)
-  },[clicked])
+  // useEffect(()=>{
+  //   console.log(clicked)
+  // },[clicked])
 
   // const parent = {
   //   visible: {

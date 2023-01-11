@@ -216,7 +216,7 @@ export default function Services({scrolled}) {
         <title>ywdesign | Our Services</title>
       </Head>
 
-      <main className="bg-[url('/images/background.svg')]">
+      <main className="">
         <Navbar from='Services'/>
         
         <Title breakPointSmall={breakPointSmall} type='services'/>

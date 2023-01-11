@@ -9,10 +9,6 @@ import { useDimensions } from "./useDimension";
 import Link from "next/link";
 import YW from "../public/images/logo_yw_b.svg";
 
-
-
-
-
 export default function NavMobile ({from}) {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
@@ -102,7 +98,8 @@ const variants = {
     custom={height}
     ref={containerRef}
     key={width}
-  >
+    >
+
     <motion.div className={`bg-white/10 backdrop-blur-md z-[51] absolute top-0 forward fill-mode rounded-b-[40px] rounded-tl-[40px] h-[530px] right-0 w-[100%] sm:w-[40vw]`} variants={sidebar} />
     {/* <motion.div className={`${isOpen?'bg-white':'bg-white/10'} fixed duration-700 top-0 rounded-b-[30px] rounded-tl-[30px] h-[530px] right-0 w-[100%] sm:w-[40vw]`} variants={sidebar} /> */}
     

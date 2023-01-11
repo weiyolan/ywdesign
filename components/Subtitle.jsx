@@ -25,10 +25,10 @@ export default function Subtitle({name, title, span, text, position, first}) {
   
 
   return (
-      <div className={`w-full whitespace-pre-wrap ${first?'mt-12 sm:mt-24':'mt-42 sm:mt-48'} `+ style}>
+      <div className={`w-full select-none whitespace-pre-wrap ${first?'mt-12 sm:mt-24':'mt-42 sm:mt-48'} `+ style}>
         <AccentTitle text={name}/>
 
-        <h2 className='text-primary font-normal text-3xl sm:text-4xl lg:text-5xl my-6 sm:my-10 '>
+        <h2 className='text-primary font-normal text-3xl select-none sm:text-4xl lg:text-5xl my-6 sm:my-10 '>
 
           {title.split(span)[0]}
       
@@ -39,7 +39,7 @@ export default function Subtitle({name, title, span, text, position, first}) {
           {title.split(span)[1]}
         </h2>
 
-        {text.length>0 && <div className='text-primary font-light text-sm sm:text-base lg:font-normal'
+        {text.length>0 && <div className='text-primary select-text font-light text-sm sm:text-base lg:font-normal'
         >{text}</div>}
       </div>
 

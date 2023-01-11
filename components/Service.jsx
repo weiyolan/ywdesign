@@ -128,7 +128,7 @@ export default function Service({name, title, span, text, position, first, noBlu
 // }
 
 function ServiceIcon ({icon, clicked, handleClick, noBlur, left}) {
-  let window = useWindowSize()
+  // let window = useWindowSize()
 
   // const iconAnimation = {
   //   visible: clicked => ({
@@ -151,14 +151,14 @@ function ServiceIcon ({icon, clicked, handleClick, noBlur, left}) {
   return (
     // <motion.div variants={iconAnimation} initial='hidden' custom={clicked} whileTap='tap' whileInView='visible'
     <div
-    className={`flex ${noBlur?'':'backdrop-blur-md'} justify-center cursor-pointer items-center duration-200 bg-white/10 filter 
+    className={`flex ${noBlur?'':'backdrop-blur-md'} justify-center select-none cursor-pointer items-center duration-200 bg-white/10 filter 
     ${!left?'ml-2 min-[350px]:ml-3 lg:ml-4 ':' mr-2 min-[350px]:mr-3 lg:mr-4 '}
       w-9 h-9 sm:mt-2  min-[350px]:w-10 min-[350px]:h-10
       sm:w-10 sm:h-10 md:h-12 md:w-12 rounded-lg md:rounded-xl lg:h-14 lg:w-14
      p-2
     outline-2 outline -outline-offset-2 hover:outline-white/30 
     `+ 
-    (clicked?` outline-white/30 animate-outlinePulse shadow-md scale-95 translate-y-1 `:`hover:scale-[1.08] shadow-2xl outline-white/0 `)}
+    (clicked?` outline-white/30 focus:outline-white/30 animate-outlinePulse shadow-md scale-95 translate-y-1 `:`hover:scale-[1.08] shadow-2xl focus:outline-none outline-white/0 `)}
     onClick={()=>handleClick(!clicked)}
     >
 

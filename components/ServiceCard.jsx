@@ -7,7 +7,7 @@ export default function ServiceCard ({icon, visible, position, noBlur, first, br
   return (
     <div className={` 
       absolute 
-      flex-col py-4 px-5 sm:p-6 lg:p-8 rounded-[1.75rem] min-[400px]:rounded-[2rem] sm:rounded-[40px]
+      flex-col py-4 px-5 sm:p-6 select-none lg:p-8 rounded-[1.75rem] min-[400px]:rounded-[2rem] sm:rounded-[40px]
       filter 
       duration-500 overflow-hidden
       cursor-default 

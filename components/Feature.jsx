@@ -68,7 +68,7 @@ const Feature = ({offset, title, text, icon}) => {
 
       className={`flex w-full ${offset?'flex-row text-left':'flex-row-reverse text-right'} sm:flex-col sm:text-center relative justify-start  
       items-start sm:items-center p-2 pt-2 sm:p-4 sm:pt-2 outline-none -outline-offset-2 cursor-default  
-      backdrop-blur-md bg-white/10 hover:outline-white/10 hover:animate-outlinePulse rounded-3xl 
+      backdrop-blur-md bg-white/10 hover:outline-white/10 hover:animate-outlinePulse focus:outline-white/10 rounded-3xl 
       shadow-md sm:shadow-xl 
       ${width<breakPointSmall?` col-span-9 min-[420px]:col-span-6 ${offset?' col-start-1 min-[420px]:col-start-2 ':' col-start-2 min-[420px]:col-start-4'}`:''}
     `

@@ -29,7 +29,7 @@ export default function SkillsMoving({breakPointSmall}) {
 //  })
   
  return (
-    <div className='cursor-default'>
+    <div className='cursor-default select-none'>
       
       <MovingRow baseVelocity={window.width<breakPointSmall?-7:-1} allSkills={skills2}/>
       <MovingRow baseVelocity={window.width<breakPointSmall?7:1} allSkills={skills1}/>
