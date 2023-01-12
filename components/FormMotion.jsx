@@ -164,7 +164,7 @@ const Form = ({noBlur, setLightbox}) => {
         </div>
       
       {/* BUTTON */}
-        <motion.div variants={inputVariants} className='flex relative col-start-1 row-start-4 min-[400px]:col-start-3 min-[400px]:row-start-2 min-h-[50px] justify-start items-end '>
+        <motion.div variants={inputVariants} className='flex relative w-fit  col-start-1 row-start-4 min-[400px]:col-start-3 min-[400px]:row-start-2 min-h-[50px] justify-start items-end '>
           
           <button key='submitted' onMouseEnter={()=>setButtonHovering(true)} onMouseLeave={()=>setButtonHovering(false)}
           className={`inline-flex shadow-sm my-2 absolute left-0 bottom-0

@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react"
 import { useAppContext } from '../components/Context'
+import { useSVGContext } from "./ContextSVG"
 
 function getOffset(lengthArray, i) {
   let included = lengthArray.map((l, index) => index < i ? l : 0)
@@ -10,8 +11,7 @@ function getOffset(lengthArray, i) {
 function getPathProps(props) {
   let pathProps = { ...props }
   delete pathProps.handleLength
-  delete pathProps.prevRatio
-  delete pathProps.myRatio
+
   delete pathProps.print
   delete pathProps.inverse
   delete pathProps.initialDash
@@ -22,31 +22,35 @@ function getPathProps(props) {
 }
 
 export function Path(props) {
+  let {myRatio, prevRatio, scrollMin, scrollMax} = useSVGContext();
+ 
   let pathRef = useRef(null)
   let [pathLength, setPathLength] = useState(0)
   let [dashArray, setDashArray] = useState('')
-
   let [newProps, setNewProps] = useState(getPathProps(props))
   let { scrolled } = useAppContext()
 
   useEffect(() => {
     let path = pathRef.current;
     let length = path.getTotalLength()
+    if (props.print) {console.log('length is:' + length); console.log('double is: ' + props.double); console.log('so pathlength is : ' + length/props.double)}
     setPathLength(length/(props.double?props.double:1));
   },[])
 
   useEffect(()=>{
     if (pathLength>0) {
-      props.handleLength(pathLength)
+      props.handleLength(pathLength, props.position)
     }
   },[pathLength])
 
   useEffect(() => {
+    if (props.print) {
     // console.log('strokedashoffset')
-    // console.log(scrolled - props.prevRatio, 0)
-    // console.log(Math.max(scrolled - props.prevRatio, 0))
-
-  }, [pathLength, props.lengths, props.position, scrolled, props.prevRatio, props.myRatio])
+    // console.log(scrolled - prevRatio[props.position], 0)
+    // console.log(Math.max(scrolled - prevRatio[props.position], 0))
+    // console.log(pathLength>0?pathLength:'calculating pathlength')
+    }
+  }, [pathLength, props.lengths, props.position, scrolled, prevRatio, myRatio])
 
 
   useEffect(()=>{
@@ -71,20 +75,20 @@ export function Path(props) {
   },[props.initialDash, pathLength])
 
   useEffect(()=>{
+    let biasedScrolled = Math.min(Math.max(scrolled-scrollMin,0)/scrollMax,1)
     let childProps = getPathProps(props);
     childProps.strokeDasharray = dashArray.length>0?dashArray:(pathLength) + ' ' + (pathLength);
-    childProps.strokeDashoffset = (pathLength) + (pathLength) * Math.min( Math.max(scrolled - props.prevRatio, 0)  / props.myRatio , 1) * (props.inverse?1:-1) || 0 
-    // childProps.strokeDashoffset = props.inverse?( -(pathLength + myOffset) + (pathLength) * scrolled) :( -(pathLength) - (pathLength) * scrolled);
+    childProps.strokeDashoffset = (pathLength) + (pathLength) * Math.min( Math.max(biasedScrolled - prevRatio[props.position], 0)  / myRatio[props.position] , 1) * (props.inverse?1:-1) || 0 
     setNewProps(childProps)
 
-  },[pathLength, dashArray, pathRef, props.inverse, props.prevRatio, props.myRatio, scrolled, props.initialDash])
+  },[pathLength, dashArray, pathRef, props.inverse, scrollMin, scrollMax, prevRatio, myRatio, scrolled, props.initialDash])
 
 
   switch (props.type) {
     case 'rect' :
-      return <rect ref={pathRef} {...childProps} />
+      return <rect ref={pathRef} {...newProps} />
     case 'circle' :
-      return <circle ref={pathRef} {...childProps} />
+      return <circle ref={pathRef} {...newProps} />
     default :
       return <path ref={pathRef} {...newProps} />
     }

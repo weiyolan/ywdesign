@@ -97,7 +97,7 @@ const variants = {
 
 
   return (
-  <motion.nav className={`fixed top-0 h-0 w-[100%] z-[51] sm:w-[40vw]`}
+  <motion.nav className={`fixed top-0 right-0 h-0 w-[100%] z-[51] sm:w-[40vw]`}
     initial={false}
     animate={isOpen ? "open" : "closed"}
     custom={height}

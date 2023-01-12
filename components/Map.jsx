@@ -20,7 +20,7 @@ const Map = () => {
       <Subtitle name='Contact' title={'Here are the details'} span={'details'} position={'left'} first={true}/>
       
       <div className='flex flex-col md:grid md:grid-cols-3 md:gap-6 '>
-        <div className='flex min-[460px]:mx-4 md:m-0 md:col-start-1 md:row-span-2 row-start-1 md:col-span-2 '>
+        <div className='flex min-[460px]:mr-6 md:m-0 md:col-start-1 md:row-span-2 row-start-1 md:col-span-2 '>
           <div className='h-[50vw] w-full md:h-full rounded-2xl shadow-lg sm:shadow-2xl overflow-hidden relative transition-all duration-700 ease-out'>
             <Image priority className='object-cover' src={'/images/map3.svg'} alt='map showing the location of ywdesign company' fill sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 80vw,
