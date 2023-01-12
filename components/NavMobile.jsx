@@ -13,6 +13,7 @@ export default function NavMobile ({from}) {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { width, height } = useDimensions(containerRef);
+  const [state, setState] = useState(false)
 
   let [selectedB,setSelectedB] = useState(from);
 
@@ -25,6 +26,9 @@ export default function NavMobile ({from}) {
     setSelectedB(from)
   },[from])
 
+  useEffect(()=>{
+    setState('update')
+  },[])
 
 //  BIG CIRCLE
 // const sidebar = {
@@ -63,6 +67,7 @@ const sidebar = {
     // x: 160,
     x: width - 70,
     y: -460,
+    opacity: state?1:0,
     transition: {
       delay: 0.2,
       type: "spring",
