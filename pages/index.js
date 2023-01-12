@@ -9,7 +9,7 @@ import Features from '../components/Features'
 import { useEffect } from 'react'
 import { useAppContext } from '../components/Context'
 import Navbar from '../components/Navbar'
-
+import RoadmapHome from '../components/RoadmapHome'
 // const inter = Inter({ subsets: ['latin'] })
 
 
@@ -23,7 +23,7 @@ export default function Index({scrolled}) {
         <title>ywdesign | Web Development</title>
       </Head>
       
-      <main>
+      <main className='scroll-smooth'>
         <Navbar from = 'Home'/>
         
         <Title breakPointSmall={breakPointSmall} type='home'/>
@@ -33,17 +33,8 @@ export default function Index({scrolled}) {
           <Specialities noBlur={noBlur}/>
 
 
-          <section className='grid grid-cols-2'>
-            <div className='col-start-1 w-full'>
-              <Subtitle name='Workflow' title='A fully personalised solution, every time' span={'solution'} 
-              text='The roadmap allows us to find the best solution for you, every time. You want to try it out.' 
-              first={true} position='left'/>
-            </div>
-            <div className=' col-start-2 w-full'>
-              {/* <SpecialtyCard 
-              className = '' title={'Roadmap'} text={'gliding and animated'} /> */}
-            </div>
-          </section>
+          <RoadmapHome/>
+
 
           <Features/>
 

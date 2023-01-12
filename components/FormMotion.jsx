@@ -183,7 +183,7 @@ const Form = ({noBlur, setLightbox}) => {
           className={`inline-flex shadow-sm my-2 absolute left-0 bottom-0
           border border-solid rounded-full px-4 py-2  
           font-sans font-semibold text-xs textcenter whitespace-nowrap
-          cursor-pointer w-fit  h-fit duration-300
+          cursor-pointer w-fit h-fit duration-300
           ${success?'opacity-0 translate-y-[40px]':'opacity-100'}
           outline-none focus-visible:outline-primary border-transparent bg-primary text-white 
           active:bg-white active:text-primary hover:border-white`}

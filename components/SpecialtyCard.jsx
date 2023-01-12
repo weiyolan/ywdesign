@@ -9,10 +9,15 @@ export default function SpecialtyCard({title, text, clicked, setClicked, noBlur,
       <div className={`flex w-full flex-col relative aspect-square select-none p-6 sm:p-2 bg-white/10 
       duration-1000 overflow-hidden transition-all z-10 min-h-fit
       text-white text-center justify-center cursor-pointer
-      outline-2 outline -outline-offset-2 hover:outline-white/30 focus:outline-white/30` + (
-        clicked?` ${noBlur?'':'backdrop-blur-md'} shadow-2xl outline-white/30 focus:outline-white/30 animate-outlinePulse 
-        rounded-[1.75rem] min-[500px]:rounded-[2.5rem] sm:rounded-[1.75rem] lg:rounded-[40px]   `:` rounded-[2.25rem] min-[500px]:rounded-[3rem] sm:rounded-[2rem] lg:rounded-[50px] 
-         outline-none ${noBlur?'':'backdrop-blur-sm'} shadow-md focus:outline-none translate-y-1 scale-95 `)}
+      outline-2 outline -outline-offset-2 hover:outline-white/30 focus:outline-white/30
+      shadow-md after:shadow-black
+      after:shadow-2xl after:top-0 after:left-0 after:absolute after:z-[-1] after:w-full after:h-full after:transition-all after:duration-1000 
+        ${clicked? 
+          `${noBlur?'':'backdrop-blur-md'} after:opacity-100  outline-white/30 focus:outline-white/30 animate-outlinePulse 
+        rounded-[1.75rem] min-[500px]:rounded-[2.5rem] sm:rounded-[1.75rem] lg:rounded-[40px]`
+        :` after:opacity-0  rounded-[2.25rem] min-[500px]:rounded-[3rem] sm:rounded-[2rem] lg:rounded-[50px] 
+         outline-none ${noBlur?'':'backdrop-blur-sm'}  focus:outline-none translate-y-1 scale-95`}`
+        }
       // onMouseEnter={()=>setHovering(true)}
       // onMouseLeave={()=>setHovering(false)}
       onClick={()=>setClicked(!clicked)}>

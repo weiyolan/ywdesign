@@ -158,7 +158,7 @@ function ServiceIcon ({icon, clicked, handleClick, noBlur, left}) {
      p-2
     outline-2 outline -outline-offset-2 hover:outline-white/30 
     `+ 
-    (clicked?` outline-white/30 focus:outline-white/30 animate-outlinePulse shadow-md scale-95 translate-y-1 `:`hover:scale-[1.08] shadow-2xl focus:outline-none outline-white/0 `)}
+    (clicked?` outline-white/30 focus:outline-white/30 animate-outlinePulse shadow-md scale-95 translate-y-1 `:`hover:scale-[1.08] shadow-2xl focus:outline-none focus:scale-[1.08] outline-white/0 `)}
     onClick={()=>handleClick(!clicked)}
     >
 
