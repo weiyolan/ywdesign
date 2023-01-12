@@ -9,6 +9,10 @@ import Navbar from '../components/Navbar'
 import RoadmapA from '../components/RoadmapA'
 import RoadmapB from '../components/RoadmapB'
 import RoadmapC from '../components/RoadmapC'
+import RoadmapD from '../components/RoadmapD'
+import RoadmapE from '../components/RoadmapE'
+import RoadmapF from '../components/RoadmapF'
+import RoadmapG from '../components/RoadmapG'
 // import RoadmapSVG from '../public/images/roadmapComplete.svg'
 // import Iteration1 from '../public/images/roadmapIteration1.svg'
 // import Iteration2 from '../public/images/roadmapIteration2.svg'
@@ -45,6 +49,10 @@ const roadmap = () => {
         <RoadmapA />
         <RoadmapB/>
         <RoadmapC/>
+        <RoadmapD/>
+        <RoadmapE/>
+        <RoadmapF/>
+        <RoadmapG/>
 
         {/* <Stroke2 scrolled={scrolled} /> */}
         {/* <Stroke3 scrolled={scrolled} /> */}
