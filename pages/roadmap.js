@@ -81,7 +81,7 @@ export default function Roadmap () {
           <RoadmapF scrollMin={0.78} scrollMax={0.83} />
           <RoadmapG scrollMin={0.82} scrollMax={0.90} />
           <div className='absolute w-[40vw] z-[35]  top-[900px] ml-4 left-0'>
-            <RoadmapIteration1 />
+            {/* <RoadmapIteration1 /> */}
           </div>
           <div className='absolute w-2/3 z-[35]  top-1/2 mr-4 right-0'>
             {/* <Iteration2 /> */}

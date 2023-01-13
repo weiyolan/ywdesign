@@ -44,7 +44,7 @@ export default function RoadmapIteration1({ scrollMin, scrollMax }) {
     // <AnimateSVGText at={0.16} fromTop={true}>
 
     <SVGWrapper myRatio={allRatios} prevRatio={allPrevRatios} scrollMin={scrollMin} scrollMax={scrollMax}>
-      <div style={{transform: `translate(0, -${200*scrolled}px)`}}  className='relative w-full h-fit flex flex-col'>
+      <div style={{transform: `translate(0, -${-100 + 200*scrolled}px)`}}  className='relative w-full h-fit flex flex-col'>
             
             <div className='mb-2 backdrop-blur-sm rounded-2xl text-center border-2 border-black bg-white/20 text-black text-sm px-2  py-1 mx-2 font-sans font-medium'>
               {`1st iteration on\nthe structure`}
