@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { useAppContext } from "./Context"
-import { Path } from './pathUtils'
+import { Path, AnimateSVGText, AnimateText } from './pathUtils'
 import { SVGWrapper } from "./ContextSVG"
 
 export default function RoadmapG({ scrollMin, scrollMax }) {

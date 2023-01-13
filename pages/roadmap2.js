@@ -6,6 +6,7 @@ import Subtitle from '../components/Subtitle'
 import Navbar from '../components/Navbar'
 
 // import { useAppContext } from '../components/Context'
+import RoadmapATitle from '../components/RoadmapATitle'
 import RoadmapA from '../components/RoadmapA'
 import RoadmapB from '../components/RoadmapB'
 import RoadmapC from '../components/RoadmapC'
@@ -46,13 +47,14 @@ const roadmap = () => {
 
       {/* <div style={fadeStyle} className='relative w-[full] h-full ' > */}
       <div className='relative w-[full] h-full ' >
-        <RoadmapA />
-        <RoadmapB/>
-        <RoadmapC/>
-        <RoadmapD/>
-        <RoadmapE/>
-        <RoadmapF/>
-        <RoadmapG/>
+        <RoadmapATitle />
+        <RoadmapA scrollMin={0} scrollMax={0.12}/>
+        <RoadmapB scrollMin={0.13} scrollMax={0.16}/>
+        <RoadmapC scrollMin={0.2} scrollMax={0.22}/>
+        <RoadmapD speed={1.5} scrollMin={0.26} scrollMax={0.52}/>
+        <RoadmapE scrollMin={0.6} scrollMax={0.8}/>
+        <RoadmapF scrollMin={0.9} scrollMax={0.95}/>
+        <RoadmapG scrollMin={0.95} scrollMax={1}/>
 
         {/* <Stroke2 scrolled={scrolled} /> */}
         {/* <Stroke3 scrolled={scrolled} /> */}

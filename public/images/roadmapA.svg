@@ -1,0 +1,18 @@
+<svg width="807" height="563" viewBox="0 0 807 563" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame 24">
+<g id="projectDefinitionGroup">
+
+<text id="Budget" fill="black" style="white-space: pre" font-family="Work Sans" font-size="37.1769" letter-spacing="0em"><tspan x="585.092" y="553.77">Budget</tspan></text>
+<rect id="budget" x="645" y="392" width="84.8528" height="84.8528" transform="rotate(45 645 392)" stroke="black" stroke-width="4"/>
+
+<text id="Timing" fill="black" style="white-space: pre" font-family="Work Sans" font-size="37.1769" letter-spacing="0em"><tspan x="343.078" y="553.77">Timing</tspan></text>
+<path id="timing" d="M403 392C412.512 392 421.887 394.261 430.353 398.598C438.819 402.934 446.132 409.22 451.69 416.939C457.248 424.658 460.892 433.588 462.32 442.991C463.748 452.395 462.92 462.004 459.904 471.025C456.888 480.046 451.771 488.22 444.974 494.874C438.177 501.528 429.896 506.471 420.813 509.295C411.73 512.119 402.106 512.743 392.735 511.115C383.363 509.488 374.513 505.656 366.914 499.935L389.154 470.392C392.07 472.587 395.466 474.057 399.061 474.681C402.657 475.306 406.35 475.066 409.834 473.983C413.319 472.9 416.497 471.003 419.105 468.45C421.712 465.897 423.676 462.761 424.833 459.299C425.99 455.838 426.308 452.152 425.76 448.544C425.212 444.936 423.814 441.509 421.682 438.548C419.549 435.586 416.743 433.174 413.495 431.51C410.247 429.847 406.649 428.979 403 428.979L403 392Z" stroke="black" stroke-width="4"/>
+
+<text id="Scope" fill="black" style="white-space: pre" font-family="Work Sans" font-size="37.1769" letter-spacing="0em"><tspan x="104.162" y="553.77">Scope</tspan></text>
+<circle id="scope" cx="160" cy="452" r="60" stroke="black" stroke-width="4"/>
+
+<text id="Project Definition" fill="black" style="white-space: pre" font-family="Work Sans" font-size="44.0504" font-weight="500" letter-spacing="0em"><tspan x="213.791" y="333.131">Project Definition</tspan></text>
+<path id="line1Roadmap" d="M423.5 2V234C423.5 252 429.5 265.5 440.5 267.493M384 2V234C384 252 378 265.5 367 267.493" stroke="black" stroke-width="3" stroke-linecap="round"/>
+</g>
+</g>
+</svg>

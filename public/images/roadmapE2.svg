@@ -1,0 +1,33 @@
+<svg width="807" height="806" viewBox="0 0 807 806" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame 20">
+<g id="developmentGroup">
+<path id="start2A" d="M403.5 691.5C403.5 724.5 383.5 726 383.5 743.5C383.5 761 383.5 770 383.5 770C383.5 787 376.394 800.406 366 803.5" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<path id="start2B" d="M403.5 691.5C403.5 728 422.999 723 423 744C423 765 423 770 423 770C423 797 432 800.5 439.5 803.5" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<path id="tails2" d="M403.5 692L403.5 596M403.5 692C403.5 606 470 628.5 470 596M403.5 692C403.5 606.5 536.5 639 536.5 596M403.5 692C403.5 606 336.5 628 336.5 596M403.5 692C403.5 606 270 637.5 270 596" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<g id="Development">
+<g id="numbers2">
+<text id="1" transform="translate(529 541)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Work Sans" font-size="34.2614" font-weight="500" letter-spacing="0em"><tspan x="0.107573" y="31.7688">1</tspan></text>
+<text id="0" transform="translate(460 541)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Work Sans" font-size="34.2614" font-weight="500" letter-spacing="0em"><tspan x="0.243129" y="31.7688">0</tspan></text>
+<text id="1_2" transform="translate(396 541)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Work Sans" font-size="34.2614" font-weight="500" letter-spacing="0em"><tspan x="0.107573" y="31.7688">1</tspan></text>
+<text id="1_3" transform="translate(331 541)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Work Sans" font-size="34.2614" font-weight="500" letter-spacing="0em"><tspan x="0.107573" y="31.7688">1</tspan></text>
+<text id="0_2" transform="translate(259 541)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Work Sans" font-size="34.2614" font-weight="500" letter-spacing="0em"><tspan x="0.243129" y="31.7688">0</tspan></text>
+</g>
+<text id="Development_2" transform="translate(260 477)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Work Sans" font-size="44.0504" font-weight="500" letter-spacing="0em"><tspan x="0.486908" y="41.1313">Development</tspan></text>
+<g id="numbers1">
+<text id="1_4" transform="translate(263 425)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Work Sans" font-size="34.2614" font-weight="500" letter-spacing="0em"><tspan x="0.107573" y="31.7688">1</tspan></text>
+<text id="0_3" transform="translate(327 425)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Work Sans" font-size="34.2614" font-weight="500" letter-spacing="0em"><tspan x="0.243129" y="31.7688">0</tspan></text>
+<text id="0_4" transform="translate(392 425)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Work Sans" font-size="34.2614" font-weight="500" letter-spacing="0em"><tspan x="0.243129" y="31.7688">0</tspan></text>
+<text id="1_5" transform="translate(464 425)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Work Sans" font-size="34.2614" font-weight="500" letter-spacing="0em"><tspan x="0.107573" y="31.7688">1</tspan></text>
+<text id="1_6" transform="translate(529 425)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Work Sans" font-size="34.2614" font-weight="500" letter-spacing="0em"><tspan x="0.107573" y="31.7688">1</tspan></text>
+</g>
+</g>
+<path id="startA" d="M423 224C423 224 423 250 423 267.5C423 285 403 286.5 403 319.5" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<path id="startB" d="M383.5 224C383.5 224 383.5 246 383.5 267C383.501 288 403 283 403 319.5" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<path id="tails" d="M403 319V415M403 319C403 405 336.5 382.5 336.5 415M403 319C403 404.5 270 372 270 415M403 319C403 405 470 383 470 415M403 319C403 405 536.5 373.5 536.5 415" stroke="black" stroke-width="4" stroke-linecap="round"/>
+</g>
+<g id="finalDesignGroup">
+<path id="designProduct" d="M403.5 207L354 136.5L403.5 66L453 136.5L403.5 207Z" stroke="black" stroke-width="4"/>
+<text id="Final Design" transform="translate(273)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Work Sans" font-size="44.0504" font-weight="500" letter-spacing="0em"><tspan x="0.0964661" y="41.1313">Final Design</tspan></text>
+</g>
+</g>
+</svg>
