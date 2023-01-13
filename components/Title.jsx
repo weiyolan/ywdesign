@@ -48,7 +48,7 @@ function GetTitle({type}) {
       loadStyle  }>contact</span> me</h1>)
 
     case 'roadmap':
-    return (<h1 className={heroTitleStyle}> Discover the <span className={' transition-all duration-700 delay-500 default:font-medium' + 
-    loadStyle  }>Roadmap</span></h1>)
+    return (<h1 className={heroTitleStyle}> <span className={' transition-all duration-700 delay-500 default:font-medium' + 
+    loadStyle  }>Scroll</span> Down</h1>)
   }
 }

@@ -3,7 +3,7 @@ import { useAppContext } from "./Context"
 import { Path, AnimateIn, TextAnimate } from './pathUtils'
 import { SVGWrapper } from "./ContextSVG"
 
-export default function RoadmapE({ scrollMin, scrollMax }) {
+export default function RoadmapE({home, scrollMin, scrollMax }) {
   let [allLengths, setAllLengths] = useState([])
   let [allOffsetLengths, setAllOffsetLengths] = useState([])
   let [allRatios, setAllRatios] = useState([0])
@@ -52,7 +52,7 @@ export default function RoadmapE({ scrollMin, scrollMax }) {
           <g id="Frame 20">
             <g id="finalDesignGroup">
               <Path position={0}  inverse={false} double={1} handleLength={(l,i)=>handleLength(1.2,l,i)} id="designProduct" d="M403.5 207L354 136.5L403.5 66L453 136.5L403.5 207Z" stroke="black" stroke-width="4"/>
-              <TextAnimate print={false} at={0.58} fromTop={true} id="Final Design" transform="translate(273)" fill="black" style="white-space: pre" font-family="Work Sans" font-size="44.0504" font-weight="500" letter-spacing="0em"><tspan x="0.0964661" y="41.1313">Final Design</tspan></TextAnimate>
+              <TextAnimate print={false} at={home?0.35:0.58} fromTop={true} id="Final Design" transform="translate(273)" fill="black" style="white-space: pre" font-family="Work Sans" font-size="44.0504" font-weight="500" letter-spacing="0em"><tspan x="0.0964661" y="41.1313">Final Design</tspan></TextAnimate>
 
             </g>
           </g>
@@ -84,11 +84,11 @@ export default function RoadmapE({ scrollMin, scrollMax }) {
             </linearGradient>
           </defs> */}
         {/* </svg> */}
-        <AnimateIn at={0.64}>
-        <h2 className='z-20 p-2 w-full text-sm font-light text-center outline-none -outline-offset-2 relative flex text-white font-sans ' >
+       {!home && <AnimateIn at={0.64}>
+        <h2 >
           {`After two iterations the final design is approved.\nNow I start coding.`}
         </h2>
-        </AnimateIn>
+        </AnimateIn>}
         {/* <h2 className='z-20 p-2 bg-white/10 rounded-2xl backdrop-blur-sm outline-none -outline-offset-2 outline-white/20 relative flex text-sm font-light w-[40vw] text-center text-white font-sans ' >{`We take note of your\nvalues, existing branding\nand style preferences to\ngenerate ideas together`} </h2> */}
         {/* <h2 className='z-20 p-2 relative flex text-sm font-light w-[30vw] text-center text-white font-sans top-[70%] left-0' >{`I then transform the\nfinal design into the\nactual digital produc`}t</h2>
         <h2 className='z-20 p-2 relative flex text-sm font-light w-[30vw] text-center text-white font-sans top-[80%] left-0' >{`When the product is ready\nyou finally receive it.\nYes, you own all the code`}.</h2>

@@ -20,9 +20,11 @@ import RoadmapE2 from '../components/RoadmapE2'
 import RoadmapF from '../components/RoadmapF'
 import RoadmapG from '../components/RoadmapG'
 // import RoadmapSVG from '../public/images/roadmapComplete.svg'
-import Iteration1 from '../public/images/roadmapIteration1.svg'
-import Iteration2 from '../public/images/roadmapIteration2.svg'
+import RoadmapIteration1 from '../components/RoadmapIteration1'
+// import RoadmapIteration2 from '../public/images/RoadmapIteration2.svg'
 import { useAppContext } from '../components/Context'
+import ArrowLink from '../components/ArrowLink'
+import Conctact from '../components/Contact'
 
 
 export default function Roadmap () {
@@ -52,17 +54,23 @@ export default function Roadmap () {
         <title>ywdesign | Our Services</title>
       </Head>
       
-      <main className=''>
+      <main className='scroll-smooth'>
         <Navbar />
         
-        <Title type='roadmap'/>
-        
+        <div id='Title'>
+          <Title type='roadmap'/>
+        </div>
         <Layout>
+        
+        <section>
+        <Subtitle name={'visual'} position='center' title={`Our collaboration visualised`} span={'collaboration'} text={'How it is to work on a digital product? We follow the design process that is visualised below.'} first={true} />
 
-        <Subtitle name={'Roadmap'} title={`Scroll down and see\nhow we work together`} span={'Scroll'} first={true} />
+        <div className='text-center w-full pl-6'>
+          <ArrowLink text='Questions? Reach out' to='/contact/#Form' />
+        </div>
+        </section>
 
-        {/* <div style={fadeStyle} className='relative w-[full] h-full ' > */}
-        <div className='flex w-full flex-col justify-center relative h-full' >
+        <section className='flex w-full flex-col mt-6 justify-center relative h-full' >
           <RoadmapATitle />
           <RoadmapA scrollMin={0} scrollMax={0.12} />
           <RoadmapB scrollMin={0.13} scrollMax={0.16} />
@@ -70,21 +78,22 @@ export default function Roadmap () {
           <RoadmapD speed={1.5} scrollMin={0.35} scrollMax={0.57} />
           <RoadmapE1 scrollMin={0.6} scrollMax={0.64} />
           <RoadmapE2 scrollMin={0.65} scrollMax={0.72} />
-          <RoadmapF scrollMin={0.9} scrollMax={0.95} />
-          <RoadmapG scrollMin={0.95} scrollMax={1} />
-
-          <div className='absolute w-1/3 z-[35] backdrop-blur-sm top-[900px] ml-4 left-0'>
-            <Iteration1 />
+          <RoadmapF scrollMin={0.78} scrollMax={0.83} />
+          <RoadmapG scrollMin={0.82} scrollMax={0.90} />
+          <div className='absolute w-[40vw] z-[35]  top-[900px] ml-4 left-0'>
+            <RoadmapIteration1 />
           </div>
-
-          <div className='absolute w-1/3 z-[35] backdrop-blur-sm top-1/2 mr-4 right-0'>
-            <Iteration2 />
+          <div className='absolute w-2/3 z-[35]  top-1/2 mr-4 right-0'>
+            {/* <Iteration2 /> */}
           </div>
+        </section>
 
-
-          {/* <Stroke2 scrolled={scrolled} /> */}
-          {/* <Stroke3 scrolled={scrolled} /> */}
+        <section>
+        <div className='text-center w-full pl-6 mb-12'>
+            <ArrowLink text='To the top' to='#Title' />
         </div>
+        <Conctact/>
+        </section>
         </Layout>
 
         <Footer/>

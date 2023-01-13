@@ -3,7 +3,7 @@ import { useAppContext } from "./Context"
 import { Path, AnimateIn, TextAnimate } from './pathUtils'
 import { SVGWrapper } from "./ContextSVG"
 
-export default function RoadmapC({ scrollMin, scrollMax }) {
+export default function RoadmapC({ home, scrollMin, scrollMax }) {
   let [allLengths, setAllLengths] = useState([])
   let [allOffsetLengths, setAllOffsetLengths] = useState([])
   let [allRatios, setAllRatios] = useState([0])
@@ -44,17 +44,17 @@ export default function RoadmapC({ scrollMin, scrollMax }) {
     <SVGWrapper myRatio={allRatios} prevRatio={allPrevRatios} scrollMin={scrollMin} scrollMax={scrollMax}>
       <div className='relative w-full h-fit flex flex-col '>
 
-        <svg className='relative w-full px-4 left-1/2' style={{ transform: `translate(-50%, ${-0 * scrolled}px)` }} viewBox="0 0 807 193" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className='relative w-full  left-1/2' style={{ transform: `translate(-50%, ${-0 * scrolled}px)` }} viewBox="0 0 807 193" fill="none" xmlns="http://www.w3.org/2000/svg">
           <TextAnimate at={0.26} fromTop={true} id="Ideation" transform="translate(316 141)" fill="black" style="white-space: pre" font-family="Work Sans" font-size="44.0504" font-weight="500" letter-spacing="0em"><tspan x="0.0875778" y="41.1313">Ideation</tspan></TextAnimate>
           <Path position={0} inverse={true} double={2} handleLength={(l, i) => handleLength(1, l, i)}  id="Vector" d="M383.588 125V2M423.602 125V2" stroke="black" stroke-width="3" stroke-linecap="round"/>
         
         </svg>
 
-        <AnimateIn at={0.28}>
+        {!home && <AnimateIn at={0.28}>
         <h2 >
         {`Once agreed, we meet up and take note of your\nvalues, existing branding\nand style preferences to\ngenerate ideas together:`} 
           </h2>
-        </AnimateIn>
+        </AnimateIn>}
 
       </div>
     </SVGWrapper>

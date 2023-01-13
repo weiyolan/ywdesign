@@ -66,7 +66,7 @@ const sidebar = {
     // y: -490,
     // x: 160,
     x: width - 70,
-    y: -460,
+    y: -530,
     opacity: state?1:0,
     transition: {
       delay: 0.2,
@@ -105,7 +105,7 @@ const variants = {
     key={width}
     >
 
-    <motion.div className={`bg-white/10 backdrop-blur-md z-[51] absolute top-0 forward fill-mode rounded-b-[40px] rounded-tl-[40px] h-[530px] right-0 w-[100%] sm:w-[40vw]`} variants={sidebar} />
+    <motion.div className={`bg-white/10 backdrop-blur-md z-[51] absolute top-0 forward fill-mode rounded-b-[40px] rounded-tl-[40px] h-[600px] right-0 w-[100%] sm:w-[40vw]`} variants={sidebar} />
     {/* <motion.div className={`${isOpen?'bg-white':'bg-white/10'} fixed duration-700 top-0 rounded-b-[30px] rounded-tl-[30px] h-[530px] right-0 w-[100%] sm:w-[40vw]`} variants={sidebar} /> */}
     
     <motion.div 
@@ -128,6 +128,7 @@ const variants = {
       <Button  mobile={true} className='' to="services" title="Services" text="Services" mode={selectedB==='Services'?'selected':'unselected'} handleClick={selectButton}/>
       <Button  mobile={true} className='' to="aboutme" title="About Me" text="About Me" mode={selectedB==='About Me'?'selected':'unselected'} handleClick={selectButton}/>
       <Button  mobile={true} className='' to="contact" title="Contact"  text="Contact" mode={selectedB==='Contact'?'selected':'unselected'} handleClick={selectButton}/>
+      <Button  mobile={true} className='' to="roadmap" title="Roadmap" text="Roadmap" mode={selectedB==='Roadmap'?'selected':'unselected'}  handleClick={selectButton} />
       <Button  mobile={true} className='' to="contact/#Form" title="Contact" text="Ask a quote" handleClick={selectButton}  mode={'dark'}/>
     </Navigation>
     

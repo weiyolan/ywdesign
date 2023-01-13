@@ -61,6 +61,7 @@ export default function NavDesk({from}) {
               <Button className='' to="services" title="Services" text="Services" mode={selectedB==='Services'?'selected':'unselected'} handleClick={selectButton}/>
               <Button className='' to="aboutme" title="About Me" text="About Me" mode={selectedB==='About Me'?'selected':'unselected'} handleClick={selectButton}/>
               <Button className='' to="contact" title="Contact"  text="Contact" mode={selectedB==='Contact'?'selected':'unselected'} handleClick={selectButton}/>
+              <Button className='' to="roadmap" title="Roadmap"  text="Roadmap" mode={selectedB==='Roadmap'?'selected':'unselected'} handleClick={selectButton}/>
             </div>
             
             <div className='flex absolute  h-16 right-0 '>

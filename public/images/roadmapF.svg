@@ -2,7 +2,7 @@
 <g id="Frame 21">
 <g id="productDeliveryGroup">
 <path id="finishedProduct" d="M403.5 210L354 139.5L403.5 69L453 139.5L403.5 210Z" fill="black" stroke="black" stroke-width="4"/>
-<text id="Product Delivery" transform="translate(223)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Work Sans" font-size="44.0504" font-weight="500" letter-spacing="0em"><tspan x="0.174484" y="41.1313">Product Delivery</tspan></text>
+<text id="Product Delivery" transform="translate(223)" fill="black"  style="white-space: pre" font-family="Work Sans" font-size="44.0504" font-weight="500" letter-spacing="0em"><tspan x="0.174484" y="41.1313">Product Delivery</tspan></text>
 </g>
 </g>
 </svg>

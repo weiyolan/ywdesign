@@ -15,12 +15,14 @@ function getPathProps(props) {
   delete pathProps.lineSpeed
   delete pathProps.inverse
   delete pathProps.initialDash
+  delete pathProps.animateFill
   delete pathProps.myGradient
   delete pathProps['stroke-linecap']
   delete pathProps['stroke-width']
   delete pathProps.initialDash
   pathProps.strokeWidth = '4'
   pathProps.strokeLinecap="round"
+  pathProps.stroke="transparent"
   return pathProps
 }
 
@@ -89,11 +91,13 @@ export function Path(props) {
     
     let childProps = getPathProps(props);
     childProps.strokeDasharray = dashArray.length>0?dashArray:(pathLength) + ' ' + (pathLength);
-    let newOffset =  (pathLength + (dashLineLength>0?0:0)) * Math.min( Math.max(biasedScrolled*mySpeed - prevRatio[props.position], 0)  / myRatio[props.position] , 1) * (props.inverse?1:-1) || 0 
-    childProps.strokeDashoffset = (pathLength + (dashLineLength>0?0:0)) + newOffset
+    let newOffset = Math.min( Math.max(biasedScrolled*mySpeed - prevRatio[props.position], 0)  / myRatio[props.position] , 1) * (props.inverse?1:-1) || 0 
+    childProps.strokeDashoffset = (pathLength + (dashLineLength>0?0:0)) + (pathLength + (dashLineLength>0?0:0))*newOffset
     
-    childProps.stroke = props.myGradient?props.myGradient:(dashArray.length>0)?(newOffset!=0?'white':'transparent'):'white';
+    childProps.stroke = props.myGradient?props.myGradient:newOffset!=0?'white':'transparent';
     
+    childProps.fill = props.animateFill?Math.abs(newOffset)===1?'white':'transparent':'transparent';
+
     if (props.print) {
       // console.log(scrollMin, scrollMax, biasedScrolled)
       // console.log('dashLineLength', dashLineLength)
@@ -101,10 +105,104 @@ export function Path(props) {
     };
     setNewProps(childProps)
 
-  },[pathLength, dashArray, pathRef, props.inverse, scrollMin, scrollMax, mySpeed, dashLineLength , prevRatio, myRatio, scrolled, props.initialDash])
+  },[pathLength, dashArray, pathRef, props.inverse, scrollMin, scrollMax, mySpeed, dashLineLength , props.animateFill, prevRatio, myRatio, scrolled, props.initialDash])
 
-  // let style={transition:'all 0.1s ease'};
-  let style={};
+  let style={transition:'all 0.5s ease'};
+  // let style={transition: 'fill 0.5s ease'}
+
+  switch (props.type) {
+    case 'rect' :
+      return <rect ref={pathRef} style={style} {...newProps} />
+    case 'circle' :
+      return <circle ref={pathRef} style={style} {...newProps} />
+    default :
+      return <path ref={pathRef} style={style} {...newProps} />
+    }
+
+}
+
+export function PathFillText(props) {
+  let {myRatio, prevRatio, scrollMin, scrollMax, animationSpeed} = useSVGContext();
+ 
+  let pathRef = useRef(null)
+  let [pathLength, setPathLength] = useState(0)
+  let [mySpeed, setMySpeed] = useState(1)
+  let [dashArray, setDashArray] = useState('')
+  let [dashLineLength, setDashLineLength] = useState(0)
+  let [newProps, setNewProps] = useState(getPathProps(props))
+
+  useEffect(() => {
+    let path = pathRef.current;
+    let length = path.getTotalLength()
+    if (props.print) {console.log('length is:' + length); console.log('double is: ' + props.double); console.log('so pathlength is : ' + length/props.double)}
+    setPathLength(length/(props.double?props.double:1));
+  },[])
+
+  useEffect(()=>{
+    if (pathLength>0) {
+      props.handleLength(pathLength, props.position)
+    }
+  },[pathLength])
+
+  useEffect(() => {
+    if (props.print) {
+    // console.log('strokedashoffset')
+    // console.log(props.scrolled - prevRatio[props.position], 0)
+    // console.log(Math.max(props.scrolled - prevRatio[props.position], 0))
+    // console.log(pathLength>0?pathLength:'calculating pathlength')
+    }
+  }, [pathLength, props.lengths, props.position, props.scrolled, prevRatio, myRatio])
+
+  useEffect(()=>{
+    if (props.initialDash) {
+      let stringDash = props.initialDash.split(' ');
+      let lineString = stringDash[0];
+      let gapString = stringDash[1];
+      let numDash = stringDash.map(i=>+i);
+      let dashLength = numDash.reduce((acc,x)=>acc + x, 0);
+
+      let repeat = Math.floor(pathLength/dashLength);
+      // console.log(repeat)
+      let newStringDash = Array(repeat).fill(props.initialDash)
+      newStringDash.push(lineString)
+      newStringDash.push(`${pathLength}`)
+      newStringDash = newStringDash.join(' ')
+      // console.log(newStringDash)
+      setDashArray(newStringDash)
+      setDashLineLength(+lineString)
+    }
+  },[props.initialDash, pathLength])
+
+  useEffect(()=>{
+    let speed = 1;
+    if (animationSpeed) {speed = speed*animationSpeed}
+    if (props.lineSpeed) {speed = speed*props.lineSpeed}
+    setMySpeed(speed)
+  },[animationSpeed, props.lineSpeed])
+
+  useEffect(()=>{
+    let biasedScrolled = scrollMin>=0&&scrollMax>scrollMin&&scrollMax>0?(Math.min(Math.max(props.scrolled-scrollMin,0)/(scrollMax-scrollMin),1)):props.scrolled;
+    
+    let childProps = getPathProps(props);
+    childProps.strokeDasharray = dashArray.length>0?dashArray:(pathLength) + ' ' + (pathLength);
+    let newOffset = Math.min( Math.max(biasedScrolled*mySpeed - prevRatio[props.position], 0)  / myRatio[props.position] , 1) * (props.inverse?1:-1) || 0 
+    childProps.strokeDashoffset = (pathLength + (dashLineLength>0?0:0)) + (pathLength + (dashLineLength>0?0:0))*newOffset
+    
+    childProps.stroke = props.myGradient?props.myGradient:newOffset!=0?'white':'transparent';
+    
+    childProps.fill = props.animateFill?Math.abs(newOffset)===1?'white':'transparent':'transparent';
+
+    if (props.print) {
+      // console.log(scrollMin, scrollMax, biasedScrolled)
+      // console.log('dashLineLength', dashLineLength)
+      console.log(newOffset)
+    };
+    setNewProps(childProps)
+
+  },[pathLength, dashArray, pathRef, props.inverse, scrollMin, scrollMax, mySpeed, dashLineLength , props.animateFill, prevRatio, myRatio, props.scrolled, props.initialDash])
+
+  let style={transition:props.scrolled>0?'all 10s ease':'all 0.1s'};
+  // let style={transition: 'fill 0.5s ease'}
 
   switch (props.type) {
     case 'rect' :
@@ -147,7 +245,8 @@ let {scrolled} = useAppContext();
     delete newProps.print
     delete newProps.fromTop
     delete newProps.transform
-    newProps.fill = 'white'
+    // newProps.fill = '#171B4D'
+    newProps.fill='white'
     return newProps
   }
 
