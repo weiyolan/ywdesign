@@ -15,7 +15,8 @@ import RoadmapA from '../components/RoadmapA'
 import RoadmapB from '../components/RoadmapB'
 import RoadmapC from '../components/RoadmapC'
 import RoadmapD from '../components/RoadmapD'
-import RoadmapE from '../components/RoadmapE'
+import RoadmapE1 from '../components/RoadmapE1'
+import RoadmapE2 from '../components/RoadmapE2'
 import RoadmapF from '../components/RoadmapF'
 import RoadmapG from '../components/RoadmapG'
 // import RoadmapSVG from '../public/images/roadmapComplete.svg'
@@ -24,7 +25,7 @@ import Iteration2 from '../public/images/roadmapIteration2.svg'
 import { useAppContext } from '../components/Context'
 
 
-const roadmap = () => {
+export default function Roadmap () {
   let {breakPointSmall,scrolled} = useAppContext();
   // let { scrolled } = useAppContext();
   // PARALLAX
@@ -58,7 +59,7 @@ const roadmap = () => {
         
         <Layout>
 
-        <Subtitle name={'Roadmap'} title={`Scroll down to see\nhow we work together`} span={'Scroll'} text={'Yes indeed scroll dooownnnnn'} first={true} />
+        <Subtitle name={'Roadmap'} title={`Scroll down and see\nhow we work together`} span={'Scroll'} first={true} />
 
         {/* <div style={fadeStyle} className='relative w-[full] h-full ' > */}
         <div className='flex w-full flex-col justify-center relative h-full' >
@@ -67,7 +68,8 @@ const roadmap = () => {
           <RoadmapB scrollMin={0.13} scrollMax={0.16} />
           <RoadmapC scrollMin={0.22} scrollMax={0.25} />
           <RoadmapD speed={1.5} scrollMin={0.35} scrollMax={0.57} />
-          <RoadmapE scrollMin={0.64} scrollMax={0.8} />
+          <RoadmapE1 scrollMin={0.6} scrollMax={0.64} />
+          <RoadmapE2 scrollMin={0.65} scrollMax={0.72} />
           <RoadmapF scrollMin={0.9} scrollMax={0.95} />
           <RoadmapG scrollMin={0.95} scrollMax={1} />
 
@@ -91,7 +93,6 @@ const roadmap = () => {
     </>
   )
 }
-export default roadmap
 
 
 

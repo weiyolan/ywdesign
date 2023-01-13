@@ -103,13 +103,16 @@ export function Path(props) {
 
   },[pathLength, dashArray, pathRef, props.inverse, scrollMin, scrollMax, mySpeed, dashLineLength , prevRatio, myRatio, scrolled, props.initialDash])
 
+  // let style={transition:'all 0.1s ease'};
+  let style={};
+
   switch (props.type) {
     case 'rect' :
-      return <rect ref={pathRef} style={{transition:'all 0.1s ease'}} {...newProps} />
+      return <rect ref={pathRef} style={style} {...newProps} />
     case 'circle' :
-      return <circle ref={pathRef} style={{transition:'all 0.1s ease'}} {...newProps} />
+      return <circle ref={pathRef} style={style} {...newProps} />
     default :
-      return <path ref={pathRef} style={{transition:'all 0.1s ease'}} {...newProps} />
+      return <path ref={pathRef} style={style} {...newProps} />
     }
 
 }
