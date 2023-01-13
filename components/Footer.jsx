@@ -18,8 +18,8 @@ const contactList = [
 ];
 
 
-export default function Footer({scrolled}) {
-  let {width, breakPointSmall} = useAppContext();
+export default function Footer() {
+  let {width, breakPointSmall, scrolled} = useAppContext();
   // let [style,setStyle] = useState({transform: 'translateY(100%) ', opacity:0 })
   // let [appeared,setAppeared] = useState(false)
 

@@ -2,11 +2,11 @@ import React, { useRef, useState, useEffect } from "react"
 import { useAppContext } from '../components/Context'
 import { useSVGContext } from "./ContextSVG"
 
-function getOffset(lengthArray, i) {
-  let included = lengthArray.map((l, index) => index < i ? l : 0)
-  let offset = included.reduce((prev, curr) => prev + curr)
-  return offset
-}
+// function getOffset(lengthArray, i) {
+//   let included = lengthArray.map((l, index) => index < i ? l : 0)
+//   let offset = included.reduce((prev, curr) => prev + curr)
+//   return offset
+// }
 
 function getPathProps(props) {
   let pathProps = { ...props }
@@ -15,6 +15,7 @@ function getPathProps(props) {
   delete pathProps.lineSpeed
   delete pathProps.inverse
   delete pathProps.initialDash
+  delete pathProps.myGradient
   delete pathProps['stroke-linecap']
   delete pathProps['stroke-width']
   delete pathProps.initialDash
@@ -91,7 +92,8 @@ export function Path(props) {
     let newOffset =  (pathLength + (dashLineLength>0?0:0)) * Math.min( Math.max(biasedScrolled*mySpeed - prevRatio[props.position], 0)  / myRatio[props.position] , 1) * (props.inverse?1:-1) || 0 
     childProps.strokeDashoffset = (pathLength + (dashLineLength>0?0:0)) + newOffset
     
-    childProps.stroke = (dashArray.length>0)?(newOffset!=0?'white':'transparent'):'white';
+    childProps.stroke = props.myGradient?props.myGradient:(dashArray.length>0)?(newOffset!=0?'white':'transparent'):'white';
+    
     if (props.print) {
       // console.log(scrollMin, scrollMax, biasedScrolled)
       // console.log('dashLineLength', dashLineLength)
@@ -101,69 +103,97 @@ export function Path(props) {
 
   },[pathLength, dashArray, pathRef, props.inverse, scrollMin, scrollMax, mySpeed, dashLineLength , prevRatio, myRatio, scrolled, props.initialDash])
 
-
   switch (props.type) {
     case 'rect' :
-      return <rect ref={pathRef} {...newProps} />
+      return <rect ref={pathRef} style={{transition:'all 0.1s ease'}} {...newProps} />
     case 'circle' :
-      return <circle ref={pathRef} {...newProps} />
+      return <circle ref={pathRef} style={{transition:'all 0.1s ease'}} {...newProps} />
     default :
-      return <path ref={pathRef} {...newProps} />
+      return <path ref={pathRef} style={{transition:'all 0.1s ease'}} {...newProps} />
     }
 
 }
 
-export function AnimateSVGText({children,at, fromTop}) {
+export function AnimateIn({children,at}) {
   let {scrolled} = useAppContext();
 
   return (
-    <g className='' 
-    style={{opacity:(scrolled>at?1:0),transform:scrolled>at?'translateY(0)':`translateY(${fromTop?'-20px':'0'})`, transition:'all 0.4s ease'}}>
-      {children}
-    </g>
-  )
-
-}
-
-export function AnimateText({children,at}) {
-  let {scrolled} = useAppContext();
-
-  return (
-    <div className='' 
+    <div className='z-20 px-4 my-4 w-full text-sm font-extralight text-center outline-none -outline-offset-2 relative flex text-white font-sans ' 
     style={{opacity:(scrolled>at?1:0),transform:scrolled>at?'translateY(0)':'translateY(0)', transition:'all 0.4s ease'}}>
       {children}
     </div>
   )
-
 }
 
-export function Text(props) {
-let [myProps, setMyProps] = useState(handleTextProps(props));  
-  
-function handleTextProps (props) {
-  let newProps = {...props}
-  newProps.fontFamily = 'Work Sans'
-  newProps.fontSize = newProps['font-size']
-  newProps.letterSpacing = newProps['letter-spacing']
-  newProps.fontWeight = newProps['font-weight']
-  // delete newProps['xml:space']
-  delete newProps['font-family']
-  delete newProps['font-size']
-  delete newProps['letter-spacing']
-  delete newProps['font-weight']
-  delete newProps.children
-  newProps.style = {'white-space': 'pre'}
-  newProps.fill = 'white'
-  return newProps
-}
+export function TextAnimate(props) {
+let {scrolled} = useAppContext();
 
-// useEffect(()=>{
-//   setMyProps(handleTextProps(props))
-//   console.log(handleTextProps(props))
-// },[props])
+  function handleTextProps (props) {
+    let newProps = {...props}
+    newProps.fontFamily = 'Work Sans'
+    newProps.fontSize = newProps['font-size']
+    newProps.letterSpacing = newProps['letter-spacing']
+    newProps.fontWeight = newProps['font-weight']
+    // delete newProps['xml:space']
+    delete newProps['font-family']
+    delete newProps['font-size']
+    delete newProps['letter-spacing']
+    delete newProps['font-weight']
+    delete newProps.children
+    delete newProps.at
+    delete newProps.print
+    delete newProps.fromTop
+    delete newProps.transform
+    newProps.fill = 'white'
+    return newProps
+  }
 
+  // translate(185 181)
 
-  return <text {...myProps}>
-    {props.children}
+  function handleTransform (Y) {
+  let [x,y] = [undefined, undefined] 
+
+    if (props.transform) {      
+      let first = props.transform.split(' ');
+      if (first.length===1) {
+        x = +first[0].split('(')[1].split(')')[0];
+        y = 0;
+      } else { 
+        x = +first[0].split('(')[1];
+        y = +first[1].split(')')[0];
+      }
+    } else {x,y=[0,0]}
+    if (props.print) {
+      console.log(props.transform.split(' '))
+      console.log(Y)
+      console.log(x)
+      console.log(`translate(${x?x:0}px,${(y?y:0) + Y}px)`)
+    }
+    return `translate(${x}px, ${y + Y}px)`
+  }
+
+  return (
+    <text {...handleTextProps(props)}
+    style={{
+      opacity:(scrolled>props.at?1:0),
+      transform: scrolled>props.at?handleTransform(0):handleTransform(props.fromTop?-25:0), 
+      transition:'all 0.4s ease', 
+      whiteSpace:'pre'
+    }}>
+      {props.children}
     </text>
+  )
+
 }
+
+// export function AnimateSVGText({children,at, fromTop}) {
+  //   let {scrolled} = useAppContext();
+  
+  //   return (
+  //     <g className='' 
+  //     style={{opacity:(scrolled>at?1:0),transform:scrolled>at?'translateY(0)':`translateY(${fromTop?'-20px':'0'})`, transition:'all 0.4s ease'}}>
+  //       {children}
+  //     </g>
+  //   )
+  
+  // }

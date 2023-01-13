@@ -1,9 +1,11 @@
 import Image from 'next/image';
 import Button from './Button';
-import { useEffect, useState } from 'react';
+import React,{ useEffect, useState } from 'react';
 import SkillsMoving from './SkillsMoving';
+import { useAppContext } from './Context';
 
-export default function Title({type, breakPointSmall}) {
+export default function Title({type}) {
+  let {breakPointSmall} = useAppContext();
   // useEffect(()=>{
   //   console.log(breakPointSmall)
   // })
@@ -44,5 +46,9 @@ function GetTitle({type}) {
     case 'contact':
       return (<h1 className={heroTitleStyle}> You can <span className={' transition-all duration-700 delay-500 default:font-medium' + 
       loadStyle  }>contact</span> me</h1>)
+
+    case 'roadmap':
+    return (<h1 className={heroTitleStyle}> Discover the <span className={' transition-all duration-700 delay-500 default:font-medium' + 
+    loadStyle  }>Roadmap</span></h1>)
   }
 }

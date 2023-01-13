@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { useAppContext } from "./Context"
-import { Path, AnimateSVGText, AnimateText, Text } from './pathUtils'
+import { Path, AnimateIn, TextAnimate } from './pathUtils'
 import { SVGWrapper } from "./ContextSVG"
 
 export default function RoadmapC({ scrollMin, scrollMax }) {
@@ -45,19 +45,16 @@ export default function RoadmapC({ scrollMin, scrollMax }) {
       <div className='relative w-full h-fit flex flex-col '>
 
         <svg className='relative w-full px-4 left-1/2' style={{ transform: `translate(-50%, ${-0 * scrolled}px)` }} viewBox="0 0 807 193" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <AnimateSVGText at={0.225} fromTop={true}>
-            <Text id="Ideation" transform="translate(316 141)" fill="black" style="white-space: pre" font-family="Work Sans" font-size="44.0504" font-weight="500" letter-spacing="0em"><tspan x="0.0875778" y="41.1313">Ideation</tspan></Text>
-          </AnimateSVGText>
-
+          <TextAnimate at={0.26} fromTop={true} id="Ideation" transform="translate(316 141)" fill="black" style="white-space: pre" font-family="Work Sans" font-size="44.0504" font-weight="500" letter-spacing="0em"><tspan x="0.0875778" y="41.1313">Ideation</tspan></TextAnimate>
           <Path position={0} inverse={true} double={2} handleLength={(l, i) => handleLength(1, l, i)}  id="Vector" d="M383.588 125V2M423.602 125V2" stroke="black" stroke-width="3" stroke-linecap="round"/>
         
         </svg>
 
-        <AnimateText at={0.24}>
-        <h2 className='z-20 px-4 my-4 w-full text-sm font-extralight text-center outline-none -outline-offset-2 relative flex text-white font-sans ' >
+        <AnimateIn at={0.28}>
+        <h2 >
         {`Once agreed, we meet up and take note of your\nvalues, existing branding\nand style preferences to\ngenerate ideas together:`} 
           </h2>
-        </AnimateText>
+        </AnimateIn>
 
       </div>
     </SVGWrapper>
