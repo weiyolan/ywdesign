@@ -24,11 +24,11 @@ import RoadmapIteration1 from '../components/RoadmapIteration1'
 // import RoadmapIteration2 from '../public/images/RoadmapIteration2.svg'
 import { useAppContext } from '../components/Context'
 import ArrowLink from '../components/ArrowLink'
-import Conctact from '../components/Contact'
+import Contact from '../components/Contact'
 
 
 export default function Roadmap () {
-  let {breakPointSmall,scrolled} = useAppContext();
+  let {width,breakPointSmall,scrolled} = useAppContext();
   // let { scrolled } = useAppContext();
   // PARALLAX
   // let target = document.getElementById('id')
@@ -55,7 +55,7 @@ export default function Roadmap () {
       </Head>
       
       <main className='scroll-smooth'>
-        <Navbar />
+        <Navbar from={'Roadmap'}/>
         
         <div id='Title'>
           <Title type='roadmap'/>
@@ -70,16 +70,16 @@ export default function Roadmap () {
         </div>
         </section>
 
-        <section className='flex w-full flex-col mt-6 justify-center relative h-full' >
+        <section className='flex w-full sm:w-[80%] md:w-[60%] lg:w-[50%] xl:w-[40%] mx-auto flex-col mt-6 sm:mt-12 justify-center relative h-full' >
           <RoadmapATitle />
           <RoadmapA scrollMin={0} scrollMax={0.12} />
           <RoadmapB scrollMin={0.13} scrollMax={0.16} />
           <RoadmapC scrollMin={0.22} scrollMax={0.25} />
-          <RoadmapD speed={1.5} scrollMin={0.35} scrollMax={0.57} />
-          <RoadmapE1 scrollMin={0.6} scrollMax={0.64} />
-          <RoadmapE2 scrollMin={0.65} scrollMax={0.72} />
-          <RoadmapF scrollMin={0.78} scrollMax={0.83} />
-          <RoadmapG scrollMin={0.82} scrollMax={0.90} />
+          <RoadmapD speed={1.5} scrollMin={0.31} scrollMax={0.45} />
+          <RoadmapE1 scrollMin={0.46} scrollMax={0.53} />
+          <RoadmapE2 scrollMin={0.55} scrollMax={0.63} />
+          <RoadmapF scrollMin={0.65} scrollMax={0.68} />
+          <RoadmapG scrollMin={0.70} scrollMax={0.77} />
           <div className='absolute w-[40vw] z-[35]  top-[900px] ml-4 left-0'>
             {/* <RoadmapIteration1 /> */}
           </div>
@@ -88,12 +88,8 @@ export default function Roadmap () {
           </div>
         </section>
 
-        <section>
-        <div className='text-center w-full pl-6 mb-12'>
-            <ArrowLink text='To the top' to='#Title' />
-        </div>
-        <Conctact/>
-        </section>
+        
+          <Contact first={true}/>
         </Layout>
 
         <Footer/>

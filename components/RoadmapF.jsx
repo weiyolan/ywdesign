@@ -48,11 +48,11 @@ export default function RoadmapF({ scrollMin, scrollMax }) {
         <svg className='relative w-full px-4 left-1/2' style={{ transform: `translate(-50%, ${-0 * scrolled}px)` }} viewBox="0 0 807 214" fill="none" xmlns="http://www.w3.org/2000/svg">
           
           <Path print={false} position={0} animateFill={true} inverse={false} double={1} handleLength={(l,i)=>handleLength(1,l,i)} id="finishedProduct" d="M403.5 210L354 139.5L403.5 69L453 139.5L403.5 210Z" fill="black" stroke="black" stroke-width="4"/>
-          <TextAnimate at={0.77} fromTop={true} id="Product Delivery" transform="translate(223)" fill="black" style="white-space: pre" font-family="Work Sans" font-size="44.0504" font-weight="500" letter-spacing="0em"><tspan x="0.174484" y="41.1313">Product Delivery</tspan></TextAnimate>
+          <TextAnimate at={0.64} fromTop={true} id="Product Delivery" transform="translate(223)" fill="black" style="white-space: pre" font-family="Work Sans" font-size="44.0504" font-weight="500" letter-spacing="0em"><tspan x="0.174484" y="41.1313">Product Delivery</tspan></TextAnimate>
 
         </svg>
 
-        <AnimateIn at={0.84}>
+        <AnimateIn at={0.69}>
           <h2 >
           {`When the product is ready you receive it.\nYes, you own all the code.`}
         </h2>

@@ -4,7 +4,7 @@ import AccentTitle from './AccentTitle'
 import Button from './Button'
 import { useAppContext } from './Context'
 
-export default function Conctact ({first}) {
+export default function Contact ({first}) {
   let {width, breakPointSmall} = useAppContext()
 
   // useEffect(()=>{
@@ -40,7 +40,7 @@ export default function Conctact ({first}) {
           <ContactB />
         </div>
         <div className='mt-6 sm:mt-10 ml-8 sm:ml-0 flex lg:mr-16'>
-          <Button to="quote" title="Contact" text="Ask a quote" mode={'white'}/>
+          <Button to="contact" title="Contact" text="Ask a quote" mode={'white'} handleClick={()=>''}/>
         </div>
       </div>
 

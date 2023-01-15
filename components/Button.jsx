@@ -5,7 +5,7 @@ import Link from "next/link"
   
 export default function Button({to, title, text, selected, handleClick, darkMode, mode, mobile}) {
     // let content = title;
-  let basicStyle = `flex border border-solid rounded-full px-4 py-2 mx-4 
+  let basicStyle = `flex border border-solid rounded-full px-4 py-2 mx-4 md:mx-2 lg:mx-4
   font-sans font-semibold  ${mobile?'text-lg':'text-xs'} textcenter self-center whitespace-nowrap
   duration-500 cursor-pointer select-none
   outline-none focus-visible:outline-primary`
@@ -17,7 +17,7 @@ export default function Button({to, title, text, selected, handleClick, darkMode
   switch (mode) {
     case 'unselected' :
       return (
-        <Link className={`flex border select-none border-solid rounded-full px-4 py-2 mx-4 
+        <Link className={`flex border select-none border-solid rounded-full px-4 py-2 mx-4  md:mx-2 lg:mx-4
         font-sans font-semibold  ${mobile?'text-lg':'text-xs'} textcenter self-center whitespace-nowrap
         duration-500 cursor-pointer   
         outline-none focus-visible:outline-primary border-transparent text-primary/70 hover:border-primary active:bg-white/20`}
@@ -40,7 +40,7 @@ export default function Button({to, title, text, selected, handleClick, darkMode
     case 'dark' :
       return(
       // <Link className={basicStyle + darkStyle + ''}
-        <Link className={`flex border-2 border-solid select-none rounded-full px-4 py-2 mx-4 
+        <Link className={`flex border-2 border-solid select-none rounded-full px-4 py-2 mx-4 md:mx-2 lg:mx-4 
         font-sans font-semibold ${mobile?'text-lg':'text-xs'} textcenter self-center whitespace-nowrap
         duration-300 cursor-pointer   
         outline-none border-transparent 

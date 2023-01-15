@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Title from '../components/Title'
 import Layout from '../components/Layout'
 import Subtitle from '../components/Subtitle'
-import Conctact from '../components/Contact'
+import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 import Specialities from '../components/Specialities'
 import Features from '../components/Features'
@@ -39,7 +39,7 @@ export default function Index({scrolled}) {
           <Features/>
 
               
-          <Conctact breakPointSmall={breakPointSmall} first={true}/>
+          <Contact breakPointSmall={breakPointSmall} first={true}/>
 
         </Layout>
 

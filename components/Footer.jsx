@@ -43,35 +43,34 @@ export default function Footer() {
       initial={{y: `${width<breakPointSmall?100:200}` }} 
       whileInView={{y: 0, transition: {type:'spring', stiffness: 200, damping:25}}} 
       viewport={{once : true}}
-      className={`backdrop-blur bg-white/10 rounded-t-2xl sm:rounded-t-[2rem] mt-12 p-4 sm:mt-24 sm:p-8 lg:p-16 bottom-0 relative w-full`}>
-      <div className='flex justify-between max-w-4xl mx-auto items-start '>
-        <div className='flex-1'>
-          <AccentTitle text={'Design'}/>
-          <List list={designList}/>
-        </div>
-        <div className='flex-1'>
-          <AccentTitle text={'Support'}/>
-          <List list={supportList}/>
-        </div>  
+      className={`backdrop-blur bg-white/10 rounded-t-2xl sm:rounded-t-[2rem] mt-12 p-6 sm:mt-24 sm:p-8 lg:p-16 bottom-0 relative w-full`}>
+      
+      <div className='flex flex-wrap sm:flex-nowrap justify-between max-w-4xl mx-auto items-start '>
+        
+        <Links text='Design' list={designList} left={true} />
+        <Links text='Support' list={supportList} left={width<breakPointSmall?false:true} />
 
-        <div className="my-auto">
-          {/* <Link href='/'><Image src="/images/logo_ywd_w.svg" width={60} height={60*92/112} alt="ywdesign logo"/></Link> */}
-          <Link href='/'><YWD className='w-8 sm:w-14' alt='ywdesign logo in white'/></Link>
+        <div className="my-auto w-full sm:w-fit">
+          <div className='mx-auto w-fit'><Link href='/'><YWD className='w-8 sm:w-14' alt='ywdesign logo in white'/></Link></div>
         </div>
 
-        <div className='text-right flex-1'>
-          <AccentTitle text={'Links'}/>
-          <List list={linksList}/>
-        </div>
-        <div className='text-right flex-1'>
-          <AccentTitle text={'Contact'}/>
-          <List list={contactList}/>
-        </div>
+        <Links text='Links' list={linksList} left={width<breakPointSmall?true:false} />
+        <Links text='Contact' list={contactList} left={false} />
+
       </div>
+
     </motion.section>
   )
 }
 
+function Links ({left, text, list}) {
+  return (
+    <div className={`${left?'':'text-right'} flex-1`}>
+          <AccentTitle text={text}/>
+          <List list={list}/>
+  </div>
+  )
+}
 
 function List ({list}) {
 
@@ -82,8 +81,8 @@ function List ({list}) {
           return (
             <li key={i} 
             className={`text-white font-light whitespace-nowrap
-            my-1 sm:my-3
-            text-[0.6rem] sm:text-sm`} >
+            my-3 sm:my-3
+            text-sm sm:text-sm`} >
               <Link href={item.link} target='_blank' className='cursor-alias' rel="noopener noreferrer" >
                 {item.text}
               </Link>
@@ -92,8 +91,8 @@ function List ({list}) {
         else { return (
           <li key={i} 
           className={`text-white font-light whitespace-nowrap
-          my-1 sm:my-3
-          text-[0.6rem] sm:text-sm`} >
+          my-3 sm:my-3
+          text-sm sm:text-sm`} >
             <Link href={item.link}>
               {item.text}
             </Link>
@@ -103,3 +102,4 @@ function List ({list}) {
 
   )
 }
+

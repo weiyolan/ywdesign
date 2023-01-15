@@ -4,6 +4,7 @@ import Layout from '../components/Layout'
 import Footer from '../components/Footer'
 import Subtitle from '../components/Subtitle'
 import TwoColumns from '../components/TwoColumns'
+// import { FaTimes } from 'react-icons/fa'
 // import { Inter } from '@next/font/google'
 // import styles from '../styles/Home.module.css'
 import Navbar from '../components/Navbar'
@@ -15,14 +16,15 @@ import {RiDoubleQuotesL,RiDoubleQuotesR} from 'react-icons/ri'
 import Number from '../components/Number'
 import Vision from '../components/Vision'
 import YolanPhoto from '../components/YolanPhoto'
-import Conctact from '../components/Contact'
+import Contact from '../components/Contact'
 import { useAppContext } from '../components/Context'
 
 // const inter = Inter({ subsets: ['latin'] })
 
-let numbers = [{n:12,unit:'',title:'years global website traffic\nthrough mobile devices',text:'the number of months abroad'},
-{n:58,unit:'%',title:`the global website traffic\nthrough mobile devices`,text:'',link:'https://www.statista.com/statistics/277125/share-of-website-traffic-coming-from-mobile-devices/'},
-{n:2.4,unit:'€',title:'million global website traffic\nthrough mobile devices', text:'total value of projects managed'}]
+let numbers = [
+{n:3,unit:'x',title:"Growth of retail sales through\ne-commerce worldwide since 2015",text:"You better get your\nbrand online", link: "https://www.statista.com/statistics/379046/worldwide-retail-e-commerce-sales/"},
+{n:58,unit:'%',title:`Global website traffic\nthrough mobile devices`,text:'You better have a\nresponsive website',link:'https://www.statista.com/statistics/277125/share-of-website-traffic-coming-from-mobile-devices/'},
+{n:92,unit:'%',title:"Internet searches globally going\nthrough Google's search engine", text:"You better optimise your\nwebsite's SEO", link:"https://www.oberlo.com/statistics/search-engine-market-share#:~:text=Handling%20over%2090%25%20of%20all,done%20through%20the%20internet%20giant."}]
 
 let vision = [{title:'Impact',text:'To have an impact in this world is to share your ideas and to have the many understand them.', span:''},
 {title:'Excellence',text:'To succeed in whatever you do is to always be open minded to improving yourself.', span:''},
@@ -74,7 +76,7 @@ export default function Aboutme({scrolled}) {
           <section className='flex flex-col cursor-default'>
             <Subtitle name='Vision' title={`Everything starts\nwith a vision`} first={width>1025?false:true} span='vision'/>
             {/* <RiDoubleQuotesL className='inline-block -translate-y-3' fill='white'/>  */}
-            <div className='grid grid-cols-2 gap-8  sm:gap-16 auto-rows-auto mx-auto'>
+            <div className='grid grid-cols-2 gap-4  sm:gap-16 auto-rows-auto mx-auto'>
               {vision.map((item)=>{
                 return (
                   <Vision key={item.title} title={item.title} text={item.text}/>
@@ -109,7 +111,7 @@ export default function Aboutme({scrolled}) {
           </section> */}
 
 
-          <Conctact first={width>1025?false:true}/>
+          <Contact first={width>1025?false:true}/>
           
         </Layout>
 

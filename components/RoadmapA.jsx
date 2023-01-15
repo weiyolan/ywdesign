@@ -33,9 +33,9 @@ export default function RoadmapA({scrollMin,scrollMax}) {
       })
     }
   
-    // useEffect(() => {
-    //   console.log(scrolled)
-    // }, [scrolled])
+    useEffect(() => {
+      console.log(scrolled)
+    }, [scrolled])
   
     useEffect(() => {
       // console.log(allLengths)

@@ -6,7 +6,7 @@ import Title from '../components/Title'
 import Layout from '../components/Layout'
 import Subtitle from '../components/Subtitle'
 import Footer from '../components/Footer'
-import Conctact from '../components/Contact'
+import Contact from '../components/Contact'
 import Technologies from '../components/Technologies'
 import Service from '../components/Service'
 import Navbar from '../components/Navbar';
@@ -244,7 +244,7 @@ export default function Services({scrolled}) {
 
           <Technologies breakPointSmall={breakPointSmall}/>
 
-          <Conctact breakPointSmall={breakPointSmall} first={width<breakPointSmall?true:false}/>
+          <Contact breakPointSmall={breakPointSmall} first={width<breakPointSmall?true:false}/>
 
         </Layout>
 

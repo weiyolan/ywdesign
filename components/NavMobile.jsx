@@ -78,6 +78,17 @@ const sidebar = {
 };
 
 
+const variants2 = {
+  open: {
+    display: "block",
+    transition: { staggerChildren: 0.05, delayChildren: 0.1 }
+  },
+  closed: {
+    display: "none",
+    transition: { staggerChildren: 0.05, staggerDirection: -1, when: "afterChildren"},
+  }
+};
+
 const variants = {
   open: {
     y: 0,
@@ -109,26 +120,28 @@ const variants = {
     {/* <motion.div className={`${isOpen?'bg-white':'bg-white/10'} fixed duration-700 top-0 rounded-b-[30px] rounded-tl-[30px] h-[530px] right-0 w-[100%] sm:w-[40vw]`} variants={sidebar} /> */}
     
     <motion.div 
-      variants={variants}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
+      variants={variants2}
       className='absolute inline-flex rounded-full w-fit top-[16px] z-[51] left-[16px]'>
-      <Link  href={`/`} onClick={()=>selectButton('Home')}>
-      {/* <YW
-        width='40'
-        className='m-2'
-        alt="ywdesign svg-logo"
-        onClick={()=>selectButton('Home')}/> */}
+      <motion.div variants={variants}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }} >
+        <Link  href={`/`} onClick={()=>selectButton('Home')}>
+        {/* <YW
+          width='40'
+          className='m-2'
+          alt="ywdesign svg-logo"
+          onClick={()=>selectButton('Home')}/> */}
         <YW className='w-10 h-10' lt="ywdesign logo" />
-      </Link> 
+        </Link> 
+      </motion.div>
     </motion.div>
 
     <Navigation>
       <Button  mobile={true} className='' to="" title="Home" text="Home" mode={selectedB==='Home'?'selected':'unselected'} handleClick={selectButton}/>
       <Button  mobile={true} className='' to="services" title="Services" text="Services" mode={selectedB==='Services'?'selected':'unselected'} handleClick={selectButton}/>
       <Button  mobile={true} className='' to="aboutme" title="About Me" text="About Me" mode={selectedB==='About Me'?'selected':'unselected'} handleClick={selectButton}/>
-      <Button  mobile={true} className='' to="contact" title="Contact"  text="Contact" mode={selectedB==='Contact'?'selected':'unselected'} handleClick={selectButton}/>
       <Button  mobile={true} className='' to="roadmap" title="Roadmap" text="Roadmap" mode={selectedB==='Roadmap'?'selected':'unselected'}  handleClick={selectButton} />
+      <Button  mobile={true} className='' to="contact" title="Contact"  text="Contact" mode={selectedB==='Contact'?'selected':'unselected'} handleClick={selectButton}/>
       <Button  mobile={true} className='' to="contact/#Form" title="Contact" text="Ask a quote" handleClick={selectButton}  mode={'dark'}/>
     </Navigation>
     

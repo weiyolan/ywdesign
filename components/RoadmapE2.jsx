@@ -39,7 +39,7 @@ export default function RoadmapE({ scrollMin, scrollMax }) {
     }
   }, [allLengths])
   // style={{transform: `translate(-50%, -${500*scrolled}px)`}} 
-  let a = 0.67;
+  let a = 0.572;
   let delay = 0.003;
   return (
     // <AnimateSVGText at={0.16} fromTop={true}>
@@ -50,20 +50,12 @@ export default function RoadmapE({ scrollMin, scrollMax }) {
         <svg className='relative w-full mb-4 px-4 left-1/2' style={{ transform: `translate(-50%, ${-0 * scrolled}px)` }} viewBox="0 0 807 584"  fill="none" xmlns="http://www.w3.org/2000/svg">
           <g id="Frame 20">
             <g id="developmentGroup">
-              {/* <Path position={4} inverse={false} double={1} handleLength={(l,i)=>handleLength(0,l,i)}  id="start2A" d="M403.5 691.5C403.5 724.5 383.5 726 383.5 743.5C383.5 761 383.5 770 383.5 770C383.5 787 376.394 800.406 366 803.5" stroke="white" stroke-width="4" stroke-linecap="round"/>
-              <Path position={4} inverse={false} double={1} handleLength={(l,i)=>handleLength(1,l,i)}  id="start2B" d="M403.5 691.5C403.5 728 422.999 723 423 744C423 765 423 770 423 770C423 797 432 800.5 439.5 803.5" stroke="white" stroke-width="4" stroke-linecap="round"/>
-              <Path position={3} inverse={true} double={1} handleLength={(l,i)=>handleLength(1,l,i)}  id="tails2" d="M403.5 692L403.5 596M403.5 692C403.5 606 470 628.5 470 596M403.5 692C403.5 606.5 536.5 639 536.5 596M403.5 692C403.5 606 336.5 628 336.5 596M403.5 692C403.5 606 270 637.5 270 596" stroke="white" stroke-width="4" stroke-linecap="round"/> */}
               <Path position={3} inverse={false} double={1} handleLength={(l,i)=>handleLength(0,l,i)} id="start2A" d="M403.5 469.5C403.5 502.5 383.5 504 383.5 521.5C383.5 539 383.5 548 383.5 548C383.5 565 376.394 578.406 366 581.5" stroke="black" stroke-width="4" stroke-linecap="round"/>
               <Path position={3} inverse={false} double={1} handleLength={(l,i)=>handleLength(1,l,i)} id="start2B" d="M403.5 469.5C403.5 506 422.999 501 423 522C423 543 423 548 423 548C423 575 432 578.5 439.5 581.5" stroke="black" stroke-width="4" stroke-linecap="round"/>
               <Path position={2} inverse={true} double={1} handleLength={(l,i)=>handleLength(1,l,i)} id="tails2" d="M403.5 470L403.5 374M403.5 470C403.5 384 470 406.5 470 374M403.5 470C403.5 384.5 536.5 417 536.5 374M403.5 470C403.5 384 336.5 406 336.5 374M403.5 470C403.5 384 270 415.5 270 374" stroke="black" stroke-width="4" stroke-linecap="round"/>
 
               <g id="Development">
                 <g id="numbers2">
-                  {/* <TextAnimate print={false} at={a+12*delay} fromTop={true} id="1" transform="translate(529 541)" fill="white" style={{'white-space':'pre'}} font-family="Work Sans" font-size="34.2614" font-weight="500" letter-spacing="0em"><tspan x="0.107573" y="31.7688">1</tspan></TextAnimate>
-                  <TextAnimate print={false} at={a+11*delay} fromTop={true} id="0" transform="translate(460 541)" fill="white" style={{'white-space':'pre'}} font-family="Work Sans" font-size="34.2614" font-weight="500" letter-spacing="0em"><tspan x="0.243129" y="31.7688">0</tspan></TextAnimate>
-                  <TextAnimate print={false} at={a+10*delay} fromTop={true} id="1_2" transform="translate(396 541)" fill="white" style={{'white-space':'pre'}} font-family="Work Sans" font-size="34.2614" font-weight="500" letter-spacing="0em"><tspan x="0.107573" y="31.7688">1</tspan></TextAnimate>
-                  <TextAnimate print={false} at={a+9*delay} fromTop={true} id="1_3" transform="translate(331 541)" fill="white" style={{'white-space':'pre'}} font-family="Work Sans" font-size="34.2614" font-weight="500" letter-spacing="0em"><tspan x="0.107573" y="31.7688">1</tspan></TextAnimate>
-                  <TextAnimate print={false} at={a+8*delay} fromTop={true} id="0_2" transform="translate(259 541)" fill="white" style={{'white-space':'pre'}} font-family="Work Sans" font-size="34.2614" font-weight="500" letter-spacing="0em"><tspan x="0.243129" y="31.7688">0</tspan></TextAnimate> */}
                   <TextAnimate print={false} at={a+12*delay} fromTop={true} id="1" transform="translate(529 319)" fill="black" style="white-space: pre" font-family="Work Sans" font-size="34.2614" font-weight="500" letter-spacing="0em"><tspan x="0.107573" y="31.7688">1</tspan></TextAnimate>
                   <TextAnimate print={false} at={a+11*delay} fromTop={true} id="0" transform="translate(460 319)" fill="black" style="white-space: pre" font-family="Work Sans" font-size="34.2614" font-weight="500" letter-spacing="0em"><tspan x="0.243129" y="31.7688">0</tspan></TextAnimate>
                   <TextAnimate print={false} at={a+10*delay} fromTop={true} id="1_2" transform="translate(396 319)" fill="black" style="white-space: pre" font-family="Work Sans" font-size="34.2614" font-weight="500" letter-spacing="0em"><tspan x="0.107573" y="31.7688">1</tspan></TextAnimate>
@@ -75,11 +67,6 @@ export default function RoadmapE({ scrollMin, scrollMax }) {
                 <TextAnimate print={false} at={a+6*delay} fromTop={true} id="Development_2" transform="translate(260 255)" fill="black" style="white-space: pre" font-family="Work Sans" font-size="44.0504" font-weight="500" letter-spacing="0em"><tspan x="0.486908" y="41.1313">Development</tspan></TextAnimate>
 
                 <g id="numbers1">
-                  {/* <TextAnimate print={false} at={a} fromTop={true} id="1_4" transform="translate(263 425)" fill="white" style={{'white-space':'pre'}} font-family="Work Sans" font-size="34.2614" font-weight="500" letter-spacing="0em"><tspan x="0.107573" y="31.7688">1</tspan></TextAnimate>
-                  <TextAnimate print={false} at={a+1*delay} fromTop={true} id="0_3" transform="translate(327 425)" fill="white" style={{'white-space':'pre'}} font-family="Work Sans" font-size="34.2614" font-weight="500" letter-spacing="0em"><tspan x="0.243129" y="31.7688">0</tspan></TextAnimate>
-                  <TextAnimate print={false} at={a+2*delay} fromTop={true} id="0_4" transform="translate(392 425)" fill="white" style={{'white-space':'pre'}} font-family="Work Sans" font-size="34.2614" font-weight="500" letter-spacing="0em"><tspan x="0.243129" y="31.7688">0</tspan></TextAnimate>
-                  <TextAnimate print={false} at={a+3*delay} fromTop={true} id="1_5" transform="translate(464 425)" fill="white" style={{'white-space':'pre'}} font-family="Work Sans" font-size="34.2614" font-weight="500" letter-spacing="0em"><tspan x="0.107573" y="31.7688">1</tspan></TextAnimate>
-                  <TextAnimate print={false} at={a+4*delay} fromTop={true} id="1_6" transform="translate(529 425)" fill="white" style={{'white-space':'pre'}} font-family="Work Sans" font-size="34.2614" font-weight="500" letter-spacing="0em"><tspan x="0.107573" y="31.7688">1</tspan></TextAnimate> */}
                   <TextAnimate print={false} at={a} fromTop={true} id="1_4" transform="translate(263 203)" fill="black" style="white-space: pre" font-family="Work Sans" font-size="34.2614" font-weight="500" letter-spacing="0em"><tspan x="0.107573" y="31.7688">1</tspan></TextAnimate>
                   <TextAnimate print={false} at={a+1*delay} fromTop={true} id="0_3" transform="translate(327 203)" fill="black" style="white-space: pre" font-family="Work Sans" font-size="34.2614" font-weight="500" letter-spacing="0em"><tspan x="0.243129" y="31.7688">0</tspan></TextAnimate>
                   <TextAnimate print={false} at={a+2*delay} fromTop={true} id="0_4" transform="translate(392 203)" fill="black" style="white-space: pre" font-family="Work Sans" font-size="34.2614" font-weight="500" letter-spacing="0em"><tspan x="0.243129" y="31.7688">0</tspan></TextAnimate>
@@ -88,10 +75,6 @@ export default function RoadmapE({ scrollMin, scrollMax }) {
 
                 </g>
               </g>
-              {/* <Path position={1}  inverse={false} double={1} handleLength={(l,i)=>handleLength(1,l,i)} id="Vector_2" d="M423 224V264.5C423 288 403.25 285.5 403.25 309M403.25 309C403.25 285.5 383.5 288 383.5 264.5V224M403.25 309V328.5M403.25 328.5C403.25 394.5 270 377 270 415M403.25 328.5C403.25 394.5 336.787 391.5 336.625 415M403.25 328.5C403.25 394.5 469.875 391.892 469.875 415M403.25 328.5C403.25 394.5 536.208 378.36 536.5 415M403.25 328.5V415" stroke="white" strokeWidth="3" strokeLinecap="round" /> */}
-              {/* <Path position={1} inverse={false} double={1} handleLength={(l,i)=>handleLength(0,l,i)} id="startA" d="M423 224C423 224 423 250 423 267.5C423 285 403 286.5 403 319.5" stroke="white" stroke-width="4" stroke-linecap="round"/>
-              <Path position={1} inverse={false} double={1} handleLength={(l,i)=>handleLength(0.5,l,i)} id="startB" d="M383.5 224C383.5 224 383.5 246 383.5 267C383.501 288 403 283 403 319.5" stroke="white" stroke-width="4" stroke-linecap="round"/>
-              <Path position={2} inverse={false} double={1} handleLength={(l,i)=>handleLength(0.1,l,i)} id="tails" d="M403 319V415M403 319C403 405 336.5 382.5 336.5 415M403 319C403 404.5 270 372 270 415M403 319C403 405 470 383 470 415M403 319C403 405 536.5 373.5 536.5 415" stroke="white" stroke-width="4" stroke-linecap="round"/> */}
               <Path position={0} inverse={false} double={1} handleLength={(l,i)=>handleLength(0,l,i)}  id="startA" d="M423 2C423 2 423 28 423 45.5C423 63 403 64.5 403 97.5" stroke="black" stroke-width="4" stroke-linecap="round"/>
               <Path position={0} inverse={false} double={1} handleLength={(l,i)=>handleLength(1,l,i)} id="startB" d="M383.5 2C383.5 2 383.5 24 383.5 45C383.501 66 403 61 403 97.5" stroke="black" stroke-width="4" stroke-linecap="round"/>
               <Path position={1} inverse={false} double={1} handleLength={(l,i)=>handleLength(0.1,l,i)} id="tails" d="M403 97V193M403 97C403 183 336.5 160.5 336.5 193M403 97C403 182.5 270 150 270 193M403 97C403 183 470 161 470 193M403 97C403 183 536.5 151.5 536.5 193" stroke="black" stroke-width="4" stroke-linecap="round"/>
