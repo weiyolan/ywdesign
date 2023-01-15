@@ -18,6 +18,7 @@ import Vision from '../components/Vision'
 import YolanPhoto from '../components/YolanPhoto'
 import Contact from '../components/Contact'
 import { useAppContext } from '../components/Context'
+import YolanMotion from '../components/YolanPhotoMotion'
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -51,7 +52,7 @@ export default function Aboutme({scrolled}) {
 
         <Layout type='text'>
         
-          <YolanPhoto />
+          <YolanMotion />
 
             <div className='flex flex-col lg:flex-row'>
               <div className='flex-1'>
