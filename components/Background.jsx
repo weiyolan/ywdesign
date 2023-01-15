@@ -41,11 +41,11 @@ export default function Background ({scrolled}) {
           right-[25vw] -top-[33vh] 
           transition-all duration-400 rounded-full filter absolute ${blurOn?`blur-[200px]`:''} `}
           />
-        <div style={myWidth<640?{}:{top:`${-60+25*scrolled}vh`, left:`${-33+30*scrolled}vw`}} 
+        <div style={myWidth<640?{top:0,left:0}:{top:`${-60+25*scrolled}vh`, left:`${-33+30*scrolled}vw`}} 
         className={`bg-green ${myWidth<640?'':'animate-blob'} animation-delay-6000   
           h-[100vh] w-[66vw] 
           -left-[33vw] -top-[60vh] 
-          transition-all ease-in-out duration-1000 rounded-full filter absolute ${blurOn?`blur-[200px]`:''} `}
+          transition-all ease-in-out duration-1000 rounded-full filter absolute ${blurOn?`blur-[100px] sm:blur-[200px]`:''} `}
           /> 
         <div className={`bg-green ${myWidth<640?'':'animate-blob2'} animation-delay-2000  
           h-[200vh] w-[66vw] 
@@ -61,10 +61,10 @@ export default function Background ({scrolled}) {
          h-[150vh] w-[50vw]
           transition-all ease-in-out duration-1000 rounded-full filter absolute ${blurOn?`blur-[200px]`:''} `}
           />
-        <div className={`bg-green ${myWidth<640?'':'animate-blob'} animation-delay-0000   
+        <div className={`bg-green ${myWidth<640?'top-0 right-0':'animate-blob'} animation-delay-0000   
           h-[200vh] w-[66vw] 
-          -right-[33vw] -top-[150vh] 
-          transition-all duration-400 rounded-full filter absolute ${blurOn?`blur-[200px]`:''} `}
+          -right-[33vw] -top-[150vh]
+          transition-all duration-400 rounded-full filter absolute ${blurOn?`blur-[100px] sm:blur-[200px]`:''} `}
           /> 
 
     </div>

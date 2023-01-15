@@ -157,20 +157,20 @@ const Form = ({noBlur, setLightbox}) => {
             type='text'
             name='message' 
             placeholder={
-            `For example:\nHi Yolan,\nI would like a new logo and website for my shop.\nCould we meet up to talk about it?\nSee you!`} 
+            `For example: \nHi Yolan, \nI would like a new logo and website for my shop. \nCould we meet up to talk about it? \nSee you!`} 
             value={message}
             onChange={(e)=>{setMessage(e.target.value)}}>
           </motion.textarea> 
         </div>
       
       {/* BUTTON */}
-        <motion.div variants={inputVariants} className='flex relative w-fit  col-start-1 row-start-4 min-[400px]:col-start-3 min-[400px]:row-start-2 min-h-[50px] justify-start items-end '>
+        <motion.div variants={inputVariants} className='flex relative w-full col-start-1 row-start-4 min-[400px]:col-start-3 min-[400px]:row-start-2 min-h-[50px] justify-start items-end '>
           
           <button key='submitted' onMouseEnter={()=>setButtonHovering(true)} onMouseLeave={()=>setButtonHovering(false)}
           className={`inline-flex shadow-sm my-2 absolute left-0 bottom-0
           border border-solid rounded-full px-4 py-2  
           font-sans font-semibold text-xs textcenter whitespace-nowrap
-          cursor-pointer overflow-hidden w-fit h-fit  duration-300
+          cursor-pointer overflow-hidden w-fit h-fit duration-300
           ${success?'opacity-100 ':'opacity-0 -translate-x-[50px]'}
           outline-none focus-visible:outline-primary border-transparent bg-primary text-white 
           active:bg-white active:text-primary hover:border-white`} 

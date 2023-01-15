@@ -23,7 +23,16 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 1px red solid; */
+  border: 1px red solid;
+}
+
+*:focus:not(:focus-visible) {
+  outline:none;
+}
+
+*:focus-visible {
+  outline: rgba(255, 255, 255, 0.203) solid 2px;
+  outline-offset: -2px;
 }
 
   input:-webkit-autofill,
