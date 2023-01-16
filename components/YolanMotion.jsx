@@ -12,7 +12,7 @@ export default function YolanMotion({ home, scrollMin, scrollMax }) {
   let { scrolled } = useAppContext();
   let [fakeScroll,setFakeScroll] = useState(0)
   let [fillStyle,setFillStyle] = useState(false)
-  let [strokeColor,setStrokeColor] = useState('#171B4D')
+  let [strokeColor, setStrokeColor] = useState('#171B4D')
 
   function handleLength(f, newLength, position) {
 
@@ -53,7 +53,7 @@ export default function YolanMotion({ home, scrollMin, scrollMax }) {
   return (
     <SVGWrapper myRatio={allRatios} prevRatio={allPrevRatios} scrollMin={scrollMin} scrollMax={scrollMax}>
     <section className='relative flex flex-col max-w-3xl w-full mx-auto cursor-default'>
-      <div className={`mx-auto relative`} onMouseEnter={()=>{setHovering(true)}} onMouseLeave={()=>{setHovering(false)}}>
+      <div className={`mx-auto relative`}>
         {/* <Yolan className={`duration-500 transition-all delay-500 mt-12 sm:mt-24 mb-6 ${loaded?'opacity-100':'opacity-0'}`}  width='200' alt='Picture of Yolan Weiler' /> */}
         <div className='w-fit mt-6 sm:mt-12 h-[200px] flex'>
           <svg viewBox="0 0 260 328" fill="none" xmlns="http://www.w3.org/2000/svg">

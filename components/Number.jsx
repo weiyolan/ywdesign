@@ -11,7 +11,7 @@ export default function Number ({n, title, text, link, unit}) {
     <div onMouseEnter={()=>setHovering(true)} onMouseLeave={()=>setHovering(false)} className='flex sm:flex-col w-full min-[420px]:px-8 sm:px-0 items-center md:whitespace-pre mx-auto text-left sm:text-center cursor-default'>
       
       {/* <MyLink link={link}> */}
-        <div className='flex font-sans items-end text-primary w-[50vw] min-[420px]:w-[25vw] sm:w-full justify-start sm:justify-center mb-2 sm:mb-4 font-light sm:font-extralight text-6xl sm:text-8xl md:text-9xl'>
+        <div className='flex font-sans items-end text-primary w-[50vw] min-[420px]:w-[40vw] sm:w-full justify-start sm:justify-center mb-2 sm:mb-4 font-light sm:font-extralight text-6xl sm:text-8xl md:text-9xl'>
           {n}
           <span className='text-2xl sm:text-3xl font-light'>{unit}</span>
         </div>

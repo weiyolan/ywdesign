@@ -203,7 +203,7 @@ export function PathFillText(props) {
     let newOffset = Math.min( Math.max(biasedScrolled*mySpeed - prevRatio[props.position], 0)  / myRatio[props.position] , 1) * (props.inverse?1:-1) || 0 
     childProps.strokeDashoffset = (pathLength + (dashLineLength>0?0:0)) + (pathLength + (dashLineLength>0?0:0))*newOffset
     
-    childProps.stroke = props.myGradient?props.myGradient:newOffset!=0?props.strokeColor?props.strokeColor:'white':'transparent';
+    childProps.stroke = props.myGradient?props.myGradient:newOffset!=0?(props.strokeColor?props.strokeColor:'white'):'transparent';
     childProps.fill = props.animateFill?Math.abs(newOffset)===1?props.fillColor?props.fillColor:'white':'transparent':'transparent';
 
     childProps.strokeWidth = '3'

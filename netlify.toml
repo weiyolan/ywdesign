@@ -1,0 +1,6 @@
+[[redirects]]
+  from = "/*"
+  to = "www.ywdesign.co"
+  status = 301
+  force = true
+  conditions = {Country = ["CH"]}
