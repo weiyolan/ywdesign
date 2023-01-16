@@ -29,7 +29,7 @@ export default function Background ({scrolled}) {
 
 
   return (
-    <div className={`-z-[50] w-full fixed top-0 h-screen overflow-hidden filter bg-blue`} >
+    <div className={`-z-[50] w-full fixed top-0 h-screen overflow-hidden filter bg-cover bg-[url('/images/background.svg')] sm:bg-auto sm:bg-blue`} >
 
         <div className={`bg-green ${myWidth<640?'':'animate-blob'} animation-delay-2000   
           h-[200vh] w-[66vw] 
@@ -52,8 +52,6 @@ export default function Background ({scrolled}) {
           right-[0] -bottom-[60vh]
           transition-all duration-400 rounded-full filter absolute ${blurOn?`blur-[200px]`:''} `}
           /> 
-
-        {/* height:`${200-80*scrolled}vh`, width:`${66-20*scrolled}vw`} */}
 
         <div style={myWidth<640?{}:{bottom:`${-100+20*scrolled}vh`, right:`${-25+50*scrolled}vw`}}
         className={`bg-blue ${myWidth<640?'':'animate-blob'} animation-delay-4000    
