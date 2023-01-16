@@ -30,7 +30,7 @@ export default function SpecialtyCard({title, text, clicked, setClicked, noBlur,
             {text}
         </p>
         <div onClick={(e)=>e.stopPropagation()} className={`absolute w-full font-extralight text-xs min-[400px]:text-sm transition-all left-1/2 -translate-x-1/2 ml-[15px] text-white fill-white bottom-0 mb-1 min-[400px]:mb-2 sm:mb-1 md:mb-2 lg:mb-6 ` + (clicked?` opacity-100 visible ease-in duration-[3s]`:` opacity-0 pointer-events-none ease-out duration-[0.5s] `)} >
-          <ArrowLink text='More' inherit={true} to={link} ext={false}/>
+          <ArrowLink text='Features' inherit={true} to={link} ext={false}/>
         </div>
       </div>
   

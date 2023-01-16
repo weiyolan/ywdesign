@@ -9,7 +9,7 @@ import useWindowSize from "./useWindowSize"
 
 
 
-export default function Service({name, title, span, text, position, first, noBlur, icons, breakPointSmall}) {
+export default function Service({name, title, span, text, position, realFirst, first, noBlur, icons, breakPointSmall}) {
   // create object with key-value pairs of index-false
   let [visibleItem, setVisibleItem] = useState(new Array(icons.length).fill(false))
   let [clicked,setClicked] = useState(false)
@@ -73,6 +73,7 @@ export default function Service({name, title, span, text, position, first, noBlu
           title={title} 
           span={span} 
           text={text}
+          realFirst={realFirst}
           first={window.width<breakPointSmall?true:first} 
           position={position}
         />

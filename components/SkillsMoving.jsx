@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Check from '../public/images/icon_check_round.svg';
-import { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import useWindowSize from './useWindowSize';
 import {
   motion,
@@ -11,6 +11,7 @@ import {
   useVelocity,
   useAnimationFrame
 } from "framer-motion";
+import { useAppContext } from './Context';
 
 
 const skills1 = ['Biomedical Engineering', 'PRINCE2', 'Project Management', 'Adaptibility', 'Communication', 
@@ -21,8 +22,10 @@ const skills2 = ['Next.js', "Logo's", 'Websites', 'React.js', 'Front-End', 'Mobi
 'Javascript', 'CSS', 'Sanity.io', 'CMS Integration', 'Headless CMS', 'Tailwind CSS', 'VS Code', 'Postman', 
 'API', 'Node.js', 'NoSQL', 'e-Commerce', 'Redux', 'GitHub', 'Web 3.0', "MongoDB", 'Stripe', 'Payments', 'Twint'];
 
-export default function SkillsMoving({breakPointSmall}) {
- let window = useWindowSize();
+export default function SkillsMoving() {
+  let window = useWindowSize();
+  let {width, breakPointSmall} = useAppContext();
+
 
 //  useEffect(()=>{
 //   console.log(breakPointSmall)
@@ -31,8 +34,8 @@ export default function SkillsMoving({breakPointSmall}) {
  return (
     <div className='cursor-default select-none'>
       
-      <MovingRow baseVelocity={window.width<breakPointSmall?-7:-1} allSkills={skills2}/>
-      <MovingRow baseVelocity={window.width<breakPointSmall?7:1} allSkills={skills1}/>
+      <MovingRow  baseVelocity={window.width<breakPointSmall?-7:-1} allSkills={skills2}/>
+      <MovingRow  baseVelocity={window.width<breakPointSmall?7:1} allSkills={skills1}/>
         
     </div>
 
@@ -115,8 +118,8 @@ function Pill({content,round}) {
       <div className='inline-flex mx-2 px-2 py-1 
       bg-white/10 items-center
       rounded-full 
-       text-xs text-white font-medium  '>
-          <Check className='inline-block mr-1' width='12' height={12} alt='checkmark icon'/>
+       text-[0.6rem] text-white/90 font-normal  '>
+          <Check className='inline-block mr-1' width='10' height={10} alt='checkmark icon'/>
           {/* <Check width='15' alt='checkmark'/> */}
           {/* <Image priority className='aspect-square inline-block mr-1' src={`/images/icon_check_${round?'round':'simple'}.svg`} width={12} height={12} alt='checkmark icon'/>         */}
           <span className='inline-block whitespace-nowrap'>{content}</span>           

@@ -68,7 +68,7 @@ export default function Specialities ({noBlur}) {
   return (
     <LayoutSection>
     
-      <Subtitle first={true} name='Solutions' title='Our in-house specialities' span={'specialities'} position='center'/>
+      <Subtitle first={true} realFirst={true} name='Solutions' title='Our in-house specialities' span={'specialities'} position='center'/>
     
       {/* <div initial='hidden' viewport={{once:false}} whileInView='visible' variants={parent}  */}
 

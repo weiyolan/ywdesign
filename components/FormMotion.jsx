@@ -157,7 +157,7 @@ const Form = ({noBlur, setLightbox}) => {
             type='text'
             name='message' 
             placeholder={
-            `For example: \nHi Yolan, \nI would like a new logo and website for my shop. \nCould we meet up to talk about it? \nSee you!`} 
+            `An example below. To begin, just start typing. \nHi Yolan, \nI would like a new logo and website for my shop. \nCould we meet up to talk about it? \nSee you!`} 
             value={message}
             onChange={(e)=>{setMessage(e.target.value)}}>
           </motion.textarea> 
@@ -170,7 +170,7 @@ const Form = ({noBlur, setLightbox}) => {
           className={`inline-flex shadow-sm my-2 absolute left-0 bottom-0
           border border-solid rounded-full px-4 py-2  
           font-sans font-semibold text-xs textcenter whitespace-nowrap
-          cursor-pointer overflow-hidden w-fit h-fit duration-300
+          cursor-pointer overflow-hidden w-fit min-[400px]:w-50% min-[430px]:w-fit h-fit duration-300
           ${success?'opacity-100 ':'opacity-0 -translate-x-[50px]'}
           outline-none focus-visible:outline-primary border-transparent bg-primary text-white 
           active:bg-white active:text-primary hover:border-white`} 
@@ -183,7 +183,7 @@ const Form = ({noBlur, setLightbox}) => {
           className={`inline-flex shadow-sm my-2 absolute left-0 bottom-0
           border border-solid rounded-full px-4 py-2  
           font-sans font-semibold text-xs textcenter whitespace-nowrap
-          cursor-pointer w-fit h-fit duration-300
+          cursor-pointer w-fit min-[400px]:w-50% min-[430px]:w-fit h-fit duration-300
           ${success?'opacity-0 translate-y-[40px]':'opacity-100'}
           outline-none focus-visible:outline-primary border-transparent bg-primary text-white 
           active:bg-white active:text-primary hover:border-white`}

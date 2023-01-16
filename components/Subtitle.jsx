@@ -4,7 +4,7 @@ import {useAppContext } from './Context'
 let draft= {name: 'SOLUTIONS', title: "Our in-house specialities", span: 'specialities', text: 'The roadmap allows us to find the best solution for you, every time. You want to try it out.' }
 
 
-export default function Subtitle({name, title, span, text, position, first}) {
+export default function Subtitle({name, title, span, text, position, realFirst, first}) {
 // position is left, center or right
   let [style, setStyle] = useState('text-center')
 
@@ -25,7 +25,7 @@ export default function Subtitle({name, title, span, text, position, first}) {
   
 
   return (
-      <div className={`w-full select-none whitespace-pre-wrap ${first?'mt-12 sm:mt-24':'mt-42 sm:mt-48'} `+ style}>
+      <div className={`w-full select-none whitespace-pre-wrap ${realFirst?'mt-6 sm:mt-12':first?'mt-12 sm:mt-24':'mt-24 sm:mt-36'} `+ style}>
         <AccentTitle text={name}/>
 
         <h2 className='text-primary font-normal text-3xl select-none sm:text-4xl lg:text-5xl my-6 sm:my-10 '>

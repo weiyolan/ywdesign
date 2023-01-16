@@ -58,6 +58,7 @@ body {
 *::selection{
   color:white;
   background:#4200a431;
+  /* background:#ffffffc2; */
 }
 *::-moz-selection {
   color:white;

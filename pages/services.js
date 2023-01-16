@@ -228,7 +228,8 @@ export default function Services({scrolled}) {
           {serviceList.map((service,i)=>{
             return <Service 
             key={i} 
-            name={service.name} 
+            name={service.name}
+            realFirst={i===0?true:false} 
             first={true}
             // first={i===0?true:false}
             icons={service.icons}

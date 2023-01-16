@@ -63,7 +63,7 @@ export default function Roadmap () {
         <Layout>
         
         <section>
-        <Subtitle name={'visual'} position='center' title={`Our collaboration visualised`} span={'collaboration'} text={'How it is to work on a digital product? We follow the design process that is visualised below.'} first={true} />
+        <Subtitle realFirst={true} name={'visual'} position='center' title={`Our collaboration visualised`} span={'collaboration'} text={'How it is to work on a digital product? We follow the design process that is visualised below.'} first={true} />
 
         <div className='text-center w-full pl-6'>
           <ArrowLink text='Questions? Reach out' to='/contact/#Form' />

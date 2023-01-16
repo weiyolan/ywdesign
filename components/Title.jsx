@@ -12,7 +12,7 @@ export default function Title({type}) {
 
 
   return (
-      <section className='text-center w-full mt-16 md:mt-0'>
+      <section className='text-center w-full'>
           <GetTitle type={type}/>
        
         <SkillsMoving breakPointSmall={breakPointSmall}/>
@@ -22,7 +22,7 @@ export default function Title({type}) {
   )
 }
 
-let heroTitleStyle = 'text-primary  text-4xl  sm:text-6xl font-medium my-12 sm:my-24 px-4';
+let heroTitleStyle = 'text-primary  text-4xl  sm:text-6xl font-medium mt-12 mb-6 sm:mt-24 sm:mb-12 px-4';
 
 function GetTitle({type}) {
   let [ loadStyle, setLoadStyle] = useState(' ');
