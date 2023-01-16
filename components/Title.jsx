@@ -12,7 +12,7 @@ export default function Title({type}) {
 
 
   return (
-      <section className='text-center w-full'>
+      <section className='text-center w-full px-5'>
           <GetTitle type={type}/>
        
         <SkillsMoving breakPointSmall={breakPointSmall}/>
@@ -22,7 +22,7 @@ export default function Title({type}) {
   )
 }
 
-let heroTitleStyle = 'text-primary  text-4xl  sm:text-6xl font-medium mt-12 mb-6 sm:mt-24 sm:mb-12 px-4';
+let heroTitleStyle = 'text-primary whitespace-pre-wrap min-[445px]:whitespace-nowrap text-4xl sm:text-6xl font-medium mt-12 mb-6 sm:mt-24 sm:mb-12';
 
 function GetTitle({type}) {
   let [ loadStyle, setLoadStyle] = useState(' ');
@@ -33,18 +33,18 @@ function GetTitle({type}) {
 
   switch (type) {
     case 'home':
-      return (<h1 className={heroTitleStyle}> Your <span className={' transition-all duration-700 delay-500 default:font-medium' + 
-      loadStyle  }>Digital</span> Partner</h1>)
+      return (<h1 className={heroTitleStyle}>Your <span className={'transition-all duration-700 delay-500 default:font-medium' + 
+      loadStyle  }>Digital</span>{`\nPartner`}</h1>)
 
     case 'services':
-      return (<h1 className={heroTitleStyle}> Discover our <span className={ 
+      return (<h1 className={heroTitleStyle}>Discover our <span className={ 
       ' transition-all duration-700 delay-500 default:font-medium ' + loadStyle }>Services</span></h1>)
     case 'aboutme':
-      return (<h1 className={heroTitleStyle}> Hi, I am <span className={' transition-all duration-700 delay-500 default:font-medium' + 
+      return (<h1 className={heroTitleStyle}>Hi, I am <span className={' transition-all duration-700 delay-500 default:font-medium' + 
       loadStyle  }>Yolan</span></h1>)
 
     case 'contact':
-      return (<h1 className={heroTitleStyle}> You can <span className={' transition-all duration-700 delay-500 default:font-medium' + 
+      return (<h1 className={heroTitleStyle}>{`You can\n`}<span className={' transition-all duration-700 delay-500 default:font-medium' + 
       loadStyle  }>contact</span> me</h1>)
 
     case 'roadmap':

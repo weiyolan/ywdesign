@@ -18,6 +18,8 @@ function getPathProps(props) {
   delete pathProps.animateFill
   delete pathProps.fillColor
   delete pathProps.strokeColor
+  delete pathProps.home
+  delete pathProps.scrolled
   delete pathProps.myGradient
   delete pathProps['stroke-linecap']
   delete pathProps['stroke-width']
@@ -133,6 +135,17 @@ export function PathFillText(props) {
   let [dashLineLength, setDashLineLength] = useState(0)
   let [newProps, setNewProps] = useState(getPathProps(props))
 
+  let fakeScrolled = props.scrolled;
+  let realScrolled = useAppContext().scrolled;
+  let scrolled=fakeScrolled?fakeScrolled:realScrolled
+
+  useEffect(()=>{
+    scrolled=(fakeScrolled>0)?fakeScrolled:realScrolled
+    // console.log(scrolled)
+    // console.log(props.scrolled)
+  },[fakeScrolled, realScrolled])
+
+
   useEffect(() => {
     let path = pathRef.current;
     let length = path.getTotalLength()
@@ -149,11 +162,11 @@ export function PathFillText(props) {
   useEffect(() => {
     if (props.print) {
     // console.log('strokedashoffset')
-    // console.log(props.scrolled - prevRatio[props.position], 0)
-    // console.log(Math.max(props.scrolled - prevRatio[props.position], 0))
+    // console.log(scrolled - prevRatio[props.position], 0)
+    // console.log(Math.max(scrolled - prevRatio[props.position], 0))
     // console.log(pathLength>0?pathLength:'calculating pathlength')
     }
-  }, [pathLength, props.lengths, props.position, props.scrolled, prevRatio, myRatio])
+  }, [pathLength, props.lengths, props.position, scrolled, prevRatio, myRatio])
 
   useEffect(()=>{
     if (props.initialDash) {
@@ -183,7 +196,7 @@ export function PathFillText(props) {
   },[animationSpeed, props.lineSpeed])
 
   useEffect(()=>{
-    let biasedScrolled = scrollMin>=0&&scrollMax>scrollMin&&scrollMax>0?(Math.min(Math.max(props.scrolled-scrollMin,0)/(scrollMax-scrollMin),1)):props.scrolled;
+    let biasedScrolled = scrollMin>=0&&scrollMax>scrollMin&&scrollMax>0?(Math.min(Math.max(scrolled-scrollMin,0)/(scrollMax-scrollMin),1)):scrolled;
     
     let childProps = getPathProps(props);
     childProps.strokeDasharray = dashArray.length>0?dashArray:(pathLength) + ' ' + (pathLength);
@@ -192,19 +205,23 @@ export function PathFillText(props) {
     
     childProps.stroke = props.myGradient?props.myGradient:newOffset!=0?props.strokeColor?props.strokeColor:'white':'transparent';
     childProps.fill = props.animateFill?Math.abs(newOffset)===1?props.fillColor?props.fillColor:'white':'transparent':'transparent';
-    
+
     childProps.strokeWidth = '3'
+
+
+    // console.log(childProps.stroke)
 
     if (props.print) {
       // console.log(scrollMin, scrollMax, biasedScrolled)
       // console.log('dashLineLength', dashLineLength)
+      console.log('newoffset:')
       console.log(newOffset)
     };
     setNewProps(childProps)
 
-  },[pathLength, dashArray, pathRef, props.inverse, scrollMin, scrollMax, mySpeed, dashLineLength , props.animateFill, prevRatio, myRatio, props.scrolled, props.initialDash])
+  },[pathLength, dashArray, pathRef, props.inverse, scrollMin, scrollMax, mySpeed, dashLineLength, props.strokeColor , props.animateFill, prevRatio, myRatio, scrolled, props.initialDash])
 
-  let style={transition:props.scrolled>0?'all 4s ease':'all 0.1s'};
+  let style={transition: scrolled>0?props.home?'all 0.5s ease':'all 4s ease':'all 0.1s'};
   // let style={transition: 'fill 0.5s ease'}
 
   switch (props.type) {

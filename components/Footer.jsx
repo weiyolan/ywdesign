@@ -8,7 +8,7 @@ import {motion} from 'framer-motion'
 import { useAppContext } from "./Context";
 
 const designList = [{text:'Logo',link:'/services/#Logo'},{text:'Website',link:'/services/#Website'},{text:'e-Commerce',link:'/services/#e-Commerce'},{text:'Analysis',link:'/services/#Analysis'}];
-const supportList = [{text:'FAQ',link:''},{text:'T&C',link:''},{text:'Workflow',link:''},{text:'Simulation',link:''}];
+const supportList = [{text:'FAQ',link:'/contact/#Form',disabled:false},{text:'Roadmap',link:'/roadmap'},{text:'T&C',link:'',disabled:true},{text:'Simulation',link:'',disabled:true}];
 const linksList = [{text:'Home',link:'/'},{text:'Services',link:'/services'},{text:'About me',link:'/aboutme'},{text:'Contact',link:'/contact'}];
 const contactList = [
   {text:'Call', ext:false, link:'tel:+32471124525'},
@@ -45,7 +45,7 @@ export default function Footer() {
       viewport={{once : true}}
       className={`backdrop-blur bg-white/10 rounded-t-2xl sm:rounded-t-[2rem] mt-12 p-10 pb-0 sm:p-8 lg:p-16 bottom-0 relative w-full`}>
       
-      <div className='flex flex-wrap sm:flex-nowrap justify-between max-w-4xl mx-auto items-start '>
+      <div className='flex flex-wrap sm:flex-nowrap justify-between  max-w-4xl mx-auto items-start sm:items-center '>
         
         {/* {width<breakPointSmall && <div className="mb-4 w-full sm:w-fit">
           <div className='mx-auto w-fit'><Link href='/'><YWD className='w-8 sm:w-14' alt='ywdesign logo in white'/></Link></div>
@@ -94,12 +94,12 @@ function List ({list}) {
         )} 
         else { return (
           <li key={i} 
-          className={`text-white font-light whitespace-nowrap
+          className={`${item.disabled?'text-primary/90':'text-white'} font-light whitespace-nowrap
           my-3 sm:my-3
           text-base sm:text-sm`} >
-            <Link href={item.link}>
+            {item.disabled?item.text:<Link href={item.link}>
               {item.text}
-            </Link>
+            </Link>}
           </li>)}
       })}
     </ul>

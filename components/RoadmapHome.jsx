@@ -5,12 +5,14 @@ import ArrowLink from './ArrowLink'
 import RoadmapE1 from './RoadmapE1'
 import RoadmapE2 from './RoadmapE2'
 import RoadmapC from './RoadmapC'
-import RoadmapD from './RoadmapD'
+import RoadmapDHome from './RoadmapDHome'
 import { useAppContext } from './Context'
+import Link from 'next/link'
 
 const RoadmapHome = () => {
   let {scrolled} = useAppContext()
   let {width, breakPointSmall} = useAppContext();
+  let [hovering,setHovering] = useState(false);
 
   // useEffect(()=>{
   //   console.log(scrolled)
@@ -46,15 +48,16 @@ const RoadmapHome = () => {
     <div className='flex-1 flex justify-center'>
       <div style={fadeStyle1} className='relative overflow-hidden w-full h-[100%] z-0 mt-5'>
         {/* <div style={{transform: `translate(-50%, -${20  + 1000*Math.max(scrolled-0.20,0)}px)`}} className=' flex absolute w-full left-1/2 top-1/2 '> */}
-        <div style={{transform: `translate(-50%, -${(width<breakPointSmall?0:50)  + (width<breakPointSmall?280:300)*Math.max(scrolled-0.20,0)}px)`}} className='transition-all ease flex flex-col absolute w-[98%] lg:w-[80%] left-1/2 top-1/3 '>
+        <div onMouseEnter={()=>setHovering(true)} onMouseLeave={()=>setHovering(false)} 
+        style={{transform: `translate(-50%, -${(width<breakPointSmall?0:50)  + (width<breakPointSmall?280:300)*Math.max(scrolled-0.20,0)}px) scale(${hovering?1.02:1})`}} 
+        className='transition-all hover:cursor-pointer ease flex flex-col absolute w-[98%] lg:w-[80%] left-1/2 top-1/3 '>
+        <Link onFocus={()=>setHovering(true)} onBlur={()=>setHovering(false)} href='/roadmap'>
           {width<breakPointSmall && <RoadmapC home={true} scrollMin={0.2} scrollMax={0.25}/>}
-          <RoadmapD home={true} scrollMin={width<breakPointSmall?0.25:0.22} scrollMax={width<breakPointSmall?0.35:width<768?0.55:0.55} speed={width<breakPointSmall?1.5:1.2}/>
-          <RoadmapE1 home={true} scrollMin={0.35} scrollMax={0.37} />
-          {/* <RoadmapE2 scrollMin={0.38} scrollMax={0.43} /> */}
+          <RoadmapDHome print={false} hovering={hovering} home={true} scrollMin={width<breakPointSmall?0.25:0.18} scrollMax={width<breakPointSmall?0.35:width<768?0.55:0.55} speed={width<breakPointSmall?1.5:1.2}/>
+          {/* <RoadmapE1 home={true} scrollMin={0.35} scrollMax={0.37} /> */}
+        </Link>
         </div>
-          {/* <div className='flex absolute w-full h-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-local bg-no-repeat bg-center' style={{'background-image':'url(./images/roadmapComplete.svg)'}}>
 
-          </div> */}
       </div>
     </div>
   </section>
