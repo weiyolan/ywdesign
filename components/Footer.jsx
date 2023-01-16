@@ -55,7 +55,7 @@ export default function Footer() {
         <Links text='Support' list={supportList} position={width<breakPointSmall?'center':'left'} />
 
         <div className="mb-4 w-full sm:w-fit">
-          <div className='mx-auto w-fit'><Link href='/'><YWD className='w-8 sm:w-14' alt='ywdesign logo in white'/></Link></div>
+          <div className='mx-auto w-fit'><Link href='/' title='Homepage'><YWD className='w-8 sm:w-14' alt='ywdesign logo in white'/></Link></div>
         </div>
 
         <Links text='Links' list={linksList} position={width<breakPointSmall?'center':'right'} />
