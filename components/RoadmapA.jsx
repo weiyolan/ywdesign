@@ -55,7 +55,7 @@ export default function RoadmapA({scrollMin,scrollMax}) {
       <div className='relative w-full h-fit flex flex-col '> 
         {/* <RoadmapSVG className='absolute left-1/2 -translate-x-1/2 w-full px-4 mt-24  '/> */}
   
-        <svg style={{transform: `translate(-50%, ${-0*scrolled}px)`}} 
+        <svg alt='Roadmap part 1, Project defintion' style={{transform: `translate(-50%, ${-0*scrolled}px)`}} 
         className='relative w-full px-4 left-1/2' viewBox="0 0 807 563" fill="none" xmlns="http://www.w3.org/2000/svg">
             
             <g id="projectDefinitionGroup">

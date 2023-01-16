@@ -45,7 +45,7 @@ export default function RoadmapD({ scrollMin, scrollMax, speed , home}) {
       <SVGWrapper myRatio={allRatios} prevRatio={allPrevRatios} scrollMin={scrollMin} scrollMax={scrollMax} animationSpeed={speed}>
         <div className='relative w-full h-fit flex flex-col '>
 
-          <svg className={`relative w-full ${home?'mb-1':'mb-4'} left-1/2`} style={{ transform: `translate(-50%, ${-0 * scrolled}px)` }} viewBox="0 0 810 1116" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg alt='Roadmap part 4, Iteration on different designs' className={`relative w-full ${home?'mb-1':'mb-4'} left-1/2`} style={{ transform: `translate(-50%, ${-0 * scrolled}px)` }} viewBox="0 0 810 1116" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g id="Frame 19">
           <g id="iterationGroup">
           <Path position={11}  inverse={false}  double={1} handleLength={(l,i)=>handleLength(1,l,i)} id="Tri10" d="M382.506 764.69L465.074 836.031L362.007 871.866L382.506 764.69Z" stroke="white" strokeWidth="4"/>

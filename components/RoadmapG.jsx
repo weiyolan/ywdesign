@@ -47,7 +47,7 @@ export default function RoadmapG({ scrollMin, scrollMax }) {
       <div className='relative w-full h-fit flex flex-col '>
 
 
-        <svg className='relative w-full px-4 left-1/2' style={{ transform: `translate(-50%, ${-0 * scrolled}px)` }} viewBox="0 0 807 393" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg alt='Roadmap part 8, Maintenance' className='relative w-full px-4 left-1/2' style={{ transform: `translate(-50%, ${-0 * scrolled}px)` }} viewBox="0 0 807 393" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g id="Frame 22">
             <g id="maintenanceGroup">
               

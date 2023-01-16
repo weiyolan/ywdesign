@@ -46,7 +46,7 @@ export default function RoadmapE({home, scrollMin, scrollMax }) {
     <SVGWrapper myRatio={allRatios} prevRatio={allPrevRatios} scrollMin={scrollMin} scrollMax={scrollMax}>
       <div className='relative w-full h-fit flex flex-col '>
 
-        <svg className='relative w-full px-4 left-1/2' style={{ transform: `translate(-50%, ${-0 * scrolled}px)` }} viewBox="0 0 807 211" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg alt='Roadmap part 5, Final design' className='relative w-full px-4 left-1/2' style={{ transform: `translate(-50%, ${-0 * scrolled}px)` }} viewBox="0 0 807 211" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g id="Frame 20">
             <g id="finalDesignGroup">
               <Path position={0}  inverse={false} double={1} handleLength={(l,i)=>handleLength(1.2,l,i)} id="designProduct" d="M403.5 207L354 136.5L403.5 66L453 136.5L403.5 207Z" stroke="black" stroke-width="4"/>
@@ -58,7 +58,7 @@ export default function RoadmapE({home, scrollMin, scrollMax }) {
 
        {!home && <AnimateIn at={0.52}>
         <h2 >
-          {`After two iterations the final design is approved.\nNow I start coding.`}
+          {`After two iterations on the structure\nand design, the final design can be approved.\nNow I start coding.`}
         </h2>
         </AnimateIn>}
         {/* <h2 className='z-20 p-2 bg-white/10 rounded-2xl backdrop-blur-sm outline-none -outline-offset-2 outline-white/20 relative flex text-sm font-light w-[40vw] text-center text-white font-sans ' >{`We take note of your\nvalues, existing branding\nand style preferences to\ngenerate ideas together`} </h2> */}

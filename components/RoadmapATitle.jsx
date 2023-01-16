@@ -54,7 +54,7 @@ export default function RoadmapATitle({scrollMin,scrollMax}) {
       <SVGWrapper myRatio={allRatios} prevRatio={allPrevRatios} scrollMin={scrollMin} scrollMax={scrollMax}>
       <div className='relative w-full h-fit flex flex-col '> 
         
-        <svg style={{transform: `translate(-50%, ${!fakeScroll?20:0}px)`, transition:'all 4s ease-out'}}  className='relative w-full px-4 left-1/2' viewBox="0 0 807 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg alt='Roadmap title' style={{transform: `translate(-50%, ${!fakeScroll?20:0}px)`, transition:'all 4s ease-out'}}  className='relative w-full px-4 left-1/2' viewBox="0 0 807 160" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g id="Frame 25">
           {/* <TextAnimate at={-1} fromTop={false} id="RoadmapTitle" style="white-space: pre" font-family="Work Sans" font-size="67.7698" font-weight="600" letter-spacing="0em"><tspan x="248.246" y="62.7789">Roadmap</tspan></TextAnimate> */}
           </g>

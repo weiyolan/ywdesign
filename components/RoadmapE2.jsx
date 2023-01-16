@@ -47,7 +47,7 @@ export default function RoadmapE({ scrollMin, scrollMax }) {
     <SVGWrapper myRatio={allRatios} prevRatio={allPrevRatios} scrollMin={scrollMin} scrollMax={scrollMax}>
       <div className='relative w-full h-fit flex flex-col '>
 
-        <svg className='relative w-full mb-4 px-4 left-1/2' style={{ transform: `translate(-50%, ${-0 * scrolled}px)` }} viewBox="0 0 807 584"  fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg alt='Roadmap part 5, Development of website' className='relative w-full mb-4 px-4 left-1/2' style={{ transform: `translate(-50%, ${-0 * scrolled}px)` }} viewBox="0 0 807 584"  fill="none" xmlns="http://www.w3.org/2000/svg">
           <g id="Frame 20">
             <g id="developmentGroup">
               <Path position={3} inverse={false} double={1} handleLength={(l,i)=>handleLength(0,l,i)} id="start2A" d="M403.5 469.5C403.5 502.5 383.5 504 383.5 521.5C383.5 539 383.5 548 383.5 548C383.5 565 376.394 578.406 366 581.5" stroke="black" stroke-width="4" stroke-linecap="round"/>
