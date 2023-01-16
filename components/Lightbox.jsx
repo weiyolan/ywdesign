@@ -21,7 +21,7 @@ const Lightbox = ({lightbox, setLightbox}) => {
           <div className='flex flex-col md:flex-row'>
             <div className='flex-1 flex flex-col md:text-lg justify-end'>
               <p className='font-light mt-4'>
-              I will get back to you by tomorrow.
+              We'll be in touch soon.
               </p>
               <p className=' font-light mt-2'>
               Kind Regards,</p>
