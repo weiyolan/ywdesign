@@ -22,7 +22,7 @@ export default function ContactB() {
           </Button>
       </Link>
 
-      <Link className='cursor-alias' alt='Send an Email' target='_blank' rel="noopener noreferrer" href={mailLink}>
+      <Link className='cursor-alias' title='Send an Email' target='_blank' rel="noopener noreferrer" href={mailLink}>
           <Button ext={true}>
           <Mail className='w-4 sm:w-5 cursor-alias' fill='white' alt='Send an Email'/>
           </Button>

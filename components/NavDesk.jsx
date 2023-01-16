@@ -46,13 +46,13 @@ export default function NavDesk({from}) {
         <nav className={`flex fixed justify-center w-full h-16 rounded-b-3xl top-0 z-10 bg-white/5 backdrop-blur-sm`}>
             
             <div className='inline-flex absolute items-center h-16 left-0'>
-              <Link  href={`/`} onClick={()=>selectButton('Home')}>
+              <Link  href={`/`} title='Go to the homepage' onClick={()=>selectButton('Home')}>
               {/* <YW
                 width='40'
                 className='m-2'
                 alt="ywdesign svg-logo"
                 onClick={()=>selectButton('Home')}/> */}
-              <YW className='m-2 w-10 h-10' lt="ywdesign logo" />
+              <YW className='m-2 w-10 h-10' alt="ywdesign logo" />
               </Link> 
             </div>
 

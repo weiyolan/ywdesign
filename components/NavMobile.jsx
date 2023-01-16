@@ -125,13 +125,13 @@ const variants = {
       <motion.div variants={variants}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }} >
-        <Link  href={`/`} onClick={()=>selectButton('Home')}>
+        <Link  href={`/`} title='Go to the homepage' onClick={()=>selectButton('Home')}>
         {/* <YW
           width='40'
           className='m-2'
           alt="ywdesign svg-logo"
           onClick={()=>selectButton('Home')}/> */}
-        <YW className='w-10 h-10' lt="ywdesign logo" />
+        <YW className='w-10 h-10' alt="ywdesign logo" />
         </Link> 
       </motion.div>
     </motion.div>
