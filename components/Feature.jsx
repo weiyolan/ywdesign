@@ -25,13 +25,13 @@ const Feature = ({offset, title, text, icon}) => {
           break
       }
     }
-  },[offset, width]) 
+  },[offset, width, breakPointSmall]) 
 
 
-  useEffect(()=>{
+  // useEffect(()=>{
     // console.log(title)
     // console.log(offset)
-  },[title,offset])
+  // },[title,offset])
 
   // useEffect(()=>{
 

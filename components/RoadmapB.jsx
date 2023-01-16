@@ -22,16 +22,10 @@ export default function RoadmapB({scrollMin,scrollMax}) {
           return copyOffsetLengths
       })
     }
-  
-    useEffect(() => {
-    }, [scrolled])
-  
-    useEffect(() => {
-    }, [allLengths, allOffsetLengths, allRatios, allPrevRatios])
-  
+    
     useEffect(() => {
       if (allLengths.length > 0) {
-        let totLength = allLengths.reduce((x, y) => x + y);
+        // let totLength = allLengths.reduce((x, y) => x + y);
         let totOffsetLength = allOffsetLengths.reduce((x, y) => x + y);
         let allRatios = allLengths.map(itemLength => itemLength / totOffsetLength);
   
@@ -45,7 +39,7 @@ export default function RoadmapB({scrollMin,scrollMax}) {
         setAllRatios(allRatios)
         setAllPrevRatios(newPrevRatios)
       }
-    }, [allLengths])
+    }, [allLengths,allOffsetLengths])
     return (
       <SVGWrapper myRatio={allRatios} prevRatio={allPrevRatios} scrollMin={scrollMin} scrollMax={scrollMax}>
       <div className='relative w-full h-fit flex flex-col '> 

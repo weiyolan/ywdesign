@@ -26,7 +26,7 @@ export default function RoadmapC({ home, scrollMin, scrollMax }) {
 
   useEffect(() => {
     if (allLengths.length > 0) {
-      let totLength = allLengths.reduce((x, y) => x + y);
+      // let totLength = allLengths.reduce((x, y) => x + y);
       let totOffsetLength = allOffsetLengths.reduce((x, y) => x + y);
       let allRatios = allLengths.map(itemLength => itemLength / totOffsetLength);
       let newPrevRatios = allLengths.map((itemLength, index) => {
@@ -38,7 +38,7 @@ export default function RoadmapC({ home, scrollMin, scrollMax }) {
       setAllRatios(allRatios)
       setAllPrevRatios(newPrevRatios)
     }
-  }, [allLengths])
+  }, [allLengths,allOffsetLengths])
 
   return (
     <SVGWrapper myRatio={allRatios} prevRatio={allPrevRatios} scrollMin={scrollMin} scrollMax={scrollMax}>

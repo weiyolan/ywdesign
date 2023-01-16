@@ -20,7 +20,7 @@ import RoadmapE2 from '../components/RoadmapE2'
 import RoadmapF from '../components/RoadmapF'
 import RoadmapG from '../components/RoadmapG'
 // import RoadmapSVG from '../public/images/roadmapComplete.svg'
-import RoadmapIteration1 from '../components/RoadmapIteration1'
+// import RoadmapIteration1 from '../components/RoadmapIteration1'
 // import RoadmapIteration2 from '../public/images/RoadmapIteration2.svg'
 import { useAppContext } from '../components/Context'
 import ArrowLink from '../components/ArrowLink'
@@ -80,12 +80,12 @@ export default function Roadmap () {
           <RoadmapE2 scrollMin={0.55} scrollMax={0.63} />
           <RoadmapF scrollMin={0.65} scrollMax={0.68} />
           <RoadmapG scrollMin={0.70} scrollMax={0.77} />
-          <div className='absolute w-[40vw] z-[35]  top-[900px] ml-4 left-0'>
-            {/* <RoadmapIteration1 /> */}
+          {/* <div className='absolute w-[40vw] z-[35]  top-[900px] ml-4 left-0'>
+            <RoadmapIteration1 />
           </div>
           <div className='absolute w-2/3 z-[35]  top-1/2 mr-4 right-0'>
-            {/* <Iteration2 /> */}
-          </div>
+            <Iteration2 />
+          </div> */}
         </section>
 
         

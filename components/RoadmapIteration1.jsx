@@ -26,7 +26,7 @@ export default function RoadmapIteration1({ scrollMin, scrollMax }) {
 
   useEffect(() => {
     if (allLengths.length > 0) {
-      let totLength = allLengths.reduce((x, y) => x + y);
+      // let totLength = allLengths.reduce((x, y) => x + y);
       let totOffsetLength = allOffsetLengths.reduce((x, y) => x + y);
       let allRatios = allLengths.map(itemLength => itemLength / totOffsetLength);
       let newPrevRatios = allLengths.map((itemLength, index) => {
@@ -38,7 +38,7 @@ export default function RoadmapIteration1({ scrollMin, scrollMax }) {
       setAllRatios(allRatios)
       setAllPrevRatios(newPrevRatios)
     }
-  }, [allLengths])
+  }, [allLengths,allOffsetLengths])
   // style={{transform: `translate(-50%, -${500*scrolled}px)`}} 
   return (
     // <AnimateSVGText at={0.16} fromTop={true}>

@@ -11,24 +11,14 @@ export default function RoadmapA({scrollMin,scrollMax}) {
     let { scrolled } = useAppContext();
   
     function handleLength(f, newLength, position) {
-      // console.log(`handling length with f, newlength and position: ${f} ${newLength} ${position} `)
-      
       setAllLengths(prevLengths => {
         let copyLengths = [...prevLengths];
-          // console.log('copylengths:')
-          // console.log(copyLengths)
         copyLengths[position]=newLength;
-          // console.log('Added value to copylengths: ')
-          // console.log(copyLengths)
         return copyLengths
       })
       setAllOffsetLengths(prevOffsets => {
         let copyOffsetLengths = [...prevOffsets];
-            // console.log('copyOffset:')
-            // console.log(copyOffsetLengths)
           copyOffsetLengths[position] = newLength * f;
-            // console.log('Added value to copyOffset: ')
-            // console.log(copyOffsetLengths)
           return copyOffsetLengths
       })
     }
@@ -37,24 +27,19 @@ export default function RoadmapA({scrollMin,scrollMax}) {
     //   console.log(scrolled)
     // }, [scrolled])
   
-    useEffect(() => {
+    // useEffect(() => {
       // console.log(allLengths)
       // console.log(allOffsetLengths)
       // console.log(allRatios)
       // console.log(allPrevRatios)
-    }, [allLengths, allOffsetLengths, allRatios, allPrevRatios])
+    // }, [allLengths, allOffsetLengths, allRatios, allPrevRatios])
   
     useEffect(() => {
       if (allLengths.length > 0) {
-        let totLength = allLengths.reduce((x, y) => x + y);
         let totOffsetLength = allOffsetLengths.reduce((x, y) => x + y);
         let allRatios = allLengths.map(itemLength => itemLength / totOffsetLength);
-  
         let newPrevRatios = allLengths.map((itemLength, index) => {
-          // console.log('Mapping to reduce to allPrevRatios, current index: ' + index)
           let prevOffsetLength = allOffsetLengths.reduce((acc, y, i) => {
-            // console.log('acc: ' + acc + ' currentVal: ' + y + ' index: ' + i)
-            // if (i<index) {console.log('added the value: ' + y + ' to acc ' + acc +' resulting in : ' + (acc + y))}
             return (i < index ? acc + y : acc)
           }, 0);
           return prevOffsetLength / totOffsetLength
@@ -63,9 +48,8 @@ export default function RoadmapA({scrollMin,scrollMax}) {
         setAllRatios(allRatios)
         setAllPrevRatios(newPrevRatios)
       }
-    }, [allLengths])
-    // style={{transform: `translateY(-${500*scrolled})`}}
-    // style={{transform: `translate(-50%, -${500*scrolled}px)`}} 
+    }, [allLengths, allOffsetLengths])
+
     return (
       <SVGWrapper myRatio={allRatios} prevRatio={allPrevRatios} scrollMin={scrollMin} scrollMax={scrollMax}>
       <div className='relative w-full h-fit flex flex-col '> 

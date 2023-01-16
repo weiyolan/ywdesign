@@ -9,7 +9,11 @@ export default function Navbar ({from}) {
   let [show,setShow] = useState(true)
   let {width, noBlur} = useAppContext()
 
-  function handleScroll () {
+
+
+
+  useEffect(()=>{
+    function handleScroll () {
       if(window.scrollY > lastTop){ //if it will be greater than the previous
         setShow(false);//set the value to the negetive of height of navbar 
       }
@@ -19,8 +23,6 @@ export default function Navbar ({from}) {
       setLastTop(window.scrollY); //New Position Stored
     }
 
-
-  useEffect(()=>{
     window.addEventListener('scroll', handleScroll, ) //{passive:true}
     return () => {window.removeEventListener('scroll', handleScroll)}
   },[lastTop])

@@ -28,7 +28,7 @@ export default function RoadmapATitle({scrollMin,scrollMax}) {
   
     useEffect(() => {
       if (allLengths.length > 0) {
-        let totLength = allLengths.reduce((x, y) => x + y);
+        // let totLength = allLengths.reduce((x, y) => x + y);
         let totOffsetLength = allOffsetLengths.reduce((x, y) => x + y);
         let allRatios = allLengths.map(itemLength => itemLength / totOffsetLength);
   
@@ -42,7 +42,7 @@ export default function RoadmapATitle({scrollMin,scrollMax}) {
         setAllRatios(allRatios)
         setAllPrevRatios(newPrevRatios)
       }
-    }, [allLengths])
+    }, [allLengths,allOffsetLengths])
 
     useEffect(()=>{
       let timer = setTimeout(()=>{setFakeScroll(1)},500)

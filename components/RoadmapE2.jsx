@@ -25,7 +25,7 @@ export default function RoadmapE({ scrollMin, scrollMax }) {
 
   useEffect(() => {
     if (allLengths.length > 0) {
-      let totLength = allLengths.reduce((x, y) => x + y);
+      // let totLength = allLengths.reduce((x, y) => x + y);
       let totOffsetLength = allOffsetLengths.reduce((x, y) => x + y);
       let allRatios = allLengths.map(itemLength => itemLength / totOffsetLength);
       let newPrevRatios = allLengths.map((itemLength, index) => {
@@ -37,7 +37,7 @@ export default function RoadmapE({ scrollMin, scrollMax }) {
       setAllRatios(allRatios)
       setAllPrevRatios(newPrevRatios)
     }
-  }, [allLengths])
+  }, [allLengths,allOffsetLengths])
   // style={{transform: `translate(-50%, -${500*scrolled}px)`}} 
   let a = 0.572;
   let delay = 0.003;

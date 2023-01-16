@@ -55,7 +55,7 @@ export default function Features () {
     // console.log(`width= ${width}`)
     // console.log(`breakPointSmall= ${breakPointSmall}`)
     setOffsets(width<breakPointSmall?[1,0,1,0,1,0]:[-1, 0, 1, -1, 0, 1])
-  },[width])
+  },[width, breakPointSmall])
 
  
 

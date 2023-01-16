@@ -20,6 +20,7 @@ export default function Service({name, title, span, text, position, realFirst, f
 
   useEffect(()=> {
     handleVisibility(true, Math.floor(Math.random()*icons.length))
+    
   },[icons])
 
   useEffect(()=>{

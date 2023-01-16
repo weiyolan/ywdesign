@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import {RiDoubleQuotesL,RiDoubleQuotesR} from 'react-icons/ri'
 import { useAppContext } from "./Context"
-import { Path, PathFillText, AnimateIn, TextAnimate } from './pathUtils'
+import { PathFillText } from './pathUtils'
 import { SVGWrapper } from "./ContextSVG"
 
 export default function YolanMotion({ home, scrollMin, scrollMax }) {
@@ -9,8 +9,10 @@ export default function YolanMotion({ home, scrollMin, scrollMax }) {
   let [allOffsetLengths, setAllOffsetLengths] = useState([])
   let [allRatios, setAllRatios] = useState([0])
   let [allPrevRatios, setAllPrevRatios] = useState([0])
-  let { scrolled } = useAppContext();
+  
+  // let { scrolled } = useAppContext();
   let [fakeScroll,setFakeScroll] = useState(0)
+
   let [fillStyle,setFillStyle] = useState(false)
   let [strokeColor, setStrokeColor] = useState('#171B4D')
 
@@ -30,7 +32,7 @@ export default function YolanMotion({ home, scrollMin, scrollMax }) {
 
   useEffect(() => {
     if (allLengths.length > 0) {
-      let totLength = allLengths.reduce((x, y) => x + y);
+      // let totLength = allLengths.reduce((x, y) => x + y);
       let totOffsetLength = allOffsetLengths.reduce((x, y) => x + y);
       let allRatios = allLengths.map(itemLength => itemLength / totOffsetLength);
       let newPrevRatios = allLengths.map((itemLength, index) => {
@@ -42,7 +44,7 @@ export default function YolanMotion({ home, scrollMin, scrollMax }) {
       setAllRatios(allRatios)
       setAllPrevRatios(newPrevRatios)
     }
-  }, [allLengths])
+  }, [allLengths, allOffsetLengths])
 
   useEffect(()=>{
     let timer = setTimeout(()=>{setFakeScroll(1)},500)
