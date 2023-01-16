@@ -16,19 +16,20 @@ export default function App({ Component, pageProps }) {
 
   let [scrolled, setScrolled] = useState(0)
   
-  function handleScroll () {
-    let ratio = (document.documentElement.scrollTop + document.body.scrollTop)/(document.documentElement.scrollHeight - document.documentElement.clientHeight)
-    setScrolled(ratio)
-    // console.log(ratio)
-  }
 
   useEffect(()=>{
+
+    function handleScroll () {
+      let ratio = (document.documentElement.scrollTop + document.body.scrollTop)/(document.documentElement.scrollHeight - document.documentElement.clientHeight)
+      setScrolled(ratio)
+    }
+    
     let ratio = (document.documentElement.scrollTop + document.body.scrollTop)/(document.documentElement.scrollHeight - document.documentElement.clientHeight)
     setScrolled(ratio)
-
+    
     window.addEventListener('scroll', handleScroll, {passive:true})
 
-    return () => {window.removeEventListener('scroll',handleScroll)}
+    return () => {window.removeEventListener('scroll', handleScroll)}
   },[])
 
   return (
