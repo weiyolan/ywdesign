@@ -22,7 +22,7 @@ const ArrowLink = ({text,to,ext,inherit, inText, tabIndex}) => {
   }
 
   return (
-    <Link tabIndex={tabIndex} className={` ${inherit?'text-inherit font-medium':'text-primary font-semibold'}  min-[460px]:whitespace-pre-wrap sm:whitespace-nowrap text-sm  `} 
+    <Link tabIndex={tabIndex} className={` ${inherit?'text-inherit font-medium':'text-primary font-semibold'} min-[460px]:whitespace-pre-wrap sm:whitespace-nowrap text-sm  `} 
     href={to}>
       <span className='inline-flex items-center mt-4 relative'
       onMouseEnter={()=>setHovering(true)}

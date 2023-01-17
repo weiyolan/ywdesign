@@ -11,13 +11,13 @@ export default function SpecialtyCard({title, text, clicked, setClicked, noBlur,
       <div tabIndex={0} className={`flex absolute h-full w-full flex-col select-none bg-white/10 
       duration-1000 overflow-hidden transition-all
       text-white text-center justify-center cursor-pointer
-      outline-2 outline -outline-offset-2 hover:outline-white/30 focus:outline-white/
+      outline-none -outline-offset-2 hover:outline-white/30 focus:outline-white/30 
       
         ${clicked? 
-          `${noBlur?'':'backdrop-blur-md'} shadow-2xl   outline-white/30 focus:outline-white/30 animate-outlinePulse 
-        after:rounded-[1.75rem] rounded-[1.75rem]  min-[500px]:rounded-[2.5rem] sm:rounded-[1.75rem] lg:rounded-[40px] `
+          `${noBlur?'':'backdrop-blur-md'} shadow-2xl animate-outlinePulse 
+        after:rounded-[1.75rem] rounded-[1.75rem] min-[500px]:rounded-[2.5rem] sm:rounded-[1.75rem] lg:rounded-[40px] `
         :` shadow-md  rounded-[2.25rem] min-[500px]:rounded-[3rem] sm:rounded-[2rem] lg:rounded-[50px] 
-         outline-none ${noBlur?'':'backdrop-blur-sm'} focus-within:outline-white/20 focus-within:scale-[1.02] focus:ring-0 translate-y-1 scale-95`}`
+         outline-none ${noBlur?'':'backdrop-blur-sm'} focus-within:outline-white/20 focus-within:scale-[1.02] translate-y-1 scale-95`}`
         }
       // onMouseEnter={()=>setHovering(true)}
       // onMouseLeave={()=>setHovering(false)}

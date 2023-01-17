@@ -28,7 +28,6 @@ html {
 
 *:focus:not(:focus-visible) {
   /* outline:none; */
-  outline:none;
   
 }
 
@@ -37,6 +36,8 @@ html {
   outline-offset: -2px;
 }
 
+
+/* Form styling */
   input:-webkit-autofill,
   input:-webkit-autofill:hover, 
   input:-webkit-autofill:focus,
@@ -46,11 +47,9 @@ html {
   select:-webkit-autofill,
   select:-webkit-autofill:hover,
   select:-webkit-autofill:focus {
-  
   -webkit-box-shadow: 0 0 0px 1000px #rgba(255,255,255,0.1) inset;
   transition: background-color 5000s ease-in-out 0s;
   -webkit-text-fill-color: #171B4D;
-    /* background-color: rgba(255,255,255,0.1); */
 }
 
 body {
