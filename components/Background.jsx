@@ -29,7 +29,7 @@ export default function Background ({scrolled}) {
 
 
   return (
-    <div className={`-z-[50] w-full fixed top-0 h-screen overflow-hidden filter bg-cover bg-[url('/images/background.svg')] sm:bg-auto sm:bg-blue`} >
+    <div className={`-z-[50] w-full fixed top-0 h-screen overflow-hidden filter bg-cover bg-[url('/images/background.svg')] sm:bg-none`} >
 
       {width>breakPointSmall && 
         <div className={`bg-green ${myWidth<640?'':'animate-blob'} animation-delay-2000   
