@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "https://www.ywdesign.co/*"
+  from = "https://ywdesign.co/*"
   to = "https://www.ywdesign.ch/:splat"
   status = 301
   force = true
