@@ -11,7 +11,7 @@ const designList = [{text:'Logo',link:'/services/#Logo'},{text:'Website',link:'/
 const supportList = [{text:'FAQ',link:'/contact/#Form',disabled:false},{text:'Roadmap',link:'/roadmap'},{text:'T&C',link:'',disabled:true},{text:'Simulation',link:'',disabled:true}];
 const linksList = [{text:'Home',link:'/'},{text:'Services',link:'/services'},{text:'About me',link:'/aboutme'},{text:'Contact',link:'/contact'}];
 const contactList = [
-  {text:'Call', ext:false, link:'tel:+32471124525'},
+  {text:'Call', ext:false, link:'tel:+33638565302'},
   {text:'Whatsapp',ext:true, link:'https://wa.me/32471124525?text=Hi+Yolan%2C+%0D%0AI+got+your+WhatsApp+from+your+website+ywdesign.co.+Are+you+free+to+talk+any+time+soon+about+a+project+I+have+in+mind%3F+%0D%0AThanks%2C%0D%0A'},
   {text:'Email', ext:true, link:"mailto:contact@ywdesign.co?subject=Website%20Project&body=Hi%20Yolan%2C%0A%0AI%20have%20a%20website%20that%20needs%20an%20update.%0ACould%20we%20talk%20about%20this%20any%20time%20soon%3F%0A%0AThanks%20in%20advance%2C%0A%0A"},
   {text:'Form', ext:false, link:'/contact/#Form'},

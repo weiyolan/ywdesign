@@ -10,7 +10,7 @@ export default function ContactB() {
   return (
 
     <div className='inline-flex'>
-      <Link href='tel:+32471124525' title='Call phone number'>
+      <Link href='tel:+33638565302' title='Call phone number'>
         <Button>
           <Phone className='w-4 sm:w-5' fill='white' alt='Call phone number'/>
         </Button>

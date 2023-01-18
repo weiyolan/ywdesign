@@ -49,7 +49,7 @@ const Map = () => {
             </p>
 
             <ArrowLink ext={true} text={`contact\n@ywdesign.co`} to={"mailto:contact@ywdesign.co?subject=Website%20Project&body=Hi%20Yolan%2C%0A%0AI%20have%20a%20website%20that%20needs%20an%20update.%0ACould%20we%20talk%20about%20this%20any%20time%20soon%3F%0A%0AThanks%20in%20advance%2C%0A%0A"}/>
-            <ArrowLink text={`+32 4 71\n12 45 25`} to={'tel:+32471124525'}/>
+            <ArrowLink text={`+33 6 38\n56 53 02`} to={'tel:+33638565302'}/>
           </div>
         
         </div>
