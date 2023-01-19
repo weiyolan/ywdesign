@@ -54,6 +54,9 @@ module.exports = {
         outlinePulse: {
           '50%': {'outline-color': 'rgba(255,255,255,0.05)'},
         },
+        borderPulse: {
+          '50%': {'border-color': 'rgba(255,255,255,0.05)'},
+        },
         blob: {
           '0%, 100%': {
             transform: 'scale(1) translate(0,0)',
@@ -86,6 +89,7 @@ module.exports = {
       animation: {
         wiggle: 'wiggle 1s ease infinite',
         outlinePulse: 'outlinePulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        borderPulse: 'borderPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         blob: 'blob 7s ease infinite',
         blob2: 'blob2 7s ease infinite',
       },
