@@ -55,7 +55,7 @@ let serviceIconsWebsite = [
   },
   { icon: <IconScreen color='white' className='mx-auto w-8 h-8' alt='Computer screen size icon'/>,
   title:'Responsiveness',
-  list:['50%-60% of all interent consumption comes from mobile devices. We adapt your website to small, medium and large screen sizes.']
+  list:['50%-60% of all internet consumption comes from mobile devices. We adapt your website to small, medium and large screen sizes.']
   },
   {icon: <HiOutlineTranslate color='white' className='mx-auto w-8 h-8' alt={'Translate Icon'}/>, 
   title:'Multiple Languages', 
