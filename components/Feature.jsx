@@ -67,8 +67,8 @@ const Feature = ({offset, title, text, icon}) => {
       // viewport={{once:true}}
 
       className={`flex w-full ${offset?'flex-row text-left':'flex-row-reverse text-right'} sm:flex-col sm:text-center relative justify-start  
-      items-start sm:items-center p-2 pt-2 sm:p-4 sm:pt-2 outline-none -outline-offset-2 cursor-default  
-      backdrop-blur-md bg-white/10 hover:outline-white/10 hover:animate-outlinePulse focus:outline-white/10 rounded-3xl 
+      items-start sm:items-center p-1 sm:p-4 sm:pt-2 border-2 border-transparent cursor-default  
+      backdrop-blur-md bg-white/10 hover:border-white/10 hover:animate-borderPulse focus:border-white/10 focus:outline-none rounded-3xl 
       shadow-md sm:shadow-xl 
       ${width<breakPointSmall?` col-span-9 min-[420px]:col-span-6 ${offset?' col-start-1 min-[420px]:col-start-2 ':' col-start-2 min-[420px]:col-start-4'}`:''}
     `
@@ -82,7 +82,7 @@ w-5 h-5 sm:w-8 sm:h-8
 w-5 h-5 sm:w-8 sm:h-8 */}
 
       <motion.div variants={iconVariant}
-      className={`w-8 h-8 sm:w-10 sm:h-10 p-1 flex ${width<breakPointSmall?offset?'mr-2 ':'ml-2 ':''} aspect-square justify-center items-center rounded-lg sm:rounded-xl outline-none -outline-offset-2  `}>
+      className={`w-8 h-8 sm:w-10 sm:h-10 p-1 flex ${width<breakPointSmall?offset?'mr-2 ':'ml-2 ':''} aspect-square justify-center items-center rounded-lg sm:rounded-xl outline-none   `}>
         {icon}
       </motion.div>
       <div>

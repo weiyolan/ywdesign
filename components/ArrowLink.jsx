@@ -3,13 +3,13 @@ import React,{useState,useEffect} from 'react'
 import { BsArrowRightShort } from 'react-icons/bs'
 
 const ArrowLink = ({text,to,ext,inherit, inText, tabIndex}) => {
-  let [hovering,setHovering] = useState(false)
+  let [hovering, setHovering] = useState(false)
 
 
   if (ext) {
     return (
       <Link tabIndex={tabIndex} className={`${inherit?'text-inherit':'text-primary'} font-semibold min-[460px]:whitespace-pre-wrap sm:whitespace-nowrap text-sm cursor-alias`} 
-      href={to} rel="noopener noreferrer" target='_blank'>
+      href={to} onFocus={()=>{setHovering(true)}} onBlur={()=>{setHovering(false)}} rel="noopener noreferrer" target='_blank'>
       
       <span className={`inline-flex items-center ${inText?'mt-0':'mt-4'} relative`}
       onMouseEnter={()=>setHovering(true)}
@@ -23,7 +23,7 @@ const ArrowLink = ({text,to,ext,inherit, inText, tabIndex}) => {
 
   return (
     <Link tabIndex={tabIndex} className={` ${inherit?'text-inherit font-medium':'text-primary font-semibold'} min-[460px]:whitespace-pre-wrap sm:whitespace-nowrap text-sm  `} 
-    href={to}>
+    href={to} onFocus={()=>{setHovering(true)}} onBlur={()=>{setHovering(false)}}>
       <span className='inline-flex items-center mt-4 relative'
       onMouseEnter={()=>setHovering(true)}
       onMouseLeave={()=>setHovering(false)}>

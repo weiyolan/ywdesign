@@ -87,7 +87,7 @@ export default function Service({name, title, span, text, position, realFirst, f
           // console.log('i and visibility of service icon is:' )
           // console.log(i)
           // console.log(visibleItem[i])
-          return <ServiceIcon left={position==='left'} noBlur={noBlur} icon={icon.icon} key={i} clicked={visibleItem[i]} handleClick={(newVal)=>{handleVisibility(newVal,i);setClicked(true)}} />
+          return <ServiceIcon title={icon.title} left={position==='left'} noBlur={noBlur} icon={icon.icon} key={i} clicked={visibleItem[i]} handleClick={(newVal)=>{handleVisibility(newVal,i);setClicked(true)}} />
           })}
       </div>
     </div>
@@ -129,7 +129,7 @@ export default function Service({name, title, span, text, position, realFirst, f
 //   tap: {scale:1}
 // }
 
-function ServiceIcon ({icon, clicked, handleClick, noBlur, left}) {
+function ServiceIcon ({icon, clicked, handleClick, noBlur, left,title}) {
   // let window = useWindowSize()
 
   // const iconAnimation = {
@@ -152,16 +152,16 @@ function ServiceIcon ({icon, clicked, handleClick, noBlur, left}) {
 
   return (
     // <motion.div variants={iconAnimation} initial='hidden' custom={clicked} whileTap='tap' whileInView='visible'
-    <div
+    <div tabIndex={0} title={title}
     className={`flex ${noBlur?'':'backdrop-blur-md'} justify-center select-none cursor-pointer items-center duration-200 bg-white/10 filter 
     ${!left?'ml-2 min-[350px]:ml-3 lg:ml-4 ':' mr-2 min-[350px]:mr-3 lg:mr-4 '}
       w-9 h-9 sm:mt-2  min-[350px]:w-10 min-[350px]:h-10
       sm:w-10 sm:h-10 md:h-12 md:w-12 rounded-lg md:rounded-xl lg:h-14 lg:w-14
      p-2
-    outline-2 outline -outline-offset-2 hover:outline-white/30 
+    border-2 hover:border-white/30 focus:outline-none outline-none
     `+ 
-    (clicked?` outline-white/30 focus:outline-white/30 animate-outlinePulse shadow-md scale-95 translate-y-1 `:`hover:scale-[1.08] shadow-2xl focus:outline-none focus:scale-[1.08] outline-white/0 `)}
-    onClick={()=>handleClick(!clicked)}
+    (clicked?` border-white/30 focus:border-white/30 focus:animate-none animate-borderPulse shadow-md scale-95 translate-y-1 `:`border-transparent hover:scale-[1.08] shadow-2xl focus:border-white/30 focus:scale-[1.08] `)}
+    onClick={()=>handleClick(!clicked)} onKeyDown={(e)=>{if (e.code==='Enter'){handleClick(!clicked)}}}
     >
 
       {icon}

@@ -9,22 +9,22 @@ let mailLink = 'mailto:contact@ywdesign.co?subject=Website%20Project&body=Hi%20Y
 export default function ContactB() {
   return (
 
-    <div className='inline-flex'>
-      <Link href='tel:+33638565302' title='Call phone number'>
+    <div className='inline-flex '>
+      <Link className='focus:outline-none group' href='tel:+33638565302' title='Call phone number'>
         <Button>
-          <Phone className='w-4 sm:w-5' fill='white' alt='Call phone number'/>
+          <Phone className='w-5 sm:w-5' fill='white' alt='Call phone number'/>
         </Button>
       </Link>
 
-      <Link className='cursor-alias' title='Send WhatsApp Message' target='_blank' rel="noopener noreferrer" href={whatsappLink}>
+      <Link className='focus:outline-none group' title='Send WhatsApp Message' target='_blank' rel="noopener noreferrer" href={whatsappLink}>
           <Button ext={true} >
-            <WhatsApp className='w-4 sm:w-5 cursor-alias' fill='white' alt='Send WhatsApp Message'/>
+            <WhatsApp className='w-5 sm:w-5 ' fill='white' alt='Send WhatsApp Message'/>
           </Button>
       </Link>
 
-      <Link className='cursor-alias' title='Send an Email' target='_blank' rel="noopener noreferrer" href={mailLink}>
+      <Link className='focus:outline-none group' title='Send an Email' target='_blank' rel="noopener noreferrer" href={mailLink}>
           <Button ext={true}>
-          <Mail className='w-4 sm:w-5 cursor-alias' fill='white' alt='Send an Email'/>
+          <Mail className='w-5 sm:w-5 ' fill='white' alt='Send an Email'/>
           </Button>
       </Link>
 
@@ -34,8 +34,8 @@ export default function ContactB() {
 
 function Button ({children,ext}) {
   return (
-      <div className={`rounded-full bg-white/10 backdrop-blur-md p-2 min-[420px]:p-3 sm:p-4 mr-2 min-[420px]:mr-3 outline-none -outline-offset-2 ${ext?'cursor-alias':'cursor-pointer'}
-        duration-300 shadow-xl hover:backdrop-blur-sm hover:outline-white/20 hover:animate-outlinePulse hover:shadow-sm hover:translate-y-1 hover:scale-[0.98]`}>
+      <div className={`rounded-full bg-white/10 backdrop-blur-sm p-3 min-[420px]:p-3 sm:p-3 mr-3 min-[420px]:mr-3 border-2 border-transparent focus:outline-none cursor-pointer
+        duration-200 shadow-xl hover:border-white/20 hover:animate-borderPulse group-focus:border-white/20 group-focus:scale-[1.05] group-hover:scale-[1.05] hover:scale-[1.05] active:shadow-sm active:translate-y-1 group-active:scale-[0.95]`}>
           {children}
       </div>
   )

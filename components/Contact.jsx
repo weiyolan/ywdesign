@@ -39,7 +39,7 @@ export default function Contact ({first}) {
         <div className='mt-6 sm:mt-10 flex '>
           <ContactB />
         </div>
-        <div className='mt-6 sm:mt-10 ml-8 sm:ml-0 flex lg:mr-16'>
+        <div className='mt-6 sm:mt-10 ml-0 min-[350px]:ml-4 min-[400px]:ml-10 sm:ml-0 flex lg:mr-16'>
           <Button to="contact" title="Contact" text="Ask a quote" mode={'white'} handleClick={()=>''}/>
         </div>
       </div>

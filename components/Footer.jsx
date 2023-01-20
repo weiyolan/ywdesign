@@ -86,8 +86,8 @@ function List ({list}) {
             <li key={i} 
             className={`text-white font-light whitespace-nowrap
             my-3 sm:my-3
-            text-base sm:text-sm`} >
-              <Link href={item.link} target='_blank' className='cursor-alias' rel="noopener noreferrer" >
+            text-base sm:text-sm focus-within:scale-110 duration-200 focus-within:text-primary hover:text-primary hover:scale-110 `} >
+              <Link href={item.link} target='_blank' className='focus:outline-none cursor-alias' rel="noopener noreferrer" >
                 {item.text}
               </Link>
             </li>
@@ -96,8 +96,8 @@ function List ({list}) {
           <li key={i} 
           className={`${item.disabled?'text-primary/90':'text-white'} font-light whitespace-nowrap
           my-3 sm:my-3
-          text-base sm:text-sm`} >
-            {item.disabled?item.text:<Link href={item.link}>
+          text-base sm:text-sm focus-within:scale-110 duration-200 focus-within:text-primary hover:text-primary hover:scale-110`} >
+            {item.disabled?item.text:<Link className='focus:outline-none ' href={item.link}>
               {item.text}
             </Link>}
           </li>)}
