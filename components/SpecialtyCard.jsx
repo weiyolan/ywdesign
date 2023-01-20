@@ -11,7 +11,7 @@ export default function SpecialtyCard({title, text, clicked, setClicked, noBlur,
       <div tabIndex={0} className={`flex absolute h-full w-full flex-col select-none bg-white/10 
       duration-1000 overflow-hidden transition-all
       text-white text-center justify-center cursor-pointer
-      border-2 hover:border-white/30 focus:border-white/30 focus:outline-none
+      border-2 hover:border-white/30 focus:border-white/30 outline-none focus:outline-none
       
         ${clicked? 
           `${noBlur?'':'backdrop-blur-md'} shadow-2xl animate-borderPulse border-white/30
