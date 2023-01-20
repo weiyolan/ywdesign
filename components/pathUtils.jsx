@@ -267,13 +267,14 @@ let {scrolled} = useAppContext();
     delete newProps.transform
     // newProps.fill = '#171B4D'
     newProps.fill='white'
+    // console.log(newProps)
     return newProps
   }
 
   // translate(185 181)
 
   function handleTransform (Y) {
-  let [x,y] = [undefined, undefined] 
+  let [x,y] = [undefined, undefined];
 
     if (props.transform) {      
       let first = props.transform.split(' ');
