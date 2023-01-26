@@ -8,7 +8,7 @@ export default function RoadmapF({ scrollMin, scrollMax }) {
   let [allOffsetLengths, setAllOffsetLengths] = useState([])
   let [allRatios, setAllRatios] = useState([0])
   let [allPrevRatios, setAllPrevRatios] = useState([0])
-  let { scrolled } = useAppContext();
+  let { scrolled , locale} = useAppContext();
 
   function handleLength(f, newLength, position) {
     setAllLengths(prevLengths => {
@@ -48,13 +48,13 @@ export default function RoadmapF({ scrollMin, scrollMax }) {
         <svg alt='Roadmap part 7, Product delivery' className='relative w-full px-4 left-1/2' style={{ transform: `translate(-50%, ${-0 * scrolled}px)` }} viewBox="0 0 807 214" fill="none" xmlns="http://www.w3.org/2000/svg">
           
           <Path print={false} position={0} animateFill={true} inverse={false} double={1} handleLength={(l,i)=>handleLength(1,l,i)} id="finishedProduct" d="M403.5 210L354 139.5L403.5 69L453 139.5L403.5 210Z" fill="black" stroke="black" stroke-width="4"/>
-          <TextAnimate at={0.64} fromTop={true} id="Product Delivery" transform="translate(223)" fill="black" style="white-space: pre" font-family="Work Sans" font-size="44.0504" font-weight="500" letter-spacing="0em"><tspan x="180.5" y="41.1313" textAnchor="middle">Product Delivery</tspan></TextAnimate>
+          <TextAnimate at={0.64} fromTop={true} id="Product Delivery" transform="translate(223)" fill="black" style="white-space: pre" font-family="Work Sans" font-size="44.0504" font-weight="500" letter-spacing="0em"><tspan x="180.5" y="41.1313" textAnchor="middle">{`${locale==='en'?'Product Handover':"Passation du Produit"}`}</tspan></TextAnimate>
 
         </svg>
 
         <AnimateIn at={0.69}>
           <h2 >
-          {`When the product is ready you receive it.\nYes, you own all the code.`}
+          {`${locale==='en'?'When the product is ready you receive it.\nYes, you own all the code.':"Lorsque le produit est prêt, vous le recevez. Oui, vous possédez tout le code."}`}
         </h2>
         </AnimateIn>
         {/* <h2 className='z-20 p-2 bg-white/10 rounded-2xl backdrop-blur-sm outline-none -outline-offset-2 outline-white/20 relative flex text-sm font-light w-[40vw] text-center text-white font-sans ' >{`We take note of your\nvalues, existing branding\nand style preferences to\ngenerate ideas together`} </h2> */}

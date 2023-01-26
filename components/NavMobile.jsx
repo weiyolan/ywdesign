@@ -8,12 +8,20 @@ import Button from "./Button";
 import { useDimensions } from "./useDimension";
 import Link from "next/link";
 import YW from "../public/images/logo_yw_b.svg";
+import ChooseLanguage from "./ChooseLanguage";
+import { useRouter } from "next/router";
+import { useAppContext } from "./Context";
 
-export default function NavMobile ({from}) {
-  const [isOpen, toggleOpen] = useCycle(false, true);
+export default function NavMobile ({from, navLight, toggleNavLight}) {
+  // const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
-  const { width, height } = useDimensions(containerRef);
-  const [state, setState] = useState(false)
+  // const { width, height } = useDimensions(containerRef);
+  // const [state, setState] = useState(false)
+  const {width, breakPointSmall, isOpen, toggleOpen} = useAppContext()
+
+  const router = useRouter()
+  const { locale } = router    
+
 
   let [selectedB,setSelectedB] = useState(from);
 
@@ -27,8 +35,12 @@ export default function NavMobile ({from}) {
   },[from])
 
   useEffect(()=>{
-    setState('update')
-  },[])
+  },[navLight])
+  // useEffect(()=>{
+  //   setState('update')
+  // },[])
+
+
 
 //  BIG CIRCLE
 // const sidebar = {
@@ -55,6 +67,7 @@ const sidebar = {
   open: {
     y: 0,
     x: 0,
+    // opacity:1,
     transition: {
       type: "spring",
       stiffness: 400,
@@ -65,9 +78,9 @@ const sidebar = {
   closed: {
     // y: -490,
     // x: 160,
-    x: width - 70,
-    y: -530,
-    opacity: state?1:0,
+    x: width<breakPointSmall?(width - 70):(350-70),
+    y: width<breakPointSmall?(-600 + 70):(-510+70),
+    // opacity: state?1:0,
     transition: {
       delay: 0.2,
       type: "spring",
@@ -107,21 +120,24 @@ const variants = {
 };
 
 
+
+
   return (
-  <motion.nav className={`fixed top-0 right-0 h-0 w-[100%] z-[51] sm:w-[40vw]`}
+    
+  <motion.nav className={`fixed top-0 right-0 h-0 w-[100%] z-[51] sm:w-[350px]`}
     initial={false}
     animate={isOpen ? "open" : "closed"}
-    custom={height}
+    // custom={height}
     ref={containerRef}
     key={width}
     >
-
-    <motion.div className={`bg-white/10 backdrop-blur-md z-[51] absolute top-0 forward fill-mode rounded-b-[40px] rounded-tl-[40px] h-[600px] right-0 w-[100%] sm:w-[40vw]`} variants={sidebar} />
+    
+    <motion.div className={`bg-white/10 backdrop-blur-md z-[51] absolute top-0 forward fill-mode rounded-b-[40px] rounded-tl-[40px] ${width<breakPointSmall?'h-[600px]':'h-[510px]'} right-0 w-[100%] sm:w-[350px]`} variants={sidebar} />
     {/* <motion.div className={`${isOpen?'bg-white':'bg-white/10'} fixed duration-700 top-0 rounded-b-[30px] rounded-tl-[30px] h-[530px] right-0 w-[100%] sm:w-[40vw]`} variants={sidebar} /> */}
     
     <motion.div 
       variants={variants2}
-      className='absolute inline-flex rounded-full w-fit top-[16px] z-[51] left-[16px]'>
+      className='absolute inline-flex rounded-full w-fit top-[18px] z-[51] left-[18px]'>
       <motion.div variants={variants}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }} >
@@ -137,16 +153,24 @@ const variants = {
     </motion.div>
 
     <Navigation>
-      <Button  mobile={true} className='' to="" title="Home" text="Home" mode={selectedB==='Home'?'selected':'unselected'} handleClick={selectButton}/>
-      <Button  mobile={true} className='' to="services" title="Services" text="Services" mode={selectedB==='Services'?'selected':'unselected'} handleClick={selectButton}/>
-      <Button  mobile={true} className='' to="aboutme" title="About Me" text="About Me" mode={selectedB==='About Me'?'selected':'unselected'} handleClick={selectButton}/>
-      <Button  mobile={true} className='' to="roadmap" title="Roadmap" text="Roadmap" mode={selectedB==='Roadmap'?'selected':'unselected'}  handleClick={selectButton} />
-      <Button  mobile={true} className='' to="contact" title="Contact"  text="Contact" mode={selectedB==='Contact'?'selected':'unselected'} handleClick={selectButton}/>
-      <Button  mobile={true} className='' to="contact/#Form" title="Contact" text="Ask a quote" handleClick={selectButton}  mode={'dark'}/>
+      <Button  mobile={width<breakPointSmall} className='' to="" title="Home" text={home[locale].text} mode={selectedB==='Home'?'selected':'unselected'} handleClick={selectButton}/>
+      <Button  mobile={width<breakPointSmall} className='' to="services" title="Services"  text={services[locale].text}  mode={selectedB==='Services'?'selected':'unselected'} handleClick={selectButton}/>
+      <Button  mobile={width<breakPointSmall} className='' to="aboutme" title="About Me" text={aboutme[locale].text} mode={selectedB==='About Me'?'selected':'unselected'} handleClick={selectButton}/>
+      <Button  mobile={width<breakPointSmall} className='' to="roadmap" title="Roadmap" text={roadmap[locale].text} mode={selectedB==='Roadmap'?'selected':'unselected'}  handleClick={selectButton} />
+      <Button  mobile={width<breakPointSmall} className='' to="contact" title="Contact"  text={contact[locale].text}  mode={selectedB==='Contact'?'selected':'unselected'} handleClick={selectButton}/>
+      <Button  mobile={width<breakPointSmall} className='' to="contact/#Form" title="Contact" text={quote[locale].text} handleClick={selectButton}  mode={'dark'}/>
+      <ChooseLanguage mobile={width<breakPointSmall} toggleOpen={()=>toggleOpen()}/>
     </Navigation>
     
-    <MenuToggle open={isOpen} toggle={() => toggleOpen()} />
+    <MenuToggle open={isOpen} toggle={() => {toggleOpen()}} />
   
   </motion.nav>
   );
 };
+
+let home = {en: {text: 'Home'}, fr: {text: 'Accueil'}}
+let services = {en: {text: 'Services'}, fr: {text: 'Services'}}
+let aboutme = {en: {text: 'About Me'}, fr: {text: 'A Propos'}}
+let roadmap = {en: {text: 'Workflow'}, fr: {text: 'Votre Chemin'}}
+let contact = {en: {text: 'Contact'}, fr: {text: 'Contact'}}
+let quote = {en: {text: 'Ask a Quote'}, fr: {text: 'Demander un Devis'}}

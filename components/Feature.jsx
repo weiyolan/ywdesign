@@ -9,7 +9,6 @@ const Feature = ({offset, title, text, icon}) => {
   let [yOffset,setYOffset] = useState(0)
   // let [style, setStyle] = useState({visible:{x:0, y:0 , opacity:1, transition:{type:'spring', bounce: 0.4, duration:0.8}}, hidden:{x: small? offset? -100 : 100 :0, y:100, opacity:0}});
 
-
   useEffect(()=>{
     if (width<breakPointSmall) {
       setXOffset(offset? -100: 100)
@@ -67,7 +66,7 @@ const Feature = ({offset, title, text, icon}) => {
       // viewport={{once:true}}
 
       className={`flex w-full ${offset?'flex-row text-left':'flex-row-reverse text-right'} sm:flex-col sm:text-center relative justify-start  
-      items-start sm:items-center p-1 sm:p-4 sm:pt-2 border-2 border-transparent cursor-default  
+      items-start sm:items-center p-1 sm:p-4 sm:pt-2 md:px-2 xl:px-4 border-2 border-transparent cursor-default  
       backdrop-blur-md bg-white/10 hover:border-white/10 hover:animate-borderPulse focus:border-white/10 outline-none focus:outline-none rounded-3xl 
       shadow-md sm:shadow-xl 
       ${width<breakPointSmall?` col-span-9 min-[420px]:col-span-6 ${offset?' col-start-1 min-[420px]:col-start-2 ':' col-start-2 min-[420px]:col-start-4'}`:''}
@@ -90,7 +89,7 @@ w-5 h-5 sm:w-8 sm:h-8 */}
           {title}
         </motion.h4>
           
-        <motion.p variants={iconVariant} className='text-white font-extralight font-sans text-sm  md:whitespace-pre-wrap'>
+        <motion.p variants={iconVariant} className='text-white font-extralight font-sans text-sm  lg:whitespace-pre-wrap'>
           {text}
         </motion.p>
       </div>

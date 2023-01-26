@@ -6,6 +6,7 @@ import LayoutSection from "./LayoutSection"
 import { motion } from "framer-motion"
 import ArrowLink from "./ArrowLink"
 import useWindowSize from "./useWindowSize"
+import { useAppContext } from "./Context"
 
 
 
@@ -14,6 +15,7 @@ export default function Service({name, title, span, text, position, realFirst, f
   let [visibleItem, setVisibleItem] = useState(new Array(icons.length).fill(false))
   let [clicked,setClicked] = useState(false)
   let window = useWindowSize()
+  let {locale} = useAppContext()
   // let [visibleItem, setVisibleItem] = useState(Object.fromEntries(new Array(icons.length).fill(false).map((val,i)=>[i,val])))
   // let [globalClick,setGlobalClick] = useState(false)
   // let [serviceText,setServiceText] = useState('')
@@ -33,12 +35,12 @@ export default function Service({name, title, span, text, position, realFirst, f
   }, [visibleItem, clicked])
 
   function handleVisibility(newVal,i) {
-    let newVisibility = new Array(icons.length).fill(false);
     if (newVal===true) {
+      let newVisibility = new Array(icons.length).fill(false);
       newVisibility[i]=newVal;
       setVisibleItem(newVisibility)
     } else if (newVal === false) {
-      setVisibleItem(newVisibility)
+      randomVisibility(visibleItem)
     }     
   }
 
@@ -52,9 +54,16 @@ export default function Service({name, title, span, text, position, realFirst, f
     }    
   }
 
-  // useEffect(()=>{
-  //   console.log(breakPointSmall)
-  // })
+  function randomVisibility(visibleItems) {
+    let currentItem = visibleItems.indexOf(true);
+    let indexes = new Array(visibleItems.length).fill(0).map((val,i)=>{return i})
+    if (currentItem > -1) {
+      indexes.splice(currentItem,1);
+    }
+    let newIndex=indexes[Math.floor(Math.random()*indexes.length)];
+    handleVisibility(true,newIndex)
+  }
+
 
   let cards = (
     // <div className={`relative w-full sm:h-full min-h-[75vw] min-[350px]:min-h-[75vw] min-[400px]:min-h-[60vw] min-[500px]:min-h-[45vw] `}>
@@ -80,7 +89,7 @@ export default function Service({name, title, span, text, position, realFirst, f
         />
 {/* initial={'hidden'} whileInView={"visible"} variants={parent} */}
       <div className= {`flex ${position==='left'?'':'justify-end'} `}>
-        <ArrowLink text={'Ask for it'} to={'/contact/#Form'} ext={false}/>
+        <ArrowLink text={`${locale==='en'?'Ask a quote':'Demandez un devis'}`} to={'/contact/#Form'} ext={false}/>
         </div>
       <div className= {`flex mt-8 ${position==='left'?'':'justify-end'} `}>
         {icons.map((icon,i)=>{

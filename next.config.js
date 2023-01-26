@@ -4,7 +4,12 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
-  reactStrictMode: false,
+  
+  i18n: {
+      locales: ['en', 'fr'],
+      defaultLocale: 'en',
+  },
+  
 
   webpack(config) {
     config.module.rules.push({

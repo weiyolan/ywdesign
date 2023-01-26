@@ -9,7 +9,7 @@ export default function RoadmapG({ scrollMin, scrollMax }) {
   let [allOffsetLengths, setAllOffsetLengths] = useState([])
   let [allRatios, setAllRatios] = useState([0])
   let [allPrevRatios, setAllPrevRatios] = useState([0])
-  let { scrolled } = useAppContext();
+  let { scrolled , locale} = useAppContext();
 
   function handleLength(f, newLength, position) {
     setAllLengths(prevLengths => {
@@ -51,7 +51,7 @@ export default function RoadmapG({ scrollMin, scrollMax }) {
           <g id="Frame 22">
             <g id="maintenanceGroup">
               
-              <TextAnimate at={0.78} fromTop={true} id="Maintenance" transform="translate(453 43)" fill="black" style="white-space: pre" font-family="Work Sans" font-size="44.0504" font-weight="500" letter-spacing="0em"><tspan x="0.304916" y="41.1313">Maintenance</tspan></TextAnimate >
+              <TextAnimate at={0.78} fromTop={true} id="Maintenance" transform="translate(453 43)" fill="black" style="white-space: pre" font-family="Work Sans" font-size="44.0504" font-weight="500" letter-spacing="0em"><tspan x="0.304916" y="41.1313">{`Maintenance`}</tspan></TextAnimate >
               <Path position={0}  inverse={false} double={1} handleLength={(l,i)=>handleLength(1,l,i)} id="Vector 15" d="M366.5 2.5C380 6 383.5 23.5 383.5 38V72C383.5 132 272.001 154 272.001 255C272.001 322 325.001 387.5 402.001 387.5C475.001 387.5 531.001 330 531.001 255C531.001 155.5 423.5 135.5 423.5 72" stroke="black" stroke-width="4" stroke-linecap="round"/>
               <Path position={0}  inverse={false} double={1} handleLength={(l,i)=>handleLength(1,l,i)} id="Vector 16" d="M441 2.5C428 8.5 423.5 19 423.5 38V72C424.5 165 307.5 165 307.5 257C307.5 330.5 367 354.5 400.5 354.5C448 354.5 495.5 319 495.5 257C495.5 171 386 157.5 383.5 72" stroke="black" stroke-width="4" stroke-linecap="round"/>
 
@@ -72,15 +72,15 @@ export default function RoadmapG({ scrollMin, scrollMax }) {
 
         <AnimateIn at={0.79}>
         <h2 >
-        {`An apple a day keeps the doctor away.\nA maintenance plan is crucial\nfor the health of your product.`}
+        {`${locale==='en'?'An apple a day keeps the doctor away.\nA maintenance plan is crucial\nfor the health of your product.':"Une pomme par jour éloigne le médecin. Un plan de maintenance est crucial pour la santé de votre produit."}`}
         </h2>
         </AnimateIn>
 
 
         <AnimateIn at={0.82}>
 
-        <div className='text-center w-full pl-6 mb-12'>
-            <ArrowLink text='To the top' to='#Title' />
+        <div className='text-center w-full pl-6'>
+            <ArrowLink text={`${locale==='en'?'To the top':'Vers le haut'}`} to='#Title' />
         </div>
         </AnimateIn>
         {/* <h2 className='z-20 p-2 bg-white/10 rounded-2xl backdrop-blur-sm outline-none -outline-offset-2 outline-white/20 relative flex text-sm font-light w-[40vw] text-center text-white font-sans ' >{`We take note of your\nvalues, existing branding\nand style preferences to\ngenerate ideas together`} </h2> */}

@@ -15,7 +15,7 @@ const Path = props => (
 
 export default function MenuToggle ({ open, toggle }) {
     return (
-    <button className='outline-none border-none duration-300 rounded-none cursor-pointer z-[51] w-fit h-fit absolute top-[23px] right-[23px] bg-transparent' 
+    <button className='outline-none border-transparent border-2 duration-300 rounded-none rounded-bl-[40px] focus:outline-none focus-visible:border-primary hover:cursor-pointer z-[51] w-fit h-fit top-0 right-0 absolute p-[23px] bg-transparent' 
     onClick={toggle}>
         <svg width="23" height="23" viewBox="0 0 23 23">
         <Path open={open}

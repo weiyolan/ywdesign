@@ -37,7 +37,7 @@ export default function ServiceCard ({icon, visible, position, noBlur, first, br
         ${(visible? 'border-b-white w-full ' : `w-0  border-b-transparent `)}`}>
       </div>
       
-      <ul className={`text-justify text-sm filter-none font-extralight duration-500 ${visible?'':'font-thin'}` 
+      <ul className={`text-justify md:select-text text-sm filter-none font-extralight duration-500 ${visible?'':'font-thin'}` 
       }>
         {icon.list.map((item)=>{return <li className='' key={item}>{item}</li>})}
       </ul>

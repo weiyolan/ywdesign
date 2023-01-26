@@ -8,7 +8,7 @@ export default function RoadmapD({ scrollMin, scrollMax, speed , home}) {
     let [allOffsetLengths, setAllOffsetLengths] = useState([])
     let [allRatios, setAllRatios] = useState([0])
     let [allPrevRatios, setAllPrevRatios] = useState([0])
-    let { scrolled } = useAppContext();
+    let { scrolled ,locale} = useAppContext();
 
     function handleLength(f, newLength, position) {
         setAllLengths(prevLengths => {
@@ -55,7 +55,7 @@ export default function RoadmapD({ scrollMin, scrollMax, speed , home}) {
           <Path position={7}  inverse={false}  double={1} handleLength={(l,i)=>handleLength(0.2,l,i)} id="Tri6" d="M377.385 388.989C386.718 383.601 398.385 390.336 398.385 401.113L398.385 469.927C398.385 480.704 386.718 487.44 377.385 482.051L317.791 447.645C308.457 442.256 308.457 428.784 317.791 423.396L377.385 388.989Z" stroke="white" strokeWidth="4" initialDash="10 10"/>
           <Path lineSpeed={1.2} position={5}  inverse={false}  double={1} handleLength={(l,i)=>handleLength(0.1,l,i)} id="Arrow" d="M407.5 346C407.5 464.5 606 425 606 517.5C606 610 250.5 558 250.5 669.5C250.5 781 484 741 484 805C484 869 380.5 869 380.5 916.5C380.5 964 406.5 964 406.5 1055M406.5 1055L412 1047.5M406.5 1055L400.5 1047.5" myGradient="url(#paint0_linear_652_2278)" strokeWidth="3" strokeLinecap="round" initialDash="6 6"/>
           
-            <TextAnimate at={home?0.28:0.41} fromTop={true} id="Iteration" transform="translate(477 335)" fill="black" style="white-space: pre" font-family="Work Sans" font-size="44.0504" font-weight="500" letter-spacing="0em"><tspan x="0.0276794" y="41.1313">Iteration</tspan></TextAnimate>
+            <TextAnimate at={home?0.28:0.41} fromTop={true} id="Iteration" transform="translate(477 335)" fill="black" style="white-space: pre" font-family="Work Sans" font-size="44.0504" font-weight="500" letter-spacing="0em"><tspan x="0.0276794" y="41.1313">{`${locale==='en'?'Iteration':'Itération'}`}</tspan></TextAnimate>
 
           <Path position={6}  inverse={false}  double={1} handleLength={(l,i)=>handleLength(0.2,l,i)} id="Tri5" d="M272.216 403.651C259.576 411.009 243.71 401.924 243.658 387.298L243.476 335.805C243.424 321.179 259.225 311.982 271.918 319.25L316.603 344.839C329.295 352.107 329.36 370.389 316.719 377.747L272.216 403.651Z" stroke="white" strokeWidth="4" initialDash="10 10"/>
           <Path position={4}  inverse={false}  double={1} handleLength={(l,i)=>handleLength(0.2,l,i)} id="Tri4" d="M351.517 338.905C339.236 339.85 330.538 327.147 335.859 316.039L356.852 272.216C362.174 261.108 377.524 259.926 384.483 270.089L411.938 310.181C418.898 320.344 412.246 334.229 399.965 335.174L351.517 338.905Z" stroke="white" strokeWidth="4" initialDash="10 10"/>

@@ -11,9 +11,8 @@ import Link from 'next/link'
 
 const RoadmapHome = () => {
   let {scrolled} = useAppContext()
-  let {width, breakPointSmall} = useAppContext();
+  let {width, breakPointSmall, locale} = useAppContext();
   let [hovering,setHovering] = useState(false);
-
   // useEffect(()=>{
   //   console.log(scrolled)
 
@@ -36,12 +35,12 @@ const RoadmapHome = () => {
   return (
     <section className='flex flex-row'>
     <div className='flex-1 max-w-[50%] z-10 '>
-      <Subtitle name='Workflow' title='A fully transparent design process' span={'transparent'} 
-      text='The roadmap allows us to find the best solution for you, every time. You want to try it out.' 
+      <Subtitle name={`${locale==='en'?'Workflow':'Votre chemin'}`} title={`${locale==='en'?'A fully transparent design process':'Un processus transparent'}`} span={'transparent'} 
+      text={`${locale==='en'?'The roadmap allows us to find the best solution for you, every time. You want to try it out.':"Notre processus de conception permet de trouver la meilleure solution pour vous, à chaque fois. Vous voulez vraiment l'essayer."} `}
       first={true} position='left'/>
       
       <div className= {`flex `}>
-        <ArrowLink text={'Discover more'} to={'/roadmap'} ext={false}/>
+        <ArrowLink text={`${locale==='en'?'Discover more':'En savoir plus'}`} to={'/roadmap'} ext={false}/>
       </div>
 
     </div>
@@ -51,7 +50,7 @@ const RoadmapHome = () => {
         <div onMouseEnter={()=>setHovering(true)} onMouseLeave={()=>setHovering(false)} 
         style={{transform: `translate(-50%, -${(width<breakPointSmall?0:50)  + (width<breakPointSmall?280:300)*Math.max(scrolled-0.20,0)}px) scale(${hovering?1.02:1})`}} 
         className='transition-all hover:cursor-pointer ease flex flex-col absolute w-[98%] lg:w-[80%] left-1/2 top-1/3 '>
-        <Link onFocus={()=>setHovering(true)} onBlur={()=>setHovering(false)} title='Explore the roadmap' href='/roadmap'>
+        <Link onFocus={()=>setHovering(true)} onBlur={()=>setHovering(false)} title={`${locale==='en'?'Explore the roadmap':'Découvrez votre chemin'}`} href='/roadmap'>
           {width<breakPointSmall && <RoadmapC home={true} scrollMin={0.2} scrollMax={0.25}/>}
           <RoadmapDHome print={false} hovering={hovering} home={true} scrollMin={width<breakPointSmall?0.25:0.18} scrollMax={width<breakPointSmall?0.35:width<768?0.55:0.55} speed={width<breakPointSmall?1.5:1.2}/>
           {/* <RoadmapE1 home={true} scrollMin={0.35} scrollMax={0.37} /> */}

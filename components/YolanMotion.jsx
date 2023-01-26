@@ -5,6 +5,7 @@ import { PathFillText } from './pathUtils'
 import { SVGWrapper } from "./ContextSVG"
 
 export default function YolanMotion({ home, scrollMin, scrollMax }) {
+  let {locale} = useAppContext()
   let [allLengths, setAllLengths] = useState([])
   let [allOffsetLengths, setAllOffsetLengths] = useState([])
   let [allRatios, setAllRatios] = useState([0])
@@ -70,8 +71,8 @@ export default function YolanMotion({ home, scrollMin, scrollMax }) {
       <div className='flex flex-row mx-auto whitespace-pre-wrap'>
         <h2 className='text-center my-8 font-sans font-light text-xl sm:text-2xl text-primary'>
           <span className='inline-block flex-none '><RiDoubleQuotesL  fill='rgb(23 27 77)'/></span>
-          {` As a passionate biomedical engineer and surfer, I am dedicated to having a `}
-          <span className='text-white font-medium'>global positive impact </span>
+          {`${locale==='en'?' As a passionate biomedical engineer and surfer, I am dedicated to having a ':" En tant qu'ingénieur biomédical et surfeur passionné, je m'efforce d'avoir un '"}`}
+          <span className='text-white font-medium'>{`${locale==='en'?'global positive impact ':"impact positif au niveau mondial "}`} </span>
           <span className='inline-block flex-none '><RiDoubleQuotesR  fill='rgb(23 27 77)'/></span>
         </h2>
       </div>

@@ -8,7 +8,7 @@ export default function RoadmapE({home, scrollMin, scrollMax }) {
   let [allOffsetLengths, setAllOffsetLengths] = useState([])
   let [allRatios, setAllRatios] = useState([0])
   let [allPrevRatios, setAllPrevRatios] = useState([0])
-  let { scrolled } = useAppContext();
+  let { scrolled , locale} = useAppContext();
 
   function handleLength(f, newLength, position) {
     setAllLengths(prevLengths => {
@@ -50,7 +50,7 @@ export default function RoadmapE({home, scrollMin, scrollMax }) {
           <g id="Frame 20">
             <g id="finalDesignGroup">
               <Path position={0}  inverse={false} double={1} handleLength={(l,i)=>handleLength(1.2,l,i)} id="designProduct" d="M403.5 207L354 136.5L403.5 66L453 136.5L403.5 207Z" stroke="black" stroke-width="4"/>
-              <TextAnimate print={false} at={home?0.35:0.50} fromTop={true} id="Final Design" transform="translate(273)" fill="black" style="white-space: pre" font-family="Work Sans" font-size="44.0504" font-weight="500" letter-spacing="0em"><tspan x="130.5" y="41.1313" textAnchor="middle">Final Design</tspan></TextAnimate>
+              <TextAnimate print={false} at={home?0.35:0.50} fromTop={true} id="Final Design" transform="translate(273)" fill="black" style="white-space: pre" font-family="Work Sans" font-size="44.0504" font-weight="500" letter-spacing="0em"><tspan x="130.5" y="41.1313" textAnchor="middle">{`${locale==='en'?'Final Design':"Conception Finale"}`}</tspan></TextAnimate>
               {/* <TextAnimate print={false} at={home?0.35:0.50} fromTop={true} id="Final Design" transform="translate(273)" fill="black" style="white-space: pre" font-family="Work Sans" font-size="44.0504" font-weight="500" letter-spacing="0em"><tspan x="0.0964661" y="41.1313">Final Design</tspan></TextAnimate> */}
 
             </g>
@@ -59,7 +59,7 @@ export default function RoadmapE({home, scrollMin, scrollMax }) {
 
        {!home && <AnimateIn at={0.52}>
         <h2 >
-          {`After two iterations on the structure\nand design, the final design can be approved.\nNow I start coding.`}
+          {`${locale==='en'?'After two iterations on the structure\nand design, the final design can be approved.\nNow I start coding.':"Après deux itérations sur la structure et le design, le design final peut être approuvé. Je commence alors à coder."}`}
         </h2>
         </AnimateIn>}
         {/* <h2 className='z-20 p-2 bg-white/10 rounded-2xl backdrop-blur-sm outline-none -outline-offset-2 outline-white/20 relative flex text-sm font-light w-[40vw] text-center text-white font-sans ' >{`We take note of your\nvalues, existing branding\nand style preferences to\ngenerate ideas together`} </h2> */}

@@ -8,7 +8,7 @@ export default function RoadmapC({ home, scrollMin, scrollMax }) {
   let [allOffsetLengths, setAllOffsetLengths] = useState([])
   let [allRatios, setAllRatios] = useState([0])
   let [allPrevRatios, setAllPrevRatios] = useState([0])
-  let { scrolled } = useAppContext();
+  let { scrolled ,locale} = useAppContext();
 
   function handleLength(f, newLength, position) {
 
@@ -45,14 +45,14 @@ export default function RoadmapC({ home, scrollMin, scrollMax }) {
       <div className='relative w-full h-fit flex flex-col '>
 
         <svg alt='Roadmap part 3, Ideation phase' className='relative w-full  left-1/2' style={{ transform: `translate(-50%, ${-0 * scrolled}px)` }} viewBox="0 0 807 193" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <TextAnimate at={0.26} fromTop={true} id="Ideation" transform="translate(316 141)" fill="black" style="white-space: pre" font-family="Work Sans" font-size="44.0504" font-weight="500" letter-spacing="0em"><tspan x="87.5" y="41.1313" textAnchor="middle">Ideation</tspan></TextAnimate>
+          <TextAnimate at={0.26} fromTop={true} id="Ideation" transform="translate(316 141)" fill="black" style="white-space: pre" font-family="Work Sans" font-size="44.0504" font-weight="500" letter-spacing="0em"><tspan x="87.5" y="41.1313" textAnchor="middle">{`${locale==='en'?'Ideation':'Idéation'}`}</tspan></TextAnimate>
           <Path position={0} inverse={true} double={2} handleLength={(l, i) => handleLength(1, l, i)}  id="Vector" d="M383.588 125V2M423.602 125V2" stroke="black" stroke-width="3" stroke-linecap="round"/>
         
         </svg>
 
         {!home && <AnimateIn at={0.28}>
         <h2 >
-        {`Once agreed, we meet up and take note of your\nvalues, existing branding\nand style preferences to\ngenerate ideas together:`} 
+        {`${locale==='en'?'Once agreed, we meet up and take note of your\nvalues, existing branding\nand style preferences to\ngenerate ideas together:':"Une fois l'accord conclu, nous nous rencontrons et prenons note de vos valeurs, de votre image de marque existante et de vos préférences stylistiques pour générer des idées ensemble :"}`} 
           </h2>
         </AnimateIn>}
 

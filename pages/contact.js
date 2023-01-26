@@ -14,7 +14,7 @@ import { useAppContext } from '../components/Context'
 
 
 export default function Contact({scrolled}) {
-  let {width, breakPointSmall, noBlur} = useAppContext();
+  let {noBlur, isOpen,toggleOpen} = useAppContext();
 
   let [lightbox, setLightbox] = useState(false);
 
@@ -22,9 +22,13 @@ export default function Contact({scrolled}) {
       if (lightbox && event.target === document.getElementById('lightboxBackground')) {
           setLightbox(false);
       };
-
-      // console.log(event.target)  
   };
+
+  function handleNavLight (event) {
+    if (isOpen && event.target === document.getElementById('navBackground')) {
+      toggleOpen();
+    };
+};
 
   return (
     <>
@@ -32,14 +36,14 @@ export default function Contact({scrolled}) {
         <title>ywdesign | Contact</title>
       </Head>
 
-      <main onClick={lightboxClick}>
+      <main onClick={(event)=>{lightboxClick(event);handleNavLight(event)}}>
 
       {/* <Navbar from = 'Home'/>
         
         <Title breakPointSmall={breakPointSmall} type='home'/>
          */}
         <Navbar from='Contact'/>
-        <Title breakPointSmall={breakPointSmall} type='contact'/>
+        <Title  type='contact'/>
 
         <Layout>
           

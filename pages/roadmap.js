@@ -28,7 +28,7 @@ import Contact from '../components/Contact'
 
 
 export default function Roadmap () {
-  let {width,breakPointSmall,scrolled} = useAppContext();
+  let {isOpen, toggleOpen, locale} = useAppContext();
   // let { scrolled } = useAppContext();
   // PARALLAX
   // let target = document.getElementById('id')
@@ -40,13 +40,19 @@ export default function Roadmap () {
   // setStyle ( {transform: `translate3d(${posX}px,${posY}px, 0px)`})
 
 
-  let fadeStyle = {
-    'maskImage': "linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)",
-    'maskSize': '100% 100%',
-    'WebkitMaskImage': "linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)",
-    'maskPosition': '0 0',
-    'maskRepeat': 'no-repeat',
-  }
+  // let fadeStyle = {
+  //   'maskImage': "linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)",
+  //   'maskSize': '100% 100%',
+  //   'WebkitMaskImage': "linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)",
+  //   'maskPosition': '0 0',
+  //   'maskRepeat': 'no-repeat',
+  // }
+
+  function handleNavLight (event) {
+    if (isOpen && event.target === document.getElementById('navBackground')) {
+      toggleOpen();
+    };
+};
 
   return (
     <>
@@ -54,7 +60,7 @@ export default function Roadmap () {
         <title>ywdesign | Our Services</title>
       </Head>
       
-      <main className='scroll-smooth'>
+      <main className='scroll-smooth' onClick={handleNavLight}>
         <Navbar from={'Roadmap'}/>
         
         <div id='Title'>
@@ -63,10 +69,10 @@ export default function Roadmap () {
         <Layout>
         
         <section>
-        <Subtitle realFirst={true} name={'visual'} position='center' title={`Our collaboration visualised`} span={'collaboration'} text={'How it is to work on a digital product? We follow the design process that is visualised below.'} first={true} />
+        <Subtitle realFirst={true} name={`${locale==='en'?'visual':"Visuel"}`} position='center' title={`${locale==='en'?'Our collaboration visualised':"Notre collaboration visualisée"}`} span={'collaboration'} text={`${locale==='en'?'How it is to work on a digital product? We follow the design process that is visualised below.':"Comment travailler sur un produit numérique ?\nNous suivons le processus de conception qui est visualisé ci-dessous."}`} first={true} />
 
         <div className='text-center w-full pl-6'>
-          <ArrowLink text='Questions? Reach out' to='/contact/#Form' />
+          <ArrowLink text={`${locale==='en'?'Questions? Reach out':"Des questions? N'hésitez pas"}`} to='/contact/#Form' />
         </div>
         </section>
 

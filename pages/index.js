@@ -1,3 +1,4 @@
+import React,{useState,useEffect} from 'react'
 import Head from 'next/head'
 import Title from '../components/Title'
 import Layout from '../components/Layout'
@@ -6,16 +7,34 @@ import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 import Specialities from '../components/Specialities'
 import Features from '../components/Features'
-import { useEffect } from 'react'
 import { useAppContext } from '../components/Context'
 import Navbar from '../components/Navbar'
 import RoadmapHome from '../components/RoadmapHome'
 // const inter = Inter({ subsets: ['latin'] })
+import { useRouter } from 'next/router'
+
+// import { GetStaticProps } from 'next/types'
 
 
 
 export default function Index({scrolled}) {
-  let {width, breakPointSmall, noBlur} = useAppContext();
+
+  const router = useRouter()
+  const { locale, locales, defaultLocale } = router
+  let {noBlur, isOpen, toggleOpen} = useAppContext();
+
+  // let [navLight, setNavLight] = useState(false);
+
+  function handleNavLight (event) {
+      if (isOpen && event.target === document.getElementById('navBackground')) {
+        toggleOpen();
+      };
+  };
+
+  // useEffect(()=>{
+  //   console.log('navlight= ' + isOpen)
+  // },[isOpen])
+
 
   return (
     <>
@@ -23,10 +42,10 @@ export default function Index({scrolled}) {
         <title>ywdesign | Web Development</title>
       </Head>
       
-      <main className='scroll-smooth'>
+      <main className='scroll-smooth' onClick={handleNavLight}>
         <Navbar from = 'Home'/>
         
-        <Title breakPointSmall={breakPointSmall} type='home'/>
+        <Title type='home'/>
 
         <Layout>
           
@@ -39,7 +58,7 @@ export default function Index({scrolled}) {
           <Features/>
 
               
-          <Contact breakPointSmall={breakPointSmall} first={true}/>
+          <Contact first={true}/>
 
         </Layout>
 
@@ -49,3 +68,15 @@ export default function Index({scrolled}) {
     </>
   )
 }
+
+// export async function getStaticProps({locale,locales}) {
+
+// //  Return local values from sanity
+
+//   return {
+//       props: {
+
+
+//       },
+//     }
+// }
