@@ -85,9 +85,9 @@ w-5 h-5 sm:w-8 sm:h-8 */}
         {icon}
       </motion.div>
       <div>
-        <motion.h4 variants={iconVariant} className='text-white font-sans font-light sm:font-extralight sm:mb-1 text-xl lg:text-2xl whitespace-nowrap md:whitespace-pre-wrap'>
+        <motion.h3 variants={iconVariant} className='text-white font-sans font-light sm:font-extralight sm:mb-1 text-xl lg:text-2xl whitespace-nowrap md:whitespace-pre-wrap'>
           {title}
-        </motion.h4>
+        </motion.h3>
           
         <motion.p variants={iconVariant} className='text-white font-extralight font-sans text-sm  lg:whitespace-pre-wrap'>
           {text}

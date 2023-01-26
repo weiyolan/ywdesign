@@ -28,7 +28,7 @@ export default function Button({to, title, text, selected, handleClick, darkMode
           onClick={()=>handleClick(title)}
           title={`Go to the ${text} page`}>
 
-            <h5>{text.toUpperCase()}</h5>
+            <div>{text.toUpperCase()}</div>
         </Link>)
 
     case 'selected' :
@@ -38,7 +38,7 @@ export default function Button({to, title, text, selected, handleClick, darkMode
            onClick={()=>handleClick(title)}
            title={`Go to the ${text} page`}>
 
-            <h5>{text.toUpperCase()}</h5>
+            <div>{text.toUpperCase()}</div>
 
         </Link>)
 
@@ -54,7 +54,7 @@ export default function Button({to, title, text, selected, handleClick, darkMode
         onClick={()=>handleClick(title)}
         title={`Go to the ${text} page`}>
 
-          <h5>{text.toUpperCase()}</h5>
+          <div>{text.toUpperCase()}</div>
 
       </Link>)
 
@@ -68,7 +68,7 @@ export default function Button({to, title, text, selected, handleClick, darkMode
           onClick={()=>handleClick(title)}
           title={`Go to the ${text} page`}>
   
-            <h5>{text.toUpperCase()}</h5>
+            <div>{text.toUpperCase()}</div>
   
         </Link>)
 
@@ -79,7 +79,7 @@ export default function Button({to, title, text, selected, handleClick, darkMode
           onClick={()=>handleClick(title)}
           title={`Go to the ${text} page`}>
   
-            <h5>{text.toUpperCase()}</h5>
+            <div>{text.toUpperCase()}</div>
   
         </Link>)
     default: 
@@ -90,7 +90,7 @@ export default function Button({to, title, text, selected, handleClick, darkMode
           title={`Go to the ${text} page`}>
             
 
-            <h5>{text.toUpperCase()}</h5>
+            <div>{text.toUpperCase()}</div>
         </Link>)
   }
     

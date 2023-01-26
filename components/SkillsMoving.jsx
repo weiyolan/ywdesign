@@ -34,8 +34,8 @@ export default function SkillsMoving() {
  return (
     <div className='cursor-default select-none'>
       
-      <MovingRow  baseVelocity={window.width<breakPointSmall?-7:-1} allSkills={skills2}/>
-      <MovingRow  baseVelocity={window.width<breakPointSmall?7:1} allSkills={skills1}/>
+      <MovingRow role='presentation' baseVelocity={window.width<breakPointSmall?-7:-1} allSkills={skills2}/>
+      <MovingRow role='presentation' baseVelocity={window.width<breakPointSmall?7:1} allSkills={skills1}/>
         
     </div>
 
@@ -90,7 +90,7 @@ function MovingRow({allSkills, baseVelocity=100}) {
         {/* {allSkills.sort((a, b) => 0.5 - Math.random()).map((skill)=>{
           return <Pill content={skill} round={true} key={skill}/>
         })} */}
-        <ul className={`inline-block flex-none`}>
+        <ul role='presentation' className={`inline-block flex-none`}>
           {allSkills.map((skill)=>{
           return <li className='inline-block' key={skill}><Pill content={skill} round={true} /></li>
         })}
@@ -115,14 +115,14 @@ function MovingRow({allSkills, baseVelocity=100}) {
 
 function Pill({content,round}) {
   return (
-      <div className='inline-flex mx-2 px-2 py-1 
+      <div role='presentation' className='inline-flex mx-2 px-2 py-1 
       bg-white/10 items-center
       rounded-full 
        text-[0.6rem] text-white/90 font-normal  '>
           <Check className='inline-block mr-1' width='10' height={10} alt='checkmark icon'/>
           {/* <Check width='15' alt='checkmark'/> */}
           {/* <Image priority className='aspect-square inline-block mr-1' src={`/images/icon_check_${round?'round':'simple'}.svg`} width={12} height={12} alt='checkmark icon'/>         */}
-          <span className='inline-block whitespace-nowrap'>{content}</span>           
+          <span role='presentation' className='inline-block whitespace-nowrap'>{content}</span>           
       </div>
     
 )

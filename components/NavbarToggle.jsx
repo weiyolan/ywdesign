@@ -1,5 +1,6 @@
 import * as React from "react";
 import { motion } from "framer-motion";
+import { useAppContext } from "./Context";
 
 const Path = props => (
   <motion.path
@@ -14,8 +15,9 @@ const Path = props => (
 );
 
 export default function MenuToggle ({ open, toggle }) {
+    const {locale} = useAppContext()
     return (
-    <button className='outline-none border-transparent border-2 duration-300 rounded-none rounded-bl-[40px] focus:outline-none focus-visible:border-primary hover:cursor-pointer z-[51] w-fit h-fit top-0 right-0 absolute p-[23px] bg-transparent' 
+    <button title={`${locale==='en'?'Menu toggle':'Ouvrir et fermer le menu'}`} className='outline-none border-transparent border-2 duration-300 rounded-none rounded-bl-[40px] focus:outline-none focus-visible:border-primary hover:cursor-pointer z-[51] w-fit h-fit top-0 right-0 absolute p-[23px] bg-transparent' 
     onClick={toggle}>
         <svg width="23" height="23" viewBox="0 0 23 23">
         <Path open={open}
