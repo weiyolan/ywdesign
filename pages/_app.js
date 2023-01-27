@@ -36,6 +36,13 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+          {/* <style jsx global>
+          {`
+            :root {
+              --font-worksans: ${workSans.style.fontFamily};
+            }
+          `}
+          </style> */}
       </Head>
       <AppWrapper breakPointSmall={640} scrolled={scrolled}>
         

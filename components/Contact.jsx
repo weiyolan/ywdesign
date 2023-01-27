@@ -22,18 +22,19 @@ export default function Contact ({first}) {
       <div className='flex-1 lg:flex-0'>
         <AccentTitle text='Contact' />
         <h2 className={` text-primary font-normal text-3xl sm:text-4xl lg:text-5xl mt-6 sm:mt-10 `}>
-          {`${locale==='en'?'I can ':'Je peux '}`}
+          {`${locale==='en'?'I can ':''}`}
 
           <span className='text-white font-[550]'>
-          {`${locale==='en'?'help' :'aider'}`}
+          {`${locale==='en'?'help' :'Contactez'}`}
           </span> 
+          {`${locale==='en'?"":' moi'}`} 
 
-          {`${locale==='en'?"\nJust get in ":''}`} 
+
+          {`${locale==='en'?"\nJust get in ":'\nJe vous '}`} 
 
           <span className='text-white font-[550]'>
-          {`${locale==='en'?'touch':'\nContactez'}`}
+          {`${locale==='en'?'touch':'aiderai'}`}
           </span>
-          {`${locale==='en'?"":' moi'}`} 
 
         </h2>
       </div>
