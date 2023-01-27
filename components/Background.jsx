@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useState, useEffect } from "react"
 import { useAppContext } from "./Context"
 
@@ -27,9 +28,11 @@ export default function Background ({scrolled}) {
   //   return () => {window.removeEventListener('scroll',handleScroll)}
   // },[])
 
-
+  // bg-cover bg-[url('/images/backgroundpng.png')
   return (
-    <div className={`-z-[50] w-full fixed top-0 h-screen overflow-hidden filter bg-cover bg-[url('/images/backgroundpng.png')] `} >
+    <div className={`-z-[50] w-full fixed top-0 h-screen overflow-hidden filter ] `} >
+      {myWidth<breakPointSmall && <Image priority src='/images/backgroundpng.png' alt='' fill sizes='100vw' className='object-cover object-center'/>}
+      {/* Empty ALT for purely decorative images */}
 
       {myWidth>breakPointSmall && 
         <div role='presentation' className={`bg-green ${myWidth<640?'':'animate-blob'} animation-delay-2000   

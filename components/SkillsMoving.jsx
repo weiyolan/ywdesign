@@ -92,17 +92,17 @@ function MovingRow({allSkills, baseVelocity=100}) {
         })} */}
         <ul role='presentation' className={`inline-block flex-none`}>
           {allSkills.map((skill)=>{
-          return <li className='inline-block' key={skill}><Pill content={skill} round={true} /></li>
+          return <li role='presentation' className='inline-block' key={skill}><Pill content={skill} round={true} /></li>
         })}
         </ul>
         <ul className={`inline-block flex-none`}>
           {allSkills.map((skill,i)=>{
-          return <li className='inline-block' key={skill+i}><Pill content={skill} round={true} /></li>
+          return <li role='presentation' className='inline-block' key={skill+i}><Pill content={skill} round={true} /></li>
         })}
         </ul>
         <ul className={`inline-block flex-none`}>
           {allSkills.map((skill,i)=>{
-          return <li className='inline-block' key={skill+i}><Pill content={skill} round={true} /></li>
+          return <li role='presentation' className='inline-block' key={skill+i}><Pill content={skill} round={true} /></li>
         })}
         </ul>
         
@@ -119,7 +119,7 @@ function Pill({content,round}) {
       bg-white/10 items-center
       rounded-full 
        text-[0.6rem] text-white/90 font-normal  '>
-          <Check className='inline-block mr-1' width='10' height={10} alt='checkmark icon'/>
+          <Check role='presentation' className='inline-block mr-1' width='10' height={10} alt='checkmark icon'/>
           {/* <Check width='15' alt='checkmark'/> */}
           {/* <Image priority className='aspect-square inline-block mr-1' src={`/images/icon_check_${round?'round':'simple'}.svg`} width={12} height={12} alt='checkmark icon'/>         */}
           <span role='presentation' className='inline-block whitespace-nowrap'>{content}</span>           
