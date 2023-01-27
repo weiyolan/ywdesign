@@ -16,7 +16,7 @@ const specialities = {en: [
   fr: [{title:'Sites web', text:'Faites un site web performant pour dynamiser votre marque.', link:'/services/#Website'},
   {title: 'Image', text: 'Améliorez votre logo et site web avec une palette de couleurs et design modernes.',link:'/services/#Logo'},
   {title: 'Boutiques', text: "J'aide les entreprises et les artistes à mettre leurs produits en vente en ligne.",link:'/services/#e-Commerce'},
-  {title: 'Analyse', text: 'Éducez-vous sur la performance de votre site web et image en ligne.',link:'/services/#Analysis'},
+  {title: 'Analyse', text: 'Éduquez-vous sur la performance de votre site web et image en ligne.',link:'/services/#Analysis'},
 ]}
 
 export default function Specialities ({noBlur}) {
