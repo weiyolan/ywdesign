@@ -10,6 +10,7 @@ import {AppWrapper} from '../components/Context';
 const workSans = Work_Sans({
   subsets: ['latin'],
   variable: '--font-worksans',
+  display:'swap',
 })
 
 export default function App({ Component, pageProps }) {
