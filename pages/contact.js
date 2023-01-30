@@ -33,7 +33,7 @@ export default function Contact({scrolled}) {
   return (
     <>
       <Head> 
-        <title>ywdesign | Contact</title>
+        <title>{`ywdesign | ${locale==='en'?'Contact':'Coordonnées'}`}</title>
       </Head>
 
       <main onClick={(event)=>{lightboxClick(event);handleNavLight(event)}}>

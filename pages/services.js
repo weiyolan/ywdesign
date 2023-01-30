@@ -368,7 +368,7 @@ export default function Services({scrolled}) {
   return (
     <>
       <Head> 
-        <title>ywdesign | The Roadmap</title>
+        <title>{`ywdesign | ${locale==='en'?'Services':'Nos Services'}`}</title>
       </Head>
 
       <main className="" onClick={handleNavLight}>

@@ -39,7 +39,7 @@ export default function Index({scrolled}) {
   return (
     <>
       <Head>
-        <title>ywdesign | Web Development</title>
+        <title>{`ywdesign | ${locale==='en'?'Web Development':'Développement Web'}`}</title>
       </Head>
       
       <main className='scroll-smooth' onClick={handleNavLight}>

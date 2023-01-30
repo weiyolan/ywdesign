@@ -57,7 +57,7 @@ export default function Roadmap () {
   return (
     <>
       <Head>
-        <title>ywdesign | Our Services</title>
+        <title>{`ywdesign | ${locale==='en'?'Our Workflow':'Votre Chemin'}`}</title>
       </Head>
       
       <main className='scroll-smooth' onClick={handleNavLight}>

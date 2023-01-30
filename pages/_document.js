@@ -1,8 +1,11 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+// import { useRouter } from 'next/router'
 
 export default function Document() {
+  // const {locale} = useRouter()
+  
   return (
-    <Html lang="en">
+    <Html>
       <Head>
         <meta name="description" content="ywdesign.co is a one-man web development business providing personalised digital support." />
         <link rel="manifest" href="/manifest.json"/>

@@ -56,7 +56,7 @@ export default function Aboutme({scrolled}) {
   return (
     <>
       <Head> 
-        <title>ywdesign | About me</title>
+        <title>{`ywdesign | ${locale==='en'?'About me':'A Propos'}`}</title>
       </Head>
 
       <main onClick={handleNavLight}>
