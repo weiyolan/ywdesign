@@ -38,7 +38,7 @@ const Map = () => {
         <div className=' flex flex-col min-[460px]:flex-row md:flex-col md:col-start-3 md:row-start-1 row-start-2'>
           <div className='flex-1 min-[460px]:pr-4 md:p-0'>
             <h4 className='font-semibold text-lg mt-4 text-primary'>{`${locale==='en'?'Get in touch':"Prendre contact"}`}</h4>
-            <p className='font-light text-sm sm:text-base text-justify' >{`${locale==='en'?'Do not hesitate to contact me, especially not for a question. And if you already have an idea or project in mind, then I am happy to learn what you’ve got.':"N'hésitez pas à me contacter, surtout pour une question. Et si vous avez déjà une idée ou un projet en tête, je serai heureux d'apprendre ce que vous avez en tête."}`}</p>
+            <p className='font-light text-sm sm:text-base text-justify' >{`${locale==='en'?'Do not hesitate to contact me, especially not for a question. If you already have an idea or project in mind, then I am happy to learn what you’ve got.':"N'hésitez pas à me contacter, surtout pour une question. Si vous avez déjà une idée ou un projet en tête, je serai heureux d'apprendre ce que vous avez en tête."}`}</p>
             <ArrowLink text={`${locale==='en'?'Share your idea':"Partagez votre idée"}`} to={'#Form'}/>
             
           </div>

@@ -43,7 +43,7 @@ import { useEffect } from 'react'
 let roadmap = {en:{icon: <BsLightningFill color='white' className='mx-auto w-8 h-8' alt={'Roadmap Icon'}/>, title:'Roadmap', list:['Our workflow is powered by a transparant design process which allows you to collaborate and provide feedback on several design iterations.']},
 fr:{icon: <BsLightningFill color='white' className='mx-auto w-8 h-8' alt={"Icône d'un chemin"}/>, title:'Le Chemin', list:["Notre flux de travail est alimenté par un processus de conception transparent qui vous permet de fournir des commentaires sur plusieurs itérations de conception."]}}
 let fingerprint = {'en':{icon: <IoFingerPrint className='w-8 text-3xl text-white' alt='Fingerprint icon'/>, title:'UX/UI', list:["User Experience and User Interaction are central when creating your design to ensure optimal interaction and click-through. "]},
-fr:{icon: <IoFingerPrint className='w-8 text-3xl text-white' alt="Icône d'un empreinte digitale"/>, title:'UX/UI', list:["L'expérience et l'interaction de l'utilisateur sont au cœur de la création de votre design afin de garantir une interaction et un taux de clics optimaux."]}}
+fr:{icon: <IoFingerPrint className='w-8 text-3xl text-white' alt="Icône d'un empreinte digitale"/>, title:'UX/UI', list:["L'expérience et l'interaction de l'utilisateur sont au cœur de la création de votre design afin de garantir une interaction et un taux de clics optimal."]}}
 
 let serviceIconsWebsite = {'en':[
   {icon: <SlSpeedometer color='white' className='mx-auto w-8 h-8' alt='Velocity meter icon showing a high speed'/>,
@@ -115,7 +115,7 @@ let serviceIconsShop = {en:[
   list:["Nous nous assurons que vous pouvez accepter les paiements dans les devises les plus courantes autour de vous, ce qui améliore encore l'expérience d'achat globale."],
   },
   {icon: <IconGraph color='white' className='mx-auto w-8 h-8' alt='Des statistiques qui croissent'/>, 
-  title: 'Développer vos Activités',
+  title: 'Développez vos Activités',
   list: ["Nous construisons votre boutique en ligne et intégrons les outils personnalisés dont vous avez besoin pour développer votre activité."]
   },
   {icon: <FaShippingFast color='white' className='mx-auto w-8 h-8' alt={'La planète qui est accessible'}/>, 
@@ -152,7 +152,7 @@ fr:[
   list: ["Obtenez une collection d'une palette de couleurs et d'une police cohérente avec votre logo."]
   },
   {icon: <AiOutlineAim color='white' className='mx-auto w-8 h-8' alt={'Cibler une bute'}/>, 
-  title:'Ciblé le Publique', 
+  title:'Ciblez le Publique', 
   list:["Guidés par votre vision et vos valeurs, nous déterminons votre public cible et intégrons ces informations dans un design adapté."]
   },
   {icon: <TiSocialFacebook color='white' className='mx-auto w-8 h-8' alt={'Icône de Facebook'}/>, 
@@ -282,7 +282,7 @@ let serviceIconsPrototypes  ={en: [
  list:["Nous fournissons des conseils sur la définition du MVP pour accélérer le développement, qu'il prenne la forme d'une application mobile ou web."]
  },
  {icon: <BiCodeAlt color='white' className='mx-auto w-8 h-8' alt={'Des encodages'}/>, 
- title:'Encodé Dur', 
+ title:'La Code Pure', 
  list:["Comme nos produits sont codés en dur, nos prototypes sont construits en fonction de votre vision et de votre application."]
  },
  {icon: <MdEmergency color='white' className='mx-auto w-8 h-8' alt={'Astérisque de note de bas de page'}/>, 
@@ -343,7 +343,7 @@ let serviceList = {en:[
   {name:'SEO Optimisation', icons: serviceIconsSEO['en'], title:'Google will\nlove your site',span:'Google', text:"We implement Search Engine Optimisation (SEO) because even a fast and beautiful website has no impact without it."},
   ],
 fr:[
-  {name:'Site web', icons: serviceIconsWebsite['fr'], title:'Améliorez votre\njeu sur internet', span:'internet',text:"Nous créons des sites web rapides et modernes pour mettre votre histoire en ligne afin d'atteindre de nouveaux clients de manière organique."},
+  {name:'Site web', icons: serviceIconsWebsite['fr'], title:'Améliorez votre\nstratégie internet', span:'internet',text:"Nous créons des sites web rapides et modernes pour mettre votre histoire en ligne afin d'atteindre de nouveaux clients de manière organique."},
   {name:'e-Commerce', icons: serviceIconsShop['fr'], title:'Mettez votre\nboutique en ligne',span:'boutique', text:"Nous créons des e-commerces à thème, intégrant des services de paiement sécurisés comme Twint pour que les clients aiment acheter chez vous."},
   {name:'Logo', icons: serviceIconsLogo['fr'], title:'Donnez un nouveau\nvisage à votre marque',span:'visage', text:"Votre image de marque actuelle vous semble dépassée ? Nous intégrons les dernières tendances pour créer un nouveau logo et une palette de couleurs modernes."},
   {name:'Outils', icons: serviceIconsTools['fr'], title:'Des outils poussant votre activité',span:'poussant', text:"Nous créons des outils simples que vous pouvez gérer. Pensez au gestion des clients, à la planification de l'équipe, aux rappels de factures et plus encore."},

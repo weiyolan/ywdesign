@@ -22,9 +22,9 @@ let numbers = {en:[
 {n:58,unit:'%',title:`Global website traffic\nthrough mobile devices.`,text:'You better have a\nresponsive website',link:'https://www.statista.com/statistics/277125/share-of-website-traffic-coming-from-mobile-devices/'},
 {n:92,unit:'%',title:"Internet searches globally going\nthrough Google's search engine.", text:"You better optimise your\nwebsite's SEO", link:"https://www.oberlo.com/statistics/search-engine-market-share#:~:text=Handling%20over%2090%25%20of%20all,done%20through%20the%20internet%20giant."}],
 fr:[
-  {n:3,unit:'x',title:"Croissance des ventes a détail\nmondiales via e-commerce\ndepuis 2015.",text:"Vous avez intérêt à mettre\nvotre marque en ligne.", link: "https://www.statista.com/statistics/379046/worldwide-retail-e-commerce-sales/"},
-  {n:58,unit:'%',title:`Trafic mondial dessites web\nvia les appareils mobiles.`,text:'Vous avez intérêt à\navoir un site web responsive',link:'https://www.statista.com/statistics/277125/share-of-website-traffic-coming-from-mobile-devices/'},
-  {n:92,unit:'%',title:"Recherches internet mondial\npassant par le moteur de\nrecherche de Google.", text:"Vous avez intérêt à optimiser\nle référencement de votre site web", link:"https://www.oberlo.com/statistics/search-engine-market-share#:~:text=Handling%20over%2090%25%20of%20all,done%20through%20the%20internet%20giant."}]
+  {n:3,unit:'x',title:"La croissance des ventes au détail\nmondiales via e-commerce\ndepuis 2015.",text:"Vous avez intérêt à mettre\nvotre marque en ligne.", link: "https://www.statista.com/statistics/379046/worldwide-retail-e-commerce-sales/"},
+  {n:58,unit:'%',title:`Le trafic mondial des sites web\nvia les appareils mobiles.`,text:'Vous avez intérêt à\navoir un site web responsive',link:'https://www.statista.com/statistics/277125/share-of-website-traffic-coming-from-mobile-devices/'},
+  {n:92,unit:'%',title:"Les recherches internet mondiales\npassant par le moteur de\nrecherche de Google.", text:"Vous avez intérêt à optimiser\nle référencement de votre site web", link:"https://www.oberlo.com/statistics/search-engine-market-share#:~:text=Handling%20over%2090%25%20of%20all,done%20through%20the%20internet%20giant."}]
 }
 
 let vision = {en: [{title:'Impact',text:'To have an impact in this world is to share your ideas and to have the many understand them.', span:''},
@@ -33,7 +33,7 @@ let vision = {en: [{title:'Impact',text:'To have an impact in this world is to s
 {title:'Learning',text:'On the road to understanding, one has to become free from the values that make up their own reality.', span:''}
 ], fr:[{title:'Impact',text:"Pour avoir un impact dans ce monde, il faut partager ses idées et les faire comprendre au plus grand nombre.", span:''},
 {title:'Excellence',text:"Pour réussir dans tout ce que vous faites, il faut toujours être ouvert à l'idée de s'améliorer.", span:''},
-{title:'Écoute',text:"Les grandes victoires sont toujours partagées et réalisées uniquement lorsque l'individu ouvre ses oreilles et écoute.", span:''},
+{title:'Écoute',text:"Les grandes victoires sont toujours partagées et réalisées uniquement lorsque l'individu est attentif et à l'écoute.", span:''},
 {title:'Apprendre',text:"Sur la voie de la compréhension, il faut s'affranchir des valeurs qui constituent sa propre réalité.", span:''}
 ]}
 let missionText = {en:'A positive impact on the planet and its people. I want to use my passion for graphic design and computer science to inspire and motivate the many. By building digital tools that leverage the internet more people can understand the ideas that will change the world.',
@@ -109,7 +109,7 @@ export default function Aboutme({scrolled}) {
           </section> */}
 
           <section >
-              <Subtitle name={`${locale==='en'?'Numbers':"Chiffres"}`} first={width>1025?false:true} title={`${locale==='en'?'Measure to\ndrive impact':"Mesurer pour\navoir un impact"}`} span={`${locale==='en'?'impact':'impact'}`}  />
+              <Subtitle name={`${locale==='en'?'Numbers':"Chiffres"}`} first={width>1025?false:true} title={`${locale==='en'?'Measure to\ndrive impact':"Mesurez pour\navoir un impact"}`} span={`${locale==='en'?'impact':'impact'}`}  />
               
               <div className='grid grid-rows-3 sm:grid-rows-1 sm:grid-cols-3 cursor-default'>
               {numbers[locale].map((num,i) => {
