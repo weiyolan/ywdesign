@@ -88,7 +88,7 @@ export default function Footer() {
 
       <div role='presentation' className='w-full text-xs text-center mt-2 sm:mt-1 lg:mt-4 text-white font-thin'>
         <ul role='presentation' className='inline-flex flex-wrap justify-center'>
-        {financialInfo[locale].map((val,i)=>{return (<li role='presentation' className={`${i===0?'':'pl-1'}`} key={val}>{`${i===0?'':'🞄 '}${val}`}</li>)})}
+        {financialInfo[locale].map((val,i)=>{return (<li role='presentation' className={`${i===0?'':'pl-1'}`} key={val}>{`${i===0?'':'∘ '}${val}`}</li>)})}
         </ul>
       </div>
 
