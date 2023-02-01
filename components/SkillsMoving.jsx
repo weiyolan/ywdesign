@@ -90,24 +90,37 @@ function MovingRow({allSkills, baseVelocity=100}) {
         {/* {allSkills.sort((a, b) => 0.5 - Math.random()).map((skill)=>{
           return <Pill content={skill} round={true} key={skill}/>
         })} */}
-        <ul role='presentation' className={`inline-block flex-none`}>
+        {/* <ul role='presentation' className={`inline-block flex-none`}>
           {allSkills.map((skill)=>{
           return <li role='presentation' className='inline-block' key={skill}><Pill content={skill} round={true} /></li>
         })}
         </ul>
-        <ul className={`inline-block flex-none`}>
+        <ul role='presentation' className={`inline-block flex-none`}>
           {allSkills.map((skill,i)=>{
           return <li role='presentation' className='inline-block' key={skill+i}><Pill content={skill} round={true} /></li>
         })}
         </ul>
-        <ul className={`inline-block flex-none`}>
+        <ul role='presentation' className={`inline-block flex-none`}>
           {allSkills.map((skill,i)=>{
           return <li role='presentation' className='inline-block' key={skill+i}><Pill content={skill} round={true} /></li>
         })}
-        </ul>
-        
-        
-        
+        </ul> */}
+        <div role='presentation' className={`inline-block flex-none`}>
+          {allSkills.map((skill)=>{
+          return <div role='presentation' className='inline-block' key={skill}><Pill content={skill} round={true} /></div>
+        })}
+        </div>
+        <div role='presentation' className={`inline-block flex-none`}>
+          {allSkills.map((skill,i)=>{
+          return <div role='presentation' className='inline-block' key={skill+i}><Pill content={skill} round={true} /></div>
+        })}
+        </div>
+        <div role='presentation' className={`inline-block flex-none`}>
+          {allSkills.map((skill,i)=>{
+          return <div role='presentation' className='inline-block' key={skill+i}><Pill content={skill} round={true} /></div>
+        })}
+        </div>
+
         {/* animate-[left2Scroll_10s_linear_infinite] */}
       </motion.div>       
   )
