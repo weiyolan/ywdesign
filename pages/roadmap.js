@@ -57,7 +57,12 @@ export default function Roadmap () {
   return (
     <>
       <Head>
-        <title>{`ywdesign | ${locale==='en'?'Our Workflow':'Votre Chemin'}`}</title>
+        <title>{`${locale==='en'?'A Human Approach in Obtaining Your Perfect Website in 2023':'Une Approche Humaine: Obtenir un Sites Web Parfait en 2023'}`}</title>
+        <meta name="description" content={`${locale==='en'?"While building your digital product, we follow a personalised design process that allows you to provide the right feedback achieving the best results possible.":
+        "Nous suivons un processus de conception personnalisé et transparant qui vous permet de fournir le bon retour, obtenant le site web ou e-commerce parfait."}`} />
+        {/* <link rel="canonical" href='https://ywdesign.co/roadmap' /> */}
+        {/* <link rel="alternate" hreflang='en' href='https://ywdesign.co/roadmap'/> */}
+        {/* <link rel='alternate' hreflang='fr' href='https://ywdesign.co/fr/roadmap'/> */}
       </Head>
       
       <main className='scroll-smooth' onClick={handleNavLight}>

@@ -235,13 +235,13 @@ let serviceIconsAnalysis  = {en:[
 ],fr:[
   {icon: <BsFileEarmarkBarGraphFill color='white' className='mx-auto w-8 h-8' alt={'Rapport avec des statistiques'}/>, 
   title:'Rapport Approfondi', 
-  list:["Nous analysons vos performances en ligne, en examinant votre image de marque globale, l'expérience utilisateur, la vitesse, la sécurité, responsivité, la communication et les erreurs d'orthographe."]
+  list:["Nous analysons vos performances en ligne, en examinant votre image de marque globale, l'expérience utilisateur, la vitesse, la sécurité, la communication et les erreurs d'orthographe."]
   },
   {icon: <IconGraph color='white' className='mx-auto w-8 h-8' alt='Des statistiques croissants'/>, 
   title: 'Développez Vos Activités',
   list: ["Plusieurs suggestions sont faites concernant les actions et les investissements qui auront le plus d'impact sur la croissance de votre entreprise."]
   },{ icon: <IconScreen color='white' className='mx-auto w-8 h-8' alt="Icône d'une taille d'écran adaptable"/>,
-  title:'Adaptable aux Écrans',
+  title:'Adaptabilité',
   list:["50 % à 60 % de la consommation d'Internet provient d'appareils mobiles. Sachez comment votre site web s'adapte aux écrans de toutes tailles"]
   },
   {icon: <HiOutlineTranslate color='white' className='mx-auto w-8 h-8' alt={'Icône de traduction'}/>, 
@@ -368,7 +368,10 @@ export default function Services({scrolled}) {
   return (
     <>
       <Head> 
-        <title>{`ywdesign | ${locale==='en'?'Services':'Nos Services'}`}</title>
+        <title>{`${locale==='en'?'Development of Professional Websites and e-Commerces in 2023':'Création de Sites Web Professionels et e-Commerces en 2023'}`}</title>
+        <meta name="description" content={`${locale==='en'?"Get personal design and web development support for your professional website, e-commerce, logo or app with strong SEO performance, and be ready for 2023.":
+        "Obtenez une support personnelle pour la conception et développement de votre site web ou e-commerce professionnel avec du référencement performant en 2023."}`} />
+        {/* <link rel="canonical" href='https://ywdesign.co/services' /> */}
       </Head>
 
       <main className="" onClick={handleNavLight}>

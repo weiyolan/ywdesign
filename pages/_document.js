@@ -7,7 +7,6 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <meta name="description" content="ywdesign.co is a one-man web development business providing personalised digital support." />
         <link rel="manifest" href="/manifest.json"/>
 
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>

@@ -2,54 +2,425 @@
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-<url>
-<loc>https://ywdesign.co/</loc>
-<lastmod>2023-01-30T17:34:10+00:00</lastmod>
-<priority>1.00</priority>
-</url>
-<url>
-<loc>https://ywdesign.co/services</loc>
-<lastmod>2023-01-30T17:34:10+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://ywdesign.co/aboutme</loc>
-<lastmod>2023-01-30T17:34:10+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://ywdesign.co/roadmap</loc>
-<lastmod>2023-01-30T17:34:10+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://ywdesign.co/contact</loc>
-<lastmod>2023-01-30T17:34:10+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://ywdesign.co/fr</loc>
-<lastmod>2023-01-30T17:34:10+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://ywdesign.co/fr/services</loc>
-<lastmod>2023-01-30T17:34:10+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://ywdesign.co/fr/aboutme</loc>
-<lastmod>2023-01-30T17:34:10+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://ywdesign.co/fr/roadmap</loc>
-<lastmod>2023-01-30T17:34:10+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://ywdesign.co/fr/contact</loc>
-<lastmod>2023-01-30T17:34:10+00:00</lastmod>
-<priority>0.64</priority>
-</url>
+    <url>
+        <loc>https://ywdesign.co/</loc>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en'
+            href='https://ywdesign.co/'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr'
+            href='https://ywdesign.co/fr'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en-ch'
+            href='https://ywdesign.ch/'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr-ch'
+            href='https://ywdesign.ch/fr'/>            
+        <lastmod>2023-01-30T17:34:10+00:00</lastmod>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>https://ywdesign.co/fr</loc>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en'
+            href='https://ywdesign.co/'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr'
+            href='https://ywdesign.co/fr'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en-ch'
+            href='https://ywdesign.ch/'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr-ch'
+            href='https://ywdesign.ch/fr'/>
+        <lastmod>2023-01-30T17:34:10+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://ywdesign.ch</loc>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en'
+            href='https://ywdesign.co/'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr'
+            href='https://ywdesign.co/fr'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en-ch'
+            href='https://ywdesign.ch/'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr-ch'
+            href='https://ywdesign.ch/fr'/>
+        <lastmod>2023-01-30T17:34:10+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://ywdesign.ch/fr</loc>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en'
+            href='https://ywdesign.co/'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr'
+            href='https://ywdesign.co/fr'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en-ch'
+            href='https://ywdesign.ch/'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr-ch'
+            href='https://ywdesign.ch/fr'/>
+        <lastmod>2023-01-30T17:34:10+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>https://ywdesign.co/services</loc>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en'
+            href='https://ywdesign.co/services'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr'
+            href='https://ywdesign.co/fr/services'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en-ch'
+            href='https://ywdesign.ch/services'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr-ch'
+            href='https://ywdesign.ch/fr/services'/>
+        <lastmod>2023-01-30T17:34:10+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://ywdesign.co/fr/services</loc>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en'
+            href='https://ywdesign.co/services'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr'
+            href='https://ywdesign.co/fr/services'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en-ch'
+            href='https://ywdesign.ch/services'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr-ch'
+            href='https://ywdesign.ch/fr/services'/>
+        <lastmod>2023-01-30T17:34:10+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://ywdesign.ch/services</loc>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en'
+            href='https://ywdesign.co/services'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr'
+            href='https://ywdesign.co/fr/services'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en-ch'
+            href='https://ywdesign.ch/services'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr-ch'
+            href='https://ywdesign.ch/fr/services'/>
+        <lastmod>2023-01-30T17:34:10+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://ywdesign.ch/fr/services</loc>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en'
+            href='https://ywdesign.co/services'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr'
+            href='https://ywdesign.co/fr/services'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en-ch'
+            href='https://ywdesign.ch/services'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr-ch'
+            href='https://ywdesign.ch/fr/services'/>
+        <lastmod>2023-01-30T17:34:10+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://ywdesign.co/aboutme</loc>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en'
+            href='https://ywdesign.co/aboutme'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr'
+            href='https://ywdesign.co/fr/aboutme'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en-ch'
+            href='https://ywdesign.ch/aboutme'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr-ch'
+            href='https://ywdesign.ch/fr/aboutme'/>
+        <lastmod>2023-01-30T17:34:10+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://ywdesign.co/fr/aboutme</loc>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en'
+            href='https://ywdesign.co/aboutme'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr'
+            href='https://ywdesign.co/fr/aboutme'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en-ch'
+            href='https://ywdesign.ch/aboutme'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr-ch'
+            href='https://ywdesign.ch/fr/aboutme'/>
+        <lastmod>2023-01-30T17:34:10+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://ywdesign.ch/aboutme</loc>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en'
+            href='https://ywdesign.co/aboutme'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr'
+            href='https://ywdesign.co/fr/aboutme'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en-ch'
+            href='https://ywdesign.ch/aboutme'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr-ch'
+            href='https://ywdesign.ch/fr/aboutme'/>
+        <lastmod>2023-01-30T17:34:10+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://ywdesign.ch/fr/aboutme</loc>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en'
+            href='https://ywdesign.co/aboutme'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr'
+            href='https://ywdesign.co/fr/aboutme'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en-ch'
+            href='https://ywdesign.ch/aboutme'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr-ch'
+            href='https://ywdesign.ch/fr/aboutme'/>
+        <lastmod>2023-01-30T17:34:10+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://ywdesign.co/roadmap</loc>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en'
+            href='https://ywdesign.co/roadmap'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr'
+            href='https://ywdesign.co/fr/roadmap'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en-ch'
+            href='https://ywdesign.ch/roadmap'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr-ch'
+            href='https://ywdesign.ch/fr/roadmap'/>
+        <lastmod>2023-01-30T17:34:10+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://ywdesign.co/fr/roadmap</loc>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en'
+            href='https://ywdesign.co/roadmap'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr'
+            href='https://ywdesign.co/fr/roadmap'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en-ch'
+            href='https://ywdesign.ch/roadmap'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr-ch'
+            href='https://ywdesign.ch/fr/roadmap'/>
+        <lastmod>2023-01-30T17:34:10+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://ywdesign.ch/roadmap</loc>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en'
+            href='https://ywdesign.co/roadmap'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr'
+            href='https://ywdesign.co/fr/roadmap'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en-ch'
+            href='https://ywdesign.ch/roadmap'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr-ch'
+            href='https://ywdesign.ch/fr/roadmap'/>
+        <lastmod>2023-01-30T17:34:10+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://ywdesign.ch/fr/roadmap</loc>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en'
+            href='https://ywdesign.co/roadmap'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr'
+            href='https://ywdesign.co/fr/roadmap'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en-ch'
+            href='https://ywdesign.ch/roadmap'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr-ch'
+            href='https://ywdesign.ch/fr/roadmap'/>
+        <lastmod>2023-01-30T17:34:10+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://ywdesign.co/contact</loc>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en'
+            href='https://ywdesign.co/contact'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr'
+            href='https://ywdesign.co/fr/contact'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en-ch'
+            href='https://ywdesign.ch/contact'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr-ch'
+            href='https://ywdesign.ch/fr/contact'/>
+        <lastmod>2023-01-30T17:34:10+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://ywdesign.co/fr/contact</loc>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en'
+            href='https://ywdesign.co/contact'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr'
+            href='https://ywdesign.co/fr/contact'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en-ch'
+            href='https://ywdesign.ch/contact'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr-ch'
+            href='https://ywdesign.ch/fr/contact'/>
+        <lastmod>2023-01-30T17:34:10+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://ywdesign.ch/contact</loc>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en'
+            href='https://ywdesign.co/contact'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr'
+            href='https://ywdesign.co/fr/contact'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en-ch'
+            href='https://ywdesign.ch/contact'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr-ch'
+            href='https://ywdesign.ch/fr/contact'/>
+        <lastmod>2023-01-30T17:34:10+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://ywdesign.ch/fr/contact</loc>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en'
+            href='https://ywdesign.co/contact'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr'
+            href='https://ywdesign.co/fr/contact'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='en-ch'
+            href='https://ywdesign.ch/contact'/>
+        <xhtml:link
+            rel='alternate'
+            hreflang='fr-ch'
+            href='https://ywdesign.ch/fr/contact'/>
+        <lastmod>2023-01-30T17:34:10+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
 </urlset>

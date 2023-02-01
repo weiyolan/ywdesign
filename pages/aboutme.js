@@ -56,7 +56,11 @@ export default function Aboutme({scrolled}) {
   return (
     <>
       <Head> 
-        <title>{`ywdesign | ${locale==='en'?'About me':'A Propos'}`}</title>
+        <title>{`${locale==='en'?'Our In-House Developer is an Engineer and Pro Web Designer':'Notre Développeur est un Ingénieur et Designer Professionel'}`}</title>
+        <meta name="description" content={`${locale==='en'?"Get personal design and web development support for a professional website, e-commerce, logo or app with strong SEO performance, and be ready for 2023.":
+        "Obtenez une support personnelle pour la conception et développement de votre site web ou e-commerce professionnel avec du référencement performant en 2023."}`} />
+        {/* <link rel="canonical" href='https://ywdesign.co/aboutme' /> */}
+
       </Head>
 
       <main onClick={handleNavLight}>
