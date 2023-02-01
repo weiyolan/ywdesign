@@ -9,12 +9,12 @@ import Map from '../components/Map'
 // import Form from '../components/FormOld'
 import FormMotion from '../components/FormMotion'
 import { useAppContext } from '../components/Context'
-
+// import { useRouter } from 'next/router'
 
 
 
 export default function Contact({scrolled}) {
-  let {noBlur, isOpen,toggleOpen} = useAppContext();
+  let {noBlur, isOpen,toggleOpen,locale} = useAppContext();
 
   let [lightbox, setLightbox] = useState(false);
 

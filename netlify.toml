@@ -1,6 +1,13 @@
 [[redirects]]
   from = "https://ywdesign.co/*"
-  to = "https://www.ywdesign.ch/:splat"
+  to = "https://ywdesign.ch/:splat"
   status = 301
   force = true
   conditions = {Country = ["CH"]}
+
+[[redirects]]
+  from = "https://ywdesign.ch/*"
+  to = "https://ywdesign.co/:splat"
+  status = 301
+  force = true
+  conditions = {Country = ["BE","FR","US","CA","UK","DE","NL","IT"]}
