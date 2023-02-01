@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Check from '../public/images/icon_check_round.svg';
+// import Check from '../public/images/icon_check_round.svg';
 import React, { useState, useEffect, useRef } from "react";
 import useWindowSize from './useWindowSize';
 import {
@@ -132,7 +132,11 @@ function Pill({content,round}) {
       bg-white/10 items-center
       rounded-full 
        text-[0.6rem] text-white/90 font-normal  '>
-          <Check role='presentation' className='inline-block mr-1' width='10' height={10} alt='checkmark icon'/>
+          {/* <Check role='presentation' className='inline-block mr-1' width='10' height={10} alt='checkmark icon'/> */}
+          <svg role='presentation' className='inline-block mr-1' width='10' height={10} alt='checkmark icon' viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 11C22 17.0766 17.0766 22 11 22C4.92339 22 0 17.0766 0 11C0 4.92339 4.92339 0 11 0C17.0766 0 22 4.92339 22 11ZM9.72702 16.8238L17.8883 8.6625C18.1633 8.3875 18.1633 7.93508 17.8883 7.66008L16.8859 6.65766C16.6109 6.38266 16.1585 6.38266 15.8835 6.65766L9.22581 13.3109L6.11653 10.2016C5.84153 9.92661 5.38911 9.92661 5.11411 10.2016L4.11169 11.204C3.83669 11.479 3.83669 11.9315 4.11169 12.2065L8.7246 16.8194C8.9996 17.1032 9.45202 17.1032 9.72702 16.8238Z" fill="#ffffffc2"/>
+          </svg>
+
           {/* <Check width='15' alt='checkmark'/> */}
           {/* <Image priority className='aspect-square inline-block mr-1' src={`/images/icon_check_${round?'round':'simple'}.svg`} width={12} height={12} alt='checkmark icon'/>         */}
           <span role='presentation' className='inline-block whitespace-nowrap'>{content}</span>           
