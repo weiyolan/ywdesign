@@ -353,63 +353,65 @@ fr:[
   ]};
 
 export default function Services({scrolled}) {
-  let {width, breakPointSmall, noBlur, isOpen,toggleOpen, locale} = useAppContext();
-
+  let { width, breakPointSmall, noBlur, isOpen, toggleOpen, locale } = useAppContext();
 
   // let [navLight, setNavLight] = useState(false);
 
-  function handleNavLight (event) {
-      if (isOpen && event.target === document.getElementById('navBackground')) {
-        toggleOpen();
-      };
-  };
-
+  function handleNavLight(event) {
+    if (isOpen && event.target === document.getElementById("navBackground")) {
+      toggleOpen();
+    }
+  }
 
   return (
     <>
-      <Head> 
-        <title>{`${locale==='en'?'Development of Professional Websites and e-Commerces in 2023':'Création de Sites Web Professionels et e-Commerces en 2023'}`}</title>
-        <meta name="description" content={`${locale==='en'?"Get personal design and web development support for your professional website, e-commerce, logo or app with strong SEO performance, and be ready for 2023.":
-        "Obtenez une support personnelle pour la conception et développement de votre site web ou e-commerce professionnel avec du référencement performant en 2023."}`} />
+      <Head>
+        <title>{`${locale === "en" ? "Development of Professional Websites and e-Commerces in 2023" : "Création de Sites Web Professionels et e-Commerces en 2023"}`}</title>
+        <meta
+          name="description"
+          content={`${
+            locale === "en"
+              ? "Get personal design and web development support for your professional website, e-commerce, logo or app with strong SEO performance, and be ready for 2023."
+              : "Obtenez une support personnelle pour la conception et développement de votre site web ou e-commerce professionnel avec du référencement performant en 2023."
+          }`}
+        />
         {/* <link rel="canonical" href='https://ywdesign.co/services' /> */}
       </Head>
 
       <main className="" onClick={handleNavLight}>
-        <Navbar from='Services'/>
-        
-        <Title breakPointSmall={breakPointSmall} type='services'/>
-        
-        <Layout>
+        <Navbar from="Services" />
 
+        <Title breakPointSmall={breakPointSmall} type="services" />
+
+        <Layout>
           {/* <Subtitle name='How To' title='' span text first={true}/> */}
 
-          {serviceList[locale].map((service,i)=>{
-            return <Service 
-            key={i} 
-            name={service.name}
-            realFirst={i===0?true:false} 
-            first={true}
-            // first={i===0?true:false}
-            icons={service.icons}
-            title={service.title} 
-            text={service.text} 
-            span={service.span}
-            breakPointSmall = {breakPointSmall}
-            noBlur={noBlur} 
-            position={i % 2 === 0 ? 'left' : 'right' } 
-            />
+          {serviceList[locale].map((service, i) => {
+            return (
+              <Service
+                key={i}
+                name={service.name}
+                realFirst={i === 0 ? true : false}
+                first={true}
+                // first={i===0?true:false}
+                icons={service.icons}
+                title={service.title}
+                text={service.text}
+                span={service.span}
+                breakPointSmall={breakPointSmall}
+                noBlur={noBlur}
+                position={i % 2 === 0 ? "left" : "right"}
+              />
+            );
           })}
 
+          {/* <Technologies breakPointSmall={breakPointSmall}/> */}
 
-          <Technologies breakPointSmall={breakPointSmall}/>
-
-          <Contact breakPointSmall={breakPointSmall} first={width<breakPointSmall?true:false}/>
-
+          <Contact breakPointSmall={breakPointSmall} first={width < breakPointSmall ? true : false} />
         </Layout>
 
-        <Footer scrolled={scrolled}/>
-
+        <Footer scrolled={scrolled} />
       </main>
-    
     </>
-)}
+  );
+}

@@ -67,7 +67,7 @@ export default function Service({name, title, span, text, position, realFirst, f
 
   let cards = (
     // <div className={`relative w-full sm:h-full min-h-[75vw] min-[350px]:min-h-[75vw] min-[400px]:min-h-[60vw] min-[500px]:min-h-[45vw] `}>
-    <div className={`relative w-full sm:h-full min-h-[75vw] min-[350px]:min-h-[60vw] min-[400px]:min-h-[50vw] min-[500px]:min-h-[40vw] `}>
+    <div className={`relative w-full  min-h-[75vw] min-[350px]:min-h-[60vw] min-[400px]:min-h-[50vw] min-[500px]:min-h-[40vw] sm:h-full md:min-h-0`}>
       {icons.map((icon,i)=>{
         return (
           <ServiceCard icon={icon} noBlur={noBlur} first={window.width<breakPointSmall?true:first} key={i} position={position} breakPointSmall={breakPointSmall} visible={visibleItem[i]}/>

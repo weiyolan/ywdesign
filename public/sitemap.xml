@@ -21,6 +21,7 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
             rel='alternate'
             hreflang='fr-ch'
             href='https://ywdesign.ch/fr'/>            
+            
         <lastmod>2023-01-30T17:34:10+00:00</lastmod>
         <priority>1.00</priority>
     </url>
@@ -46,7 +47,7 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://ywdesign.ch</loc>
+        <loc>https://ywdesign.ch/</loc>
         <xhtml:link
             rel='alternate'
             hreflang='en'

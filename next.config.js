@@ -17,6 +17,22 @@ const nextConfig = withPWA({
   i18n: {
       locales: ['en', 'fr'],
       defaultLocale: 'en',
+      
+      // domains: [
+      //   {
+      //     // Note: subdomains must be included in the domain value to be matched
+      //     // e.g. www.example.com should be used if that is the expected hostname
+      //     domain: 'ywdesign.co',
+      //     defaultLocale: 'en',
+
+      //   },
+      //   {
+      //     domain: 'ywdesign.ch',
+      //     defaultLocale: 'fr-CH',
+      //     locales: ['fr'],
+      //   },
+      // ]
+
   },
   
 

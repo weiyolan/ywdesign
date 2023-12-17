@@ -48,6 +48,12 @@ const Form = ({noBlur, setLightbox}) => {
   let [honey,setHoney] = useState('');
 
   function encode(data) {
+    console.log(Object.keys(data)
+      .map(
+        (key) =>
+          encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&"))
     return Object.keys(data)
       .map(
         (key) =>
@@ -56,10 +62,10 @@ const Form = ({noBlur, setLightbox}) => {
       .join("&");
   }
 
-  function handleSubmit (e) {
+  async function handleSubmit(e) {
     e.preventDefault();
   
-    fetch("/", {
+    const upload = fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
@@ -73,12 +79,15 @@ const Form = ({noBlur, setLightbox}) => {
     })
     .then(() => {setLightbox(true);setSuccess(true);setName('');setLastName('');setEmail('');setHoney('');setMessage('')})
     .catch((error) => alert(error));
+    console.log(upload)
+    console.log(upload.then)
+
   };
     
     
   return (
   <section id={'Form'} className='w-full'>
-    <Subtitle name={`${locale==='en'?'Form':"Formulaire"}`} title={`${locale==='en'?'Ask a quote via\nthis beautiful form':"Demandez un devis\nvia ce formulaire"}`} span={`${locale==='en'?'quote':"devis"}`} position={'left'} first={true}/>
+      <Subtitle name={`${locale === 'en' ? 'Form' : "Formulaire"}`} title={`${locale === 'en' ? 'Ask your questions here' : "Demandez un devis\nvia ce formulaire"}`} span={`${locale === 'en' ? 'questions' : "devis"}`} position={'left'} first={true} />
 
     <motion.form initial='hidden' whileInView='visible' variants={variant} viewport={{once:true}} 
           onSubmit={handleSubmit} name='ContactForm' method="POST" data-netlify="true" netlify-honeypot="bot-field"

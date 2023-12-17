@@ -41,7 +41,7 @@ fr: [
 
 
 export default function Footer() {
-  let {width, breakPointSmall, scrolled, locale} = useAppContext();
+  let { width, breakPointSmall, locale } = useAppContext();
   // let [style,setStyle] = useState({transform: 'translateY(100%) ', opacity:0 })
   // let [appeared,setAppeared] = useState(false)
 
@@ -100,12 +100,12 @@ function Links ({position, text, list}) {
   return (
     <div className={`${position==='center'?'text-center ':position==='left'?'text-left ':'text-right '}  align-start px-0 mb-4 w-[49%] sm:w-[25%]`}>
           <AccentTitle text={text}/>
-          <List list={list}/>
+      <List list={list} position={position} />
     </div>
   )
 }
 
-function List ({list}) {
+function List({ list, position }) {
 
   return (
     <ul className='flex-1 '>
@@ -114,7 +114,7 @@ function List ({list}) {
           return (
             <li key={i} 
             className={`text-white font-light whitespace-nowrap 
-            my-3 sm:my-3
+            my-3 sm:my-3 w-fit ${position === 'center' ? 'text-center ' : position === 'left' ? 'mr-auto ' : 'ml-auto '}
             text-sm sm:text-sm focus-within:scale-110 duration-200 focus-within:text-primary hover:text-primary hover:scale-110 `} >
               <Link href={item.link} target='_blank' className='focus:outline-none cursor-alias' rel="noopener noreferrer" >
                 {item.text}
@@ -124,7 +124,7 @@ function List ({list}) {
         else { return (
           <li key={i} 
           className={`${item.disabled?'text-primary/90':'text-white'} font-light whitespace-nowrap 
-          my-3 sm:my-3
+          my-3 sm:my-3 w-fit ${position === 'center' ? 'text-center ' : position === 'left' ? 'mr-auto ' : 'ml-auto'}
           text-sm sm:text-sm focus-within:scale-110 duration-200 focus-within:text-primary hover:text-primary hover:scale-110`} >
             {item.disabled?item.text:<Link className='focus:outline-none ' href={item.link}>
               {item.text}

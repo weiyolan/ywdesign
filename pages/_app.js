@@ -4,6 +4,7 @@ import {Work_Sans} from '@next/font/google'
 import Navbar from '../components/NavDesk';
 import Image from 'next/image';
 import Background from '../components/Background'
+import BackgroundStatic from "../components/BackgroundStatic";
 import { useState,useEffect } from 'react';
 import {AppWrapper} from '../components/Context';
 
@@ -36,8 +37,8 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-          <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-          {/* <style jsx global>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        {/* <style jsx global>
           {`
             :root {
               --font-worksans: ${workSans.style.fontFamily};
@@ -46,17 +47,16 @@ export default function App({ Component, pageProps }) {
           </style> */}
       </Head>
       <AppWrapper breakPointSmall={640} scrolled={scrolled}>
-        
         <div className={`${workSans.variable} font-sans relative scroll-smooth cursor-default w-full overflow-hidden `}>
           {/* bg-gradient-to-br from-green to-blue */}
-          <Background scrolled={scrolled}/>
+          {/* <Background scrolled={scrolled}/> */}
+          <BackgroundStatic />
           {/* <Navbar/  > */}
           {/* <Image className='absolute top-0 object-cover' src='/images/background2.svg' fill alt='background image'/> */}
           {/* <Background className='absolute -z-10 w-full' /> */}
-          <Component {...pageProps} scrolled={scrolled}/>
-
+          <Component {...pageProps} scrolled={scrolled} />
         </div>
       </AppWrapper>
     </>
-    ) 
+  ); 
 }
