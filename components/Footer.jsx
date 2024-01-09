@@ -25,14 +25,14 @@ const contactList = {en:[
   {text:'Email', ext:true, link:"mailto:contact@ywdesign.co?subject=Website%20Project&body=Hi%20Yolan%2C%0A%0AI%20have%20a%20website%20that%20needs%20an%20update.%0ACould%20we%20talk%20about%20this%20any%20time%20soon%3F%0A%0AThanks%20in%20advance%2C%0A%0A"},
 ]};
 const financialInfo = {en: [
-  '2023 YWdesign', 
+  '2024 YWdesign', 
   'VAT: BE0794.586.584', 
   'legal address: Hof Savelkoul 40, 2640 Mortsel, Antwerp, Belgium',
   // 'tel: +33638565302', 
   // 'email: contact@ywdesign.co', 
 ],
 fr: [
-'2023 ywdesign.co', 
+  '2024 ywdesign.co',
 'TVA: BE0794.586.584', 
 'adresse juridique: Hof Savelkoul 40, 2640 Mortsel, Antwerp, Belgique',
 // 'tel: +33638565302', 
