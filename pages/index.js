@@ -36,13 +36,13 @@ export default function Index({ scrolled }) {
   return (
     <>
       <Head>
-        <title>{`${locale === "en" ? "Development of Professional Websites and e-Commerces in 2023" : "Création de Sites Web Professionels et e-Commerces en 2023"}`}</title>
+        <title>{`${locale === "en" ? "Development of Professional Websites and e-Commerces in 2024" : "Création de Sites Web Professionels et e-Commerces en 2024"}`}</title>
         <meta
           name="description"
           content={`${
             locale === "en"
-              ? "Get personal design and web development support for your professional website, e-commerce, logo or app with strong SEO performance, and be ready for 2023."
-              : "Obtenez une support personnelle pour la conception et développement de votre site web ou e-commerce professionnel avec du référencement performant en 2023."
+              ? "Get personal design and web development support for your professional website, e-commerce, logo or app with strong SEO performance, and be ready for 2024."
+              : "Obtenez une support personnelle pour la conception et développement de votre site web ou e-commerce professionnel avec du référencement performant en 2024."
           }`}
         />
         {/* <link rel="canonical" href='https://ywdesign.co' /> */}

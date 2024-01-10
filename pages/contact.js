@@ -31,13 +31,13 @@ export default function Contact({ scrolled }) {
   return (
     <>
       <Head>
-        <title>{`${locale === "en" ? "Contact Us For a Professional Website or e-Commerce in 2023" : "Contactez-Nous Pour un Site Web ou e-Commerce Pro en 2023"}`}</title>
+        <title>{`${locale === "en" ? "Contact Us For a Professional Website or e-Commerce in 2024" : "Contactez-Nous Pour un Site Web ou e-Commerce Pro en 2024"}`}</title>
         <meta
           name="description"
           content={`${
             locale === "en"
-              ? "Get personal design and web development support for a professional website, e-commerce, logo or app with strong SEO performance, and be ready for 2023."
-              : "Obtenez une support personnelle pour la conception et développement de votre site web ou e-commerce professionnel avec du référencement performant en 2023."
+              ? "Get personal design and web development support for a professional website, e-commerce, logo or app with strong SEO performance, and be ready for 2024."
+              : "Obtenez une support personnelle pour la conception et développement de votre site web ou e-commerce professionnel avec du référencement performant en 2024."
           }`}
         />
         {/* <link rel="canonical" href='https://ywdesign.co/contact' />       */}

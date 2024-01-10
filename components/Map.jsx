@@ -46,11 +46,10 @@ const Map = () => {
             
             <h4 className='font-semibold text-lg mt-4 text-primary'>{`${locale==='en'?'Address':"Adresse"}`}</h4>
             <p className='font-light text-sm sm:text-base ' >
-              Chem. des Crêtes 2,<br/>
-              1936 Verbier<br/>
-              Switzerland<br/>
-              <span className='text-primary inline-block font-semibold min-[460px]:whitespace-pre-wrap sm:whitespace-nowrap text-sm pt-4' >{`${locale==='en'?'VAT':'TVA'}: BE0794.586.584`}</span> 
-            
+              Torekenstraat 45,<br />
+              1040 Brussel<br />
+              Belgium<br />
+              <span className='text-primary inline-block font-semibold min-[460px]:whitespace-pre-wrap sm:whitespace-nowrap text-sm pt-4' >{`${locale === 'en' ? 'VAT' : 'TVA'}: BE0794.586.584`}</span> 
             </p>
 
             <ArrowLink ext={true} text={`contact\n@ywdesign.co`} to={"mailto:contact@ywdesign.co?subject=Website%20Project&body=Hi%20Yolan%2C%0A%0AI%20have%20a%20website%20that%20needs%20an%20update.%0ACould%20we%20talk%20about%20this%20any%20time%20soon%3F%0A%0AThanks%20in%20advance%2C%0A%0A"}/>

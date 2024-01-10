@@ -55,54 +55,73 @@ export default function Aboutme({scrolled}) {
 
   return (
     <>
-      <Head> 
-        <title>{`${locale==='en'?'Our In-House Developer is an Engineer and Pro Web Designer':'Notre Développeur est un Ingénieur et Designer Professionel'}`}</title>
-        <meta name="description" content={`${locale==='en'?"Get personal design and web development support for a professional website, e-commerce, logo or app with strong SEO performance, and be ready for 2023.":
-        "Obtenez une support personnelle pour la conception et développement de votre site web ou e-commerce professionnel avec du référencement performant en 2023."}`} />
+      <Head>
+        <title>{`${locale === "en" ? "Our In-House Developer is an Engineer and Pro Web Designer" : "Notre Développeur est un Ingénieur et Designer Professionel"}`}</title>
+        <meta
+          name="description"
+          content={`${
+            locale === "en"
+              ? "Get personal design and web development support for a professional website, e-commerce, logo or app with strong SEO performance, and be ready for 2024."
+              : "Obtenez une support personnelle pour la conception et développement de votre site web ou e-commerce professionnel avec du référencement performant en 2024."
+          }`}
+        />
         {/* <link rel="canonical" href='https://ywdesign.co/aboutme' /> */}
-
       </Head>
 
       <main onClick={handleNavLight}>
-        <Navbar from='About Me'/>
-        <Title breakPointSmall={breakPointSmall} type='aboutme'/>
+        <Navbar from="About Me" />
+        <Title breakPointSmall={breakPointSmall} type="aboutme" />
 
-        <Layout type='text'>
-        
+        <Layout type="text">
           <YolanMotion />
 
-            <div className='flex flex-col lg:flex-row'>
-              <div className='flex-1'>
-                <TwoColumns left={true}>
-                  <Subtitle name={`${locale==='en'?'About':"A Propos"}`} title={`${locale==='en'?'A little bit\nabout me':"Quelques mots\nsur moi"}`} span={`${locale==='en'?'me':"moi"}`} first={true} position={'left'}/>
-                    <div className='flex text-base lg:text-base font-light  text-primary text-justify sm:text-left sm:w-2/3 lg:w-4/5'>
-                      <p>{aboutmeText[locale]}</p>
-                    </div>
-                </TwoColumns>
-              </div>
-            {/* <TwoColumns left={width<breakPointSmall?true:false}> */}
-              <div className='flex-1'>
-                <TwoColumns left={true}>
-                  <Subtitle name={`${locale==='en'?'Mission':"Mission"}`} first={true} title={`${locale==='en'?'What I want\nto achieve':"Ce que je\nveux réaliser"}`} span={`${locale==='en'?'achieve':"réaliser"}`} position={'right'} />
-                  <div className='flex text-base lg:text-base font-light text-primary text-justify sm:text-right justify-end'>
-                    <p className='sm:w-2/3 lg:w-4/5'>{missionText[locale]}</p>
-                  </div>
-                </TwoColumns>
-              </div>
+          <div className="flex flex-col lg:flex-row">
+            <div className="flex-1">
+              <TwoColumns left={true}>
+                <Subtitle
+                  name={`${locale === "en" ? "About" : "A Propos"}`}
+                  title={`${locale === "en" ? "A little bit\nabout me" : "Quelques mots\nsur moi"}`}
+                  span={`${locale === "en" ? "me" : "moi"}`}
+                  first={true}
+                  position={"left"}
+                />
+                <div className="flex text-base lg:text-base font-light  text-primary text-justify sm:text-left sm:w-2/3 lg:w-4/5">
+                  <p>{aboutmeText[locale]}</p>
+                </div>
+              </TwoColumns>
             </div>
+            {/* <TwoColumns left={width<breakPointSmall?true:false}> */}
+            <div className="flex-1">
+              <TwoColumns left={true}>
+                <Subtitle
+                  name={`${locale === "en" ? "Mission" : "Mission"}`}
+                  first={true}
+                  title={`${locale === "en" ? "What I want\nto achieve" : "Ce que je\nveux réaliser"}`}
+                  span={`${locale === "en" ? "achieve" : "réaliser"}`}
+                  position={"right"}
+                />
+                <div className="flex text-base lg:text-base font-light text-primary text-justify sm:text-right justify-end">
+                  <p className="sm:w-2/3 lg:w-4/5">{missionText[locale]}</p>
+                </div>
+              </TwoColumns>
+            </div>
+          </div>
 
-          <section className='flex flex-col cursor-default'>
-            <Subtitle name='Vision' title={`${locale==='en'?'Everything starts\nwith a vision':"Tout commence\npar une vision"}`} first={width>1025?false:true} span='vision'/>
+          <section className="flex flex-col cursor-default">
+            <Subtitle
+              name="Vision"
+              title={`${locale === "en" ? "Everything starts\nwith a vision" : "Tout commence\npar une vision"}`}
+              first={width > 1025 ? false : true}
+              span="vision"
+            />
             {/* <RiDoubleQuotesL className='inline-block -translate-y-3' fill='white'/>  */}
-            <div className='grid grid-cols-2 gap-4  sm:gap-16 auto-rows-auto mx-auto'>
-              {vision[locale].map((item)=>{
-                return (
-                  <Vision key={item.title} title={item.title} text={item.text}/>
-                )
+            <div className="grid grid-cols-2 gap-4  sm:gap-16 auto-rows-auto mx-auto">
+              {vision[locale].map((item) => {
+                return <Vision key={item.title} title={item.title} text={item.text} />;
               })}
             </div>
-          </section>  
-          
+          </section>
+
           {/* <section className='mt-24 cursor-default'>
             <Subtitle name='About Me' title='' span='' position={'left'}/>
             <div className='inline-flex justify-between flex-row'>
@@ -112,30 +131,29 @@ export default function Aboutme({scrolled}) {
             </div>
           </section> */}
 
-          <section >
-              <Subtitle name={`${locale==='en'?'Numbers':"Chiffres"}`} first={width>1025?false:true} title={`${locale==='en'?'Measure to\ndrive impact':"Mesurez pour\navoir un impact"}`} span={`${locale==='en'?'impact':'impact'}`}  />
-              
-              <div className='grid grid-rows-3 sm:grid-rows-1 sm:grid-cols-3 cursor-default'>
-              {numbers[locale].map((num,i) => {
-                  return (
-                    <Number className={``} key={i} n={num.n} unit={num.unit} link={num.link} title={num.title} text={num.text} />
-                  )
+          <section>
+            <Subtitle
+              name={`${locale === "en" ? "Numbers" : "Chiffres"}`}
+              first={width > 1025 ? false : true}
+              title={`${locale === "en" ? "Measure to\ndrive impact" : "Mesurez pour\navoir un impact"}`}
+              span={`${locale === "en" ? "impact" : "impact"}`}
+            />
+
+            <div className="grid grid-rows-3 sm:grid-rows-1 sm:grid-cols-3 cursor-default">
+              {numbers[locale].map((num, i) => {
+                return <Number className={``} key={i} n={num.n} unit={num.unit} link={num.link} title={num.title} text={num.text} />;
               })}
-              </div>
+            </div>
           </section>
 
           {/* <section className='cursor-default'>
           <AccentTitle className='text-center' text={'Services'}/>
           </section> */}
 
-
-          <Contact first={width>1025?false:true}/>
-          
+          <Contact first={width > 1025 ? false : true} />
         </Layout>
 
-        <Footer scrolled={scrolled}/>
-
+        <Footer scrolled={scrolled} />
       </main>
-    
     </>
-)}
+  );}
