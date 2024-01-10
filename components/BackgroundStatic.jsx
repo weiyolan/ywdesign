@@ -4,6 +4,7 @@ import { useAppContext } from "./Context"
 
 
 export default function BackgroundStatic() {
+  const [loaded, setLoaded] = useState(false)
   // const [myWidth, setMyWidth] = useState(0)
   // let {width, breakPointSmall} = useAppContext();
 
@@ -30,8 +31,8 @@ export default function BackgroundStatic() {
 
   // bg-cover bg-[url('/images/backgroundpng.png')
   return (
-    <div role='presentation' className={`-z-[50] w-full fixed top-0 h-screen overflow-hidden  `} >
-      <Image priority role='presentation' src='/images/backgroundpng.png' alt='' fill sizes='120vw' quality={100} className='object-cover object-center' />
+    <div role='presentation' className={`-z-[1] w-full fixed top-0 h-screen overflow-hidden bg-[#1F8EB8] `} >
+      <Image priority onLoadingComplete={() => setLoaded(true)} role='presentation' src='/images/backgroundpng.png' alt='' fill sizes='120vw' quality={100} className={`object-cover object-center ${loaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000 `} />
     </div>
   )
 }

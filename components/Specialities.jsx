@@ -2,10 +2,10 @@ import { useState, useEffect } from "react"
 import Subtitle from "./Subtitle";
 import SpecialtyCard from "./SpecialtyCard";
 import LayoutSection from "./LayoutSection";
-import {motion} from 'framer-motion'
+// import {motion} from 'framer-motion'
 import { useRouter } from "next/router";
 
-const designList = [{text:'Logo',link:'/services/#Logo'},{text:'Website',link:'/services/#Website'},{text:'e-Commerce',link:'/services/#e-Commerce'},{text:'Analysis',link:'/services/#Analysis'}];
+// const designList = [{text:'Logo',link:'/services/#Logo'},{text:'Website',link:'/services/#Website'},{text:'e-Commerce',link:'/services/#e-Commerce'},{text:'Analysis',link:'/services/#Analysis'}];
 
 const specialities = {en: [
     {title:'Websites', text:'I build your website with strong SEO to boost your brand.', link:'/services/#Website'},
