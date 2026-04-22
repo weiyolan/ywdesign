@@ -57,7 +57,7 @@ export default function Roadmap () {
   return (
     <>
       <Head>
-        <title>{`${locale === "en" ? "A Human Approach in Obtaining Your Perfect Website in 2024" : "Une Approche Humaine: Obtenir un Sites Web Parfait en 2024"}`}</title>
+        <title>{`${locale === "en" ? "A Human Approach in Obtaining Your Perfect Website in 2026" : "Une Approche Humaine: Obtenir un Sites Web Parfait en 2026"}`}</title>
         <meta
           name="description"
           content={`${

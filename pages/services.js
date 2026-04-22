@@ -8,6 +8,7 @@ import Layout from '../components/Layout'
 import Footer from '../components/Footer'
 import Contact from '../components/Contact'
 import Technologies from '../components/Technologies'
+import Features from '../components/Features'
 import Service from '../components/Service'
 import Navbar from '../components/Navbar';
 import { useAppContext } from '../components/Context'
@@ -336,19 +337,19 @@ let serviceIconsSEO  = {en: [
 let serviceList = {en:[
   {name:'Website', icons: serviceIconsWebsite['en'], title:'Step up your\ninternet game', span:'internet',text:'We build fast and modern websites from scratch to bring your story online and to organically reach new customers.'},
   {name:'e-Commerce', icons: serviceIconsShop['en'], title:'Bring your\nshop online',span:'shop', text:'We build themed e-commerces integrating secure payment services like Twint to make customers love shopping with you.'},
-  {name:'Logo', icons: serviceIconsLogo['en'], title:'Put your brand\nin a new jacket',span:'brand', text:'Your current brand image feels outdated? We integrate the latest design trends to create a new logo and modern color palette.'},
-  {name:'Tools', icons: serviceIconsTools['en'], title:'Tools to boost\nyour business',span:'boost', text:'We build simple tools that you can manage. Think automated customer scheduling, team planning, invoice reminders and more.'},
-  {name:'Analysis', icons: serviceIconsAnalysis['en'], title:'Knowledge is\npower',span:'power', text:'We provide an in-depth report analysing your online presence inlcuding brand coherence, vision, values, speed and UX/UI.'},
-  {name:'Prototypes', icons: serviceIconsPrototypes['en'], title:'We work with\nStart-ups',span:'Start-ups', text:'We help shape your ideas into functioning prototypes that convince your stakeholders and new investors.'},
+  // {name:'Logo', icons: serviceIconsLogo['en'], title:'Put your brand\nin a new jacket',span:'brand', text:'Your current brand image feels outdated? We integrate the latest design trends to create a new logo and modern color palette.'},
+  // {name:'Tools', icons: serviceIconsTools['en'], title:'Tools to boost\nyour business',span:'boost', text:'We build simple tools that you can manage. Think automated customer scheduling, team planning, invoice reminders and more.'},
+  // {name:'Analysis', icons: serviceIconsAnalysis['en'], title:'Knowledge is\npower',span:'power', text:'We provide an in-depth report analysing your online presence inlcuding brand coherence, vision, values, speed and UX/UI.'},
+  // {name:'Prototypes', icons: serviceIconsPrototypes['en'], title:'We work with\nStart-ups',span:'Start-ups', text:'We help shape your ideas into functioning prototypes that convince your stakeholders and new investors.'},
   {name:'SEO Optimisation', icons: serviceIconsSEO['en'], title:'Google will\nlove your site',span:'Google', text:"We implement Search Engine Optimisation (SEO) because even a fast and beautiful website has no impact without it."},
   ],
 fr:[
   {name:'Site web', icons: serviceIconsWebsite['fr'], title:'Améliorez votre\nstratégie internet', span:'internet',text:"Nous créons des sites web rapides et modernes pour mettre votre histoire en ligne afin d'atteindre de nouveaux clients de manière organique."},
   {name:'e-Commerce', icons: serviceIconsShop['fr'], title:'Mettez votre\nboutique en ligne',span:'boutique', text:"Nous créons des e-commerces à thème, intégrant des services de paiement sécurisés comme Twint pour que les clients aiment acheter chez vous."},
-  {name:'Logo', icons: serviceIconsLogo['fr'], title:'Donnez un nouveau\nvisage à votre marque',span:'visage', text:"Votre image de marque actuelle vous semble dépassée ? Nous intégrons les dernières tendances pour créer un nouveau logo et une palette de couleurs modernes."},
-  {name:'Outils', icons: serviceIconsTools['fr'], title:'Des outils poussant votre activité',span:'poussant', text:"Nous créons des outils simples que vous pouvez gérer. Pensez au gestion des clients, à la planification de l'équipe, aux rappels de factures et plus encore."},
-  {name:'Analyses', icons: serviceIconsAnalysis['fr'], title:"La connaissance,\nc'est le pouvoir",span:'pouvoir', text:"Nous fournissons un rapport approfondi analysant votre présence en ligne, notamment la cohérence de la marque, la vision, les valeurs, la vitesse et l'interface utilisateur."},
-  {name:'Prototypes', icons: serviceIconsPrototypes['fr'], title:'Nous travaillons\navec les Start-ups',span:'Start-ups', text:"Nous vous aidons à transformer vos idées en prototypes fonctionnels qui convainquent vos partenaires et vos nouveaux investisseurs."},
+  // {name:'Logo', icons: serviceIconsLogo['fr'], title:'Donnez un nouveau\nvisage à votre marque',span:'visage', text:"Votre image de marque actuelle vous semble dépassée ? Nous intégrons les dernières tendances pour créer un nouveau logo et une palette de couleurs modernes."},
+  // {name:'Outils', icons: serviceIconsTools['fr'], title:'Des outils poussant votre activité',span:'poussant', text:"Nous créons des outils simples que vous pouvez gérer. Pensez au gestion des clients, à la planification de l'équipe, aux rappels de factures et plus encore."},
+  // {name:'Analyses', icons: serviceIconsAnalysis['fr'], title:"La connaissance,\nc'est le pouvoir",span:'pouvoir', text:"Nous fournissons un rapport approfondi analysant votre présence en ligne, notamment la cohérence de la marque, la vision, les valeurs, la vitesse et l'interface utilisateur."},
+  // {name:'Prototypes', icons: serviceIconsPrototypes['fr'], title:'Nous travaillons\navec les Start-ups',span:'Start-ups', text:"Nous vous aidons à transformer vos idées en prototypes fonctionnels qui convainquent vos partenaires et vos nouveaux investisseurs."},
   {name:'Référencement', icons: serviceIconsSEO['fr'], title:'Google va adorer\nvotre site',span:'Google', text:"Nous mettons en œuvre l'optimisation pour les moteurs de recherche (SEO), car même un site web rapide et beau n'a aucun impact sans un bon référencement."},
   ]};
 
@@ -366,13 +367,13 @@ export default function Services({scrolled}) {
   return (
     <>
       <Head>
-        <title>{`${locale === "en" ? "Development of Professional Websites and e-Commerces in 2024" : "Création de Sites Web Professionels et e-Commerces en 2024"}`}</title>
+        <title>{`${locale === "en" ? "Development of Professional Websites and e-Commerces in 2026" : "Création de Sites Web Professionels et e-Commerces en 2026"}`}</title>
         <meta
           name="description"
           content={`${
             locale === "en"
-              ? "Get personal design and web development support for your professional website, e-commerce, logo or app with strong SEO performance, and be ready for 2024."
-              : "Obtenez une support personnelle pour la conception et développement de votre site web ou e-commerce professionnel avec du référencement performant en 2024."
+              ? "Get personal design and web development support for your professional website, e-commerce, logo or app with strong SEO performance, and be ready for 2026."
+              : "Obtenez une support personnelle pour la conception et développement de votre site web ou e-commerce professionnel avec du référencement performant en 2026."
           }`}
         />
         {/* <link rel="canonical" href='https://ywdesign.co/services' /> */}
@@ -405,7 +406,8 @@ export default function Services({scrolled}) {
             );
           })}
 
-          {/* <Technologies breakPointSmall={breakPointSmall}/> */}
+          <Technologies breakPointSmall={breakPointSmall} />
+          <Features />
 
           <Contact breakPointSmall={breakPointSmall} first={width < breakPointSmall ? true : false} />
         </Layout>

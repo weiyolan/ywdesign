@@ -46,6 +46,12 @@ const nextConfig = withPWA({
     return config;
   },
 
+  async redirects() {
+    return [
+      { source: '/aboutme', destination: '/about', permanent: true },
+    ];
+  },
+
   reactStrictMode: true,
 })
 

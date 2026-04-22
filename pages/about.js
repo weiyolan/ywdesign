@@ -42,7 +42,7 @@ let aboutmeText = {en:"I'm an open-minded and ambitious person, taking every cha
 fr:"Je suis une personne ouverte d'esprit et ambitieuse, qui considère chaque défi comme une occasion d'apprendre. J'aime travailler avec les gens et j'ai tendance à tirer le meilleur de chacun. Mes compétences en matière d'écoute et de planification m'aident à faire avancer l'équipe et à obtenir des résultats toujours meilleurs, ensemble."}
 
 
-export default function Aboutme({scrolled}) {
+export default function About({scrolled}) {
 
   let {width, breakPointSmall, noBlur, isOpen, toggleOpen, locale} = useAppContext();
 
@@ -61,8 +61,8 @@ export default function Aboutme({scrolled}) {
           name="description"
           content={`${
             locale === "en"
-              ? "Get personal design and web development support for a professional website, e-commerce, logo or app with strong SEO performance, and be ready for 2024."
-              : "Obtenez une support personnelle pour la conception et développement de votre site web ou e-commerce professionnel avec du référencement performant en 2024."
+              ? "Get personal design and web development support for a professional website, e-commerce, logo or app with strong SEO performance, and be ready for 2026."
+              : "Obtenez une support personnelle pour la conception et développement de votre site web ou e-commerce professionnel avec du référencement performant en 2026."
           }`}
         />
         {/* <link rel="canonical" href='https://ywdesign.co/aboutme' /> */}

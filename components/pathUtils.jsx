@@ -251,7 +251,7 @@ let {scrolled} = useAppContext();
 
   function handleTextProps (props) {
     let newProps = {...props}
-    newProps.fontFamily = 'Work Sans'
+    newProps.fontFamily = 'var(--font-worksans), Work Sans, sans-serif'
     newProps.fontSize = newProps['font-size']
     newProps.letterSpacing = newProps['letter-spacing']
     newProps.fontWeight = newProps['font-weight']

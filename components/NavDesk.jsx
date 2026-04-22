@@ -63,7 +63,8 @@ export default function NavDesk({from}) {
             <div className='flex mx-auto'>
               <Button className='' to="" title="Home" text={home[locale].text} mode={selectedB==='Home'?'selected':'unselected'} handleClick={selectButton}/>
               <Button className='' to="services" title="Services" text={services[locale].text} mode={selectedB==='Services'?'selected':'unselected'} handleClick={selectButton}/>
-              <Button className='' to="aboutme" title="About Me" text={aboutme[locale].text} mode={selectedB==='About Me'?'selected':'unselected'} handleClick={selectButton}/>
+              <Button className='' to="projects" title="Projects" text={projects[locale].text} mode={selectedB==='Projects'?'selected':'unselected'} handleClick={selectButton}/>
+              <Button className='' to="about" title="About Me" text={aboutme[locale].text} mode={selectedB==='About Me'?'selected':'unselected'} handleClick={selectButton}/>
               <Button className='' to="roadmap" title="Roadmap"  text={roadmap[locale].text} mode={selectedB==='Roadmap'?'selected':'unselected'} handleClick={selectButton}/>
               <Button className='' to="contact" title="Contact"  text={contact[locale].text} mode={selectedB==='Contact'?'selected':'unselected'} handleClick={selectButton}/>
             </div>
@@ -81,7 +82,8 @@ export default function NavDesk({from}) {
 
 let home = {en: {text: 'Home'}, fr: {text: 'Accueil'}}
 let services = {en: {text: 'Services'}, fr: {text: 'Services'}}
+let projects = {en: {text: 'Projects'}, fr: {text: 'Projets'}}
 let aboutme = {en: {text: 'About Me'}, fr: {text: 'A Propos'}}
-let roadmap = {en: {text: 'Workflow'}, fr: {text: 'Votre Chemin'}}
+let roadmap = {en: {text: 'How we work'}, fr: {text: 'Notre méthode'}}
 let contact = {en: {text: 'Contact'}, fr: {text: 'Contact'}}
 let quote = {en: {text: 'Ask a Quote'}, fr: {text: 'Demander un Devis'}}

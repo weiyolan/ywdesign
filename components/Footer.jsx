@@ -7,12 +7,12 @@ import useWindowSize from "./useWindowSize";
 import {motion} from 'framer-motion'
 import { useAppContext } from "./Context";
 
-const designList = {en:[{text:'Logo',link:'/services/#Logo'},{text:'Website',link:'/services/#Website'},{text:'e-Commerce',link:'/services/#e-Commerce'},{text:'Analysis',link:'/services/#Analysis'}],
-fr:[{text:'Logo',link:'/services/#Logo'},{text:'Site web',link:'/services/#Website'},{text:'e-Commerce',link:'/services/#e-Commerce'},{text:'Analyse',link:'/services/#Analysis'}]};
-const supportList = {en:[{text:'Roadmap', link:'/roadmap'},{text:'FAQ',link:'/contact/#Form',disabled:false},{text:'T&C',link:'',disabled:true},{text:'Simulation',link:'',disabled:true}],
-fr:[{text:'Votre Chemin', link:'/roadmap',disabled:false},{text:'QFP',link:'/contact/#Form',disabled:true},{text:'T&C',link:'',disabled:true},{text:'Simulation',link:'',disabled:true}]};
-const linksList = {en:[{text:'Home',link:'/'},{text:'Services',link:'/services'},{text:'About me',link:'/aboutme'},{text:'Contact',link:'/contact'}], 
-fr: [{text:'Accueil',link:'/'},{text:'Services',link:'/services'},{text:'A Propos',link:'/aboutme'},{text:'Contact', link:'/contact'}]};
+const designList = {en:[{text:'Website',link:'/services/#Website'},{text:'e-Commerce',link:'/services/#e-Commerce'},{text:'SEO',link:'/services/#SEO Optimisation'},{text:'Projects',link:'/projects'}],
+fr:[{text:'Site web',link:'/services/#Website'},{text:'e-Commerce',link:'/services/#e-Commerce'},{text:'SEO',link:'/services/#SEO Optimisation'},{text:'Projets',link:'/projects'}]};
+const supportList = {en:[{text:'How we work', link:'/roadmap'},{text:'FAQ',link:'/contact/#Form',disabled:false},{text:'T&C',link:'',disabled:true},{text:'Simulation',link:'',disabled:true}],
+fr:[{text:'Notre méthode', link:'/roadmap',disabled:false},{text:'QFP',link:'/contact/#Form',disabled:true},{text:'T&C',link:'',disabled:true},{text:'Simulation',link:'',disabled:true}]};
+const linksList = {en:[{text:'Home',link:'/'},{text:'Services',link:'/services'},{text:'Projects',link:'/projects'},{text:'About me',link:'/about'},{text:'Contact',link:'/contact'}],
+fr: [{text:'Accueil',link:'/'},{text:'Services',link:'/services'},{text:'Projets',link:'/projects'},{text:'A Propos',link:'/about'},{text:'Contact', link:'/contact'}]};
 const contactList = {en:[
   {text:'Info', ext:false, link:'/contact/#informations'},
   {text:'Call', ext:false, link:'tel:+33638565302'},
@@ -25,14 +25,14 @@ const contactList = {en:[
   {text:'Email', ext:true, link:"mailto:contact@ywdesign.co?subject=Website%20Project&body=Hi%20Yolan%2C%0A%0AI%20have%20a%20website%20that%20needs%20an%20update.%0ACould%20we%20talk%20about%20this%20any%20time%20soon%3F%0A%0AThanks%20in%20advance%2C%0A%0A"},
 ]};
 const financialInfo = {en: [
-  '2024 YWdesign', 
-  'VAT: BE0794.586.584', 
+  '2026 YWdesign',
+  'VAT: BE0794.586.584',
   'legal address: Hof Savelkoul 40, 2640 Mortsel, Antwerp, Belgium',
-  // 'tel: +33638565302', 
-  // 'email: contact@ywdesign.co', 
+  // 'tel: +33638565302',
+  // 'email: contact@ywdesign.co',
 ],
 fr: [
-  '2024 ywdesign.co',
+  '2026 ywdesign.co',
 'TVA: BE0794.586.584', 
 'adresse juridique: Hof Savelkoul 40, 2640 Mortsel, Antwerp, Belgique',
 // 'tel: +33638565302', 

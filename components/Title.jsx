@@ -54,8 +54,12 @@ function GetTitle({type}) {
       loadStyle  }>{contact[locale].span}</span>{contact[locale].post}</h1>)
 
     case 'roadmap':
-    return (<h1 className={heroTitleStyle}>{roadmap[locale].pre}<span className={' transition-all duration-700 delay-500 default:font-medium' + 
+    return (<h1 className={heroTitleStyle}>{roadmap[locale].pre}<span className={' transition-all duration-700 delay-500 default:font-medium' +
     loadStyle  }>{roadmap[locale].span}</span>{roadmap[locale].post}</h1>)
+
+    case 'projects':
+    return (<h1 className={heroTitleStyle}>{projects[locale].pre}<span className={' transition-all duration-700 delay-500 default:font-medium' +
+    loadStyle  }>{projects[locale].span}</span>{projects[locale].post}</h1>)
   }
 }
 
@@ -118,5 +122,17 @@ let roadmap = {
     pre:'',
     span:'Défilez',
     post:' vers\nle bas',
+  }
+}
+let projects = {
+  en: {
+    pre:'Recent\n',
+    span:'Projects',
+    post:'',
+  },
+  fr :{
+    pre:'Projets\n',
+    span:'Récents',
+    post:'',
   }
 }
