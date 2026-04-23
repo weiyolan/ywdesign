@@ -1,0 +1,363 @@
+- generic [active] [ref=e1]:
+  - main [ref=e4]:
+    - navigation [ref=e5]:
+      - link "Go to the homepage" [ref=e7] [cursor=pointer]:
+        - /url: /
+        - img [ref=e8]
+      - generic [ref=e10]:
+        - link "HOME" [ref=e11] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e12]: HOME
+        - link "SERVICES" [ref=e13] [cursor=pointer]:
+          - /url: /services
+          - generic [ref=e14]: SERVICES
+        - link "PROJECTS" [ref=e15] [cursor=pointer]:
+          - /url: /projects
+          - generic [ref=e16]: PROJECTS
+        - link "ABOUT ME" [ref=e17] [cursor=pointer]:
+          - /url: /about
+          - generic [ref=e18]: ABOUT ME
+        - link "HOW WE WORK" [ref=e19] [cursor=pointer]:
+          - /url: /roadmap
+          - generic [ref=e20]: HOW WE WORK
+        - link "CONTACT" [ref=e21] [cursor=pointer]:
+          - /url: /contact
+          - generic [ref=e22]: CONTACT
+      - generic [ref=e23]:
+        - link "FR" [ref=e25] [cursor=pointer]:
+          - /url: /fr
+          - generic [ref=e26]:
+            - img [ref=e27]
+            - text: FR
+        - link "ASK A QUOTE" [ref=e29] [cursor=pointer]:
+          - /url: /contact#Form
+          - generic [ref=e30]: ASK A QUOTE
+    - generic [ref=e31]:
+      - heading "Your Digital Partner" [level=1] [ref=e32]
+      - generic [ref=e33]:
+        - generic [ref=e34]:
+          - text: Next.js
+          - text: Logo's
+          - text: Websites
+          - text: React.js
+          - text: Front-End
+          - text: Mobile App
+          - text: Online Tools
+          - text: Javascript
+          - text: CSS
+          - text: Sanity.io
+          - text: CMS Integration
+          - text: Headless CMS
+          - text: Tailwind CSS
+          - text: VS Code
+          - text: Postman
+          - text: API
+          - text: Node.js
+          - text: NoSQL
+          - text: e-Commerce
+          - text: Redux
+          - text: GitHub
+          - text: Web 3.0
+          - text: MongoDB
+          - text: Stripe
+          - text: Payments
+          - text: Twint
+          - text: Next.js
+          - text: Logo's
+          - text: Websites
+          - text: React.js
+          - text: Front-End
+          - text: Mobile App
+          - text: Online Tools
+          - text: Javascript
+          - text: CSS
+          - text: Sanity.io
+          - text: CMS Integration
+          - text: Headless CMS
+          - text: Tailwind CSS
+          - text: VS Code
+          - text: Postman
+          - text: API
+          - text: Node.js
+          - text: NoSQL
+          - text: e-Commerce
+          - text: Redux
+          - text: GitHub
+          - text: Web 3.0
+          - text: MongoDB
+          - text: Stripe
+          - text: Payments
+          - text: Twint
+          - text: Next.js
+          - text: Logo's
+          - text: Websites
+          - text: React.js
+          - text: Front-End
+          - text: Mobile App
+          - text: Online Tools
+          - text: Javascript
+          - text: CSS
+          - text: Sanity.io
+          - text: CMS Integration
+          - text: Headless CMS
+          - text: Tailwind CSS
+          - text: VS Code
+          - text: Postman
+          - text: API
+          - text: Node.js
+          - text: NoSQL
+          - text: e-Commerce
+          - text: Redux
+          - text: GitHub
+          - text: Web 3.0
+          - text: MongoDB
+          - text: Stripe
+          - text: Payments
+          - text: Twint
+        - generic [ref=e113]:
+          - text: Biomedical Engineering
+          - text: PRINCE2
+          - text: Project Management
+          - text: Adaptibility
+          - text: Communication
+          - text: Maintenance
+          - text: Computer Science
+          - text: Digital Strategy
+          - text: Customisation
+          - text: Personlised Budget
+          - text: SEO Optimisation
+          - text: Listening
+          - text: Empowerment
+          - text: Story Telling
+          - text: Graphic Design
+          - text: Leadership
+          - text: Professionality
+          - text: Sales
+          - text: Biomedical Engineering
+          - text: PRINCE2
+          - text: Project Management
+          - text: Adaptibility
+          - text: Communication
+          - text: Maintenance
+          - text: Computer Science
+          - text: Digital Strategy
+          - text: Customisation
+          - text: Personlised Budget
+          - text: SEO Optimisation
+          - text: Listening
+          - text: Empowerment
+          - text: Story Telling
+          - text: Graphic Design
+          - text: Leadership
+          - text: Professionality
+          - text: Sales
+          - text: Biomedical Engineering
+          - text: PRINCE2
+          - text: Project Management
+          - text: Adaptibility
+          - text: Communication
+          - text: Maintenance
+          - text: Computer Science
+          - text: Digital Strategy
+          - text: Customisation
+          - text: Personlised Budget
+          - text: SEO Optimisation
+          - text: Listening
+          - text: Empowerment
+          - text: Story Telling
+          - text: Graphic Design
+          - text: Leadership
+          - text: Professionality
+          - text: Sales
+    - generic [ref=e168]:
+      - generic [ref=e169]:
+        - generic [ref=e170]:
+          - generic [ref=e171]: SOLUTIONS
+          - heading "Our in-house specialities" [level=2] [ref=e172]
+        - generic [ref=e173]:
+          - generic [ref=e175] [cursor=pointer]:
+            - heading "Websites" [level=3] [ref=e176]
+            - paragraph [ref=e177]: I build your website with strong SEO to boost your brand.
+            - generic:
+              - link "Features":
+                - /url: /services#Website
+                - generic:
+                  - text: Features
+                  - generic:
+                    - generic:
+                      - img
+                    - generic:
+                      - img
+          - generic [ref=e179] [cursor=pointer]:
+            - heading "Branding" [level=3] [ref=e180]
+            - paragraph [ref=e181]: Uplift your current logo or website with a modern design and color palette.
+            - generic:
+              - link "Features":
+                - /url: /services#Logo
+                - generic:
+                  - text: Features
+                  - generic:
+                    - generic:
+                      - img
+                    - generic:
+                      - img
+          - generic [ref=e183] [cursor=pointer]:
+            - heading "Web Shop" [level=3] [ref=e184]
+            - paragraph [ref=e185]: I help companies and artists getting their products online.
+            - generic:
+              - link "Features":
+                - /url: /services#e-Commerce
+                - generic:
+                  - text: Features
+                  - generic:
+                    - generic:
+                      - img
+                    - generic:
+                      - img
+          - generic [ref=e187] [cursor=pointer]:
+            - heading "Analysis" [level=3] [ref=e188]
+            - paragraph [ref=e189]: Get insights on your current website and branding performance.
+            - generic:
+              - link "Features":
+                - /url: /services#Analysis
+                - generic:
+                  - text: Features
+                  - generic:
+                    - generic:
+                      - img
+                    - generic:
+                      - img
+      - generic [ref=e190]:
+        - generic [ref=e191]:
+          - generic [ref=e192]: WORK
+          - heading "A few recent projects" [level=2] [ref=e193]
+          - generic [ref=e194]: Websites, portfolios and brand sites shipped recently. Tap one to explore.
+        - generic [ref=e195]:
+          - link "Nu — Beauty & wellness e-commerce Beauty & wellness e-commerce Nu" [ref=e197] [cursor=pointer]:
+            - /url: /projects#nu
+            - img "Nu — Beauty & wellness e-commerce" [ref=e199]
+            - generic [ref=e200]:
+              - generic [ref=e201]: Beauty & wellness e-commerce
+              - generic [ref=e202]: Nu
+          - link "Milo Weiler — Photography portfolio Photography portfolio Milo Weiler" [ref=e204] [cursor=pointer]:
+            - /url: /projects#miloweiler
+            - img "Milo Weiler — Photography portfolio" [ref=e206]
+            - generic [ref=e207]:
+              - generic [ref=e208]: Photography portfolio
+              - generic [ref=e209]: Milo Weiler
+          - link "Bermuda Events — Events agency · Belgium Events agency · Belgium Bermuda Events" [ref=e211] [cursor=pointer]:
+            - /url: /projects#bermuda-events
+            - img "Bermuda Events — Events agency · Belgium" [ref=e213]
+            - generic [ref=e214]:
+              - generic [ref=e215]: Events agency · Belgium
+              - generic [ref=e216]: Bermuda Events
+        - link "See all projects" [ref=e218] [cursor=pointer]:
+          - /url: /projects
+          - generic [ref=e219]:
+            - text: See all projects
+            - generic [ref=e220]:
+              - img [ref=e222]
+              - img [ref=e225]
+      - generic [ref=e227]:
+        - generic [ref=e228]:
+          - generic [ref=e229]:
+            - generic [ref=e230]: WORKFLOW
+            - heading "A fully transparent design process" [level=2] [ref=e231]
+            - generic [ref=e232]: The roadmap allows us to find the best solution for you, every time. You want to try it out.
+          - link "Discover more" [ref=e234] [cursor=pointer]:
+            - /url: /roadmap
+            - generic [ref=e235]:
+              - text: Discover more
+              - generic [ref=e236]:
+                - img [ref=e238]
+                - img [ref=e241]
+        - link "Explore the roadmap" [ref=e246] [cursor=pointer]:
+          - /url: /roadmap
+          - img [ref=e248]:
+            - generic [ref=e257]: Iteration
+      - generic [ref=e264]:
+        - generic [ref=e265]:
+          - generic [ref=e266]: CONTACT
+          - heading "I can help Just get in touch" [level=2] [ref=e267]
+        - generic [ref=e268]:
+          - generic [ref=e270]:
+            - link "Call phone number" [ref=e271] [cursor=pointer]:
+              - /url: tel:+33638565302
+              - img [ref=e273]
+            - link "Send WhatsApp Message" [ref=e275] [cursor=pointer]:
+              - /url: https://wa.me/32471124525?text=Hi+Yolan%2C+%0D%0AI+got+your+WhatsApp+from+your+website+ywdesign.co.+Are+you+free+to+talk+any+time+soon+about+a+project+I+have+in+mind%3F+%0D%0AThanks%2C%0D%0A
+              - img [ref=e277]
+            - link "Send an Email" [ref=e279] [cursor=pointer]:
+              - /url: mailto:contact@ywdesign.co?subject=Website%20Project&body=Hi%20Yolan%2C%0A%0AI%20have%20a%20website%20that%20needs%20an%20update.%0ACould%20we%20talk%20about%20this%20any%20time%20soon%3F%0A%0AThanks%20in%20advance%2C%0A%0A
+              - img [ref=e281]
+          - link "ASK A QUOTE" [ref=e284] [cursor=pointer]:
+            - /url: /contact#Form
+            - generic [ref=e285]: ASK A QUOTE
+    - generic [ref=e286]:
+      - generic [ref=e287]:
+        - generic [ref=e288]:
+          - generic [ref=e289]: DESIGN
+          - list [ref=e290]:
+            - listitem [ref=e291]:
+              - link "Website" [ref=e292] [cursor=pointer]:
+                - /url: /services#Website
+            - listitem [ref=e293]:
+              - link "e-Commerce" [ref=e294] [cursor=pointer]:
+                - /url: /services#e-Commerce
+            - listitem [ref=e295]:
+              - link "SEO" [ref=e296] [cursor=pointer]:
+                - /url: /services#SEO%20Optimisation
+            - listitem [ref=e297]:
+              - link "Projects" [ref=e298] [cursor=pointer]:
+                - /url: /projects
+        - generic [ref=e299]:
+          - generic [ref=e300]: NAVIGATION
+          - list [ref=e301]:
+            - listitem [ref=e302]:
+              - link "Home" [ref=e303] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e304]:
+              - link "Services" [ref=e305] [cursor=pointer]:
+                - /url: /services
+            - listitem [ref=e306]:
+              - link "Projects" [ref=e307] [cursor=pointer]:
+                - /url: /projects
+            - listitem [ref=e308]:
+              - link "About me" [ref=e309] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e310]:
+              - link "Contact" [ref=e311] [cursor=pointer]:
+                - /url: /contact
+        - generic [ref=e312]:
+          - link "Go to homepage" [ref=e314] [cursor=pointer]:
+            - /url: /
+            - img [ref=e315]
+          - paragraph [ref=e318]
+        - generic [ref=e319]:
+          - generic [ref=e320]: SUPPORT
+          - list [ref=e321]:
+            - listitem [ref=e322]:
+              - link "How we work" [ref=e323] [cursor=pointer]:
+                - /url: /roadmap
+            - listitem [ref=e324]:
+              - link "FAQ" [ref=e325] [cursor=pointer]:
+                - /url: /contact#Form
+            - listitem [ref=e326]: T&C
+            - listitem [ref=e327]: Simulation
+        - generic [ref=e328]:
+          - generic [ref=e329]: CONTACT
+          - list [ref=e330]:
+            - listitem [ref=e331]:
+              - link "Info" [ref=e332] [cursor=pointer]:
+                - /url: /contact#informations
+            - listitem [ref=e333]:
+              - link "Call" [ref=e334] [cursor=pointer]:
+                - /url: tel:+33638565302
+            - listitem [ref=e335]:
+              - link "Whatsapp" [ref=e336]:
+                - /url: https://wa.me/32471124525?text=Hi+Yolan%2C+%0D%0AI+got+your+WhatsApp+from+your+website+ywdesign.co.+Are+you+free+to+talk+any+time+soon+about+a+project+I+have+in+mind%3F+%0D%0AThanks%2C%0D%0A
+            - listitem [ref=e337]:
+              - link "Mail" [ref=e338]:
+                - /url: mailto:contact@ywdesign.co?subject=Website%20Project&body=Hi%20Yolan%2C%0A%0AI%20have%20a%20website%20that%20needs%20an%20update.%0ACould%20we%20talk%20about%20this%20any%20time%20soon%3F%0A%0AThanks%20in%20advance%2C%0A%0A
+      - text: "2026 YWdesign ∘ VAT: BE0794.586.584 ∘ legal address: Hof Savelkoul 40, 2640 Mortsel, Antwerp, Belgium"
+  - alert [ref=e339]

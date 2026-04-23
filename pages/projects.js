@@ -4,9 +4,8 @@ import Title from '../components/Title';
 import Layout from '../components/Layout';
 import Footer from '../components/Footer';
 import Contact from '../components/Contact';
-import Project from '../components/Project';
+import ProjectStories from '../components/projects';
 import { useAppContext } from '../components/Context';
-import projects from '../components/data/projects';
 
 export default function Projects({ scrolled }) {
   const { width, breakPointSmall, isOpen, toggleOpen, locale } = useAppContext();
@@ -16,8 +15,6 @@ export default function Projects({ scrolled }) {
       toggleOpen();
     }
   }
-
-  const list = projects[locale] || projects.en;
 
   return (
     <>
@@ -43,15 +40,7 @@ export default function Projects({ scrolled }) {
         <Title type="projects" />
 
         <Layout>
-          {list.map((project, i) => (
-            <Project
-              key={project.slug}
-              project={project}
-              position={i % 2 === 0 ? 'left' : 'right'}
-              realFirst={i === 0}
-              first={true}
-            />
-          ))}
+          <ProjectStories />
 
           <Contact first={width < breakPointSmall ? true : false} />
         </Layout>

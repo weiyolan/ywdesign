@@ -1,0 +1,2 @@
+[   16733ms] [WARNING] Image with src "/projects/screenshots/milo-set-photo.png" was detected as the Largest Contentful Paint (LCP). Please add the "priority" property if this image is above the fold.
+Read more: https://nextjs.org/docs/api-reference/next/image#priority @ webpack-internal:///./node_modules/next/dist/shared/lib/utils/warn-once.js:10

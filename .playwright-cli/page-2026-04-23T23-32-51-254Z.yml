@@ -1,0 +1,146 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - banner:
+      - generic [ref=e5]:
+        - link [ref=e6] [cursor=pointer]:
+          - /url: /
+          - img [ref=e7]
+          - img [ref=e11]
+        - list [ref=e25]:
+          - listitem [ref=e26]:
+            - link "Home" [ref=e27] [cursor=pointer]:
+              - /url: /
+              - text: Home
+          - listitem [ref=e29]:
+            - link "About" [ref=e30] [cursor=pointer]:
+              - /url: /#about
+              - text: About
+          - listitem [ref=e32]:
+            - link "Contact" [ref=e33] [cursor=pointer]:
+              - /url: /contact
+              - text: Contact
+          - listitem [ref=e35]:
+            - button "NL" [ref=e36] [cursor=pointer]:
+              - link "NL" [ref=e39]:
+                - /url: /nl
+                - text: NL
+                - img [ref=e40]
+          - listitem [ref=e43]:
+            - button "Ask An Offer" [ref=e44] [cursor=pointer]:
+              - link "Ask An Offer" [ref=e45]:
+                - /url: /contact#form
+                - generic [ref=e46]:
+                  - generic [ref=e47]: Ask An Offer
+                  - generic [ref=e48]:
+                    - img [ref=e49]
+                    - img [ref=e51]
+    - main [ref=e53]:
+      - heading "Bermuda Events — Get Lost In The Experience" [level=1] [ref=e54]
+      - img [ref=e56]
+      - generic [ref=e60]:
+        - img "Wine Village 2025" [ref=e62]
+        - generic [ref=e65]:
+          - img [ref=e66]
+          - generic [ref=e76] [cursor=pointer]:
+            - img [ref=e77]
+            - img [ref=e79]
+            - img [ref=e81]
+        - img [ref=e83] [cursor=pointer]
+      - button "Get your own experience" [ref=e107] [cursor=pointer]:
+        - link "Get your own experience" [ref=e108]:
+          - /url: /contact
+          - generic [ref=e109]:
+            - generic [ref=e110]: Get your own experience
+            - generic [ref=e111]:
+              - img [ref=e112]
+              - img [ref=e114]
+      - generic [ref=e121]:
+        - paragraph [ref=e122]:
+          - text: Bermuda Events is an event agency from Berchem where
+          - strong [ref=e123]: creativity
+          - text: is limitless
+          - strong [ref=e124]
+          - text: and
+          - strong [ref=e125]: innovation
+          - text: is the standard. Thanks to our personal approach, we offer more than a one-time collaboration; we are your creative partner for all your special occasions.
+        - img [ref=e126] [cursor=pointer]
+        - img [ref=e128] [cursor=pointer]
+      - generic [ref=e130]:
+        - heading "Our Network" [level=2] [ref=e131]
+        - generic [ref=e132]:
+          - button [ref=e133] [cursor=pointer]:
+            - img [ref=e134]
+          - generic [ref=e136] [cursor=pointer]:
+            - img "Ilona" [ref=e138]
+            - paragraph [ref=e139]: "\"Ilona is the creative brain behind text and content. She provides the strong representation of Bermuda Events.\""
+            - heading "Ilona" [level=3] [ref=e140]
+            - heading "Internal communication" [level=4] [ref=e141]
+          - generic [ref=e142] [cursor=pointer]:
+            - img "Yolan, Freelance web developer" [ref=e144]
+            - paragraph [ref=e145]: "\"Yolan is thé man behind the keys. Subscriptionforms, invitation websites... everything for your event.\""
+            - heading "Yolan" [level=3] [ref=e146]
+            - heading "Freelance web developer" [level=4] [ref=e147]
+          - generic [ref=e148] [cursor=pointer]:
+            - img "Robin, Founder" [ref=e150]
+            - paragraph [ref=e151]: "\"Robin, the passionate founder, gives you a fresh perspective on the dynamic world of events and will guide you through every phase of your event.\""
+            - heading "Robin" [level=3] [ref=e152]
+            - heading "Creative eventmanager" [level=4] [ref=e153]
+          - button [ref=e154] [cursor=pointer]:
+            - img [ref=e155]
+        - generic [ref=e157]:
+          - img [ref=e158]
+          - img [ref=e160] [cursor=pointer]
+          - img [ref=e162] [cursor=pointer]
+          - img [ref=e164] [cursor=pointer]
+    - contentinfo [ref=e166]:
+      - generic [ref=e168]:
+        - generic [ref=e169]:
+          - generic [ref=e170]:
+            - heading "Get In Touch" [level=2] [ref=e172]
+            - generic [ref=e173]:
+              - generic [ref=e174] [cursor=pointer]: Subscribe to our newsletter.
+              - generic [ref=e175]:
+                - textbox "Subscribe to our newsletter." [ref=e176]:
+                  - /placeholder: example@ywdesign.co
+                - button "Send" [ref=e177] [cursor=pointer]
+          - generic [ref=e178]:
+            - generic [ref=e179]:
+              - heading "Socials" [level=2] [ref=e181]
+              - list [ref=e182]:
+                - listitem [ref=e183]:
+                  - link "Instagram" [ref=e184] [cursor=pointer]:
+                    - /url: https://www.instagram.com/bermuda_events?igsh=dGc4Zm1razJlYnN3
+            - generic [ref=e185]:
+              - heading "Navigate" [level=2] [ref=e187]
+              - list [ref=e188]:
+                - listitem [ref=e189]:
+                  - link "Ask an offer" [ref=e190] [cursor=pointer]:
+                    - /url: /contact#form
+            - generic [ref=e191]:
+              - heading "Contact" [level=2] [ref=e193]
+              - list [ref=e194]:
+                - listitem [ref=e195]:
+                  - link "hello@bermuda-events.be" [ref=e196] [cursor=pointer]:
+                    - /url: mailto:contact@bermuda-events.be?subject=Events%20Project&body=Hi%20Robin%2C%0A%0AI%20have%20a%20project%20for%20you.%0ACould%20we%20talk%20about%20this%20any%20time%20soon%3F%0A%0AThanks%20in%20advance%2C%0A%0A
+                - listitem [ref=e197]:
+                  - 'link "tel: +32483671312" [ref=e198] [cursor=pointer]':
+                    - /url: tel:+32483671312
+                - listitem [ref=e199]:
+                  - paragraph [ref=e200]: "VAT: BE1002975545"
+            - generic [ref=e201]:
+              - heading "Legal" [level=2] [ref=e203]
+              - list [ref=e204]:
+                - listitem [ref=e205]:
+                  - link "Cookie Notice" [ref=e206] [cursor=pointer]:
+                    - /url: https://cdn.sanity.io/files/nj2v8ioh/production/f55b8db155393806df00478e8dd825778736c942.docx
+                - listitem [ref=e207]:
+                  - link "Legal Notice" [ref=e208] [cursor=pointer]:
+                    - /url: https://cdn.sanity.io/files/nj2v8ioh/production/113b8b189408b0ccabfad84d1ad0d69e9b3179b9.pdf
+        - text: 2024 Bermuda Events, Inc. All rights reserved. ∘ Powered By
+        - link "ywdesign.co" [ref=e209] [cursor=pointer]:
+          - /url: https://www.ywdesign.co
+    - link "Contact us" [ref=e210] [cursor=pointer]:
+      - /url: /contact#form
+      - img [ref=e212]
+    - img [ref=e218]
+  - alert [ref=e222]

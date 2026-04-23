@@ -1,0 +1,352 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e2]
+  - generic [ref=e3]:
+    - img [ref=e4]
+    - banner:
+      - navigation [ref=e9]:
+        - list [ref=e12]:
+          - listitem [ref=e13]:
+            - img [ref=e14]
+            - text: Free delivery from 40€!
+          - listitem [ref=e20]:
+            - img [ref=e21]
+            - text: Ecological Packaging
+          - listitem [ref=e26]:
+            - img [ref=e27]
+            - text: Not happy, money back
+          - listitem [ref=e31]:
+            - img [ref=e32]
+            - text: Beautiful day!
+          - listitem [ref=e36]:
+            - img [ref=e37]
+            - text: Free delivery from 40€!
+          - listitem [ref=e43]:
+            - img [ref=e44]
+            - text: Ecological Packaging
+          - listitem [ref=e49]:
+            - img [ref=e50]
+            - text: Not happy, money back
+          - listitem [ref=e54]:
+            - img [ref=e55]
+            - text: Beautiful day!
+        - generic [ref=e59]:
+          - button [ref=e60] [cursor=pointer]:
+            - img [ref=e61]
+          - generic [ref=e63]:
+            - navigation "Main" [ref=e64]:
+              - list [ref=e66]:
+                - listitem [ref=e67]:
+                  - button [ref=e69] [cursor=pointer]:
+                    - img [ref=e70]
+            - combobox [ref=e73] [cursor=pointer]:
+              - img [ref=e74]
+            - button [ref=e78] [cursor=pointer]:
+              - img [ref=e79]
+    - main [ref=e85]:
+      - generic [ref=e86]:
+        - img "Woman seen from above taking a bath with free hair and foam on the water surface" [ref=e87]
+        - generic [ref=e88]:
+          - heading "The Brand of solid cosmetics, zero waste, natural, eco-responsible and made in France 100% Transparent" [level=1] [ref=e90]
+          - link "Visit the shop" [ref=e91] [cursor=pointer]:
+            - /url: /shop
+      - generic [ref=e93]:
+        - heading "Welcome to Nu universe, with our exclusive shampoo bar made of beer yeast" [level=2] [ref=e94]
+        - paragraph [ref=e95]: "- Explore Nu, Live Nu, Be Nu -"
+        - generic [ref=e96]:
+          - generic [ref=e97]:
+            - generic [ref=e98]:
+              - heading "Chaos - An Emblematic Treatment for Normal Hair" [level=3] [ref=e99]
+              - paragraph [ref=e100]: The emblematic. The very first in our skincare range. This solid shampoo is enriched with brewer's yeast and Provence olive oil. Our unique formula is nourishing and coats the hair fiber thanks to its quality ingredients.
+              - link "See the product" [ref=e101] [cursor=pointer]:
+                - /url: /shop/chaos
+            - img "Nu shampoo bar called Chaos, based on brewer's yeast. For normal hair." [ref=e102] [cursor=pointer]
+          - generic [ref=e103]:
+            - img "The Nyx version of Nu's shampoo bars" [ref=e104] [cursor=pointer]
+            - generic [ref=e105]:
+              - heading "Nyx - For a Sebum Regulating and Purifying Action" [level=3] [ref=e106]
+              - paragraph [ref=e107]: Discover Nyx Solid Shampoo, specially designed for oily hair. This formula combines brewer's yeast, olive oil from Provence, white clay from the Mediterranean basin and organic nettle powder.
+              - link "Buy the product" [ref=e108] [cursor=pointer]:
+                - /url: /shop/nyx
+          - generic [ref=e109]:
+            - generic [ref=e110]:
+              - heading "Cork Soap Box" [level=3] [ref=e111]
+              - paragraph [ref=e112]: Your Eco-Friendly Travel Companion. An ally to carry your solid care wherever you go. Made in Spain with a natural material, it is breathable, lightweight and shock resistant. It ensures optimal protection for your products.
+              - link "Buy the product" [ref=e113] [cursor=pointer]:
+                - /url: /shop/boite-savon
+            - img "The Cork Soap box" [ref=e114] [cursor=pointer]
+          - generic [ref=e115]:
+            - img "Soap magnetic hooks for holding solid shampoo bars with a suction cup" [ref=e116] [cursor=pointer]
+            - generic [ref=e117]:
+              - heading "The Magnetic Soap Holder" [level=3] [ref=e118]
+              - paragraph [ref=e119]: A Practical Solution for your Solid Shampoos. Discover our magnetic soap dish, carefully made in France. Designed to dry your solid shampoo evenly, it thus optimizes its lifespan.
+              - link "Buy the product" [ref=e120] [cursor=pointer]:
+                - /url: /shop/porte-savon
+      - img [ref=e123]
+      - generic [ref=e129]:
+        - img "Beer vatens with warm light" [ref=e134]
+        - generic [ref=e135]:
+          - heading "Innovative Solid Care Based on Brewer's Yeast" [level=2] [ref=e136]
+          - paragraph [ref=e138]: Discover our range of solid treatments based on brewer's yeast, the result of the unique marriage between the brewing passion of the Brasserie Artisanale Arlésienne and the natural benefits of brewer's yeast for your hair, among other things. Explore our range of solid cosmetics and take care of your hair and skin the natural way. At Nu and BAA, we celebrate beauty in all its forms, whether it's in a pint of beer or the shine of your hair. Health and happiness to you!
+          - link "Discover the good effects" [ref=e139] [cursor=pointer]:
+            - /url: /apropos#beer
+      - generic [ref=e141]:
+        - generic [ref=e142] [cursor=pointer]:
+          - img [ref=e143]
+          - paragraph [ref=e147]: Sun
+        - generic [ref=e148] [cursor=pointer]:
+          - img [ref=e149]
+          - paragraph [ref=e155]: Ecological Delivery
+        - generic [ref=e156] [cursor=pointer]:
+          - img [ref=e157]
+          - paragraph [ref=e162]: Ecological Packaging
+        - generic [ref=e163] [cursor=pointer]:
+          - img [ref=e164]
+          - paragraph [ref=e169]: No Plastics
+        - generic [ref=e170] [cursor=pointer]:
+          - img [ref=e171]
+          - paragraph [ref=e175]: Baby friendly
+        - generic [ref=e176] [cursor=pointer]:
+          - img [ref=e177]
+          - paragraph [ref=e179]: Made in France
+        - generic [ref=e180] [cursor=pointer]:
+          - img [ref=e181]
+          - paragraph [ref=e186]: Cruelty Free
+        - generic [ref=e187] [cursor=pointer]:
+          - img [ref=e188]
+          - paragraph [ref=e190]: Certfified Natural
+        - generic [ref=e191] [cursor=pointer]:
+          - img [ref=e192]
+          - paragraph [ref=e196]: 100% Vegan
+        - generic [ref=e197] [cursor=pointer]:
+          - img [ref=e198]
+          - paragraph [ref=e202]: Sun
+        - generic [ref=e203] [cursor=pointer]:
+          - img [ref=e204]
+          - paragraph [ref=e210]: Ecological Delivery
+        - generic [ref=e211] [cursor=pointer]:
+          - img [ref=e212]
+          - paragraph [ref=e217]: Ecological Packaging
+        - generic [ref=e218] [cursor=pointer]:
+          - img [ref=e219]
+          - paragraph [ref=e224]: No Plastics
+        - generic [ref=e225] [cursor=pointer]:
+          - img [ref=e226]
+          - paragraph [ref=e230]: Baby friendly
+        - generic [ref=e231] [cursor=pointer]:
+          - img [ref=e232]
+          - paragraph [ref=e234]: Made in France
+        - generic [ref=e235] [cursor=pointer]:
+          - img [ref=e236]
+          - paragraph [ref=e241]: Cruelty Free
+        - generic [ref=e242] [cursor=pointer]:
+          - img [ref=e243]
+          - paragraph [ref=e245]: Certfified Natural
+        - generic [ref=e246] [cursor=pointer]:
+          - img [ref=e247]
+          - paragraph [ref=e251]: 100% Vegan
+      - generic [ref=e253]:
+        - img "A braque dog in nature" [ref=e258]
+        - generic [ref=e259]:
+          - 'heading "Nu : A Brand Committed to the Body and Nature" [level=2] [ref=e260]'
+          - paragraph [ref=e262]: Explore our range of solid treatments, carefully crafted from natural ingredients such as brewer's yeast, beer and olive oil from Provence. Suitable for all hair types, our products are certified vegan and handcrafted in France. Designed for plastic-free use, our eco-responsible packaging preserves the planet. Discover an ethical and transparent approach to beauty with our solid cosmetics, made with love in our French workshop.
+          - link "Try now" [ref=e263] [cursor=pointer]:
+            - /url: /shop
+      - generic [ref=e265]:
+        - heading "Découvre ce que l'on dit sur Nu" [level=2] [ref=e266]
+        - paragraph [ref=e267]: Alors, prêt·e à rejoindre l'aventure Nu, où l'art, la science et la nature se rencontrent pour créer quelque chose de vraiment spécial ? Plonge dans l'univers unique de Nu, où l'authenticité et l'excellence s'harmonisent.
+        - region [ref=e268]:
+          - generic [ref=e270]:
+            - group [ref=e271]:
+              - generic [ref=e274]:
+                - img [ref=e275]
+                - paragraph [ref=e277]: The React Framework - created and maintained by @vercelThe React Framework - created and maint ain ed by @vercel
+                - generic [ref=e278]:
+                  - img [ref=e279]
+                  - paragraph [ref=e291]: 4/5
+                - paragraph [ref=e292]: "@user123"
+            - group [ref=e293]:
+              - generic [ref=e296]:
+                - img [ref=e297]
+                - paragraph [ref=e299]: The React Framework - created and maintained by @vercelThe React Framework - created and maint ain ed by @vercel
+                - generic [ref=e300]:
+                  - img [ref=e301]
+                  - paragraph [ref=e313]: 4/5
+                - paragraph [ref=e314]: "@user123"
+            - group [ref=e315]:
+              - generic [ref=e318]:
+                - img [ref=e319]
+                - paragraph [ref=e321]: The React Framework - created and maintained by @vercelThe React Framework - created and maint ain ed by @vercel
+                - generic [ref=e322]:
+                  - img [ref=e323]
+                  - paragraph [ref=e335]: 4/5
+                - paragraph [ref=e336]: "@user123"
+            - group [ref=e337]:
+              - generic [ref=e340]:
+                - img [ref=e341]
+                - paragraph [ref=e343]: The React Framework - created and maintained by @vercelThe React Framework - created and maint ain ed by @vercel
+                - generic [ref=e344]:
+                  - img [ref=e345]
+                  - paragraph [ref=e357]: 4/5
+                - paragraph [ref=e358]: "@user123"
+            - group [ref=e359]:
+              - generic [ref=e362]:
+                - img [ref=e363]
+                - paragraph [ref=e365]: The React Framework - created and maintained by @vercelThe React Framework - created and maint ain ed by @vercel
+                - generic [ref=e366]:
+                  - img [ref=e367]
+                  - paragraph [ref=e379]: 4/5
+                - paragraph [ref=e380]: "@user123"
+          - button "Previous slide" [ref=e381] [cursor=pointer]:
+            - img [ref=e382]
+            - generic [ref=e384]: Previous slide
+          - button "Next slide" [ref=e385] [cursor=pointer]:
+            - img [ref=e386]
+            - generic [ref=e388]: Next slide
+      - generic [ref=e390]:
+        - generic [ref=e391]:
+          - generic [ref=e393]:
+            - heading "Explore our Most Wanted Products" [level=2] [ref=e394]
+            - paragraph [ref=e395]: Dive into the world of Nu and discover our products most appreciated by our customers. Let yourself be seduced by our solid shampoos, our hair care products and our ecological accessories. Join our community and give your hair the attention it deserves with Nu.
+          - link "Visit the shop" [ref=e396] [cursor=pointer]:
+            - /url: /shop#shampoings
+        - generic [ref=e397]:
+          - link "XYZ Shampoing Girl in water" [ref=e398] [cursor=pointer]:
+            - /url: /shop/chaos
+            - generic [ref=e400]:
+              - img "XYZ Shampoing" [ref=e401]
+              - img "Girl in water" [ref=e402]
+          - generic [ref=e403]:
+            - img [ref=e404]
+            - paragraph [ref=e416]: 4.9/5
+          - link "Chaos Découvrez la Magie de notre Shampoing Solide pour Cheveux Normaux à la Levure de Bière et à l'Huile d'Olive de la Vallée des Baux" [ref=e417] [cursor=pointer]:
+            - /url: /shop/chaos
+            - heading "Chaos" [level=3] [ref=e418]
+            - paragraph [ref=e419]: Découvrez la Magie de notre Shampoing Solide pour Cheveux Normaux à la Levure de Bière et à l'Huile d'Olive de la Vallée des Baux
+          - generic [ref=e420]:
+            - heading "€ 16.00" [level=4] [ref=e421]
+            - generic [ref=e422]:
+              - link "See More" [ref=e423] [cursor=pointer]:
+                - /url: /shop/chaos
+              - button "Add" [ref=e424] [cursor=pointer]
+        - generic [ref=e425]:
+          - link "Spoons poudre" [ref=e426] [cursor=pointer]:
+            - /url: /shop/bon-luxe
+            - generic [ref=e428]:
+              - img "Spoons" [ref=e429]
+              - img "poudre" [ref=e430]
+          - generic [ref=e431]:
+            - img [ref=e432]
+            - paragraph [ref=e444]: 4.3/5
+          - link "Gift Card Give the gift of natural beauty with our Nu gift card. Let your loved ones choose from our accessories and our range of solid care products." [ref=e445] [cursor=pointer]:
+            - /url: /shop/bon-luxe
+            - heading "Gift Card" [level=3] [ref=e446]
+            - paragraph [ref=e447]: Give the gift of natural beauty with our Nu gift card. Let your loved ones choose from our accessories and our range of solid care products.
+          - generic [ref=e448]:
+            - heading "€ 20.00" [level=4] [ref=e449]
+            - generic [ref=e450]:
+              - link "See More" [ref=e451] [cursor=pointer]:
+                - /url: /shop/bon-luxe
+              - button "Add" [ref=e452] [cursor=pointer]
+        - generic [ref=e453]:
+          - link "porte savon hairs" [ref=e454] [cursor=pointer]:
+            - /url: /shop/porte-savon
+            - generic [ref=e456]:
+              - img "porte savon" [ref=e457]
+              - img "hairs" [ref=e458]
+          - generic [ref=e459]:
+            - img [ref=e460]
+            - paragraph [ref=e472]: 4/5
+          - link "Magnetic Soap Holder This magnetic soap dish, made in France, allows your solid shampoo to dry evenly. It thus optimizes its lifespan!" [ref=e473] [cursor=pointer]:
+            - /url: /shop/porte-savon
+            - heading "Magnetic Soap Holder" [level=3] [ref=e474]
+            - paragraph [ref=e475]: This magnetic soap dish, made in France, allows your solid shampoo to dry evenly. It thus optimizes its lifespan!
+          - generic [ref=e476]:
+            - heading "€ 7.00" [level=4] [ref=e477]
+            - generic [ref=e478]:
+              - link "See More" [ref=e479] [cursor=pointer]:
+                - /url: /shop/porte-savon
+              - button "Add" [ref=e480] [cursor=pointer]
+      - generic [ref=e483]:
+        - generic [ref=e484]:
+          - heading "Ready to try Nu?" [level=2] [ref=e485]
+          - paragraph [ref=e486]: Try our solid shampoo now and discover a new hair experience. Like us, you will love it! Your hair will thank you, and so will our planet. Join our movement for responsible and natural beauty with Nu.
+        - generic [ref=e487]:
+          - link "Try Nu Now!" [ref=e488] [cursor=pointer]:
+            - /url: /shop
+          - paragraph [ref=e489]: Enjoy 10% off!
+    - contentinfo [ref=e490]:
+      - generic [ref=e491]:
+        - generic [ref=e492]:
+          - img [ref=e493]
+          - paragraph [ref=e500]: Free delivery from 70€
+        - generic [ref=e501]:
+          - img [ref=e502]
+          - paragraph [ref=e504]: 30 days return policy
+        - generic [ref=e505]:
+          - img [ref=e506]
+          - paragraph [ref=e510]: Ecological packaging and delivery
+        - generic [ref=e511]:
+          - img [ref=e512]
+          - paragraph [ref=e517]: 100% secured transactions
+      - generic [ref=e518]:
+        - img [ref=e519]
+        - generic [ref=e522]:
+          - img [ref=e523]
+          - generic [ref=e526]:
+            - img [ref=e527]
+            - heading "In every moment, let us discover the beauty that surrounds us and embrace it with gratitude" [level=3] [ref=e529]
+            - paragraph [ref=e530]: "- Welcome to the world of Nu"
+        - generic [ref=e531]:
+          - generic [ref=e532]:
+            - heading "Newsletter" [level=3] [ref=e533]
+            - paragraph [ref=e534]: Subscribe to the newsletter and receive 10% off!
+            - generic [ref=e535]:
+              - textbox "hello@nu-cosmetics.com" [ref=e537]
+              - button "Let's go!" [ref=e538] [cursor=pointer]
+            - paragraph [ref=e539]:
+              - text: By continuing you accept our
+              - link "General conditions" [ref=e540] [cursor=pointer]:
+                - /url: https://cdn.sanity.io/files/e9p12rnn/production/1b190dda32f3c48b2329c826a88a2211a71adb27.docx
+              - text: and
+              - link "Confidentiality agreement" [ref=e541] [cursor=pointer]:
+                - /url: https://cdn.sanity.io/files/e9p12rnn/production/1b190dda32f3c48b2329c826a88a2211a71adb27.docx
+              - text: .
+          - generic [ref=e542]:
+            - heading "Navigation" [level=3] [ref=e543]
+            - list [ref=e544]:
+              - listitem [ref=e545]:
+                - link "The Shop" [ref=e546] [cursor=pointer]:
+                  - /url: /shop
+              - listitem [ref=e547]:
+                - link "About" [ref=e548] [cursor=pointer]:
+                  - /url: /about
+          - generic [ref=e549]:
+            - heading "Help" [level=3] [ref=e550]
+            - list [ref=e551]:
+              - listitem [ref=e552]:
+                - link "FAQ" [ref=e553] [cursor=pointer]:
+                  - /url: /aide
+              - listitem [ref=e554]:
+                - link "Cookie Notice" [ref=e555] [cursor=pointer]:
+                  - /url: https://cdn.sanity.io/files/e9p12rnn/production/1b190dda32f3c48b2329c826a88a2211a71adb27.docx
+          - generic [ref=e556]:
+            - heading "Socials" [level=3] [ref=e557]
+            - list [ref=e558]:
+              - listitem [ref=e559]:
+                - link "Instagram" [ref=e560] [cursor=pointer]:
+                  - /url: https://www.instagram.com/nu.soins
+              - listitem [ref=e561]:
+                - link "Facebook" [ref=e562] [cursor=pointer]:
+                  - /url: https://www.facebook.com/profile.php?id=61556251763195
+        - generic [ref=e563]:
+          - generic [ref=e564]:
+            - img "Visa card logo" [ref=e565]
+            - img "Mastercard logo" [ref=e566]
+            - img "America Express logo" [ref=e567]
+            - img "Discover logo" [ref=e568]
+            - img "Google Pay logo" [ref=e569]
+            - img "Apple Pay logo" [ref=e570]
+          - paragraph [ref=e571]:
+            - text: ©2024 NU. Tous droits réservés. Powered by
+            - link "ywdesign.co" [ref=e573] [cursor=pointer]:
+              - /url: https://ywdesign.co

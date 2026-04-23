@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Subtitle from './Subtitle';
 import ArrowLink from './ArrowLink';
 import { useAppContext } from './Context';
-import projects from './data/projects';
+import { getAllProjects } from './data/projects';
 
 const copy = {
   en: {
@@ -26,7 +26,7 @@ const copy = {
 export default function ProjectsTeaser() {
   const { width, breakPointSmall, locale } = useAppContext();
   const t = copy[locale] || copy.en;
-  const featured = (projects[locale] || projects.en).slice(0, 3);
+  const featured = getAllProjects(locale).slice(0, 3);
 
   const card = {
     hidden: { opacity: 0, y: 30 },
@@ -60,12 +60,14 @@ export default function ProjectsTeaser() {
             >
               <div className="relative w-full aspect-[16/10] overflow-hidden">
                 <Image
-                  src={p.image}
+                  src={p.teaserImage}
                   alt={`${p.name} — ${p.tag}`}
                   fill
                   sizes="(max-width: 640px) 100vw, 33vw"
+                  quality={85}
                   className="object-cover group-hover:scale-[1.05] duration-500"
                 />
+                <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
               </div>
               <div className="p-4 sm:p-5">
                 <div className="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-primary/70">{p.tag}</div>

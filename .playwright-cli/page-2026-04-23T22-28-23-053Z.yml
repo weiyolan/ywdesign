@@ -1,0 +1,374 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e2]
+  - generic [ref=e3]:
+    - img [ref=e4]
+    - banner:
+      - navigation [ref=e9]:
+        - list [ref=e12]:
+          - listitem [ref=e13]:
+            - img [ref=e14]
+            - text: Free delivery from 40€!
+          - listitem [ref=e20]:
+            - img [ref=e21]
+            - text: Ecological Packaging
+          - listitem [ref=e26]:
+            - img [ref=e27]
+            - text: Not happy, money back
+          - listitem [ref=e31]:
+            - img [ref=e32]
+            - text: Beautiful day!
+          - listitem [ref=e36]:
+            - img [ref=e37]
+            - text: Free delivery from 40€!
+          - listitem [ref=e43]:
+            - img [ref=e44]
+            - text: Ecological Packaging
+          - listitem [ref=e49]:
+            - img [ref=e50]
+            - text: Not happy, money back
+          - listitem [ref=e54]:
+            - img [ref=e55]
+            - text: Beautiful day!
+        - generic [ref=e59]:
+          - navigation "Main" [ref=e60]:
+            - list [ref=e62]:
+              - listitem [ref=e63]:
+                - link "Home" [ref=e64] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e65]:
+                - link "Shop" [ref=e66] [cursor=pointer]:
+                  - /url: /shop
+                  - button "Shop" [ref=e67]:
+                    - text: Shop
+                    - img [ref=e68]
+              - listitem [ref=e70]:
+                - link [ref=e71] [cursor=pointer]:
+                  - /url: /
+                  - img [ref=e72]
+              - listitem [ref=e75]:
+                - link "About" [ref=e76] [cursor=pointer]:
+                  - /url: /apropos
+              - listitem [ref=e77]:
+                - link "Help" [ref=e78] [cursor=pointer]:
+                  - /url: /aide
+          - generic [ref=e79]:
+            - navigation "Main" [ref=e80]:
+              - list [ref=e82]:
+                - listitem [ref=e83]:
+                  - button [ref=e85] [cursor=pointer]:
+                    - img [ref=e86]
+            - combobox [ref=e89] [cursor=pointer]:
+              - img [ref=e90]
+            - button [ref=e94] [cursor=pointer]:
+              - img [ref=e95]
+    - main [ref=e101]:
+      - generic [ref=e102]:
+        - img "Desert and dunes with a river crossing, and two people walking" [ref=e103]
+        - generic [ref=e104]:
+          - heading "The Brand of solid cosmetics, zero waste, natural, eco-responsible and made in France 100% Transparent" [level=1] [ref=e105]
+          - link "Our packs" [ref=e106] [cursor=pointer]:
+            - /url: /shop#packs
+      - generic [ref=e108]:
+        - generic [ref=e111]:
+          - heading "Shampoo Bars" [level=2] [ref=e112]
+          - paragraph [ref=e113]: Shampoo bars offer an ecological alternative to conventional liquid shampoos. Formulated with natural ingredients like brewer's yeast and Provence olive oil, they provide nourishing benefits while reducing packaging waste. Their sturdy format also makes them practical for travel and reduces the risk of leaks. Opt for an environmentally friendly solution, while taking care of your hair in a natural way.
+        - generic [ref=e114]:
+          - link "XYZ Shampoing Girl in water" [ref=e115] [cursor=pointer]:
+            - /url: /shop/chaos
+            - generic [ref=e117]:
+              - img "XYZ Shampoing" [ref=e118]
+              - img "Girl in water" [ref=e119]
+          - generic [ref=e120]:
+            - img [ref=e121]
+            - paragraph [ref=e133]: 4.9/5
+          - link "Chaos Découvrez la Magie de notre Shampoing Solide pour Cheveux Normaux à la Levure de Bière et à l'Huile d'Olive de la Vallée des Baux" [ref=e134] [cursor=pointer]:
+            - /url: /shop/chaos
+            - heading "Chaos" [level=3] [ref=e135]
+            - paragraph [ref=e136]: Découvrez la Magie de notre Shampoing Solide pour Cheveux Normaux à la Levure de Bière et à l'Huile d'Olive de la Vallée des Baux
+          - generic [ref=e137]:
+            - heading "€ 16.00" [level=4] [ref=e138]
+            - generic [ref=e139]:
+              - link "See More" [ref=e140] [cursor=pointer]:
+                - /url: /shop/chaos
+              - button "Add" [ref=e141] [cursor=pointer]
+        - generic [ref=e142]:
+          - link "Chaos shampoing test" [ref=e143] [cursor=pointer]:
+            - /url: /shop/nyx
+            - generic [ref=e145]:
+              - img "Chaos shampoing" [ref=e146]
+              - img "test" [ref=e147]
+          - generic [ref=e148]:
+            - img [ref=e149]
+            - paragraph [ref=e161]: 4.6/5
+          - link "Nyx Discover our solid shampoo specially designed for oily hair. Enriched with brewer's yeast, olive oil from Provence, organic nettle powder from France, and white clay from the Mediterranean basin to purify the scalp and gently absorb excess sebum." [ref=e162] [cursor=pointer]:
+            - /url: /shop/nyx
+            - heading "Nyx" [level=3] [ref=e163]
+            - paragraph [ref=e164]: Discover our solid shampoo specially designed for oily hair. Enriched with brewer's yeast, olive oil from Provence, organic nettle powder from France, and white clay from the Mediterranean basin to purify the scalp and gently absorb excess sebum.
+          - generic [ref=e165]:
+            - heading "€ 16.00" [level=4] [ref=e166]
+            - generic [ref=e167]:
+              - link "See More" [ref=e168] [cursor=pointer]:
+                - /url: /shop/nyx
+              - button "Add" [ref=e169] [cursor=pointer]
+      - generic [ref=e171]:
+        - generic [ref=e172] [cursor=pointer]:
+          - img [ref=e173]
+          - paragraph [ref=e177]: Sun
+        - generic [ref=e178] [cursor=pointer]:
+          - img [ref=e179]
+          - paragraph [ref=e185]: Ecological Delivery
+        - generic [ref=e186] [cursor=pointer]:
+          - img [ref=e187]
+          - paragraph [ref=e192]: Ecological Packaging
+        - generic [ref=e193] [cursor=pointer]:
+          - img [ref=e194]
+          - paragraph [ref=e199]: No Plastics
+        - generic [ref=e200] [cursor=pointer]:
+          - img [ref=e201]
+          - paragraph [ref=e205]: Baby friendly
+        - generic [ref=e206] [cursor=pointer]:
+          - img [ref=e207]
+          - paragraph [ref=e209]: Made in France
+        - generic [ref=e210] [cursor=pointer]:
+          - img [ref=e211]
+          - paragraph [ref=e216]: Cruelty Free
+        - generic [ref=e217] [cursor=pointer]:
+          - img [ref=e218]
+          - paragraph [ref=e220]: Certfified Natural
+        - generic [ref=e221] [cursor=pointer]:
+          - img [ref=e222]
+          - paragraph [ref=e226]: 100% Vegan
+        - generic [ref=e227] [cursor=pointer]:
+          - img [ref=e228]
+          - paragraph [ref=e232]: Sun
+        - generic [ref=e233] [cursor=pointer]:
+          - img [ref=e234]
+          - paragraph [ref=e240]: Ecological Delivery
+        - generic [ref=e241] [cursor=pointer]:
+          - img [ref=e242]
+          - paragraph [ref=e247]: Ecological Packaging
+        - generic [ref=e248] [cursor=pointer]:
+          - img [ref=e249]
+          - paragraph [ref=e254]: No Plastics
+        - generic [ref=e255] [cursor=pointer]:
+          - img [ref=e256]
+          - paragraph [ref=e260]: Baby friendly
+        - generic [ref=e261] [cursor=pointer]:
+          - img [ref=e262]
+          - paragraph [ref=e264]: Made in France
+        - generic [ref=e265] [cursor=pointer]:
+          - img [ref=e266]
+          - paragraph [ref=e271]: Cruelty Free
+        - generic [ref=e272] [cursor=pointer]:
+          - img [ref=e273]
+          - paragraph [ref=e275]: Certfified Natural
+        - generic [ref=e276] [cursor=pointer]:
+          - img [ref=e277]
+          - paragraph [ref=e281]: 100% Vegan
+      - generic [ref=e283]:
+        - generic [ref=e286]:
+          - heading "Ecological Accessories" [level=2] [ref=e287]
+          - paragraph [ref=e288]: Discover our selection of accessories carefully designed to combine practicality, durability and respect for the environment. Our well-designed accessories offer ecological solutions to simplify your daily life while reducing your ecological footprint. Take a step towards a more planet-friendly lifestyle with our eco-friendly and thoughtful accessories.
+        - generic [ref=e289]:
+          - link "Une boîte en liège de NU Soap bar" [ref=e290] [cursor=pointer]:
+            - /url: /shop/boite-savon
+            - generic [ref=e292]:
+              - img "Une boîte en liège de NU" [ref=e293]
+              - img "Soap bar" [ref=e294]
+          - generic [ref=e295]:
+            - img [ref=e296]
+            - paragraph [ref=e308]: 4.5/5
+          - link "The Cork Soap Box The cork box from Spain is a practical and ecological solution for transporting your solid cosmetics in complete safety. Made from natural and sustainable raw materials, this box offers an environmentally friendly alternative to traditional plastic packaging. It is breathable, lightweight, and shock resistant." [ref=e309] [cursor=pointer]:
+            - /url: /shop/boite-savon
+            - heading "The Cork Soap Box" [level=3] [ref=e310]
+            - paragraph [ref=e311]: The cork box from Spain is a practical and ecological solution for transporting your solid cosmetics in complete safety. Made from natural and sustainable raw materials, this box offers an environmentally friendly alternative to traditional plastic packaging. It is breathable, lightweight, and shock resistant.
+          - generic [ref=e312]:
+            - heading "€ 15.00" [level=4] [ref=e313]
+            - generic [ref=e314]:
+              - link "See More" [ref=e315] [cursor=pointer]:
+                - /url: /shop/boite-savon
+              - button "Add" [ref=e316] [cursor=pointer]
+        - generic [ref=e317]:
+          - link "porte savon hairs" [ref=e318] [cursor=pointer]:
+            - /url: /shop/porte-savon
+            - generic [ref=e320]:
+              - img "porte savon" [ref=e321]
+              - img "hairs" [ref=e322]
+          - generic [ref=e323]:
+            - img [ref=e324]
+            - paragraph [ref=e336]: 4/5
+          - link "Magnetic Soap Holder This magnetic soap dish, made in France, allows your solid shampoo to dry evenly. It thus optimizes its lifespan!" [ref=e337] [cursor=pointer]:
+            - /url: /shop/porte-savon
+            - heading "Magnetic Soap Holder" [level=3] [ref=e338]
+            - paragraph [ref=e339]: This magnetic soap dish, made in France, allows your solid shampoo to dry evenly. It thus optimizes its lifespan!
+          - generic [ref=e340]:
+            - heading "€ 7.00" [level=4] [ref=e341]
+            - generic [ref=e342]:
+              - link "See More" [ref=e343] [cursor=pointer]:
+                - /url: /shop/porte-savon
+              - button "Add" [ref=e344] [cursor=pointer]
+      - generic [ref=e346]:
+        - heading "Découvre ce que l'on dit sur Nu" [level=2] [ref=e347]
+        - paragraph [ref=e348]: Alors, prêt·e à rejoindre l'aventure Nu, où l'art, la science et la nature se rencontrent pour créer quelque chose de vraiment spécial ? Plonge dans l'univers unique de Nu, où l'authenticité et l'excellence s'harmonisent.
+        - generic [ref=e349]:
+          - img [ref=e350]
+          - paragraph [ref=e362]: 4.8/5
+        - heading "35 avis sur nos produits" [level=3] [ref=e363]
+      - generic [ref=e365]:
+        - generic [ref=e368]:
+          - heading "Packs for Complete and Ecological Beauty" [level=2] [ref=e369]
+          - paragraph [ref=e370]: Explore our range of carefully designed boxes, bringing together several products for a complete and eco-friendly experience. Each box is designed to meet your specific needs, offering a practical and environmentally friendly solution. Give yourself or your loved ones the ideal gift for authentic beauty and well-being, while helping to preserve our planet.
+        - generic [ref=e371]:
+          - link "Cork box shampoing nu" [ref=e372] [cursor=pointer]:
+            - /url: /shop/le-pack-total
+            - generic [ref=e374]:
+              - img "Cork box" [ref=e375]
+              - img "shampoing nu" [ref=e376]
+          - generic [ref=e377]:
+            - img [ref=e378]
+            - paragraph [ref=e390]: 5/5
+          - link "The Pack to Compose Discover our option of personalized packs, specially designed to allow you to create your own assortment of products. Choose from our wide range of solid care, accessories and other ecological products to create a set perfectly suited to your needs and preferences." [ref=e391] [cursor=pointer]:
+            - /url: /shop/le-pack-total
+            - heading "The Pack to Compose" [level=3] [ref=e392]
+            - paragraph [ref=e393]: Discover our option of personalized packs, specially designed to allow you to create your own assortment of products. Choose from our wide range of solid care, accessories and other ecological products to create a set perfectly suited to your needs and preferences.
+          - generic [ref=e394]:
+            - heading "€ 98.00" [level=4] [ref=e395]
+            - generic [ref=e396]:
+              - link "See More" [ref=e397] [cursor=pointer]:
+                - /url: /shop/le-pack-total
+              - button "Add" [ref=e398] [cursor=pointer]
+      - generic [ref=e399]:
+        - heading "Give Pleasure as a Gift" [level=2] [ref=e400]
+        - paragraph [ref=e401]: A gift, a lot of pleasure. Shampoos. Accessories. Care. Soap dishes. Positive for our body and our planet. Offer the perfect gift with our gift card! Ideal for all occasions, our gift card allows your loved ones to choose from a selection of quality products. Whether it's skincare, haircare, or eco-friendly accessories, this card offers the freedom to choose what suits each person best.
+        - generic [ref=e403]:
+          - link "Spoons poudre" [ref=e404] [cursor=pointer]:
+            - /url: /shop/bon-luxe
+            - generic [ref=e406]:
+              - img "Spoons" [ref=e407]
+              - img "poudre" [ref=e408]
+          - generic [ref=e409]:
+            - img [ref=e410]
+            - paragraph [ref=e422]: 4.3/5
+          - link "Gift Card Give the gift of natural beauty with our Nu gift card. Let your loved ones choose from our accessories and our range of solid care products." [ref=e423] [cursor=pointer]:
+            - /url: /shop/bon-luxe
+            - heading "Gift Card" [level=3] [ref=e424]
+            - paragraph [ref=e425]: Give the gift of natural beauty with our Nu gift card. Let your loved ones choose from our accessories and our range of solid care products.
+          - generic [ref=e426]:
+            - heading "€ 20.00" [level=4] [ref=e427]
+            - generic [ref=e428]:
+              - link "See More" [ref=e429] [cursor=pointer]:
+                - /url: /shop/bon-luxe
+              - button "Add" [ref=e430] [cursor=pointer]
+      - generic [ref=e432]:
+        - heading "Committed to an Ecological Future!" [level=2] [ref=e433]
+        - paragraph [ref=e434]: Welcome to the Nu universe where art, science and nature come together to create something truly special! Committed to conscious beauty, we believe in eco-friendly choices for a more sustainable future. At Nu, each product is designed to reduce our ecological footprint while offering a natural and effective beauty experience. Join us in our commitment to a lifestyle that is more respectful of the planet with Nu.
+        - img [ref=e436]
+        - generic [ref=e441]:
+          - generic [ref=e442]:
+            - img [ref=e443]
+            - heading "Quality and Commitment" [level=3] [ref=e445]
+            - paragraph [ref=e446]: From Raw Material to Finished Product
+            - paragraph [ref=e447]: At Nu, each step of the process is meticulously orchestrated to guarantee the highest quality and respect for our commitments to the environment and your well-being. We carefully select our raw materials, favoring French sources whenever possible, for their exceptional quality and ethical provenance. Committed to an organic approach certified by Cosmos, we ensure that our ingredients are pure and respectful of your skin and the environment. Our manufacturing process is artisanal, with each product crafted with love and expertise. Join us in our quest for quality and sustainability with Nu.
+            - generic [ref=e448]:
+              - text: Read the whole article
+              - img [ref=e449]
+          - generic [ref=e451]:
+            - img [ref=e452]
+            - heading "Ecological Packaging" [level=3] [ref=e457]
+            - paragraph [ref=e458]: Reduce Impact, Preserve Quality
+            - paragraph [ref=e459]: At Nu, we take a minimalist approach to packaging, favoring little packaging and sustainable fibers. Our eco-responsible packaging is the result of a committed approach at each stage. By using the rice printing system and collaborating with a local printing company, we are reducing our carbon footprint while supporting the local economy. Each packaging is designed to minimize its impact on the environment, while preserving the quality and aesthetics of our products. Join us in our commitment to planet-friendly packaging with Nu.
+            - generic [ref=e460]:
+              - text: Read the whole article
+              - img [ref=e461]
+          - generic [ref=e463]:
+            - img [ref=e464]
+            - heading "Responsible Payment" [level=3] [ref=e469]
+            - paragraph [ref=e470]: Contributes to a Cleaner Future
+            - paragraph [ref=e471]: Our secure payment system with Stripe is designed to offer you a transparent and secure experience. By choosing Stripe, we also support sustainable practices, as this platform is committed to offsetting its carbon footprint by investing in carbon reduction initiatives. With each transaction, you contribute to a cleaner and more responsible future. Opt for ethical payment and support our commitment to a more sustainable world with Nu.
+            - generic [ref=e472]:
+              - text: Read the whole article
+              - img [ref=e473]
+          - generic [ref=e475]:
+            - img [ref=e476]
+            - heading "Eco-Friendly Delivery" [level=3] [ref=e482]
+            - paragraph [ref=e483]: Let's choose a sustainable future together
+            - paragraph [ref=e484]: At Nu, we place great importance on the sustainability of our shipments, particularly taking into account the last mile principle, known for its significant environmental impact. Therefore, to minimize our carbon footprint, we encourage you to choose the relay point delivery option, especially for those who live in the city. This approach reduces emissions linked to home delivery, by promoting more efficient journeys and limiting individual trips. Together, let's choose environmentally friendly shipping with Nu.
+            - generic [ref=e485]:
+              - text: Read the whole article
+              - img [ref=e486]
+    - contentinfo [ref=e488]:
+      - generic [ref=e489]:
+        - generic [ref=e490]:
+          - img [ref=e491]
+          - paragraph [ref=e498]: Free delivery from 70€
+        - generic [ref=e499]:
+          - img [ref=e500]
+          - paragraph [ref=e502]: 30 days return policy
+        - generic [ref=e503]:
+          - img [ref=e504]
+          - paragraph [ref=e508]: Ecological packaging and delivery
+        - generic [ref=e509]:
+          - img [ref=e510]
+          - paragraph [ref=e515]: 100% secured transactions
+      - generic [ref=e516]:
+        - img [ref=e517]
+        - generic [ref=e520]:
+          - img [ref=e521]
+          - generic [ref=e524]:
+            - img [ref=e525]
+            - heading "In every moment, let us discover the beauty that surrounds us and embrace it with gratitude" [level=3] [ref=e527]
+            - paragraph [ref=e528]: "- Welcome to the world of Nu"
+        - generic [ref=e529]:
+          - generic [ref=e530]:
+            - heading "Newsletter" [level=3] [ref=e531]
+            - paragraph [ref=e532]: Subscribe to the newsletter and receive 10% off!
+            - generic [ref=e533]:
+              - textbox "hello@nu-cosmetics.com" [ref=e535]
+              - button "Let's go!" [ref=e536] [cursor=pointer]
+            - paragraph [ref=e537]:
+              - text: By continuing you accept our
+              - link "General conditions" [ref=e538] [cursor=pointer]:
+                - /url: https://cdn.sanity.io/files/e9p12rnn/production/1b190dda32f3c48b2329c826a88a2211a71adb27.docx
+              - text: and
+              - link "Confidentiality agreement" [ref=e539] [cursor=pointer]:
+                - /url: https://cdn.sanity.io/files/e9p12rnn/production/1b190dda32f3c48b2329c826a88a2211a71adb27.docx
+              - text: .
+          - generic [ref=e540]:
+            - heading "Navigation" [level=3] [ref=e541]
+            - list [ref=e542]:
+              - listitem [ref=e543]:
+                - link "The Shop" [ref=e544] [cursor=pointer]:
+                  - /url: /shop
+              - listitem [ref=e545]:
+                - link "About" [ref=e546] [cursor=pointer]:
+                  - /url: /about
+          - generic [ref=e547]:
+            - heading "Help" [level=3] [ref=e548]
+            - list [ref=e549]:
+              - listitem [ref=e550]:
+                - link "FAQ" [ref=e551] [cursor=pointer]:
+                  - /url: /aide
+              - listitem [ref=e552]:
+                - link "Cookie Notice" [ref=e553] [cursor=pointer]:
+                  - /url: https://cdn.sanity.io/files/e9p12rnn/production/1b190dda32f3c48b2329c826a88a2211a71adb27.docx
+          - generic [ref=e554]:
+            - heading "Socials" [level=3] [ref=e555]
+            - list [ref=e556]:
+              - listitem [ref=e557]:
+                - link "Instagram" [ref=e558] [cursor=pointer]:
+                  - /url: https://www.instagram.com/nu.soins
+              - listitem [ref=e559]:
+                - link "Facebook" [ref=e560] [cursor=pointer]:
+                  - /url: https://www.facebook.com/profile.php?id=61556251763195
+        - generic [ref=e561]:
+          - generic [ref=e562]:
+            - img "Visa card logo" [ref=e563]
+            - img "Mastercard logo" [ref=e564]
+            - img "America Express logo" [ref=e565]
+            - img "Discover logo" [ref=e566]
+            - img "Google Pay logo" [ref=e567]
+            - img "Apple Pay logo" [ref=e568]
+          - paragraph [ref=e569]:
+            - text: ©2024 NU. Tous droits réservés. Powered by
+            - link "ywdesign.co" [ref=e571] [cursor=pointer]:
+              - /url: https://ywdesign.co

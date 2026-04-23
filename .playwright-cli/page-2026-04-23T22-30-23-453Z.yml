@@ -1,0 +1,168 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e5]:
+        - link "Home" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e8]: Home
+        - link "About Me" [ref=e10] [cursor=pointer]:
+          - /url: /about
+          - generic [ref=e11]: About Me
+        - link "Contact" [ref=e12] [cursor=pointer]:
+          - /url: /contact
+          - generic [ref=e13]: Contact
+    - main [ref=e14]:
+      - generic [ref=e16]:
+        - generic [ref=e18]:
+          - generic [ref=e20] [cursor=pointer]:
+            - img "Highlighted" [ref=e23]
+            - generic [ref=e25]:
+              - generic [ref=e26]:
+                - generic [ref=e27]: "01"
+                - generic [ref=e28]: 10 projects
+              - heading "Highlighted" [level=2] [ref=e30]:
+                - generic [ref=e32]: Highlighted
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - img "Highlighted"
+              - generic:
+                - generic:
+                  - generic: "02"
+                  - generic: 10 projects
+                - generic:
+                  - heading "Highlighted" [level=2]:
+                    - generic:
+                      - generic: Highlighted
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - img "[object Object]"
+              - generic:
+                - generic:
+                  - generic: "03"
+                  - generic: 17 projects
+                - generic:
+                  - heading "Set Photography" [level=2]:
+                    - generic:
+                      - generic: Set
+                    - generic:
+                      - generic: Photography
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - img "Corporate & Brand"
+              - generic:
+                - generic:
+                  - generic: "04"
+                  - generic: 4 projects
+                - generic:
+                  - generic: "2025"
+                  - heading "Corporate & Brand" [level=2]:
+                    - generic:
+                      - generic: Corporate
+                    - generic:
+                      - generic: "&"
+                    - generic:
+                      - generic: Brand
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - img "[object Object]"
+              - generic:
+                - generic:
+                  - generic: "05"
+                  - generic: 6 projects
+                - generic:
+                  - heading "Event & Documentaries" [level=2]:
+                    - generic:
+                      - generic: Event
+                    - generic:
+                      - generic: "&"
+                    - generic:
+                      - generic: Documentaries
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - img "[object Object]"
+              - generic:
+                - generic:
+                  - generic: "06"
+                  - generic: 12 projects
+                - generic:
+                  - heading "Portraits & Professional Headshots" [level=2]:
+                    - generic:
+                      - generic: Portraits
+                    - generic:
+                      - generic: "&"
+                    - generic:
+                      - generic: Professional
+                    - generic:
+                      - generic: Headshots
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - img "[object Object]"
+              - generic:
+                - generic:
+                  - generic: "01"
+                  - generic: 4 projects
+                - generic:
+                  - heading "Product & Food" [level=2]:
+                    - generic:
+                      - generic: Product
+                    - generic:
+                      - generic: "&"
+                    - generic:
+                      - generic: Food
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - img "[object Object]"
+              - generic:
+                - generic:
+                  - generic: "02"
+                  - generic: 2 projects
+                - generic:
+                  - heading "Fine Art & Personal Projects" [level=2]:
+                    - generic:
+                      - generic: Fine
+                    - generic:
+                      - generic: Art
+                    - generic:
+                      - generic: "&"
+                    - generic:
+                      - generic: Personal
+                    - generic:
+                      - generic: Projects
+        - generic [ref=e35]:
+          - generic [ref=e36] [cursor=pointer]: Highlighted
+          - generic [ref=e37] [cursor=pointer]: Set Photography
+          - generic [ref=e38] [cursor=pointer]: Corporate & Brand
+          - generic [ref=e39] [cursor=pointer]: Event & Documentaries
+          - generic [ref=e40] [cursor=pointer]: Portraits & Professional Headshots
+          - generic [ref=e41] [cursor=pointer]: Product & Food
+          - generic [ref=e42] [cursor=pointer]: Fine Art & Personal Projects
+        - generic:
+          - generic:
+            - generic: 01 / 06
+          - generic:
+            - generic: "*"
+            - generic: ·
+            - generic: ·
+            - generic: ·
+            - generic: ·
+            - generic: ·
+          - generic: Brussels, Belgium
+        - generic:
+          - generic:
+            - generic: Scroll
+            - img
+  - alert [ref=e43]

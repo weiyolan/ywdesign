@@ -1,0 +1,50 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e5]:
+        - link "Home" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e8]: Home
+        - link "About Me" [ref=e9] [cursor=pointer]:
+          - /url: /about
+          - generic [ref=e10]: About Me
+        - link "Contact" [ref=e12] [cursor=pointer]:
+          - /url: /contact
+          - generic [ref=e13]: Contact
+    - main [ref=e14]:
+      - img [ref=e24]
+      - img "beautiful background image" [ref=e89]
+      - img "beautiful background image" [ref=e93]
+      - img "beautiful background image" [ref=e97]
+      - img "beautiful background image" [ref=e101]
+      - img "beautiful background image" [ref=e105]
+      - img "beautiful background image" [ref=e109]
+      - img "beautiful background image" [ref=e113]
+      - img [ref=e118]
+      - img [ref=e120]
+      - img [ref=e246]
+      - img [ref=e264]
+      - img [ref=e272]
+      - generic [ref=e325]:
+        - img [ref=e326]
+        - img [ref=e330]
+      - generic [ref=e344]:
+        - link [ref=e345] [cursor=pointer]:
+          - /url: /commissioned
+        - link [ref=e346] [cursor=pointer]:
+          - /url: /contact
+        - link [ref=e347] [cursor=pointer]:
+          - /url: /contact#printing
+      - img [ref=e348]
+      - link [ref=e367] [cursor=pointer]:
+        - /url: /contact
+      - img [ref=e370]
+      - link [ref=e378] [cursor=pointer]:
+        - /url: /contact#printing
+      - link [ref=e382] [cursor=pointer]:
+        - /url: /contact
+      - link [ref=e387] [cursor=pointer]:
+        - /url: /contact
+      - paragraph [ref=e390]: Scroll down and I'll carry you through my photography journey, bringing you through four magical chapters.
+      - img [ref=e392]
+  - alert [ref=e402]

@@ -1,0 +1,513 @@
+- main [ref=e4]:
+  - generic [ref=e5]:
+    - heading "Recent Projects" [level=1] [ref=e6]
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - text: Next.js
+        - text: Logo's
+        - text: Websites
+        - text: React.js
+        - text: Front-End
+        - text: Mobile App
+        - text: Online Tools
+        - text: Javascript
+        - text: CSS
+        - text: Sanity.io
+        - text: CMS Integration
+        - text: Headless CMS
+        - text: Tailwind CSS
+        - text: VS Code
+        - text: Postman
+        - text: API
+        - text: Node.js
+        - text: NoSQL
+        - text: e-Commerce
+        - text: Redux
+        - text: GitHub
+        - text: Web 3.0
+        - text: MongoDB
+        - text: Stripe
+        - text: Payments
+        - text: Twint
+        - text: Next.js
+        - text: Logo's
+        - text: Websites
+        - text: React.js
+        - text: Front-End
+        - text: Mobile App
+        - text: Online Tools
+        - text: Javascript
+        - text: CSS
+        - text: Sanity.io
+        - text: CMS Integration
+        - text: Headless CMS
+        - text: Tailwind CSS
+        - text: VS Code
+        - text: Postman
+        - text: API
+        - text: Node.js
+        - text: NoSQL
+        - text: e-Commerce
+        - text: Redux
+        - text: GitHub
+        - text: Web 3.0
+        - text: MongoDB
+        - text: Stripe
+        - text: Payments
+        - text: Twint
+        - text: Next.js
+        - text: Logo's
+        - text: Websites
+        - text: React.js
+        - text: Front-End
+        - text: Mobile App
+        - text: Online Tools
+        - text: Javascript
+        - text: CSS
+        - text: Sanity.io
+        - text: CMS Integration
+        - text: Headless CMS
+        - text: Tailwind CSS
+        - text: VS Code
+        - text: Postman
+        - text: API
+        - text: Node.js
+        - text: NoSQL
+        - text: e-Commerce
+        - text: Redux
+        - text: GitHub
+        - text: Web 3.0
+        - text: MongoDB
+        - text: Stripe
+        - text: Payments
+        - text: Twint
+      - generic [ref=e87]:
+        - text: Biomedical Engineering
+        - text: PRINCE2
+        - text: Project Management
+        - text: Adaptibility
+        - text: Communication
+        - text: Maintenance
+        - text: Computer Science
+        - text: Digital Strategy
+        - text: Customisation
+        - text: Personlised Budget
+        - text: SEO Optimisation
+        - text: Listening
+        - text: Empowerment
+        - text: Story Telling
+        - text: Graphic Design
+        - text: Leadership
+        - text: Professionality
+        - text: Sales
+        - text: Biomedical Engineering
+        - text: PRINCE2
+        - text: Project Management
+        - text: Adaptibility
+        - text: Communication
+        - text: Maintenance
+        - text: Computer Science
+        - text: Digital Strategy
+        - text: Customisation
+        - text: Personlised Budget
+        - text: SEO Optimisation
+        - text: Listening
+        - text: Empowerment
+        - text: Story Telling
+        - text: Graphic Design
+        - text: Leadership
+        - text: Professionality
+        - text: Sales
+        - text: Biomedical Engineering
+        - text: PRINCE2
+        - text: Project Management
+        - text: Adaptibility
+        - text: Communication
+        - text: Maintenance
+        - text: Computer Science
+        - text: Digital Strategy
+        - text: Customisation
+        - text: Personlised Budget
+        - text: SEO Optimisation
+        - text: Listening
+        - text: Empowerment
+        - text: Story Telling
+        - text: Graphic Design
+        - text: Leadership
+        - text: Professionality
+        - text: Sales
+  - generic [ref=e142]:
+    - generic [ref=e143]:
+      - generic [ref=e144]:
+        - generic [ref=e145]: "01"
+        - generic [ref=e146]: Nu · Beauty & wellness e-commerce
+      - generic [ref=e147]:
+        - generic [ref=e148]:
+          - img "Nu — editorial hero with bath imagery" [ref=e149]
+          - generic [ref=e150]:
+            - generic [ref=e151]: Beauty & wellness e-commerce
+            - generic [ref=e152]: Clean-beauty editorial flow. Multilingual storefront. Mobile-first end-to-end.
+        - generic [ref=e153]:
+          - generic [ref=e154]:
+            - img "Nu — product showcase grid" [ref=e155]
+            - generic [ref=e156]: In the catalogue
+          - generic [ref=e157]:
+            - paragraph [ref=e158]: A multilingual storefront for a clean-beauty brand — calm editorial pacing wrapped around a frictionless buying flow.
+            - paragraph [ref=e159]: Solid shampoo bars, brewer's-yeast formulas and zero-waste accessories — surfaced as an editorial sequence rather than a checkout funnel.
+            - list [ref=e160]:
+              - listitem [ref=e161]:
+                - generic [ref=e162]: ·
+                - generic [ref=e163]: Multilingual EN/FR storefront with clear category entry points
+              - listitem [ref=e164]:
+                - generic [ref=e165]: ·
+                - generic [ref=e166]: Product pages built around large imagery and ingredient transparency
+              - listitem [ref=e167]:
+                - generic [ref=e168]: ·
+                - generic [ref=e169]: Fast, responsive layout tuned for mobile-first shoppers
+              - listitem [ref=e170]:
+                - generic [ref=e171]: ·
+                - generic [ref=e172]: CMS-driven content so the team can ship updates without a developer
+        - blockquote [ref=e174]:
+          - generic [ref=e175]: “
+          - paragraph [ref=e176]: Calm editorial pacing. Honest ingredients. Mobile-first end-to-end.
+        - figure "The brewer's-yeast storyA long-form panel introduces the partnership behind the formula — beer barrels, ingredient transparency, and a quieter brand voice for buyers who read." [ref=e177]:
+          - img "Nu — long-form editorial panel about brewer's yeast" [ref=e179]
+          - generic [ref=e180]: The brewer's-yeast storyA long-form panel introduces the partnership behind the formula — beer barrels, ingredient transparency, and a quieter brand voice for buyers who read.
+        - generic [ref=e181]:
+          - img "Nu — shop landing" [ref=e183]
+          - generic [ref=e184]:
+            - img "Nu — mobile editorial home" [ref=e185]
+            - generic [ref=e186]: Mobile, refined
+        - paragraph [ref=e187]: The same calm hierarchy carries to mobile — single-column product pages, big imagery, no friction.
+      - generic [ref=e189]:
+        - generic [ref=e190]:
+          - generic [ref=e191]: Techniques used
+          - generic [ref=e192]:
+            - generic [ref=e193]: Multilingual i18n routing
+            - generic [ref=e194]: CMS-driven catalogue (Sanity)
+            - generic [ref=e195]: Mobile-first checkout flow
+            - generic [ref=e196]: Editorial product photography
+          - generic [ref=e197]: Stack
+          - generic [ref=e198]:
+            - generic [ref=e199]: nextjs
+            - generic [ref=e200]: react
+            - generic [ref=e201]: tailwind
+            - generic [ref=e202]: sanity
+        - link "Visit site" [ref=e203]:
+          - /url: https://nu-site.netlify.app/en
+          - text: Visit site
+          - generic [ref=e204]: ↗
+    - generic [ref=e205]:
+      - generic [ref=e206]:
+        - generic [ref=e207]: "02"
+        - generic [ref=e208]: Milo Weiler · Photography portfolio
+      - generic [ref=e209]:
+        - generic [ref=e210]:
+          - generic [ref=e211]:
+            - img "Milo Weiler — Highlighted chapter, dancer on dark stage" [ref=e212]
+            - generic [ref=e213]: 01 · Highlighted
+          - generic [ref=e214]:
+            - img "Milo Weiler — Set Photography" [ref=e215]
+            - generic [ref=e216]: 02 · Set Photography
+        - generic [ref=e217]:
+          - generic [ref=e220]:
+            - generic [ref=e221]: Manifesto
+            - paragraph [ref=e222]: “Seven chapters. One photographer. A story unfolds with every scroll.”
+            - paragraph [ref=e223]: A photographer's portfolio split into seven chapters — from set photography to corporate, headshots to fine art — held together by a dark, cinematic shell.
+          - generic [ref=e224]:
+            - generic [ref=e225]: 7 chapters · 55 projects
+            - list [ref=e226]:
+              - listitem [ref=e227]:
+                - generic [ref=e228]: "01"
+                - generic [ref=e229]: Highlighted
+                - generic [ref=e230]: "10"
+              - listitem [ref=e231]:
+                - generic [ref=e232]: "02"
+                - generic [ref=e233]: Set Photography
+                - generic [ref=e234]: "17"
+              - listitem [ref=e235]:
+                - generic [ref=e236]: "03"
+                - generic [ref=e237]: Corporate & Brand
+                - generic [ref=e238]: "4"
+              - listitem [ref=e239]:
+                - generic [ref=e240]: "04"
+                - generic [ref=e241]: Event & Documentaries
+                - generic [ref=e242]: "6"
+              - listitem [ref=e243]:
+                - generic [ref=e244]: "05"
+                - generic [ref=e245]: Portraits & Headshots
+                - generic [ref=e246]: "12"
+              - listitem [ref=e247]:
+                - generic [ref=e248]: "06"
+                - generic [ref=e249]: Product & Food
+                - generic [ref=e250]: "4"
+              - listitem [ref=e251]:
+                - generic [ref=e252]: "07"
+                - generic [ref=e253]: Fine Art
+                - generic [ref=e254]: "2"
+        - generic [ref=e255]:
+          - figure "17 projects Set Photography" [ref=e256]:
+            - img "Milo Weiler — Set Photography" [ref=e257]
+            - generic [ref=e259]:
+              - generic [ref=e260]: 17 projects
+              - generic [ref=e261]: Set Photography
+          - figure "4 projects Corporate & Brand" [ref=e262]:
+            - img "Milo Weiler — Corporate & Brand" [ref=e263]
+            - generic [ref=e265]:
+              - generic [ref=e266]: 4 projects
+              - generic [ref=e267]: Corporate & Brand
+          - figure "On scroll About — Four Chapters" [ref=e268]:
+            - img "Milo Weiler — About — Four Chapters" [ref=e269]
+            - generic [ref=e271]:
+              - generic [ref=e272]: On scroll
+              - generic [ref=e273]: About — Four Chapters
+        - generic [ref=e274]:
+          - generic [ref=e275]:
+            - generic [ref=e276]: ·
+            - generic [ref=e277]: Sticky chapter navigation that follows the visitor through every category
+          - generic [ref=e278]:
+            - generic [ref=e279]: ·
+            - generic [ref=e280]: Cinematic dark UI letting the imagery carry the page
+          - generic [ref=e281]:
+            - generic [ref=e282]: ·
+            - generic [ref=e283]: Per-chapter image carousels surfacing the strongest frames first
+          - generic [ref=e284]:
+            - generic [ref=e285]: ·
+            - generic [ref=e286]: Lightweight build with strong Lighthouse performance
+      - generic [ref=e288]:
+        - generic [ref=e289]:
+          - generic [ref=e290]: Techniques used
+          - generic [ref=e291]:
+            - generic [ref=e292]: Custom sectioned scroll
+            - generic [ref=e293]: Sticky chapter navigation
+            - generic [ref=e294]: Cinematic dark UI
+          - generic [ref=e295]: Stack
+          - generic [ref=e296]:
+            - generic [ref=e297]: nextjs
+            - generic [ref=e298]: react
+            - generic [ref=e299]: tailwind
+            - generic [ref=e300]: figma
+        - link "Visit site" [ref=e301]:
+          - /url: https://miloweiler.com
+          - text: Visit site
+          - generic [ref=e302]: ↗
+    - generic [ref=e303]:
+      - generic [ref=e304]:
+        - generic [ref=e305]: "03"
+        - generic [ref=e306]: Bermuda Events · Events agency · Belgium
+      - generic [ref=e307]:
+        - generic [ref=e308]:
+          - generic [ref=e309]:
+            - img "Bermuda Events — historic arched venue, gathered tables" [ref=e310]
+            - generic [ref=e313]: Get Lost In The Experience
+          - generic [ref=e314]:
+            - img "Bermuda Events — Trusted By logos and three pillars" [ref=e316]
+            - generic [ref=e317]:
+              - generic [ref=e318]:
+                - generic [ref=e319]: Trusted by
+                - list [ref=e320]:
+                  - listitem [ref=e321]: Beeple
+                  - listitem [ref=e322]: Unikoo
+                  - listitem [ref=e323]: Fever
+                  - listitem [ref=e324]: Studio Capiche
+              - generic [ref=e325]: NL · FR · EN
+        - blockquote [ref=e327]:
+          - generic [ref=e328]: “
+          - paragraph [ref=e329]: Brand-trust at every fold. Refined details. Belgian elegance.
+        - generic [ref=e330]:
+          - img "Bermuda Events — banquet hall about-us section" [ref=e332]
+          - complementary [ref=e333]:
+            - generic [ref=e334]: About the agency
+            - paragraph [ref=e335]: Bermuda Events is an Antwerp-based agency that turns venues, food and atmosphere into a single experience. The site frames their work as a portfolio rather than a service list.
+        - generic [ref=e336]:
+          - figure "The network behind it A small team of event managers, communication leads and a freelance web partner — surfaced openly on the site." [ref=e337]:
+            - img "Bermuda Events — Our Network team section" [ref=e339]
+            - generic [ref=e340]:
+              - generic [ref=e341]: The network behind it
+              - paragraph [ref=e342]: A small team of event managers, communication leads and a freelance web partner — surfaced openly on the site.
+          - figure "Contact funnel A focused contact page replaces the generic form — built to capture the right brief in one pass." [ref=e343]:
+            - img "Bermuda Events — contact funnel" [ref=e345]
+            - generic [ref=e346]:
+              - generic [ref=e347]: Contact funnel
+              - paragraph [ref=e348]: A focused contact page replaces the generic form — built to capture the right brief in one pass.
+        - generic [ref=e349]:
+          - generic [ref=e350]:
+            - generic [ref=e351]: ·
+            - generic [ref=e352]: Project gallery showcasing signature corporate and private events
+          - generic [ref=e353]:
+            - generic [ref=e354]: ·
+            - generic [ref=e355]: Trusted-by logo strip building credibility above the fold
+          - generic [ref=e356]:
+            - generic [ref=e357]: ·
+            - generic [ref=e358]: Dedicated contact funnel optimised for qualified requests
+          - generic [ref=e359]:
+            - generic [ref=e360]: ·
+            - generic [ref=e361]: Bilingual-ready structure (NL/FR/EN) for the local market
+      - generic [ref=e363]:
+        - generic [ref=e364]:
+          - generic [ref=e365]: Techniques used
+          - generic [ref=e366]:
+            - generic [ref=e367]: Bilingual NL/FR/EN routing
+            - generic [ref=e368]: Brand-trust logo strip
+            - generic [ref=e369]: Contact funnel optimisation
+          - generic [ref=e370]: Stack
+          - generic [ref=e371]:
+            - generic [ref=e372]: nextjs
+            - generic [ref=e373]: react
+            - generic [ref=e374]: tailwind
+        - link "Visit site" [ref=e375]:
+          - /url: https://bermuda-events.be
+          - text: Visit site
+          - generic [ref=e376]: ↗
+    - generic [ref=e377]:
+      - generic [ref=e378]:
+        - generic [ref=e379]: "04"
+        - generic [ref=e380]: Spiree · Activewear brand · 100% Merino
+      - generic [ref=e381]:
+        - generic [ref=e383]:
+          - img "Spiree — woman running on rocky terrain with mountains" [ref=e384]
+          - generic [ref=e385]:
+            - generic [ref=e386]: Activewear brand · 100% Merino
+            - paragraph [ref=e387]: Empowering women to run everywhere with confidence and style.
+        - generic [ref=e388]:
+          - generic [ref=e389]: The collection
+          - generic [ref=e390]:
+            - img "Spiree — Sun and Moon collection products" [ref=e392]
+            - generic [ref=e393]:
+              - generic [ref=e394]:
+                - text: Sun
+                - generic [ref=e396]: warm · core
+              - generic [ref=e397]:
+                - text: Moon
+                - generic [ref=e399]: cool · ethereal
+        - generic [ref=e400]:
+          - img "Spiree — 100% Merino features panel" [ref=e402]
+          - generic [ref=e403]:
+            - generic [ref=e404]:
+              - generic [ref=e405]: The fabric
+              - paragraph [ref=e406]: 100% Merino
+              - paragraph [ref=e407]: 100% Merino wool from sheep raised between –10°C and +30°C — odour-resistant, ultra-soft, thermoregulating, naturally quick-drying.
+            - generic [ref=e408]:
+              - generic [ref=e409]: odour-resistant
+              - generic [ref=e410]: ultra-soft
+              - generic [ref=e411]: thermoregulating
+              - generic [ref=e412]: quick-drying
+        - generic [ref=e413]:
+          - img "Spiree — Meet Astrid story section in forest" [ref=e414]
+          - generic [ref=e416]:
+            - generic [ref=e417]: Meet Astrid
+            - paragraph [ref=e418]: A long-form story page introduces Astrid — the runner whose vision shapes the brand. Story-first, product-second.
+        - generic [ref=e419]:
+          - generic [ref=e420]:
+            - generic [ref=e421]: ·
+            - generic [ref=e422]: Bold gradient design system carrying the brand voice across every section
+          - generic [ref=e423]:
+            - generic [ref=e424]: ·
+            - generic [ref=e425]: Product collection modules — Sun (warm) & Moon (cool) — with shared layout DNA
+          - generic [ref=e426]:
+            - generic [ref=e427]: ·
+            - generic [ref=e428]: Story-driven Meet Astrid section explaining the brand mission
+          - generic [ref=e429]:
+            - generic [ref=e430]: ·
+            - generic [ref=e431]: Performance-tuned with deferred imagery on the longer scroll
+      - generic [ref=e433]:
+        - generic [ref=e434]:
+          - generic [ref=e435]: Techniques used
+          - generic [ref=e436]:
+            - generic [ref=e437]: Bold gradient design system
+            - generic [ref=e438]: Product collection modules
+            - generic [ref=e439]: Story-driven brand pages
+          - generic [ref=e440]: Stack
+          - generic [ref=e441]:
+            - generic [ref=e442]: nextjs
+            - generic [ref=e443]: react
+            - generic [ref=e444]: tailwind
+        - link "Visit site" [ref=e445]:
+          - /url: https://spiree-next.netlify.app/
+          - text: Visit site
+          - generic [ref=e446]: ↗
+    - generic [ref=e447]:
+      - generic [ref=e448]:
+        - generic [ref=e449]: CONTACT
+        - heading "I can help Just get in touch" [level=2] [ref=e450]
+      - generic [ref=e451]:
+        - generic [ref=e453]:
+          - link "Call phone number" [ref=e454] [cursor=pointer]:
+            - /url: tel:+33638565302
+            - img [ref=e456]
+          - link "Send WhatsApp Message" [ref=e458] [cursor=pointer]:
+            - /url: https://wa.me/32471124525?text=Hi+Yolan%2C+%0D%0AI+got+your+WhatsApp+from+your+website+ywdesign.co.+Are+you+free+to+talk+any+time+soon+about+a+project+I+have+in+mind%3F+%0D%0AThanks%2C%0D%0A
+            - img [ref=e460]
+          - link "Send an Email" [ref=e462] [cursor=pointer]:
+            - /url: mailto:contact@ywdesign.co?subject=Website%20Project&body=Hi%20Yolan%2C%0A%0AI%20have%20a%20website%20that%20needs%20an%20update.%0ACould%20we%20talk%20about%20this%20any%20time%20soon%3F%0A%0AThanks%20in%20advance%2C%0A%0A
+            - img [ref=e464]
+        - link "ASK A QUOTE" [ref=e467] [cursor=pointer]:
+          - /url: /contact#Form
+          - generic [ref=e468]: ASK A QUOTE
+  - generic [ref=e469]:
+    - generic [ref=e470]:
+      - generic [ref=e471]:
+        - generic [ref=e472]: DESIGN
+        - list [ref=e473]:
+          - listitem [ref=e474]:
+            - link "Website" [ref=e475] [cursor=pointer]:
+              - /url: /services#Website
+          - listitem [ref=e476]:
+            - link "e-Commerce" [ref=e477] [cursor=pointer]:
+              - /url: /services#e-Commerce
+          - listitem [ref=e478]:
+            - link "SEO" [ref=e479] [cursor=pointer]:
+              - /url: /services#SEO%20Optimisation
+          - listitem [ref=e480]:
+            - link "Projects" [ref=e481] [cursor=pointer]:
+              - /url: /projects
+      - generic [ref=e482]:
+        - generic [ref=e483]: NAVIGATION
+        - list [ref=e484]:
+          - listitem [ref=e485]:
+            - link "Home" [ref=e486] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e487]:
+            - link "Services" [ref=e488] [cursor=pointer]:
+              - /url: /services
+          - listitem [ref=e489]:
+            - link "Projects" [ref=e490] [cursor=pointer]:
+              - /url: /projects
+          - listitem [ref=e491]:
+            - link "About me" [ref=e492] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=e493]:
+            - link "Contact" [ref=e494] [cursor=pointer]:
+              - /url: /contact
+      - generic [ref=e495]:
+        - link "Go to homepage" [ref=e497] [cursor=pointer]:
+          - /url: /
+          - img [ref=e498]
+        - paragraph [ref=e501]
+      - generic [ref=e502]:
+        - generic [ref=e503]: SUPPORT
+        - list [ref=e504]:
+          - listitem [ref=e505]:
+            - link "How we work" [ref=e506] [cursor=pointer]:
+              - /url: /roadmap
+          - listitem [ref=e507]:
+            - link "FAQ" [ref=e508] [cursor=pointer]:
+              - /url: /contact#Form
+          - listitem [ref=e509]: T&C
+          - listitem [ref=e510]: Simulation
+      - generic [ref=e511]:
+        - generic [ref=e512]: CONTACT
+        - list [ref=e513]:
+          - listitem [ref=e514]:
+            - link "Info" [ref=e515] [cursor=pointer]:
+              - /url: /contact#informations
+          - listitem [ref=e516]:
+            - link "Call" [ref=e517] [cursor=pointer]:
+              - /url: tel:+33638565302
+          - listitem [ref=e518]:
+            - link "Whatsapp" [ref=e519]:
+              - /url: https://wa.me/32471124525?text=Hi+Yolan%2C+%0D%0AI+got+your+WhatsApp+from+your+website+ywdesign.co.+Are+you+free+to+talk+any+time+soon+about+a+project+I+have+in+mind%3F+%0D%0AThanks%2C%0D%0A
+          - listitem [ref=e520]:
+            - link "Mail" [ref=e521]:
+              - /url: mailto:contact@ywdesign.co?subject=Website%20Project&body=Hi%20Yolan%2C%0A%0AI%20have%20a%20website%20that%20needs%20an%20update.%0ACould%20we%20talk%20about%20this%20any%20time%20soon%3F%0A%0AThanks%20in%20advance%2C%0A%0A
+    - text: "2026 YWdesign ∘ VAT: BE0794.586.584 ∘ legal address: Hof Savelkoul 40, 2640 Mortsel, Antwerp, Belgium"

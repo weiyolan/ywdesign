@@ -1,0 +1,412 @@
+- generic [active] [ref=e1]:
+  - main [ref=e4]:
+    - navigation [ref=e5]:
+      - link "Go to the homepage" [ref=e7] [cursor=pointer]:
+        - /url: /
+        - img [ref=e8]
+      - generic [ref=e10]:
+        - link "HOME" [ref=e11] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e12]: HOME
+        - link "SERVICES" [ref=e13] [cursor=pointer]:
+          - /url: /services
+          - generic [ref=e14]: SERVICES
+        - link "PROJECTS" [ref=e15] [cursor=pointer]:
+          - /url: /projects
+          - generic [ref=e16]: PROJECTS
+        - link "ABOUT ME" [ref=e17] [cursor=pointer]:
+          - /url: /about
+          - generic [ref=e18]: ABOUT ME
+        - link "HOW WE WORK" [ref=e19] [cursor=pointer]:
+          - /url: /roadmap
+          - generic [ref=e20]: HOW WE WORK
+        - link "CONTACT" [ref=e21] [cursor=pointer]:
+          - /url: /contact
+          - generic [ref=e22]: CONTACT
+      - generic [ref=e23]:
+        - link "FR" [ref=e25] [cursor=pointer]:
+          - /url: /fr/projects
+          - generic [ref=e26]:
+            - img [ref=e27]
+            - text: FR
+        - link "ASK A QUOTE" [ref=e29] [cursor=pointer]:
+          - /url: /contact#Form
+          - generic [ref=e30]: ASK A QUOTE
+    - generic [ref=e31]:
+      - heading "Recent Projects" [level=1] [ref=e32]
+      - generic [ref=e33]:
+        - generic [ref=e34]:
+          - text: Next.js
+          - text: Logo's
+          - text: Websites
+          - text: React.js
+          - text: Front-End
+          - text: Mobile App
+          - text: Online Tools
+          - text: Javascript
+          - text: CSS
+          - text: Sanity.io
+          - text: CMS Integration
+          - text: Headless CMS
+          - text: Tailwind CSS
+          - text: VS Code
+          - text: Postman
+          - text: API
+          - text: Node.js
+          - text: NoSQL
+          - text: e-Commerce
+          - text: Redux
+          - text: GitHub
+          - text: Web 3.0
+          - text: MongoDB
+          - text: Stripe
+          - text: Payments
+          - text: Twint
+          - text: Next.js
+          - text: Logo's
+          - text: Websites
+          - text: React.js
+          - text: Front-End
+          - text: Mobile App
+          - text: Online Tools
+          - text: Javascript
+          - text: CSS
+          - text: Sanity.io
+          - text: CMS Integration
+          - text: Headless CMS
+          - text: Tailwind CSS
+          - text: VS Code
+          - text: Postman
+          - text: API
+          - text: Node.js
+          - text: NoSQL
+          - text: e-Commerce
+          - text: Redux
+          - text: GitHub
+          - text: Web 3.0
+          - text: MongoDB
+          - text: Stripe
+          - text: Payments
+          - text: Twint
+          - text: Next.js
+          - text: Logo's
+          - text: Websites
+          - text: React.js
+          - text: Front-End
+          - text: Mobile App
+          - text: Online Tools
+          - text: Javascript
+          - text: CSS
+          - text: Sanity.io
+          - text: CMS Integration
+          - text: Headless CMS
+          - text: Tailwind CSS
+          - text: VS Code
+          - text: Postman
+          - text: API
+          - text: Node.js
+          - text: NoSQL
+          - text: e-Commerce
+          - text: Redux
+          - text: GitHub
+          - text: Web 3.0
+          - text: MongoDB
+          - text: Stripe
+          - text: Payments
+          - text: Twint
+        - generic [ref=e113]:
+          - text: Biomedical Engineering
+          - text: PRINCE2
+          - text: Project Management
+          - text: Adaptibility
+          - text: Communication
+          - text: Maintenance
+          - text: Computer Science
+          - text: Digital Strategy
+          - text: Customisation
+          - text: Personlised Budget
+          - text: SEO Optimisation
+          - text: Listening
+          - text: Empowerment
+          - text: Story Telling
+          - text: Graphic Design
+          - text: Leadership
+          - text: Professionality
+          - text: Sales
+          - text: Biomedical Engineering
+          - text: PRINCE2
+          - text: Project Management
+          - text: Adaptibility
+          - text: Communication
+          - text: Maintenance
+          - text: Computer Science
+          - text: Digital Strategy
+          - text: Customisation
+          - text: Personlised Budget
+          - text: SEO Optimisation
+          - text: Listening
+          - text: Empowerment
+          - text: Story Telling
+          - text: Graphic Design
+          - text: Leadership
+          - text: Professionality
+          - text: Sales
+          - text: Biomedical Engineering
+          - text: PRINCE2
+          - text: Project Management
+          - text: Adaptibility
+          - text: Communication
+          - text: Maintenance
+          - text: Computer Science
+          - text: Digital Strategy
+          - text: Customisation
+          - text: Personlised Budget
+          - text: SEO Optimisation
+          - text: Listening
+          - text: Empowerment
+          - text: Story Telling
+          - text: Graphic Design
+          - text: Leadership
+          - text: Professionality
+          - text: Sales
+    - generic [ref=e168]:
+      - generic [ref=e169]:
+        - generic [ref=e170]:
+          - generic [ref=e171]: "01"
+          - generic [ref=e172]: Nu · Beauty & wellness e-commerce
+        - generic [ref=e173]:
+          - generic [ref=e174]:
+            - img "Nu — editorial hero with bath imagery" [ref=e175]
+            - generic [ref=e176]:
+              - generic [ref=e177]: Beauty & wellness e-commerce
+              - generic [ref=e178]: Clean-beauty editorial flow. Multilingual storefront. Mobile-first end-to-end.
+          - generic [ref=e179]:
+            - generic [ref=e180]:
+              - img "Nu — product showcase grid" [ref=e181]
+              - generic [ref=e182]: In the catalogue
+            - generic [ref=e183]:
+              - paragraph [ref=e184]: A multilingual storefront for a clean-beauty brand — calm editorial pacing wrapped around a frictionless buying flow.
+              - paragraph [ref=e185]: Solid shampoo bars, brewer's-yeast formulas and zero-waste accessories — surfaced as an editorial sequence rather than a checkout funnel.
+              - list [ref=e186]:
+                - listitem [ref=e187]:
+                  - generic [ref=e188]: ·
+                  - generic [ref=e189]: Multilingual EN/FR storefront with clear category entry points
+                - listitem [ref=e190]:
+                  - generic [ref=e191]: ·
+                  - generic [ref=e192]: Product pages built around large imagery and ingredient transparency
+                - listitem [ref=e193]:
+                  - generic [ref=e194]: ·
+                  - generic [ref=e195]: Fast, responsive layout tuned for mobile-first shoppers
+                - listitem [ref=e196]:
+                  - generic [ref=e197]: ·
+                  - generic [ref=e198]: CMS-driven content so the team can ship updates without a developer
+          - blockquote [ref=e200]:
+            - generic [ref=e201]: “
+            - paragraph [ref=e202]: Calm editorial pacing. Honest ingredients. Mobile-first end-to-end.
+          - figure "The brewer's-yeast storyA long-form panel introduces the partnership behind the formula — beer barrels, ingredient transparency, and a quieter brand voice for buyers who read." [ref=e203]:
+            - img "Nu — long-form editorial panel about brewer's yeast" [ref=e205]
+            - generic [ref=e206]: The brewer's-yeast storyA long-form panel introduces the partnership behind the formula — beer barrels, ingredient transparency, and a quieter brand voice for buyers who read.
+          - generic [ref=e207]:
+            - img "Nu — shop landing" [ref=e209]
+            - generic [ref=e210]:
+              - img "Nu — mobile editorial home" [ref=e211]
+              - generic [ref=e212]: Mobile, refined
+          - paragraph [ref=e213]: The same calm hierarchy carries to mobile — single-column product pages, big imagery, no friction.
+        - generic [ref=e215]:
+          - generic [ref=e216]:
+            - generic [ref=e217]: Techniques used
+            - generic [ref=e218]:
+              - generic [ref=e219]: Multilingual i18n routing
+              - generic [ref=e220]: CMS-driven catalogue (Sanity)
+              - generic [ref=e221]: Mobile-first checkout flow
+              - generic [ref=e222]: Editorial product photography
+            - generic [ref=e223]: Stack
+            - generic [ref=e224]:
+              - generic [ref=e225]: nextjs
+              - generic [ref=e226]: react
+              - generic [ref=e227]: tailwind
+              - generic [ref=e228]: sanity
+          - link "Visit site" [ref=e229]:
+            - /url: https://nu-site.netlify.app/en
+            - text: Visit site
+            - generic [ref=e230]: ↗
+      - generic [ref=e231]:
+        - generic [ref=e232]:
+          - generic [ref=e233]: "02"
+          - generic [ref=e234]: Milo Weiler · Photography portfolio
+        - generic [ref=e235]:
+          - generic [ref=e236]:
+            - generic [ref=e237]:
+              - img "Milo Weiler — Highlighted chapter, dancer on dark stage" [ref=e238]
+              - generic [ref=e239]: 01 · Highlighted
+            - generic [ref=e240]:
+              - img "Milo Weiler — Set Photography" [ref=e241]
+              - generic [ref=e242]: 02 · Set Photography
+          - generic [ref=e243]:
+            - generic [ref=e246]:
+              - generic [ref=e247]: Manifesto
+              - paragraph [ref=e248]: “Seven chapters. One photographer. A story unfolds with every scroll.”
+              - paragraph [ref=e249]: A photographer's portfolio split into seven chapters — from set photography to corporate, headshots to fine art — held together by a dark, cinematic shell.
+            - generic [ref=e250]:
+              - generic [ref=e251]: 7 chapters · 55 projects
+              - list [ref=e252]:
+                - listitem [ref=e253]:
+                  - generic [ref=e254]: "01"
+                  - generic [ref=e255]: Highlighted
+                  - generic [ref=e256]: "10"
+                - listitem [ref=e257]:
+                  - generic [ref=e258]: "02"
+                  - generic [ref=e259]: Set Photography
+                  - generic [ref=e260]: "17"
+                - listitem [ref=e261]:
+                  - generic [ref=e262]: "03"
+                  - generic [ref=e263]: Corporate & Brand
+                  - generic [ref=e264]: "4"
+                - listitem [ref=e265]:
+                  - generic [ref=e266]: "04"
+                  - generic [ref=e267]: Event & Documentaries
+                  - generic [ref=e268]: "6"
+                - listitem [ref=e269]:
+                  - generic [ref=e270]: "05"
+                  - generic [ref=e271]: Portraits & Headshots
+                  - generic [ref=e272]: "12"
+                - listitem [ref=e273]:
+                  - generic [ref=e274]: "06"
+                  - generic [ref=e275]: Product & Food
+                  - generic [ref=e276]: "4"
+                - listitem [ref=e277]:
+                  - generic [ref=e278]: "07"
+                  - generic [ref=e279]: Fine Art
+                  - generic [ref=e280]: "2"
+          - generic [ref=e281]:
+            - figure "17 projects Set Photography" [ref=e282]:
+              - img "Milo Weiler — Set Photography" [ref=e283]
+              - generic [ref=e285]:
+                - generic [ref=e286]: 17 projects
+                - generic [ref=e287]: Set Photography
+            - figure "4 projects Corporate & Brand" [ref=e288]:
+              - img "Milo Weiler — Corporate & Brand" [ref=e289]
+              - generic [ref=e291]:
+                - generic [ref=e292]: 4 projects
+                - generic [ref=e293]: Corporate & Brand
+            - figure "On scroll About — Four Chapters" [ref=e294]:
+              - img "Milo Weiler — About — Four Chapters" [ref=e295]
+              - generic [ref=e297]:
+                - generic [ref=e298]: On scroll
+                - generic [ref=e299]: About — Four Chapters
+          - generic [ref=e300]:
+            - generic [ref=e301]:
+              - generic [ref=e302]: ·
+              - generic [ref=e303]: Sticky chapter navigation that follows the visitor through every category
+            - generic [ref=e304]:
+              - generic [ref=e305]: ·
+              - generic [ref=e306]: Cinematic dark UI letting the imagery carry the page
+            - generic [ref=e307]:
+              - generic [ref=e308]: ·
+              - generic [ref=e309]: Per-chapter image carousels surfacing the strongest frames first
+            - generic [ref=e310]:
+              - generic [ref=e311]: ·
+              - generic [ref=e312]: Lightweight build with strong Lighthouse performance
+        - generic [ref=e314]:
+          - generic [ref=e315]:
+            - generic [ref=e316]: Techniques used
+            - generic [ref=e317]:
+              - generic [ref=e318]: Custom sectioned scroll
+              - generic [ref=e319]: Sticky chapter navigation
+              - generic [ref=e320]: Cinematic dark UI
+            - generic [ref=e321]: Stack
+            - generic [ref=e322]:
+              - generic [ref=e323]: nextjs
+              - generic [ref=e324]: react
+              - generic [ref=e325]: tailwind
+              - generic [ref=e326]: figma
+          - link "Visit site" [ref=e327]:
+            - /url: https://miloweiler.com
+            - text: Visit site
+            - generic [ref=e328]: ↗
+      - generic [ref=e329]:
+        - generic [ref=e330]:
+          - generic [ref=e331]: CONTACT
+          - heading "I can help Just get in touch" [level=2] [ref=e332]
+        - generic [ref=e333]:
+          - generic [ref=e335]:
+            - link "Call phone number" [ref=e336] [cursor=pointer]:
+              - /url: tel:+33638565302
+              - img [ref=e338]
+            - link "Send WhatsApp Message" [ref=e340] [cursor=pointer]:
+              - /url: https://wa.me/32471124525?text=Hi+Yolan%2C+%0D%0AI+got+your+WhatsApp+from+your+website+ywdesign.co.+Are+you+free+to+talk+any+time+soon+about+a+project+I+have+in+mind%3F+%0D%0AThanks%2C%0D%0A
+              - img [ref=e342]
+            - link "Send an Email" [ref=e344] [cursor=pointer]:
+              - /url: mailto:contact@ywdesign.co?subject=Website%20Project&body=Hi%20Yolan%2C%0A%0AI%20have%20a%20website%20that%20needs%20an%20update.%0ACould%20we%20talk%20about%20this%20any%20time%20soon%3F%0A%0AThanks%20in%20advance%2C%0A%0A
+              - img [ref=e346]
+          - link "ASK A QUOTE" [ref=e349] [cursor=pointer]:
+            - /url: /contact#Form
+            - generic [ref=e350]: ASK A QUOTE
+    - generic [ref=e351]:
+      - generic [ref=e352]:
+        - generic [ref=e353]:
+          - generic [ref=e354]: DESIGN
+          - list [ref=e355]:
+            - listitem [ref=e356]:
+              - link "Website" [ref=e357] [cursor=pointer]:
+                - /url: /services#Website
+            - listitem [ref=e358]:
+              - link "e-Commerce" [ref=e359] [cursor=pointer]:
+                - /url: /services#e-Commerce
+            - listitem [ref=e360]:
+              - link "SEO" [ref=e361] [cursor=pointer]:
+                - /url: /services#SEO%20Optimisation
+            - listitem [ref=e362]:
+              - link "Projects" [ref=e363] [cursor=pointer]:
+                - /url: /projects
+        - generic [ref=e364]:
+          - generic [ref=e365]: NAVIGATION
+          - list [ref=e366]:
+            - listitem [ref=e367]:
+              - link "Home" [ref=e368] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e369]:
+              - link "Services" [ref=e370] [cursor=pointer]:
+                - /url: /services
+            - listitem [ref=e371]:
+              - link "Projects" [ref=e372] [cursor=pointer]:
+                - /url: /projects
+            - listitem [ref=e373]:
+              - link "About me" [ref=e374] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e375]:
+              - link "Contact" [ref=e376] [cursor=pointer]:
+                - /url: /contact
+        - generic [ref=e377]:
+          - link "Go to homepage" [ref=e379] [cursor=pointer]:
+            - /url: /
+            - img [ref=e380]
+          - paragraph [ref=e383]
+        - generic [ref=e384]:
+          - generic [ref=e385]: SUPPORT
+          - list [ref=e386]:
+            - listitem [ref=e387]:
+              - link "How we work" [ref=e388] [cursor=pointer]:
+                - /url: /roadmap
+            - listitem [ref=e389]:
+              - link "FAQ" [ref=e390] [cursor=pointer]:
+                - /url: /contact#Form
+            - listitem [ref=e391]: T&C
+            - listitem [ref=e392]: Simulation
+        - generic [ref=e393]:
+          - generic [ref=e394]: CONTACT
+          - list [ref=e395]:
+            - listitem [ref=e396]:
+              - link "Info" [ref=e397] [cursor=pointer]:
+                - /url: /contact#informations
+            - listitem [ref=e398]:
+              - link "Call" [ref=e399] [cursor=pointer]:
+                - /url: tel:+33638565302
+            - listitem [ref=e400]:
+              - link "Whatsapp" [ref=e401]:
+                - /url: https://wa.me/32471124525?text=Hi+Yolan%2C+%0D%0AI+got+your+WhatsApp+from+your+website+ywdesign.co.+Are+you+free+to+talk+any+time+soon+about+a+project+I+have+in+mind%3F+%0D%0AThanks%2C%0D%0A
+            - listitem [ref=e402]:
+              - link "Mail" [ref=e403]:
+                - /url: mailto:contact@ywdesign.co?subject=Website%20Project&body=Hi%20Yolan%2C%0A%0AI%20have%20a%20website%20that%20needs%20an%20update.%0ACould%20we%20talk%20about%20this%20any%20time%20soon%3F%0A%0AThanks%20in%20advance%2C%0A%0A
+      - text: "2026 YWdesign ∘ VAT: BE0794.586.584 ∘ legal address: Hof Savelkoul 40, 2640 Mortsel, Antwerp, Belgium"
+  - alert [ref=e404]

@@ -1,0 +1,137 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - banner:
+      - generic [ref=e5]:
+        - link [ref=e6] [cursor=pointer]:
+          - /url: /
+          - img [ref=e7]
+          - img [ref=e11]
+        - list [ref=e25]:
+          - listitem [ref=e26]:
+            - link "Home" [ref=e27] [cursor=pointer]:
+              - /url: /
+              - text: Home
+          - listitem [ref=e29]:
+            - link "About" [ref=e30] [cursor=pointer]:
+              - /url: /#about
+              - text: About
+          - listitem [ref=e32]:
+            - link "Contact" [ref=e33] [cursor=pointer]:
+              - /url: /contact
+              - text: Contact
+          - listitem [ref=e35]:
+            - button "NL" [ref=e36] [cursor=pointer]:
+              - link "NL" [ref=e39]:
+                - /url: /nl/contact
+                - text: NL
+                - img [ref=e40]
+          - listitem [ref=e43]:
+            - button "Ask An Offer" [ref=e44] [cursor=pointer]:
+              - link "Ask An Offer" [ref=e45]:
+                - /url: /contact#form
+                - generic [ref=e46]:
+                  - generic [ref=e47]: Ask An Offer
+                  - generic [ref=e48]:
+                    - img [ref=e49]
+                    - img [ref=e51]
+    - main [ref=e53]:
+      - img [ref=e55]
+      - generic [ref=e60]:
+        - img "[object Object]" [ref=e63]
+        - generic [ref=e65]:
+          - heading "Details" [level=2] [ref=e66]
+          - paragraph [ref=e67]: Send us a message and join us on this journey. Let yourself and your guests be lost in a completely new experience.
+          - generic [ref=e68]:
+            - generic [ref=e69]:
+              - heading "Address" [level=3] [ref=e70]
+              - paragraph [ref=e71]: Bermuda Events BV Lysenstraat 23 / 201 2600 Antwerpen Belgium
+            - generic [ref=e72]:
+              - heading "Details" [level=3] [ref=e73]
+              - paragraph [ref=e74]: "TVA: BE 1002975545"
+              - link "hello@bermuda-events.be" [ref=e75] [cursor=pointer]:
+                - /url: mailto:hello@bermuda-events.be?subject=Project%20Idea&body=Hi%2C%0A%0AI%20have%20a%20fun%20project%20in%20mind.%0ACould%20we%20talk%20about%20this%20any%20time%20soon%3F%0A%0AThanks%20in%20advance%2C%0A%0A
+                - generic [ref=e76]:
+                  - generic [ref=e77]: hello@bermuda-events.be
+                  - generic [ref=e78]:
+                    - img [ref=e79]
+                    - img [ref=e81]
+              - link "+32483671312" [ref=e83] [cursor=pointer]:
+                - /url: tel:+32483671312
+                - generic [ref=e84]:
+                  - generic [ref=e85]: "+32483671312"
+                  - generic [ref=e86]:
+                    - img [ref=e87]
+                    - img [ref=e89]
+              - generic [ref=e91]:
+                - link "Call phone number" [ref=e92] [cursor=pointer]:
+                  - /url: tel:+32483671312
+                  - img [ref=e94]
+                - link "Send WhatsApp Message" [ref=e96] [cursor=pointer]:
+                  - /url: https://wa.me/32483671312?text=Hi+there%2C+%0D%0AI+got+your+WhatsApp+from+your+website.+Are+you+free+to+talk+about+a+project+any+time+soon%3F+%0D%0AThanks%2C%0D%0A
+                  - img [ref=e98]
+                - link "Send an Email" [ref=e100] [cursor=pointer]:
+                  - /url: mailto:hello@bermuda-events.be?subject=Project%20Idea&body=Hi%2C%0A%0AI%20have%20a%20fun%20project%20in%20mind.%0ACould%20we%20talk%20about%20this%20any%20time%20soon%3F%0A%0AThanks%20in%20advance%2C%0A%0A
+                  - img [ref=e102]
+      - generic [ref=e107]:
+        - heading "Trusted By" [level=2] [ref=e108]
+        - generic [ref=e109]:
+          - link "Beeple's Logo" [ref=e110] [cursor=pointer]:
+            - /url: https://www.beeple.eu
+            - img "Beeple's Logo" [ref=e111]
+          - link "Unikoo's Logo" [ref=e112] [cursor=pointer]:
+            - /url: https://www.unikoo.be/nl
+            - img "Unikoo's Logo" [ref=e113]
+          - link "Fever's Logo" [ref=e114] [cursor=pointer]:
+            - /url: https://feverup.com/nl/antwerpen
+            - img "Fever's Logo" [ref=e115]
+          - link "Studio Capiche's Logo" [ref=e116] [cursor=pointer]:
+            - /url: https://studiocapiche.be
+            - img "Studio Capiche's Logo" [ref=e117]
+    - contentinfo [ref=e127]:
+      - generic [ref=e129]:
+        - generic [ref=e130]:
+          - generic [ref=e131]:
+            - heading "Get In Touch" [level=2] [ref=e133]
+            - generic [ref=e134]:
+              - generic [ref=e135] [cursor=pointer]: Subscribe to our newsletter.
+              - generic [ref=e136]:
+                - textbox "Subscribe to our newsletter." [ref=e137]:
+                  - /placeholder: example@ywdesign.co
+                - button "Send" [ref=e138] [cursor=pointer]
+          - generic [ref=e139]:
+            - generic [ref=e140]:
+              - heading "Socials" [level=2] [ref=e142]
+              - list [ref=e143]:
+                - listitem [ref=e144]:
+                  - link "Instagram" [ref=e145] [cursor=pointer]:
+                    - /url: https://www.instagram.com/bermuda_events?igsh=dGc4Zm1razJlYnN3
+            - generic [ref=e146]:
+              - heading "Navigate" [level=2] [ref=e148]
+              - list [ref=e149]:
+                - listitem [ref=e150]:
+                  - link "Ask an offer" [ref=e151] [cursor=pointer]:
+                    - /url: /contact#form
+            - generic [ref=e152]:
+              - heading "Contact" [level=2] [ref=e154]
+              - list [ref=e155]:
+                - listitem [ref=e156]:
+                  - link "hello@bermuda-events.be" [ref=e157] [cursor=pointer]:
+                    - /url: mailto:contact@bermuda-events.be?subject=Events%20Project&body=Hi%20Robin%2C%0A%0AI%20have%20a%20project%20for%20you.%0ACould%20we%20talk%20about%20this%20any%20time%20soon%3F%0A%0AThanks%20in%20advance%2C%0A%0A
+                - listitem [ref=e158]:
+                  - 'link "tel: +32483671312" [ref=e159] [cursor=pointer]':
+                    - /url: tel:+32483671312
+                - listitem [ref=e160]:
+                  - paragraph [ref=e161]: "VAT: BE1002975545"
+            - generic [ref=e162]:
+              - heading "Legal" [level=2] [ref=e164]
+              - list [ref=e165]:
+                - listitem [ref=e166]:
+                  - link "Cookie Notice" [ref=e167] [cursor=pointer]:
+                    - /url: https://cdn.sanity.io/files/nj2v8ioh/production/f55b8db155393806df00478e8dd825778736c942.docx
+                - listitem [ref=e168]:
+                  - link "Legal Notice" [ref=e169] [cursor=pointer]:
+                    - /url: https://cdn.sanity.io/files/nj2v8ioh/production/113b8b189408b0ccabfad84d1ad0d69e9b3179b9.pdf
+        - text: 2024 Bermuda Events, Inc. All rights reserved. ∘ Powered By
+        - link "ywdesign.co" [ref=e170] [cursor=pointer]:
+          - /url: https://www.ywdesign.co
+  - alert [ref=e171]
