@@ -10,6 +10,8 @@ const withPWA = require("next-pwa")({
 
 const nextConfig = withPWA({
   images: {
+    loader: 'custom',
+    loaderFile: './netlifyImageLoader.js',
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
